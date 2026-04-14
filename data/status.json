@@ -209,7 +209,7 @@
     },
     {
       "title": "공개 접속 URL",
-      "detail": "Primary: https://300fafceb00687.lhr.life / Secondary: https://05d52ded25c010.lhr.life / Local: http://127.0.0.1:8420"
+      "detail": "Stable: https://araelaver.github.io/revenue-ops-dashboard/ / Tunnel1: https://300fafceb00687.lhr.life / Tunnel2: https://05d52ded25c010.lhr.life / Local: http://127.0.0.1:8420"
     },
     {
       "title": "자동 갱신 확인",
