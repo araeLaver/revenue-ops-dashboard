@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Revenue Ops Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Hermes Revenue Operating System</p>
+          <h1 id="dashboard-title">Revenue Ops Dashboard</h1>
+          <p id="dashboard-subtitle" class="subtitle"></p>
+        </div>
+        <div class="hero-meta">
+          <div class="meta-card">
+            <span>마지막 갱신</span>
+            <strong id="last-updated">-</strong>
+          </div>
+          <div class="meta-card">
+            <span>운영 상태</span>
+            <strong id="system-status">-</strong>
+          </div>
+        </div>
+      </header>
+
+      <main class="grid">
+        <section class="card span-12">
+          <div class="card-head">
+            <h2>현재 핵심 포커스</h2>
+            <span class="badge" id="primary-goal">-</span>
+          </div>
+          <div class="focus-grid" id="focus-grid"></div>
+        </section>
+
+        <section class="card span-4">
+          <div class="card-head">
+            <h2>핵심 KPI</h2>
+            <span class="muted">주간 기준</span>
+          </div>
+          <div class="kpi-list" id="kpi-list"></div>
+        </section>
+
+        <section class="card span-4">
+          <div class="card-head">
+            <h2>수익 경로</h2>
+            <span class="muted">우선순위</span>
+          </div>
+          <div id="revenue-paths" class="stack"></div>
+        </section>
+
+        <section class="card span-4">
+          <div class="card-head">
+            <h2>퍼널</h2>
+            <span class="muted">Short → Long → Blog → Offer</span>
+          </div>
+          <div id="funnel" class="funnel"></div>
+        </section>
+
+        <section class="card span-7">
+          <div class="card-head">
+            <h2>콘텐츠 필러 & 시리즈</h2>
+            <span class="muted">장기 운영 구조</span>
+          </div>
+          <div id="pillars" class="pillars"></div>
+        </section>
+
+        <section class="card span-5">
+          <div class="card-head">
+            <h2>실시간 작업 현황</h2>
+            <span class="muted">폴링 기반</span>
+          </div>
+          <div id="active-work" class="task-list"></div>
+        </section>
+
+        <section class="card span-6">
+          <div class="card-head">
+            <h2>이번 주 실행 규칙</h2>
+            <span class="muted">반드시 지킬 것</span>
+          </div>
+          <ul id="rules" class="rules"></ul>
+        </section>
+
+        <section class="card span-6">
+          <div class="card-head">
+            <h2>리스크 & 병목</h2>
+            <span class="muted">즉시 모니터링</span>
+          </div>
+          <div id="risks" class="stack"></div>
+        </section>
+
+        <section class="card span-6">
+          <div class="card-head">
+            <h2>주간 운영 리듬</h2>
+            <span class="muted">weekly cadence</span>
+          </div>
+          <div id="weekly-cadence" class="stack"></div>
+        </section>
+
+        <section class="card span-6">
+          <div class="card-head">
+            <h2>월간 리뷰</h2>
+            <span class="muted">winner / middle / loser</span>
+          </div>
+          <div id="monthly-review" class="stack"></div>
+        </section>
+
+        <section class="card span-12">
+          <div class="card-head">
+            <h2>콘텐츠 큐</h2>
+            <span class="muted">series pipeline</span>
+          </div>
+          <div id="content-queue" class="pillars"></div>
+        </section>
+
+        <section class="card span-12">
+          <div class="card-head">
+            <h2>메모</h2>
+            <span class="muted">운영 노트</span>
+          </div>
+          <div id="notes" class="notes"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

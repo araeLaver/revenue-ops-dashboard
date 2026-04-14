@@ -1,0 +1,29 @@
+{
+  "producer": "hermes",
+  "event_type": "quality_review_completed",
+  "timestamp": "2026-04-14 15:58:00",
+  "system_status": "watch",
+  "queue_update": {
+    "name": "툴 비교 시리즈",
+    "stage": "review",
+    "priority": "high",
+    "status": "watch",
+    "next_action": "hook_strength 6, cta_naturalness 6 -> 첫 20초 및 CTA 재작성"
+  },
+  "active_work_append": {
+    "title": "품질평가 완료",
+    "detail": "overall_score 7.1 / revise 필요 / 훅과 CTA 중심 부분 수정",
+    "status": "watch",
+    "status_label": "Hermes revise 판정"
+  },
+  "risk_append": {
+    "title": "CTA 약함",
+    "detail": "콘텐츠 품질은 양호하지만 전환 유도가 약해 수익 경로가 흐릴 수 있음",
+    "status": "watch",
+    "status_label": "재작성 권장"
+  },
+  "note_append": {
+    "title": "Hermes 이벤트",
+    "detail": "quality_review_completed 이벤트 수신: revise 루프로 이동"
+  }
+}

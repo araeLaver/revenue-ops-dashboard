@@ -1,0 +1,303 @@
+{
+  "title": "YouTube + WordPress Revenue Ops Dashboard",
+  "subtitle": "수익 0 상태를 끊기 위한 장기 운영형 콘텐츠 시스템. 랜덤 생산이 아니라 시리즈, 퍼널, CTA, KPI 루프로 운영합니다.",
+  "last_updated": "2026-04-14 15:49:02",
+  "system_status": "watch",
+  "primary_goal": "수익화 가능한 에버그린 시리즈 구축",
+  "focus_areas": [
+    {
+      "title": "1차 목표",
+      "description": "돈 안 되는 주제 제거, 시리즈 구조 정착, CTA 표준화, 쇼츠→롱폼→블로그→오퍼 흐름 고정"
+    },
+    {
+      "title": "콘텐츠 운영 방식",
+      "description": "주당 1개 메인 토픽 패키지: 롱폼 1개, 쇼츠 3~5개, 워드프레스 글 1개, CTA 자산 1개"
+    },
+    {
+      "title": "수익 경로",
+      "description": "초기: 제휴 + 리드 수집. 중기: 서비스 문의 + 디지털 상품. 후기: Winner 시리즈 확장"
+    },
+    {
+      "title": "자동화 역할 분담",
+      "description": "OpenClaw는 초안 생성, Hermes는 필터/평가/재작성/시리즈 구조화/운영 기준 관리를 담당"
+    }
+  ],
+  "kpis": [
+    {
+      "label": "승인된 주제 비율",
+      "value": "10/20",
+      "target": "목표: 상위 50%만 제작"
+    },
+    {
+      "label": "주간 패키지 생산",
+      "value": "1 세트",
+      "target": "롱폼 1 / 쇼츠 3~5 / 글 1"
+    },
+    {
+      "label": "CTA 일관성",
+      "value": "100%",
+      "target": "모든 자산 동일 오퍼 연결"
+    },
+    {
+      "label": "에버그린 비율",
+      "value": "70%",
+      "target": "반응형 30% 이하 유지"
+    }
+  ],
+  "revenue_paths": [
+    {
+      "name": "Affiliate",
+      "description": "비교형/추천형 콘텐츠에서 설명란, 블로그 비교표, 추천 섹션으로 연결",
+      "status": "watch",
+      "status_label": "구조 설계 완료 / 실제 링크 세팅 필요"
+    },
+    {
+      "name": "Lead Capture",
+      "description": "체크리스트·템플릿 다운로드를 통해 이메일/잠재고객 축적",
+      "status": "watch",
+      "status_label": "오퍼 정의 필요"
+    },
+    {
+      "name": "Service / Product",
+      "description": "직접 세팅이 어려운 사용자를 상담/대행/상품 페이지로 연결",
+      "status": "blocked",
+      "status_label": "제안서/랜딩 미정"
+    }
+  ],
+  "funnel": [
+    {
+      "step": "Shorts",
+      "detail": "문제 인식, 실수 지적, 비교 포인트로 훅 형성"
+    },
+    {
+      "step": "Long-form",
+      "detail": "신뢰 형성, 구조 설명, 반론 처리, CTA 연결"
+    },
+    {
+      "step": "WordPress",
+      "detail": "검색 유입, 비교표·FAQ·요약 박스 제공, CTA 강화"
+    },
+    {
+      "step": "Offer",
+      "detail": "제휴 링크, 체크리스트, 문의, 상품 판매 중 하나로 전환"
+    }
+  ],
+  "pillars": [
+    {
+      "name": "문제 인식",
+      "description": "왜 성과가 안 나는지, 흔한 실수와 오해를 짚는 시리즈",
+      "series": [
+        "초보자 실수",
+        "성과 안 나는 이유",
+        "착각 바로잡기"
+      ]
+    },
+    {
+      "name": "비교 / 선택",
+      "description": "A vs B, 무료 vs 유료, 상황별 추천으로 구매 의도 연결",
+      "series": [
+        "툴 비교",
+        "상황별 추천",
+        "가성비 선택"
+      ]
+    },
+    {
+      "name": "실행 / 설정",
+      "description": "시작법, 세팅법, 체크리스트 기반의 실행형 시리즈",
+      "series": [
+        "시작 가이드",
+        "세팅 순서",
+        "실행 체크리스트"
+      ]
+    },
+    {
+      "name": "최적화 / 개선",
+      "description": "시간, 비용, 성과를 개선하는 반복형 운영 시리즈",
+      "series": [
+        "성과 개선",
+        "비용 절감",
+        "자동화 최적화"
+      ]
+    }
+  ],
+  "active_work": [
+    {
+      "title": "품질평가 완료",
+      "detail": "overall_score 7.1 / revise 필요 / 훅과 CTA 중심 부분 수정",
+      "status": "watch",
+      "status_label": "Hermes revise 판정"
+    },
+    {
+      "title": "초안 생성 완료",
+      "detail": "툴 비교 시리즈 롱폼 초안과 블로그 초안이 생성됨",
+      "status": "done",
+      "status_label": "OpenClaw 완료"
+    },
+    {
+      "title": "자동 업데이트 테스트",
+      "detail": "sample_updater.py 가 status.json을 갱신함",
+      "status": "done",
+      "status_label": "스크립트 실행 완료"
+    },
+    {
+      "title": "장기 운영형 수익 시스템 설계",
+      "detail": "랜덤 생산에서 시리즈/퍼널 기반 운영으로 전환. 연속성과 재활용성을 우선함.",
+      "status": "done",
+      "status_label": "전략 초안 완료"
+    },
+    {
+      "title": "수익 중심 주제 필터링",
+      "detail": "pain, buying_intent, monetization_fit, actionability 점수 기준으로 승인/폐기 판단",
+      "status": "done",
+      "status_label": "점수 규칙 설계 완료"
+    },
+    {
+      "title": "실시간 대시보드 구축",
+      "detail": "현재 작업내용과 장기 운영 상태를 한 화면에서 볼 수 있도록 정적 폴링형 대시보드 생성",
+      "status": "done",
+      "status_label": "로컬 대시보드 생성 완료"
+    },
+    {
+      "title": "실운영 데이터 연동",
+      "detail": "OpenClaw/Hermes 자동화가 status.json을 갱신하도록 연결 필요",
+      "status": "watch",
+      "status_label": "다음 단계"
+    }
+  ],
+  "rules": [
+    "랜덤 주제 생산 중단: 반드시 pillar/series 안에서만 제작",
+    "주당 1개 메인 패키지 원칙 유지",
+    "모든 자산은 동일한 전환 목표와 CTA를 공유",
+    "점수 낮은 초안은 수정하거나 폐기하고 그대로 발행하지 않기",
+    "에버그린 70%, 반응형 30% 비율 유지",
+    "월말에 Winner / Middle / Loser 분류 후 refresh 또는 prune 수행"
+  ],
+  "risks": [
+    {
+      "title": "CTA 약함",
+      "detail": "콘텐츠 품질은 양호하지만 전환 유도가 약해 수익 경로가 흐릴 수 있음",
+      "status": "watch",
+      "status_label": "재작성 권장"
+    },
+    {
+      "title": "오퍼 부재",
+      "detail": "콘텐츠는 있어도 클릭 이후 전환 대상이 약하면 계속 수익 0 상태가 이어질 수 있음",
+      "status": "blocked",
+      "status_label": "즉시 해결 필요"
+    },
+    {
+      "title": "주제는 많은데 시리즈가 없음",
+      "detail": "랜덤 주제가 많아지면 장기적으로 내부 연결과 리텐션 자산이 약해짐",
+      "status": "watch",
+      "status_label": "운영 규칙으로 통제"
+    },
+    {
+      "title": "평가 없이 양산",
+      "detail": "품질평가/폐기 규칙 없이 발행하면 장기적으로 브랜드와 전환 효율이 떨어짐",
+      "status": "watch",
+      "status_label": "평가 스키마 적용 필요"
+    }
+  ],
+  "notes": [
+    {
+      "title": "Hermes 이벤트",
+      "detail": "quality_review_completed 이벤트 수신: revise 루프로 이동"
+    },
+    {
+      "title": "OpenClaw 이벤트",
+      "detail": "draft_created 이벤트 수신: Hermes review 단계로 이동"
+    },
+    {
+      "title": "공개 접속 URL",
+      "detail": "Primary: https://300fafceb00687.lhr.life / Secondary: https://05d52ded25c010.lhr.life / Local: http://127.0.0.1:8420"
+    },
+    {
+      "title": "자동 갱신 확인",
+      "detail": "sample_updater.py 실행으로 대시보드 상태가 갱신되었습니다."
+    },
+    {
+      "title": "다음 우선순위",
+      "detail": "1) 오퍼 정의 2) CTA 라이브러리 구축 3) 실제 주제 20개 점수화 4) OpenClaw/Hermes 상태 자동 반영"
+    },
+    {
+      "title": "실시간성 설명",
+      "detail": "이 대시보드는 data/status.json을 3초마다 다시 읽습니다. 외부 자동화가 이 파일을 갱신하면 화면도 즉시 반영됩니다."
+    }
+  ],
+  "weekly_cadence": [
+    {
+      "day": "월",
+      "focus": "주제 점수화 + 시리즈 배정",
+      "deliverable": "상위 주제 5개 승인, pillar/series 맵핑 완료"
+    },
+    {
+      "day": "화",
+      "focus": "롱폼 생성/보정",
+      "deliverable": "제목 5개, 훅 3개, 대본 1개"
+    },
+    {
+      "day": "수",
+      "focus": "쇼츠 파생",
+      "deliverable": "쇼츠 3~5개 + on-screen text"
+    },
+    {
+      "day": "목",
+      "focus": "WordPress 변환 + CTA 삽입",
+      "deliverable": "검색형 글 1개 + FAQ + 비교표 + CTA"
+    },
+    {
+      "day": "금",
+      "focus": "품질평가 + 수정/폐기",
+      "deliverable": "approve/revise/reject 판정 및 draft 저장"
+    },
+    {
+      "day": "토/일",
+      "focus": "배포 + KPI 수집",
+      "deliverable": "성과 기록, 다음 주 규칙 업데이트"
+    }
+  ],
+  "monthly_review": [
+    {
+      "bucket": "Winners",
+      "detail": "CTR/체류/클릭/전환이 모두 강한 시리즈는 확장하고 후속편 제작"
+    },
+    {
+      "bucket": "Middle",
+      "detail": "제목, 훅, CTA, 구조만 부분 개선 후 재실험"
+    },
+    {
+      "bucket": "Losers",
+      "detail": "수익 경로가 약하거나 차별성이 없는 시리즈는 prune 또는 재기획"
+    }
+  ],
+  "content_queue": [
+    {
+      "name": "초보자 실수 시리즈",
+      "stage": "scoring",
+      "priority": "high",
+      "status": "watch",
+      "next_action": "주제 5개를 buying_intent 기준으로 재평가"
+    },
+    {
+      "name": "툴 비교 시리즈",
+      "stage": "review",
+      "priority": "high",
+      "status": "watch",
+      "next_action": "hook_strength 6, cta_naturalness 6 -> 첫 20초 및 CTA 재작성"
+    },
+    {
+      "name": "실행 체크리스트 시리즈",
+      "stage": "review",
+      "priority": "medium",
+      "status": "watch",
+      "next_action": "리드 자산 오퍼 정의 후 CTA 연결"
+    },
+    {
+      "name": "성과 개선 시리즈",
+      "stage": "refresh",
+      "priority": "medium",
+      "status": "watch",
+      "next_action": "기존 성과 낮은 글/영상 구조 개편"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "producer": "openclaw",
+  "event_type": "draft_created",
+  "timestamp": "2026-04-14 15:55:00",
+  "system_status": "healthy",
+  "queue_update": {
+    "name": "툴 비교 시리즈",
+    "stage": "draft",
+    "priority": "high",
+    "status": "healthy",
+    "next_action": "Hermes 품질평가로 전달"
+  },
+  "active_work_append": {
+    "title": "초안 생성 완료",
+    "detail": "툴 비교 시리즈 롱폼 초안과 블로그 초안이 생성됨",
+    "status": "done",
+    "status_label": "OpenClaw 완료"
+  },
+  "note_append": {
+    "title": "OpenClaw 이벤트",
+    "detail": "draft_created 이벤트 수신: Hermes review 단계로 이동"
+  }
+}

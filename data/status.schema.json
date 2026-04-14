@@ -1,0 +1,105 @@
+{
+  "$schema_version": "1.0.0",
+  "description": "Live status payload for the Revenue Ops Dashboard. Update this file from OpenClaw, Hermes, cron jobs, or external scripts.",
+  "required_top_level_fields": [
+    "title",
+    "subtitle",
+    "last_updated",
+    "system_status",
+    "primary_goal",
+    "focus_areas",
+    "kpis",
+    "revenue_paths",
+    "funnel",
+    "pillars",
+    "active_work",
+    "rules",
+    "risks",
+    "notes"
+  ],
+  "field_reference": {
+    "title": "Dashboard title",
+    "subtitle": "One-line operating summary",
+    "last_updated": "Timestamp string shown in the header",
+    "system_status": "Overall system health label",
+    "primary_goal": "Current top priority",
+    "focus_areas": [
+      {
+        "title": "Short heading",
+        "description": "What matters now"
+      }
+    ],
+    "kpis": [
+      {
+        "label": "Metric label",
+        "value": "Current value",
+        "target": "Target or interpretation"
+      }
+    ],
+    "revenue_paths": [
+      {
+        "name": "Affiliate / Lead / Service / Product",
+        "description": "How this path works",
+        "status": "healthy | watch | blocked",
+        "status_label": "Human-readable status"
+      }
+    ],
+    "funnel": [
+      {
+        "step": "Shorts / Long-form / WordPress / Offer",
+        "detail": "What this stage must do"
+      }
+    ],
+    "pillars": [
+      {
+        "name": "Pillar name",
+        "description": "Pillar description",
+        "series": ["Series A", "Series B"]
+      }
+    ],
+    "active_work": [
+      {
+        "title": "Task title",
+        "detail": "Task detail",
+        "status": "done | watch | blocked | healthy",
+        "status_label": "Human-readable status"
+      }
+    ],
+    "rules": ["Operating rule 1", "Operating rule 2"],
+    "risks": [
+      {
+        "title": "Risk title",
+        "detail": "What to watch",
+        "status": "watch | blocked | healthy",
+        "status_label": "Human-readable status"
+      }
+    ],
+    "notes": [
+      {
+        "title": "Note title",
+        "detail": "Note content"
+      }
+    ],
+    "weekly_cadence": [
+      {
+        "day": "Mon",
+        "focus": "Topic scoring",
+        "deliverable": "Approved topic list"
+      }
+    ],
+    "monthly_review": [
+      {
+        "bucket": "Winners",
+        "detail": "Expand these series"
+      }
+    ],
+    "content_queue": [
+      {
+        "name": "Series name",
+        "stage": "scoring | draft | review | published | refresh",
+        "priority": "high | medium | low",
+        "next_action": "What happens next"
+      }
+    ]
+  }
+}
