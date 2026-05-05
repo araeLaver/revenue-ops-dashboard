@@ -1,18 +1,18 @@
 {
   "revenue_tracking": {
-    "last_healthcheck": "2026-05-05T22:50:33Z",
+    "last_healthcheck": "2026-05-06T08:07:21+09:00",
     "status": "ok",
-    "last_error": "",
+    "last_error": null,
     "restarted": false,
     "last_http_code": "200"
   },
-  "last_updated": "2026-05-06T08:00:29+09:00",
+  "last_updated": "2026-05-06T08:20:03+09:00",
   "tracking": {
     "status": "active_stable_gateway_backend_rotated",
     "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-    "public_tracking_url": "https://b5aa9c5002de16.lhr.life",
-    "current_backend_url": "https://b5aa9c5002de16.lhr.life",
-    "last_rotated_at": "2026-05-06T08:00:29+09:00",
+    "public_tracking_url": "https://aac16e7f8353fc.lhr.life",
+    "current_backend_url": "https://aac16e7f8353fc.lhr.life",
+    "last_rotated_at": "2026-05-06T08:20:03+09:00",
     "rotation_automation": "sync_tracking_tunnel.py",
     "backend_health_ok": true,
     "backend_redirect_ok": true,
@@ -25,8 +25,8 @@
       "root_cause": "localhost.run anonymous tunnel rotates frequently.",
       "next_action": "sync_tracking_tunnel.py updates backend config/track fallback and deploys Pages; migrate to account-backed tunnel or Cloudflare/VPS for durable fix.",
       "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-      "current_backend_url": "https://b5aa9c5002de16.lhr.life",
-      "last_rotated_at": "2026-05-06T08:00:29+09:00"
+      "current_backend_url": "https://aac16e7f8353fc.lhr.life",
+      "last_rotated_at": "2026-05-06T08:20:03+09:00"
     }
   }
 }
