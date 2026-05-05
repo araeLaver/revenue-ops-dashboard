@@ -83,13 +83,13 @@
     "RouteNote portal submit and submission_id capture",
     "Optional: replace ephemeral backend tunnel with Cloudflare named tunnel/custom domain for fully durable backend"
   ],
-  "last_updated": "2026-05-05T21:41:23+09:00",
+  "last_updated": "2026-05-05T22:01:28+09:00",
   "tracking": {
     "status": "active_stable_gateway_backend_rotated",
     "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-    "public_tracking_url": "https://3ed3fcc67f5c34.lhr.life",
-    "current_backend_url": "https://3ed3fcc67f5c34.lhr.life",
-    "last_rotated_at": "2026-05-05T21:41:23+09:00",
-    "note": "localhost.run backend rotated; content CTA remains stable via GitHub Pages gateway."
+    "public_tracking_url": "https://5f55ee5c811899.lhr.life",
+    "current_backend_url": "https://5f55ee5c811899.lhr.life",
+    "last_rotated_at": "2026-05-05T22:01:28+09:00",
+    "note": "localhost.run backend rotated again; content CTA remains stable via GitHub Pages gateway."
   }
 }
