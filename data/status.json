@@ -1,7 +1,7 @@
 {
   "title": "Hermes Revenue Ops Dashboard",
   "subtitle": "오늘 발행량, 큐, 병목, 자동화 스케줄을 한눈에 보는 운영 대시보드입니다.",
-  "last_updated": "2026-05-06T05:17:54+09:00",
+  "last_updated": "2026-05-06T05:20:04+09:00",
   "system_status": "watch",
   "primary_goal": "오늘 발행 가능 물량 소진 완료 후 남은 revised 백로그 복구",
   "focus_areas": [
@@ -676,8 +676,8 @@
       "root_cause": "localhost.run anonymous tunnel rotates frequently.",
       "next_action": "sync_tracking_tunnel.py updates backend config/track fallback and deploys Pages; migrate to account-backed tunnel or Cloudflare/VPS for durable fix.",
       "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-      "current_backend_url": "https://c48d5bc5053ae4.lhr.life",
-      "last_rotated_at": "2026-05-06T05:17:54+09:00"
+      "current_backend_url": "https://ef8f89757702ce.lhr.life",
+      "last_rotated_at": "2026-05-06T05:20:04+09:00"
     }
   ],
   "hermes_feature_usage": {
@@ -1553,9 +1553,9 @@
   "tracking": {
     "status": "active_stable_gateway_backend_rotated",
     "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-    "public_tracking_url": "https://c48d5bc5053ae4.lhr.life",
-    "current_backend_url": "https://c48d5bc5053ae4.lhr.life",
-    "last_rotated_at": "2026-05-06T05:17:54+09:00",
+    "public_tracking_url": "https://ef8f89757702ce.lhr.life",
+    "current_backend_url": "https://ef8f89757702ce.lhr.life",
+    "last_rotated_at": "2026-05-06T05:20:04+09:00",
     "note": "localhost.run backend rotated; content CTA remains stable via GitHub Pages gateway.",
     "rotation_automation": "sync_tracking_tunnel.py",
     "backend_health_ok": true,
