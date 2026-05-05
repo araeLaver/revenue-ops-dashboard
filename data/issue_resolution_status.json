@@ -80,13 +80,13 @@
     }
   ],
   "stable_tracking_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-  "last_updated": "2026-05-06T01:23:31+09:00",
+  "last_updated": "2026-05-06T01:25:28+09:00",
   "tracking": {
     "status": "active_stable_gateway_backend_rotated",
     "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-    "public_tracking_url": "https://8cf4a84e5df3d7.lhr.life",
-    "current_backend_url": "https://8cf4a84e5df3d7.lhr.life",
-    "last_rotated_at": "2026-05-06T01:23:31+09:00",
+    "public_tracking_url": "https://3a3864624b8c4a.lhr.life",
+    "current_backend_url": "https://3a3864624b8c4a.lhr.life",
+    "last_rotated_at": "2026-05-06T01:25:28+09:00",
     "note": "localhost.run backend rotated; content CTA remains stable via GitHub Pages gateway.",
     "rotation_automation": "sync_tracking_tunnel.py",
     "backend_health_ok": true,
@@ -96,11 +96,11 @@
     "status_label": "provider_degraded",
     "summary": "localhost.run anonymous tunnel is repeatedly failing health checks.",
     "detail": "Stable gateway is preserved, but the current rotating backend is unhealthy.",
-    "current_backend": "https://40a03c869c81f8.lhr.life",
+    "current_backend": "https://3c280066db6941.lhr.life",
     "gateway": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
     "root_cause": "http_error kind=health code=503",
     "next_action": "Use account-backed localhost.run, Cloudflare Tunnel, VPS reverse proxy, or custom tracking domain for durable public tracking.",
-    "updated_at": "2026-05-06T01:23:19+09:00"
+    "updated_at": "2026-05-06T01:25:16+09:00"
   },
   "bottleneck_board": {
     "tracking": {
@@ -109,8 +109,8 @@
       "root_cause": "localhost.run anonymous tunnel rotates frequently.",
       "next_action": "sync_tracking_tunnel.py updates backend config/track fallback and deploys Pages; migrate to account-backed tunnel or Cloudflare/VPS for durable fix.",
       "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-      "current_backend_url": "https://8cf4a84e5df3d7.lhr.life",
-      "last_rotated_at": "2026-05-06T01:23:31+09:00"
+      "current_backend_url": "https://3a3864624b8c4a.lhr.life",
+      "last_rotated_at": "2026-05-06T01:25:28+09:00"
     }
   },
   "tracking_gateway_status": "provider_degraded",
