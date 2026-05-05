@@ -1,7 +1,7 @@
 {
   "title": "Hermes Revenue Ops Dashboard",
   "subtitle": "오늘 발행량, 큐, 병목, 자동화 스케줄을 한눈에 보는 운영 대시보드입니다.",
-  "last_updated": "2026-05-05T20:55:34+09:00",
+  "last_updated": "2026-05-05T21:07:33+09:00",
   "system_status": "watch",
   "primary_goal": "오늘 발행 가능 물량 소진 완료 후 남은 revised 백로그 복구",
   "focus_areas": [
@@ -127,6 +127,13 @@
   ],
   "active_work": [
     {
+      "title": "RouteNote 업로드 패키지 완료",
+      "detail": "TRK-001/TRK-002 ZIP 패키지 생성 및 내용 검증 완료. 원본 WAV, 커버 PNG, 체크리스트 포함. 제출 후 submission_id 기록 스크립트 추가.",
+      "status": "done",
+      "status_label": "패키지 완료",
+      "updated": "2026-05-05 20:59:14 KST"
+    },
+    {
       "title": "Tracking 고정 중계 URL 적용",
       "detail": "CTA canonical을 https://araelaver.github.io/revenue-ops-dashboard/track.html 로 전환. 현재 backend tunnel은 https://f521895a4a2395.lhr.life. 초안 내 lhr 직접 URL 0개.",
       "status": "done",
@@ -225,6 +232,10 @@
     }
   ],
   "notes": [
+    {
+      "title": "RouteNote 패키지 완료",
+      "detail": "업로드 ZIP: music_ip/routenote/packages/TRK-001_routenote_upload_packet.zip, TRK-002_routenote_upload_packet.zip. 제출 후 scripts/record_routenote_submission.py 사용."
+    },
     {
       "title": "Tracking URL 고정화",
       "detail": "고정 CTA gateway: https://araelaver.github.io/revenue-ops-dashboard/track.html. 기존 lhr 직접 CTA를 제거하고 stable gateway로 치환 완료."
@@ -406,9 +417,9 @@
     },
     {
       "area": "routenote",
-      "status": "portal_login_required",
-      "summary": "TRK-001/002 오디오+커버 준비 완료. 실제 배포 제출은 RouteNote 포털 로그인 필요.",
-      "next": "RouteNote Free 로그인 후 체크리스트대로 제출, submission_id 기록"
+      "status": "portal_login_only",
+      "summary": "TRK-001/002 업로드 ZIP 패키지 준비 완료. 실제 RouteNote 포털 로그인/제출만 남음.",
+      "next": "RouteNote 로그인 후 ZIP 안의 original WAV + cover PNG 업로드, submission_id 기록"
     },
     {
       "area": "tracking_public_url",
@@ -1365,8 +1376,8 @@
       "real form submit에서 /lead 호출",
       "affiliate/order postback 확보 시 /revenue 호출"
     ],
-    "last_healthcheck": "2026-05-05T11:45:58Z",
-    "last_error": ""
+    "last_healthcheck": "2026-05-05T21:03:29+09:00",
+    "last_error": null
   },
   "analytics_api_status": {
     "updated_at": "2026-05-05 17:11:32 KST",
@@ -1526,5 +1537,13 @@
       "MCP dashboardfs config retry after restart",
       "image provider key or manual artwork generation"
     ]
+  },
+  "tracking": {
+    "status": "active_stable_gateway_backend_rotated",
+    "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
+    "public_tracking_url": "https://a98a1f06e08cc5.lhr.life",
+    "current_backend_url": "https://a98a1f06e08cc5.lhr.life",
+    "last_rotated_at": "2026-05-05T21:07:33+09:00",
+    "note": "localhost.run backend rotated; content CTA remains stable via GitHub Pages gateway."
   }
 }

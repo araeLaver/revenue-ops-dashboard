@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-05 20:55:34 KST",
+  "updated_at": "2026-05-05 20:59:14 KST",
   "summary": "Remaining issue resolution status after last-mile hardening",
   "issues": [
     {
@@ -16,12 +16,14 @@
     {
       "area": "routenote",
       "previous": "artwork_required_missing",
-      "status": "portal_ready_login_required",
+      "status": "upload_packets_ready_portal_login_only",
       "evidence": [
-        "music_ip/routenote/routenote_last_mile_manifest.json",
-        "TRK-001/002 submission_status.json"
+        "music_ip/routenote/packages/TRK-001_routenote_upload_packet.zip",
+        "music_ip/routenote/packages/TRK-002_routenote_upload_packet.zip",
+        "music_ip/routenote/packages/routenote_upload_packages_manifest.json",
+        "scripts/record_routenote_submission.py"
       ],
-      "notes": "필수 오디오+커버 준비 완료. 실제 제출은 계정 로그인/포털 승인 필요, credential 저장 금지 유지"
+      "notes": "TRK-001/TRK-002 RouteNote 업로드 ZIP 패키지 생성 및 검증 완료. 실제 포털 로그인/제출 후 record_routenote_submission.py로 submission_id 기록."
     },
     {
       "area": "tracking_public_url",
@@ -77,5 +79,14 @@
       "reason": "localhost.run tunnel rotated/matched watch pattern"
     }
   ],
-  "stable_tracking_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html"
+  "stable_tracking_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
+  "last_updated": "2026-05-05T21:07:33+09:00",
+  "tracking": {
+    "status": "active_stable_gateway_backend_rotated",
+    "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
+    "public_tracking_url": "https://a98a1f06e08cc5.lhr.life",
+    "current_backend_url": "https://a98a1f06e08cc5.lhr.life",
+    "last_rotated_at": "2026-05-05T21:07:33+09:00",
+    "note": "localhost.run backend rotated; content CTA remains stable via GitHub Pages gateway."
+  }
 }
