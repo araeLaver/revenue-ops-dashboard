@@ -35,7 +35,7 @@
     if (!r.ok) throw new Error('tracking_public_url.json HTTP ' + r.status);
     const cfg = await r.json();
     const base = String(cfg.public_tracking_url || '').replace(/\/$/, '');
-    if (!/^https:\/\/[a-z0-9.-]+\/.test(base + '/')) throw new Error('invalid tracking base');
+    if (!/^https:\/\/[a-z0-9.-]+\//.test(base + '/')) throw new Error('invalid tracking base');
     const url = base + '/t?' + out.toString();
     msg.textContent = 'tracking server로 이동합니다.';
     msg.className = 'ok';
