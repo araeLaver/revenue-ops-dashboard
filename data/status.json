@@ -1,7 +1,7 @@
 {
   "title": "Hermes Revenue Ops Dashboard",
   "subtitle": "오늘 발행량, 큐, 병목, 자동화 스케줄을 한눈에 보는 운영 대시보드입니다.",
-  "last_updated": "2026-05-05T22:08:18+09:00",
+  "last_updated": "2026-05-05T22:22:03+09:00",
   "system_status": "watch",
   "primary_goal": "오늘 발행 가능 물량 소진 완료 후 남은 revised 백로그 복구",
   "focus_areas": [
@@ -423,9 +423,10 @@
     },
     {
       "area": "tracking_public_url",
-      "status": "resolved_stable_gateway",
-      "summary": "콘텐츠 CTA는 고정 GitHub Pages track.html 사용. backend tunnel 회전은 data/tracking_public_url.json으로 흡수.",
-      "next": "선택사항: Cloudflare named tunnel/custom domain으로 backend까지 완전 고정"
+      "status": "blocked_backend_tunnel_health_failed",
+      "summary": "backend tunnel health check failed: curl -sS --max-time 10 https://efb4df1b262767.lhr.life/health -> Empty reply from server (curl exit 52)",
+      "next": "tracking tunnel/local server 재시작 후 data/tracking_public_url.json public_tracking_url 갱신 및 /health 재검증",
+      "checked_at": "2026-05-05T22:13:12+09:00"
     },
     {
       "area": "shorts_renderer",
@@ -675,8 +676,8 @@
       "root_cause": "localhost.run anonymous tunnel rotates frequently.",
       "next_action": "sync_tracking_tunnel.py updates backend config/track fallback and deploys Pages; migrate to account-backed tunnel or Cloudflare/VPS for durable fix.",
       "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-      "current_backend_url": "https://efb4df1b262767.lhr.life",
-      "last_rotated_at": "2026-05-05T22:08:18+09:00"
+      "current_backend_url": "https://29f0b8bd893c18.lhr.life",
+      "last_rotated_at": "2026-05-05T22:22:03+09:00"
     }
   ],
   "hermes_feature_usage": {
@@ -1386,8 +1387,8 @@
       "real form submit에서 /lead 호출",
       "affiliate/order postback 확보 시 /revenue 호출"
     ],
-    "last_healthcheck": "2026-05-05T21:55:18+09:00",
-    "last_error": ""
+    "last_healthcheck": "2026-05-05T13:15:57.509366Z",
+    "last_error": null
   },
   "analytics_api_status": {
     "updated_at": "2026-05-05 17:11:32 KST",
@@ -1551,9 +1552,9 @@
   "tracking": {
     "status": "active_stable_gateway_backend_rotated",
     "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-    "public_tracking_url": "https://efb4df1b262767.lhr.life",
-    "current_backend_url": "https://efb4df1b262767.lhr.life",
-    "last_rotated_at": "2026-05-05T22:08:18+09:00",
+    "public_tracking_url": "https://29f0b8bd893c18.lhr.life",
+    "current_backend_url": "https://29f0b8bd893c18.lhr.life",
+    "last_rotated_at": "2026-05-05T22:22:03+09:00",
     "note": "localhost.run backend rotated; content CTA remains stable via GitHub Pages gateway.",
     "rotation_automation": "sync_tracking_tunnel.py",
     "backend_health_ok": true,
