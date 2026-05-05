@@ -31,7 +31,13 @@
   "cta_canonical_url_mode": "stable_gateway_to_current_tunnel",
   "current_backend_url": "https://5f55ee5c811899.lhr.life",
   "mode": "stable_gateway_to_rotating_tunnel",
-  "last_rotated_at": "2026-05-05T22:01:28+09:00",
-  "last_updated": "2026-05-05T22:01:28+09:00",
-  "source": "localhost.run_watch_pattern_rotation"
+  "last_rotated_at": "2026-05-05T22:05:02+09:00",
+  "last_updated": "2026-05-05T22:05:02+09:00",
+  "source": "sync_tracking_tunnel.py",
+  "rotation_automation": {
+    "status": "script_managed",
+    "script": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/scripts/sync_tracking_tunnel.py",
+    "manual_update_needed": false,
+    "long_term_recommendation": "Replace anonymous localhost.run with account-backed localhost.run, Cloudflare Tunnel, VPS, or custom domain."
+  }
 }
