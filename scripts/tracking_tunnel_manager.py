@@ -13,10 +13,13 @@ import datetime as dt
 import json
 import os
 import re
+import select
 import signal
 import subprocess
 import sys
 import time
+import urllib.error
+import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -67,6 +70,32 @@ def sync_url(url: str, commit: bool, push: bool) -> bool:
     return ok
 
 
+def quick_backend_ok(url: str, timeout: int = 8) -> tuple[bool, str]:
+    """Cheap periodic health check for an already-synced tunnel."""
+    target = "https%3A%2F%2Funpre.co.kr%2F"
+    checks = [
+        (url.rstrip("/") + "/health", "health"),
+        (url.rstrip("/") + f"/t?site=unpre&slot=manager-health&content_id=manager-health&target={target}", "redirect"),
+    ]
+    opener = urllib.request.build_opener(urllib.request.HTTPRedirectHandler)
+    for check_url, kind in checks:
+        try:
+            req = urllib.request.Request(check_url, headers={"User-Agent": "HermesTrackingTunnelManager/1.0"})
+            with opener.open(req, timeout=timeout) as resp:
+                status = getattr(resp, "status", resp.getcode())
+                final_url = resp.geturl()
+                if kind == "health" and status == 200:
+                    continue
+                if kind == "redirect" and final_url.startswith("https://unpre.co.kr"):
+                    continue
+                return False, f"bad_status kind={kind} status={status} final={final_url}"
+        except urllib.error.HTTPError as e:
+            return False, f"http_error kind={kind} code={e.code}"
+        except Exception as e:
+            return False, f"exception kind={kind} error={type(e).__name__}: {e}"
+    return True, "ok"
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--port", type=int, default=8431)
@@ -75,6 +104,7 @@ def main() -> int:
     ap.add_argument("--push", action="store_true", default=True)
     ap.add_argument("--no-push", dest="push", action="store_false")
     ap.add_argument("--restart-delay", type=int, default=10)
+    ap.add_argument("--health-interval", type=int, default=60)
     args = ap.parse_args()
 
     stopping = False
@@ -102,22 +132,43 @@ def main() -> int:
         write_state(status="running", tunnel_pid=child.pid, manager_pid=os.getpid())
         try:
             assert child.stdout is not None
-            for raw in child.stdout:
-                line = raw.rstrip("\n")
-                log("TUNNEL_OUT " + line)
-                urls = URL_RE.findall(line)
-                for url in urls:
-                    if url == last_url:
-                        continue
-                    last_url = url
-                    write_state(status="url_detected", current_url=url, detected_at=stamp(), tunnel_pid=child.pid, manager_pid=os.getpid())
-                    ok = sync_url(url, commit=args.commit, push=args.push)
+            current_url = None
+            last_health_check = 0.0
+            restart_requested = False
+            while not stopping and child.poll() is None and not restart_requested:
+                ready, _, _ = select.select([child.stdout], [], [], 1.0)
+                if ready:
+                    raw = child.stdout.readline()
+                    if raw == "":
+                        break
+                    line = raw.rstrip("\n")
+                    log("TUNNEL_OUT " + line)
+                    urls = URL_RE.findall(line)
+                    for url in urls:
+                        if url == last_url:
+                            continue
+                        last_url = url
+                        current_url = url
+                        last_health_check = time.time()
+                        write_state(status="url_detected", current_url=url, detected_at=stamp(), tunnel_pid=child.pid, manager_pid=os.getpid())
+                        ok = sync_url(url, commit=args.commit, push=args.push)
+                        if not ok:
+                            log(f"SYNC_FAILED_RESTART_TUNNEL url={url}")
+                            write_state(status="sync_failed_restarting", failed_url=url, tunnel_pid=child.pid, manager_pid=os.getpid())
+                            restart_requested = True
+                            if child.poll() is None:
+                                child.terminate()
+                            break
+                if current_url and (time.time() - last_health_check) >= args.health_interval:
+                    last_health_check = time.time()
+                    ok, detail = quick_backend_ok(current_url)
+                    write_state(status="health_ok" if ok else "health_failed_restarting", current_url=current_url, last_health_ok=ok, last_health_detail=detail, last_health_at=stamp(), tunnel_pid=child.pid, manager_pid=os.getpid())
+                    log(f"HEALTH_CHECK url={current_url} ok={ok} detail={detail}")
                     if not ok:
-                        log(f"SYNC_FAILED_RESTART_TUNNEL url={url}")
-                        write_state(status="sync_failed_restarting", failed_url=url, tunnel_pid=child.pid, manager_pid=os.getpid())
+                        log(f"HEALTH_FAILED_RESTART_TUNNEL url={current_url}")
+                        restart_requested = True
                         if child.poll() is None:
                             child.terminate()
-                        break
                 if stopping:
                     break
         finally:
