@@ -70,6 +70,56 @@ def sync_url(url: str, commit: bool, push: bool) -> bool:
     return ok
 
 
+def mark_provider_degraded(url: str, detail: str) -> None:
+    """Reflect tunnel provider failure in dashboard JSON without accepting a bad backend as healthy."""
+    now = stamp()
+    data_dir = ROOT / "data"
+    stable_gateway = "https://araelaver.github.io/revenue-ops-dashboard/track.html"
+    tracking_card = {
+        "area": "Tracking",
+        "name": "Tracking",
+        "status": "blocked",
+        "status_label": "provider_degraded",
+        "summary": "localhost.run anonymous tunnel is repeatedly failing health checks.",
+        "detail": "Stable gateway is preserved, but the current rotating backend is unhealthy.",
+        "current_backend": url,
+        "gateway": stable_gateway,
+        "root_cause": detail,
+        "next_action": "Use account-backed localhost.run, Cloudflare Tunnel, VPS reverse proxy, or custom tracking domain for durable public tracking.",
+        "updated_at": now,
+    }
+    for rel in ["status.json", "issue_resolution_status.json", "hermes_feature_activation_matrix.json"]:
+        path = data_dir / rel
+        if not path.exists():
+            continue
+        try:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        if rel == "status.json":
+            payload["tracking_public_backend_status"] = tracking_card
+            payload["tracking_gateway_status"] = "provider_degraded"
+            payload["tracking_last_error"] = detail
+            board = payload.get("bottleneck_board")
+            if isinstance(board, list):
+                board = [x for x in board if not (isinstance(x, dict) and (x.get("area") == "Tracking" or x.get("name") == "Tracking"))]
+                board.append(tracking_card)
+                payload["bottleneck_board"] = board
+            elif isinstance(board, dict):
+                board["tracking"] = tracking_card
+                payload["bottleneck_board"] = board
+            else:
+                payload["bottleneck_board"] = [tracking_card]
+        else:
+            payload.setdefault("tracking", {})
+            if isinstance(payload.get("tracking"), dict):
+                payload["tracking"].update(tracking_card)
+            payload["tracking_gateway_status"] = "provider_degraded"
+            payload["tracking_last_error"] = detail
+        payload["last_updated"] = now
+        path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
 def quick_backend_ok(url: str, timeout: int = 8) -> tuple[bool, str]:
     """Cheap periodic health check for an already-synced tunnel."""
     target = "https%3A%2F%2Funpre.co.kr%2F"
@@ -153,6 +203,7 @@ def main() -> int:
                         write_state(status="url_detected", current_url=url, detected_at=stamp(), tunnel_pid=child.pid, manager_pid=os.getpid())
                         ok = sync_url(url, commit=args.commit, push=args.push)
                         if not ok:
+                            mark_provider_degraded(url, f"sync_failed rc={0 if ok else 'nonzero'}")
                             log(f"SYNC_FAILED_RESTART_TUNNEL url={url}")
                             write_state(status="sync_failed_restarting", failed_url=url, tunnel_pid=child.pid, manager_pid=os.getpid())
                             restart_requested = True
@@ -165,6 +216,7 @@ def main() -> int:
                     write_state(status="health_ok" if ok else "health_failed_restarting", current_url=current_url, last_health_ok=ok, last_health_detail=detail, last_health_at=stamp(), tunnel_pid=child.pid, manager_pid=os.getpid())
                     log(f"HEALTH_CHECK url={current_url} ok={ok} detail={detail}")
                     if not ok:
+                        mark_provider_degraded(current_url, detail)
                         log(f"HEALTH_FAILED_RESTART_TUNNEL url={current_url}")
                         restart_requested = True
                         if child.poll() is None:
