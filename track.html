@@ -34,7 +34,7 @@
     const r = await fetch('data/tracking_public_url.json?t=' + Date.now(), { cache: 'no-store' });
     if (!r.ok) throw new Error('tracking_public_url.json HTTP ' + r.status);
     const cfg = await r.json();
-    const embeddedFallbackBase = 'https://519a3a3c2e5c8b.lhr.life';
+    const embeddedFallbackBase = 'https://11a1dcd71ffd44.lhr.life';
     const cfgBase = String(cfg.public_tracking_url || '').replace(/\/$/, '');
     // GitHub Pages can briefly serve stale JSON after tunnel rotation. Prefer JSON when it carries
     // the rotation-aware schema; otherwise use the embedded latest backend from this deployed file.
