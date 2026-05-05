@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Hermes Tracking Redirect</title>
+  <style>
+    body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#0f172a;color:#e5e7eb;display:grid;place-items:center;min-height:100vh;margin:0;padding:24px}
+    main{max-width:680px;background:#111827;border:1px solid #334155;border-radius:18px;padding:28px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+    a{color:#38bdf8}.muted{color:#94a3b8}.bad{color:#f87171}.ok{color:#34d399}
+  </style>
+</head>
+<body>
+<main>
+  <h1>이동 중입니다</h1>
+  <p id="message" class="muted">최신 tracking server를 확인하고 있습니다.</p>
+  <p id="fallback"></p>
+</main>
+<script>
+(async function () {
+  const msg = document.getElementById('message');
+  const fallback = document.getElementById('fallback');
+  const params = new URLSearchParams(location.search);
+  const safeParamNames = ['site','slot','content_id','placeholder','target'];
+  const out = new URLSearchParams();
+  for (const name of safeParamNames) {
+    if (params.has(name)) out.set(name, params.get(name));
+  }
+  if (!out.has('site')) out.set('site', 'unknown');
+  if (!out.has('slot')) out.set('slot', 'unknown');
+  if (!out.has('content_id')) out.set('content_id', 'unknown');
+  try {
+    const r = await fetch('data/tracking_public_url.json?t=' + Date.now(), { cache: 'no-store' });
+    if (!r.ok) throw new Error('tracking_public_url.json HTTP ' + r.status);
+    const cfg = await r.json();
+    const base = String(cfg.public_tracking_url || '').replace(/\/$/, '');
+    if (!/^https:\/\/[a-z0-9.-]+\/.test(base + '/')) throw new Error('invalid tracking base');
+    const url = base + '/t?' + out.toString();
+    msg.textContent = 'tracking server로 이동합니다.';
+    msg.className = 'ok';
+    fallback.innerHTML = '<a rel="nofollow" href="' + url.replace(/"/g, '&quot;') + '">이동이 안 되면 여기를 누르세요</a>';
+    location.replace(url);
+  } catch (err) {
+    msg.textContent = 'tracking server 확인에 실패했습니다: ' + err.message;
+    msg.className = 'bad';
+    const target = params.get('target');
+    if (target && /^https?:\/\//.test(target)) {
+      fallback.innerHTML = '<a rel="nofollow" href="' + target.replace(/"/g, '&quot;') + '">최종 링크로 직접 이동</a>';
+    } else {
+      fallback.textContent = '잠시 후 다시 시도해 주세요.';
+    }
+  }
+})();
+</script>
+</body>
+</html>

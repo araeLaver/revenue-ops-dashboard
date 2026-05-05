@@ -1,0 +1,86 @@
+{
+  "updated_at": "2026-05-05 20:55:34 KST",
+  "summary": "Hermes revenue operations feature activation matrix",
+  "features": [
+    {
+      "feature": "skills",
+      "status": "active",
+      "revenue_use": "content revenue automation, live ops dashboard, Hermes config workflows",
+      "evidence": "skills loaded and used"
+    },
+    {
+      "feature": "memory",
+      "status": "active",
+      "revenue_use": "operator preferences and pipeline conventions retained",
+      "evidence": "persistent memory injected"
+    },
+    {
+      "feature": "cron",
+      "status": "active",
+      "revenue_use": "generate/review/publish/analytics/tracking healthcheck automation",
+      "evidence": "15 active jobs including revenue tracking and analytics refresh"
+    },
+    {
+      "feature": "event_automation",
+      "status": "active",
+      "revenue_use": "operation events merge into status/performance snapshots",
+      "evidence": "scripts/apply_event.py and data/events.jsonl"
+    },
+    {
+      "feature": "delegation",
+      "status": "active",
+      "revenue_use": "parallel analytics and RouteNote inspections",
+      "evidence": "subagents completed two inspection tasks"
+    },
+    {
+      "feature": "profile",
+      "status": "partial_active",
+      "revenue_use": "dedicated revenueops profile created for isolated monetization operations",
+      "evidence": "/Users/down/.hermes/profiles/revenueops"
+    },
+    {
+      "feature": "reporting",
+      "status": "active_project_notify",
+      "revenue_use": "publish/reporting Telegram proof via dashboard notify script",
+      "evidence": "notify-telegram ok logs for WP/Shorts/Longform"
+    },
+    {
+      "feature": "gateway_native_telegram",
+      "status": "not_configured",
+      "revenue_use": "future direct Hermes chat delivery",
+      "evidence": "Hermes Gateway service running but Telegram platform not configured"
+    },
+    {
+      "feature": "mcp",
+      "status": "runtime_ready_server_not_connected",
+      "revenue_use": "future external tool/data integrations",
+      "evidence": "python mcp, npx, uvx available; dashboardfs connection closed"
+    },
+    {
+      "feature": "tracking_server",
+      "status": "active_stable_gateway_to_tunnel",
+      "revenue_use": "CTA click, lead, revenue event capture",
+      "evidence": "Stable CTA gateway https://araelaver.github.io/revenue-ops-dashboard/track.html forwards to current tunnel https://f521895a4a2395.lhr.life; draft links normalized to stable gateway",
+      "public_url": "https://f521895a4a2395.lhr.life",
+      "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html"
+    },
+    {
+      "feature": "analytics_api",
+      "status": "active_youtube_reauth_completed",
+      "revenue_use": "WP recent posts collected; YouTube pipeline ready but reauth required",
+      "evidence": "YouTube analytics ok: subscribers 114, views 344059, videos 709"
+    },
+    {
+      "feature": "image_generation",
+      "status": "resolved_local_artwork_generation",
+      "revenue_use": "RouteNote artwork and thumbnails",
+      "evidence": "FAL_KEY not needed for RouteNote covers; local PIL generated TRK-001/TRK-002 3000x3000 PNG"
+    }
+  ],
+  "next_unlocks": [
+    "Hermes native Telegram setup if desired",
+    "MCP dashboardfs config retry after restart",
+    "RouteNote portal submit and submission_id capture",
+    "Optional: replace ephemeral backend tunnel with Cloudflare named tunnel/custom domain for fully durable backend"
+  ]
+}

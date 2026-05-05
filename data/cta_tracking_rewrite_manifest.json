@@ -1,0 +1,40 @@
+{
+  "updated_at": "2026-05-05 20:55:02 KST",
+  "apply": true,
+  "base_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
+  "states": [
+    "pending",
+    "reviewed",
+    "revised"
+  ],
+  "files": [
+    {
+      "state": "revised",
+      "path": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/drafts/revised/20260505_wp-unpre_월세.md",
+      "change_count": 4,
+      "changes": [
+        {
+          "kind": "rotating_lhr_tracking_normalized",
+          "to": "https://araelaver.github.io/revenue-ops-dashboard/track.html"
+        },
+        {
+          "kind": "rotating_lhr_tracking_normalized",
+          "to": "https://araelaver.github.io/revenue-ops-dashboard/track.html"
+        },
+        {
+          "kind": "rotating_lhr_tracking_normalized",
+          "to": "https://araelaver.github.io/revenue-ops-dashboard/track.html"
+        },
+        {
+          "kind": "rotating_lhr_tracking_normalized",
+          "to": "https://araelaver.github.io/revenue-ops-dashboard/track.html"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "scanned": 5,
+    "changed_files": 1,
+    "changes": 4
+  }
+}

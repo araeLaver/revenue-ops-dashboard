@@ -1,0 +1,81 @@
+{
+  "updated_at": "2026-05-05 20:55:34 KST",
+  "summary": "Remaining issue resolution status after last-mile hardening",
+  "issues": [
+    {
+      "area": "image_generation",
+      "previous": "blocked_missing_provider_key",
+      "status": "resolved_via_local_generation",
+      "evidence": [
+        "scripts/generate_routenote_covers.py",
+        "music_ip/artwork/TRK-001_cover_3000x3000.png",
+        "music_ip/artwork/TRK-002_cover_3000x3000.png"
+      ],
+      "notes": "FAL_KEY 없이 PIL 로컬 생성으로 RouteNote 필수 커버 해소"
+    },
+    {
+      "area": "routenote",
+      "previous": "artwork_required_missing",
+      "status": "portal_ready_login_required",
+      "evidence": [
+        "music_ip/routenote/routenote_last_mile_manifest.json",
+        "TRK-001/002 submission_status.json"
+      ],
+      "notes": "필수 오디오+커버 준비 완료. 실제 제출은 계정 로그인/포털 승인 필요, credential 저장 금지 유지"
+    },
+    {
+      "area": "tracking_public_url",
+      "previous": "local_only_127_0_0_1",
+      "status": "resolved_stable_gateway_active",
+      "public_url": "https://f521895a4a2395.lhr.life",
+      "evidence": [
+        "public /health OK",
+        "public /t redirect 302 OK",
+        "cta rewrite manifest public URL 4개"
+      ],
+      "notes": "CTA에는 GitHub Pages 고정 track.html을 사용하고, track.html이 현재 tunnel public_tracking_url로 중계함. 터널 회전 시 data/tracking_public_url.json만 갱신하면 됨.",
+      "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html"
+    },
+    {
+      "area": "youtube_oauth",
+      "previous": "invalid_grant",
+      "status": "resolved_reauth_completed",
+      "evidence": [
+        "4 channel token files saved",
+        "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/data/analytics/youtube-analytics-2026-05-05.json",
+        "analytics status ok",
+        "subscribers 114",
+        "views 344059"
+      ],
+      "next_commands": [
+        "npm run youtube:reauth -- --channel kdowndan",
+        "npm run youtube:reauth -- --channel araelaver",
+        "npm run youtube:reauth -- --channel micheuhasi",
+        "npm run youtube:reauth -- --channel untabcompany",
+        "npm run youtube:analytics"
+      ],
+      "notes": "4개 채널 Google OAuth 재승인 완료. invalid_grant 해소 및 analytics 생성 확인."
+    }
+  ],
+  "public_tracking_url": "https://f521895a4a2395.lhr.life",
+  "tracking_tunnel": "localhost.run anonymous tunnel; keep ssh process alive",
+  "do_not_store_credentials": true,
+  "tunnel_history": [
+    {
+      "updated_at": "2026-05-05 20:41:19 KST",
+      "url": "https://f521895a4a2395.lhr.life",
+      "reason": "localhost.run tunnel rotated again"
+    },
+    {
+      "updated_at": "2026-05-05 20:21:18 KST",
+      "url": "https://f521895a4a2395.lhr.life",
+      "reason": "localhost.run tunnel rotated again/matched watch pattern"
+    },
+    {
+      "updated_at": "2026-05-05 20:00:46 KST",
+      "url": "https://f521895a4a2395.lhr.life",
+      "reason": "localhost.run tunnel rotated/matched watch pattern"
+    }
+  ],
+  "stable_tracking_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html"
+}
