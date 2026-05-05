@@ -36,8 +36,8 @@
   "cta_canonical_url_mode": "stable_gateway_to_current_tunnel",
   "current_backend_url": "https://efb4df1b262767.lhr.life",
   "mode": "stable_gateway_to_rotating_tunnel",
-  "last_rotated_at": "2026-05-05T22:06:06+09:00",
-  "last_updated": "2026-05-05T22:06:06+09:00",
+  "last_rotated_at": "2026-05-05T22:08:18+09:00",
+  "last_updated": "2026-05-05T22:08:18+09:00",
   "source": "sync_tracking_tunnel.py",
   "rotation_automation": {
     "status": "script_managed",
