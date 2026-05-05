@@ -1,7 +1,7 @@
 {
   "title": "Hermes Revenue Ops Dashboard",
   "subtitle": "오늘 발행량, 큐, 병목, 자동화 스케줄을 한눈에 보는 운영 대시보드입니다.",
-  "last_updated": "2026-05-06T00:12:33+09:00",
+  "last_updated": "2026-05-06T00:13:21+09:00",
   "system_status": "watch",
   "primary_goal": "오늘 발행 가능 물량 소진 완료 후 남은 revised 백로그 복구",
   "focus_areas": [
@@ -676,8 +676,8 @@
       "root_cause": "localhost.run anonymous tunnel rotates frequently.",
       "next_action": "sync_tracking_tunnel.py updates backend config/track fallback and deploys Pages; migrate to account-backed tunnel or Cloudflare/VPS for durable fix.",
       "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-      "current_backend_url": "https://4cbbbfcb5bdfe6.lhr.life",
-      "last_rotated_at": "2026-05-06T00:12:33+09:00"
+      "current_backend_url": "https://7dbe107368c849.lhr.life",
+      "last_rotated_at": "2026-05-06T00:13:21+09:00"
     }
   ],
   "hermes_feature_usage": {
@@ -1552,9 +1552,9 @@
   "tracking": {
     "status": "active_stable_gateway_backend_rotated",
     "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-    "public_tracking_url": "https://4cbbbfcb5bdfe6.lhr.life",
-    "current_backend_url": "https://4cbbbfcb5bdfe6.lhr.life",
-    "last_rotated_at": "2026-05-06T00:12:33+09:00",
+    "public_tracking_url": "https://7dbe107368c849.lhr.life",
+    "current_backend_url": "https://7dbe107368c849.lhr.life",
+    "last_rotated_at": "2026-05-06T00:13:21+09:00",
     "note": "localhost.run backend rotated; content CTA remains stable via GitHub Pages gateway.",
     "rotation_automation": "sync_tracking_tunnel.py",
     "backend_health_ok": true,
@@ -1567,11 +1567,11 @@
     "status_label": "provider_degraded",
     "summary": "localhost.run anonymous tunnel is repeatedly failing health checks.",
     "detail": "Stable gateway is preserved, but the current rotating backend is unhealthy.",
-    "current_backend": "https://c4dade0ecdecd2.lhr.life",
+    "current_backend": "https://4cbbbfcb5bdfe6.lhr.life",
     "gateway": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
     "root_cause": "exception kind=health error=RemoteDisconnected: Remote end closed connection without response",
     "next_action": "Use account-backed localhost.run, Cloudflare Tunnel, VPS reverse proxy, or custom tracking domain for durable public tracking.",
-    "updated_at": "2026-05-06T00:12:21+09:00"
+    "updated_at": "2026-05-06T00:13:09+09:00"
   },
   "tracking_gateway_status": "provider_degraded",
   "tracking_last_error": "exception kind=health error=RemoteDisconnected: Remote end closed connection without response"
