@@ -80,13 +80,13 @@
     }
   ],
   "stable_tracking_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-  "last_updated": "2026-05-05T23:16:17+09:00",
+  "last_updated": "2026-05-05T23:17:46+09:00",
   "tracking": {
     "status": "active_stable_gateway_backend_rotated",
     "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-    "public_tracking_url": "https://940453f356f11a.lhr.life",
-    "current_backend_url": "https://940453f356f11a.lhr.life",
-    "last_rotated_at": "2026-05-05T23:16:17+09:00",
+    "public_tracking_url": "https://d0f0bf88962d35.lhr.life",
+    "current_backend_url": "https://d0f0bf88962d35.lhr.life",
+    "last_rotated_at": "2026-05-05T23:17:46+09:00",
     "note": "localhost.run backend rotated; content CTA remains stable via GitHub Pages gateway.",
     "rotation_automation": "sync_tracking_tunnel.py",
     "backend_health_ok": true,
@@ -96,11 +96,11 @@
     "status_label": "provider_degraded",
     "summary": "localhost.run anonymous tunnel is repeatedly failing health checks.",
     "detail": "Stable gateway is preserved, but the current rotating backend is unhealthy.",
-    "current_backend": "https://7207e89676d959.lhr.life",
+    "current_backend": "https://940453f356f11a.lhr.life",
     "gateway": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-    "root_cause": "RemoteDisconnected: Remote end closed connection without response during final verification",
+    "root_cause": "exception kind=redirect error=RemoteDisconnected: Remote end closed connection without response",
     "next_action": "Use account-backed localhost.run, Cloudflare Tunnel, VPS reverse proxy, or custom tracking domain for durable public tracking.",
-    "updated_at": "2026-05-05T23:16:22+09:00"
+    "updated_at": "2026-05-05T23:17:34+09:00"
   },
   "bottleneck_board": {
     "tracking": {
@@ -109,10 +109,10 @@
       "root_cause": "localhost.run anonymous tunnel rotates frequently.",
       "next_action": "sync_tracking_tunnel.py updates backend config/track fallback and deploys Pages; migrate to account-backed tunnel or Cloudflare/VPS for durable fix.",
       "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-      "current_backend_url": "https://940453f356f11a.lhr.life",
-      "last_rotated_at": "2026-05-05T23:16:17+09:00"
+      "current_backend_url": "https://d0f0bf88962d35.lhr.life",
+      "last_rotated_at": "2026-05-05T23:17:46+09:00"
     }
   },
   "tracking_gateway_status": "provider_degraded",
-  "tracking_last_error": "RemoteDisconnected: Remote end closed connection without response during final verification"
+  "tracking_last_error": "exception kind=redirect error=RemoteDisconnected: Remote end closed connection without response"
 }
