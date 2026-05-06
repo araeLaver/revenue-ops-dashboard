@@ -1,152 +1,9 @@
 {
   "revenue_tracking": {
-    "last_healthcheck": "2026-05-06T03:08:00Z",
+    "last_healthcheck": "2026-05-06T03:24:56Z",
     "status": "ok",
-    "last_error": null,
-    "last_restart_attempted": false,
-    "health_url": "http://127.0.0.1:8431/health"
+    "last_error": ""
   },
-  "last_updated": "2026-05-06T12:20:43+09:00",
-  "tracking": {
-    "status": "active_stable_gateway_backend_rotated",
-    "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-    "public_tracking_url": "https://39502e0b17d572.lhr.life",
-    "current_backend_url": "https://39502e0b17d572.lhr.life",
-    "last_rotated_at": "2026-05-06T12:20:43+09:00",
-    "rotation_automation": "sync_tracking_tunnel.py",
-    "backend_health_ok": true,
-    "backend_redirect_ok": true,
-    "note": "localhost.run backend rotated; content CTA remains stable via GitHub Pages gateway."
-  },
-  "bottleneck_board": {
-    "tracking": {
-      "status": "watch",
-      "title": "CTA tracking backend",
-      "root_cause": "localhost.run anonymous tunnel rotates frequently.",
-      "next_action": "sync_tracking_tunnel.py updates backend config/track fallback and deploys Pages; migrate to account-backed tunnel or Cloudflare/VPS for durable fix.",
-      "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-      "current_backend_url": "https://39502e0b17d572.lhr.life",
-      "last_rotated_at": "2026-05-06T12:20:43+09:00"
-    }
-  },
-  "analytics_api_status": {
-    "updated_at": "2026-05-06T09:17:24+09:00",
-    "wordpress": {
-      "status": "ok",
-      "collected": true,
-      "file": "data/analytics/blog-analytics-2026-05-06.json",
-      "date": "2026-05-06",
-      "site_count": 3,
-      "recent_post_total": 60,
-      "has_wp_statistics": false,
-      "error": null
-    },
-    "youtube": {
-      "status": "ok",
-      "file": "data/analytics/youtube-analytics-2026-05-06.json",
-      "date": "2026-05-06",
-      "summary": {
-        "totalSubscribers": 114,
-        "totalViews": 344070,
-        "totalVideos": 709,
-        "uniqueChannels": 4
-      },
-      "warnings_count": 1,
-      "error": null
-    }
-  },
-  "conversion_event_rollup": {
-    "cta_click_events": {
-      "file": "data/analytics/cta_click_events.jsonl",
-      "exists": true,
-      "events": 843,
-      "valid_events": 843,
-      "invalid_lines": 0,
-      "first_timestamp": "2026-05-05T17:09:55+09:00",
-      "last_timestamp": "2026-05-06T09:17:02+09:00",
-      "top_keys": [
-        "content_id",
-        "event_id",
-        "ip_hash",
-        "placeholder",
-        "referrer",
-        "site",
-        "slot",
-        "target",
-        "timestamp",
-        "type",
-        "ua_hash"
-      ],
-      "latest_event_type": "cta_click"
-    },
-    "lead_events": {
-      "file": "data/analytics/lead_events.jsonl",
-      "exists": true,
-      "events": 1,
-      "valid_events": 1,
-      "invalid_lines": 0,
-      "first_timestamp": "2026-05-05T17:09:55+09:00",
-      "last_timestamp": "2026-05-05T17:09:55+09:00",
-      "top_keys": [
-        "content_id",
-        "email_hash",
-        "event_id",
-        "ip_hash",
-        "lead_type",
-        "note",
-        "offer_id",
-        "referrer",
-        "site",
-        "source",
-        "timestamp",
-        "type",
-        "ua_hash"
-      ],
-      "latest_event_type": "lead"
-    },
-    "revenue_event_log": {
-      "file": "data/analytics/revenue_events.jsonl",
-      "exists": true,
-      "events": 1,
-      "valid_events": 1,
-      "invalid_lines": 0,
-      "first_timestamp": "2026-05-05T17:09:55+09:00",
-      "last_timestamp": "2026-05-05T17:09:55+09:00",
-      "top_keys": [
-        "amount",
-        "content_id",
-        "currency",
-        "event_id",
-        "ip_hash",
-        "offer_id",
-        "order_ref_hash",
-        "referrer",
-        "site",
-        "source",
-        "timestamp",
-        "type",
-        "ua_hash"
-      ],
-      "latest_event_type": "revenue"
-    },
-    "canonical_conversion_events": {
-      "file": "data/conversion_events.jsonl",
-      "exists": true,
-      "events": 0,
-      "valid_events": 0,
-      "invalid_lines": 0,
-      "first_timestamp": null,
-      "last_timestamp": null,
-      "top_keys": [],
-      "latest_event_type": null
-    },
-    "updated_at": "2026-05-06T09:17:24+09:00",
-    "cta_clicks": 843,
-    "leads": 1,
-    "revenue_events": 1,
-    "latest_event_type": "cta_click"
-  },
-  "updated_at": "2026-05-06T09:17:24+09:00",
   "tracking_public_backend_status": {
     "area": "Tracking",
     "name": "Tracking",
@@ -154,12 +11,36 @@
     "status_label": "provider_degraded",
     "summary": "localhost.run anonymous tunnel is repeatedly failing health checks.",
     "detail": "Stable gateway is preserved, but the current rotating backend is unhealthy.",
-    "current_backend": "https://f218408ab0442f.lhr.life",
+    "current_backend": "https://f441f5e9145415.lhr.life",
     "gateway": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-    "root_cause": "http_error kind=redirect code=503",
+    "root_cause": "exception kind=health error=RemoteDisconnected: Remote end closed connection without response",
     "next_action": "Use account-backed localhost.run, Cloudflare Tunnel, VPS reverse proxy, or custom tracking domain for durable public tracking.",
-    "updated_at": "2026-05-06T12:20:07+09:00"
+    "updated_at": "2026-05-06T12:25:31+09:00"
   },
   "tracking_gateway_status": "provider_degraded",
-  "tracking_last_error": "http_error kind=redirect code=503"
+  "tracking_last_error": "exception kind=health error=RemoteDisconnected: Remote end closed connection without response",
+  "bottleneck_board": [
+    {
+      "area": "Tracking",
+      "status": "watch",
+      "title": "CTA tracking backend",
+      "root_cause": "localhost.run anonymous tunnel rotates frequently.",
+      "next_action": "sync_tracking_tunnel.py updates backend config/track fallback and deploys Pages; migrate to account-backed tunnel or Cloudflare/VPS for durable fix.",
+      "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
+      "current_backend_url": "https://91df4aabac982f.lhr.life",
+      "last_rotated_at": "2026-05-06T12:25:43+09:00"
+    }
+  ],
+  "last_updated": "2026-05-06T12:25:43+09:00",
+  "tracking": {
+    "status": "active_stable_gateway_backend_rotated",
+    "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
+    "public_tracking_url": "https://91df4aabac982f.lhr.life",
+    "current_backend_url": "https://91df4aabac982f.lhr.life",
+    "last_rotated_at": "2026-05-06T12:25:43+09:00",
+    "rotation_automation": "sync_tracking_tunnel.py",
+    "backend_health_ok": true,
+    "backend_redirect_ok": true,
+    "note": "localhost.run backend rotated; content CTA remains stable via GitHub Pages gateway."
+  }
 }
