@@ -1,16 +1,16 @@
 {
   "revenue_tracking": {
-    "last_healthcheck": "2026-05-05T23:55:23.519359+00:00",
-    "status": "down",
-    "last_error": "healthcheck_failed_http_none"
+    "last_healthcheck": "2026-05-06T00:11:04Z",
+    "status": "ok",
+    "last_error": ""
   },
-  "last_updated": "2026-05-06T09:00:36+09:00",
+  "last_updated": "2026-05-06T09:20:25+09:00",
   "tracking": {
     "status": "active_stable_gateway_backend_rotated",
     "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-    "public_tracking_url": "https://e45234ae00411e.lhr.life",
-    "current_backend_url": "https://e45234ae00411e.lhr.life",
-    "last_rotated_at": "2026-05-06T09:00:36+09:00",
+    "public_tracking_url": "https://47a666d791c832.lhr.life",
+    "current_backend_url": "https://47a666d791c832.lhr.life",
+    "last_rotated_at": "2026-05-06T09:20:25+09:00",
     "rotation_automation": "sync_tracking_tunnel.py",
     "backend_health_ok": true,
     "backend_redirect_ok": true,
@@ -23,8 +23,126 @@
       "root_cause": "localhost.run anonymous tunnel rotates frequently.",
       "next_action": "sync_tracking_tunnel.py updates backend config/track fallback and deploys Pages; migrate to account-backed tunnel or Cloudflare/VPS for durable fix.",
       "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-      "current_backend_url": "https://e45234ae00411e.lhr.life",
-      "last_rotated_at": "2026-05-06T09:00:36+09:00"
+      "current_backend_url": "https://47a666d791c832.lhr.life",
+      "last_rotated_at": "2026-05-06T09:20:25+09:00"
     }
-  }
+  },
+  "analytics_api_status": {
+    "updated_at": "2026-05-06T09:17:24+09:00",
+    "wordpress": {
+      "status": "ok",
+      "collected": true,
+      "file": "data/analytics/blog-analytics-2026-05-06.json",
+      "date": "2026-05-06",
+      "site_count": 3,
+      "recent_post_total": 60,
+      "has_wp_statistics": false,
+      "error": null
+    },
+    "youtube": {
+      "status": "ok",
+      "file": "data/analytics/youtube-analytics-2026-05-06.json",
+      "date": "2026-05-06",
+      "summary": {
+        "totalSubscribers": 114,
+        "totalViews": 344070,
+        "totalVideos": 709,
+        "uniqueChannels": 4
+      },
+      "warnings_count": 1,
+      "error": null
+    }
+  },
+  "conversion_event_rollup": {
+    "cta_click_events": {
+      "file": "data/analytics/cta_click_events.jsonl",
+      "exists": true,
+      "events": 843,
+      "valid_events": 843,
+      "invalid_lines": 0,
+      "first_timestamp": "2026-05-05T17:09:55+09:00",
+      "last_timestamp": "2026-05-06T09:17:02+09:00",
+      "top_keys": [
+        "content_id",
+        "event_id",
+        "ip_hash",
+        "placeholder",
+        "referrer",
+        "site",
+        "slot",
+        "target",
+        "timestamp",
+        "type",
+        "ua_hash"
+      ],
+      "latest_event_type": "cta_click"
+    },
+    "lead_events": {
+      "file": "data/analytics/lead_events.jsonl",
+      "exists": true,
+      "events": 1,
+      "valid_events": 1,
+      "invalid_lines": 0,
+      "first_timestamp": "2026-05-05T17:09:55+09:00",
+      "last_timestamp": "2026-05-05T17:09:55+09:00",
+      "top_keys": [
+        "content_id",
+        "email_hash",
+        "event_id",
+        "ip_hash",
+        "lead_type",
+        "note",
+        "offer_id",
+        "referrer",
+        "site",
+        "source",
+        "timestamp",
+        "type",
+        "ua_hash"
+      ],
+      "latest_event_type": "lead"
+    },
+    "revenue_event_log": {
+      "file": "data/analytics/revenue_events.jsonl",
+      "exists": true,
+      "events": 1,
+      "valid_events": 1,
+      "invalid_lines": 0,
+      "first_timestamp": "2026-05-05T17:09:55+09:00",
+      "last_timestamp": "2026-05-05T17:09:55+09:00",
+      "top_keys": [
+        "amount",
+        "content_id",
+        "currency",
+        "event_id",
+        "ip_hash",
+        "offer_id",
+        "order_ref_hash",
+        "referrer",
+        "site",
+        "source",
+        "timestamp",
+        "type",
+        "ua_hash"
+      ],
+      "latest_event_type": "revenue"
+    },
+    "canonical_conversion_events": {
+      "file": "data/conversion_events.jsonl",
+      "exists": true,
+      "events": 0,
+      "valid_events": 0,
+      "invalid_lines": 0,
+      "first_timestamp": null,
+      "last_timestamp": null,
+      "top_keys": [],
+      "latest_event_type": null
+    },
+    "updated_at": "2026-05-06T09:17:24+09:00",
+    "cta_clicks": 843,
+    "leads": 1,
+    "revenue_events": 1,
+    "latest_event_type": "cta_click"
+  },
+  "updated_at": "2026-05-06T09:17:24+09:00"
 }
