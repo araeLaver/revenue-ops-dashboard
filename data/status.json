@@ -1,32 +1,8 @@
 {
   "revenue_tracking": {
-    "last_healthcheck": "2026-05-06T12:28:50Z",
+    "last_healthcheck": "2026-05-06T12:45:01Z",
     "status": "ok",
-    "last_error": null,
-    "restarted_on_last_healthcheck": false
-  },
-  "last_updated": "2026-05-06T21:40:36+09:00",
-  "tracking": {
-    "status": "active_stable_gateway_backend_rotated",
-    "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-    "public_tracking_url": "https://b5a83b1f64fd57.lhr.life",
-    "current_backend_url": "https://b5a83b1f64fd57.lhr.life",
-    "last_rotated_at": "2026-05-06T21:40:36+09:00",
-    "rotation_automation": "sync_tracking_tunnel.py",
-    "backend_health_ok": true,
-    "backend_redirect_ok": true,
-    "note": "localhost.run backend rotated; content CTA remains stable via GitHub Pages gateway."
-  },
-  "bottleneck_board": {
-    "tracking": {
-      "status": "watch",
-      "title": "CTA tracking backend",
-      "root_cause": "localhost.run anonymous tunnel rotates frequently.",
-      "next_action": "sync_tracking_tunnel.py updates backend config/track fallback and deploys Pages; migrate to account-backed tunnel or Cloudflare/VPS for durable fix.",
-      "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-      "current_backend_url": "https://b5a83b1f64fd57.lhr.life",
-      "last_rotated_at": "2026-05-06T21:40:36+09:00"
-    }
+    "last_error": ""
   },
   "tracking_public_backend_status": {
     "area": "Tracking",
@@ -35,51 +11,36 @@
     "status_label": "provider_degraded",
     "summary": "localhost.run anonymous tunnel is repeatedly failing health checks.",
     "detail": "Stable gateway is preserved, but the current rotating backend is unhealthy.",
-    "current_backend": "https://9644972d6f5e82.lhr.life",
+    "current_backend": "https://b5a83b1f64fd57.lhr.life",
     "gateway": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-    "root_cause": "exception kind=health error=timeout: The read operation timed out",
+    "root_cause": "http_error kind=redirect code=503",
     "next_action": "Use account-backed localhost.run, Cloudflare Tunnel, VPS reverse proxy, or custom tracking domain for durable public tracking.",
-    "updated_at": "2026-05-06T20:20:14+09:00"
+    "updated_at": "2026-05-06T22:00:04+09:00"
   },
   "tracking_gateway_status": "provider_degraded",
-  "tracking_last_error": "exception kind=health error=timeout: The read operation timed out",
-  "queue_snapshot": {
-    "pending": 1,
-    "reviewed": 1,
-    "revised": 8,
-    "published": 288,
-    "rejected": 27
-  },
-  "format_queue": {
-    "pending": {
-      "wp": 1,
-      "shorts": 0,
-      "longform": 0,
-      "other": 0
-    },
-    "reviewed": {
-      "wp": 0,
-      "shorts": 0,
-      "longform": 1,
-      "other": 0
-    },
-    "revised": {
-      "wp": 1,
-      "shorts": 1,
-      "longform": 6,
-      "other": 0
-    },
-    "published": {
-      "wp": 213,
-      "shorts": 54,
-      "longform": 19,
-      "other": 2
-    },
-    "rejected": {
-      "wp": 3,
-      "shorts": 18,
-      "longform": 6,
-      "other": 0
+  "tracking_last_error": "http_error kind=redirect code=503",
+  "bottleneck_board": [
+    {
+      "area": "Tracking",
+      "status": "watch",
+      "title": "CTA tracking backend",
+      "root_cause": "localhost.run anonymous tunnel rotates frequently.",
+      "next_action": "sync_tracking_tunnel.py updates backend config/track fallback and deploys Pages; migrate to account-backed tunnel or Cloudflare/VPS for durable fix.",
+      "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
+      "current_backend_url": "https://09e025cc03282b.lhr.life",
+      "last_rotated_at": "2026-05-06T22:00:59+09:00"
     }
+  ],
+  "last_updated": "2026-05-06T22:00:59+09:00",
+  "tracking": {
+    "status": "active_stable_gateway_backend_rotated",
+    "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
+    "public_tracking_url": "https://09e025cc03282b.lhr.life",
+    "current_backend_url": "https://09e025cc03282b.lhr.life",
+    "last_rotated_at": "2026-05-06T22:00:59+09:00",
+    "rotation_automation": "sync_tracking_tunnel.py",
+    "backend_health_ok": true,
+    "backend_redirect_ok": true,
+    "note": "localhost.run backend rotated; content CTA remains stable via GitHub Pages gateway."
   }
 }
