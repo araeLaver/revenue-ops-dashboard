@@ -1,6 +1,6 @@
 {
   "updated_at": "2026-05-05 20:55:34 KST",
-  "public_tracking_url": "https://0fdcfddb09a453.lhr.life",
+  "public_tracking_url": "https://0f2a7f0af4c1cd.lhr.life",
   "kind": "ephemeral_localhost_run",
   "stable": false,
   "local_server": "http://127.0.0.1:8431",
@@ -1054,15 +1054,20 @@
       "updated_at": "2026-05-06T15:20:50+09:00",
       "url": "https://0fdcfddb09a453.lhr.life",
       "source": "sync_tracking_tunnel.py"
+    },
+    {
+      "updated_at": "2026-05-06T15:35:22+09:00",
+      "url": "https://0f2a7f0af4c1cd.lhr.life",
+      "source": "sync_tracking_tunnel.py"
     }
   ],
   "note": "Use stable_gateway_url in published CTA links. It fetches this file and forwards to public_tracking_url, so rotating lhr.life tunnel URLs do not need to be embedded in content.",
   "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
   "cta_canonical_url_mode": "stable_gateway_to_current_tunnel",
-  "current_backend_url": "https://0fdcfddb09a453.lhr.life",
+  "current_backend_url": "https://0f2a7f0af4c1cd.lhr.life",
   "mode": "stable_gateway_to_rotating_tunnel",
-  "last_rotated_at": "2026-05-06T15:20:50+09:00",
-  "last_updated": "2026-05-06T15:20:50+09:00",
+  "last_rotated_at": "2026-05-06T15:35:22+09:00",
+  "last_updated": "2026-05-06T15:35:22+09:00",
   "source": "sync_tracking_tunnel.py",
   "rotation_automation": {
     "status": "script_managed",

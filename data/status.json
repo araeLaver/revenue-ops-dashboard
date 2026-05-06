@@ -1,17 +1,17 @@
 {
   "revenue_tracking": {
-    "last_healthcheck": "2026-05-06T06:05:39Z",
+    "last_healthcheck": "2026-05-06T06:25:01Z",
     "status": "ok",
-    "last_error": "",
+    "last_error": null,
     "restarted_on_last_healthcheck": false
   },
-  "last_updated": "2026-05-06T15:20:50+09:00",
+  "last_updated": "2026-05-06T15:35:22+09:00",
   "tracking": {
     "status": "active_stable_gateway_backend_rotated",
     "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-    "public_tracking_url": "https://0fdcfddb09a453.lhr.life",
-    "current_backend_url": "https://0fdcfddb09a453.lhr.life",
-    "last_rotated_at": "2026-05-06T15:20:50+09:00",
+    "public_tracking_url": "https://0f2a7f0af4c1cd.lhr.life",
+    "current_backend_url": "https://0f2a7f0af4c1cd.lhr.life",
+    "last_rotated_at": "2026-05-06T15:35:22+09:00",
     "rotation_automation": "sync_tracking_tunnel.py",
     "backend_health_ok": true,
     "backend_redirect_ok": true,
@@ -24,8 +24,8 @@
       "root_cause": "localhost.run anonymous tunnel rotates frequently.",
       "next_action": "sync_tracking_tunnel.py updates backend config/track fallback and deploys Pages; migrate to account-backed tunnel or Cloudflare/VPS for durable fix.",
       "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-      "current_backend_url": "https://0fdcfddb09a453.lhr.life",
-      "last_rotated_at": "2026-05-06T15:20:50+09:00"
+      "current_backend_url": "https://0f2a7f0af4c1cd.lhr.life",
+      "last_rotated_at": "2026-05-06T15:35:22+09:00"
     }
   },
   "tracking_public_backend_status": {
@@ -35,12 +35,12 @@
     "status_label": "provider_degraded",
     "summary": "localhost.run anonymous tunnel is repeatedly failing health checks.",
     "detail": "Stable gateway is preserved, but the current rotating backend is unhealthy.",
-    "current_backend": "https://64555e30406d01.lhr.life",
+    "current_backend": "https://880c6a3d30cbd5.lhr.life",
     "gateway": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-    "root_cause": "http_error kind=health code=503",
+    "root_cause": "sync_failed rc=nonzero",
     "next_action": "Use account-backed localhost.run, Cloudflare Tunnel, VPS reverse proxy, or custom tracking domain for durable public tracking.",
-    "updated_at": "2026-05-06T15:20:19+09:00"
+    "updated_at": "2026-05-06T15:35:09+09:00"
   },
   "tracking_gateway_status": "provider_degraded",
-  "tracking_last_error": "http_error kind=health code=503"
+  "tracking_last_error": "sync_failed rc=nonzero"
 }
