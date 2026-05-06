@@ -1,15 +1,15 @@
 {
   "revenue_tracking": {
-    "last_healthcheck": "2026-05-06T23:06:03+09:00",
+    "last_healthcheck": "2026-05-06T23:38:40+09:00",
     "status": "ok",
-    "last_error": null
+    "last_error": ""
   },
-  "last_updated": "2026-05-06T23:20:37+09:00",
+  "last_updated": "2026-05-06T23:40:29+09:00",
   "queue_snapshot": {
     "pending": 0,
     "reviewed": 0,
-    "revised": 7,
-    "published": 291,
+    "revised": 5,
+    "published": 293,
     "rejected": 27
   },
   "format_queue": {
@@ -27,15 +27,15 @@
     },
     "revised": {
       "wp": 0,
-      "shorts": 1,
-      "longform": 6,
+      "shorts": 0,
+      "longform": 5,
       "other": 0
     },
     "published": {
       "wp": 215,
-      "shorts": 54,
+      "shorts": 53,
       "longform": 20,
-      "other": 2
+      "other": 5
     },
     "rejected": {
       "wp": 3,
@@ -47,9 +47,9 @@
   "tracking": {
     "status": "active_stable_gateway_backend_rotated",
     "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-    "public_tracking_url": "https://a69211fa62f475.lhr.life",
-    "current_backend_url": "https://a69211fa62f475.lhr.life",
-    "last_rotated_at": "2026-05-06T23:20:37+09:00",
+    "public_tracking_url": "https://fcf52fbb3e775a.lhr.life",
+    "current_backend_url": "https://fcf52fbb3e775a.lhr.life",
+    "last_rotated_at": "2026-05-06T23:40:29+09:00",
     "rotation_automation": "sync_tracking_tunnel.py",
     "backend_health_ok": true,
     "backend_redirect_ok": true,
@@ -62,8 +62,8 @@
       "root_cause": "localhost.run anonymous tunnel rotates frequently.",
       "next_action": "sync_tracking_tunnel.py updates backend config/track fallback and deploys Pages; migrate to account-backed tunnel or Cloudflare/VPS for durable fix.",
       "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-      "current_backend_url": "https://a69211fa62f475.lhr.life",
-      "last_rotated_at": "2026-05-06T23:20:37+09:00"
+      "current_backend_url": "https://fcf52fbb3e775a.lhr.life",
+      "last_rotated_at": "2026-05-06T23:40:29+09:00"
     }
   },
   "tracking_backend_fixed_transition": {
@@ -76,5 +76,84 @@
     "recommended_next": "cloudflare_named_tunnel_or_vps_reverse_proxy",
     "checklist": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/docs/fixed_tracking_backend_checklist.md",
     "updated_at": "2026-05-06T22:55:08+09:00"
+  },
+  "growth_ops": {
+    "updated_at": "2026-05-06T23:33:21+09:00",
+    "status": "active_growth_ops_configured",
+    "latest_published": [
+      {
+        "type": "shorts",
+        "channel": "kdowndan",
+        "url": "https://www.youtube.com/shorts/rhlDtsAzJMw",
+        "purpose": "views_subscriber_growth"
+      },
+      {
+        "type": "longform",
+        "channel": "untabcompany",
+        "url": "https://www.youtube.com/watch?v=37izZcWMvW0",
+        "purpose": "finance_trust_wp_revenue_bridge"
+      }
+    ],
+    "queue": {
+      "pending": {
+        "total": 0,
+        "wp": 0,
+        "shorts": 0,
+        "longform": 0,
+        "other": 0
+      },
+      "reviewed": {
+        "total": 0,
+        "wp": 0,
+        "shorts": 0,
+        "longform": 0,
+        "other": 0
+      },
+      "revised": {
+        "total": 5,
+        "wp": 0,
+        "shorts": 0,
+        "longform": 5,
+        "other": 0
+      },
+      "published": {
+        "total": 293,
+        "wp": 215,
+        "shorts": 53,
+        "longform": 20,
+        "other": 5
+      },
+      "rejected": {
+        "total": 27,
+        "wp": 3,
+        "shorts": 18,
+        "longform": 6,
+        "other": 0
+      }
+    },
+    "youtube_quota": {
+      "used": 8000,
+      "uploads": 5,
+      "safe_limit": 9600,
+      "remaining": 1600
+    },
+    "wp_revenue_growth_system": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/docs/wp_revenue_growth_system.md",
+    "youtube_growth_packaging_system": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/docs/youtube_growth_packaging_system.md",
+    "hermes_productivity_monetization_loop": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/docs/hermes_productivity_monetization_loop.md",
+    "lead_capture_page": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/lead_capture/lead.html",
+    "next_actions": [
+      "남은 Longform 5건은 source URL 0개라 공식 출처 보강 후만 발행",
+      "오늘 남은 YT slot 1개는 quota 보호를 위해 즉시 소진보다 다음 high-quality 후보 대기 권장",
+      "WP pageview analytics 연결 또는 임시 pageview event 추가",
+      "lead_capture lead.html을 GitHub Pages/고정 backend와 연결",
+      "Cloudflare Tunnel named backend 전환"
+    ],
+    "kpis": {
+      "baseline_cta_clicks": "2406+",
+      "baseline_leads": 1,
+      "baseline_revenue_events": 1,
+      "target_7d_leads": 5,
+      "target_30d_leads": 30
+    }
   }
 }
