@@ -1,20 +1,20 @@
 {
   "revenue_tracking": {
-    "last_healthcheck": "2026-05-06T13:34:28Z",
-    "status": "healthy",
-    "last_error": ""
+    "last_healthcheck": "2026-05-06T13:50:20Z",
+    "status": "ok",
+    "last_error": null
   },
-  "last_updated": "2026-05-06T22:40:41+09:00",
+  "last_updated": "2026-05-06T23:00:54+09:00",
   "queue_snapshot": {
-    "pending": 1,
+    "pending": 0,
     "reviewed": 0,
-    "revised": 8,
-    "published": 289,
+    "revised": 7,
+    "published": 291,
     "rejected": 27
   },
   "format_queue": {
     "pending": {
-      "wp": 1,
+      "wp": 0,
       "shorts": 0,
       "longform": 0,
       "other": 0
@@ -26,13 +26,13 @@
       "other": 0
     },
     "revised": {
-      "wp": 1,
+      "wp": 0,
       "shorts": 1,
       "longform": 6,
       "other": 0
     },
     "published": {
-      "wp": 213,
+      "wp": 215,
       "shorts": 54,
       "longform": 20,
       "other": 2
@@ -47,9 +47,9 @@
   "tracking": {
     "status": "active_stable_gateway_backend_rotated",
     "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-    "public_tracking_url": "https://cb88936162b39a.lhr.life",
-    "current_backend_url": "https://cb88936162b39a.lhr.life",
-    "last_rotated_at": "2026-05-06T22:40:41+09:00",
+    "public_tracking_url": "https://62fe2efb5d0ecc.lhr.life",
+    "current_backend_url": "https://62fe2efb5d0ecc.lhr.life",
+    "last_rotated_at": "2026-05-06T23:00:54+09:00",
     "rotation_automation": "sync_tracking_tunnel.py",
     "backend_health_ok": true,
     "backend_redirect_ok": true,
@@ -62,8 +62,19 @@
       "root_cause": "localhost.run anonymous tunnel rotates frequently.",
       "next_action": "sync_tracking_tunnel.py updates backend config/track fallback and deploys Pages; migrate to account-backed tunnel or Cloudflare/VPS for durable fix.",
       "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-      "current_backend_url": "https://cb88936162b39a.lhr.life",
-      "last_rotated_at": "2026-05-06T22:40:41+09:00"
+      "current_backend_url": "https://62fe2efb5d0ecc.lhr.life",
+      "last_rotated_at": "2026-05-06T23:00:54+09:00"
     }
+  },
+  "tracking_backend_fixed_transition": {
+    "status": "pending_fixed_backend",
+    "current_mode": "localhost_run_anonymous_ephemeral",
+    "local_tracking_server": "http://127.0.0.1:8431",
+    "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
+    "public_backend_health_latest": "ok_at_check_time_but_not_durable",
+    "provider_degraded_reason": "anonymous localhost.run has repeated rotation/503/empty-reply/timeouts",
+    "recommended_next": "cloudflare_named_tunnel_or_vps_reverse_proxy",
+    "checklist": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/docs/fixed_tracking_backend_checklist.md",
+    "updated_at": "2026-05-06T22:55:08+09:00"
   }
 }
