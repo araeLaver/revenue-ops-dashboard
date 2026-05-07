@@ -1,0 +1,51 @@
+{
+  "_description": "Hermes CTA 라이브러리 전용 플레이스홀더 → 실제 URL 매핑.",
+  "_note": "[COUPANG_LINK_1/2/3]과 [LINKPRICE_LINK_1/2]는 37_blog-auto/coupang-links.js, linkprice-links.js가 발행 시 자동 치환. 여기서는 건드리지 않음.",
+  "wp_links": {
+    "unpre": {
+      "[COUPANG_LINK]": "https://www.coupang.com/np/search?q=%EC%9E%AC%ED%85%8C%ED%81%AC+%EB%B2%A0%EC%8A%A4%ED%8A%B8%EC%85%80%EB%9F%AC&channel=user&sourceType=affiliate&sort=scoreDesc&rating=4&trackingCode=AF5249936",
+      "[AFFILIATE_LINK]": "https://unpre.co.kr/category/finance/",
+      "[LEAD_FORM_LINK]": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=unpre&backend=https://fcf52fbb3e775a.lhr.life",
+      "[LINKPRICE_LINK]": "https://lpweb.kr/click.php?m=udemy&a=A100703472&l=0000"
+    },
+    "untab": {
+      "[COUPANG_LINK]": "https://www.coupang.com/np/search?q=%EC%A0%95%EB%B6%80%EC%A7%80%EC%9B%90%EA%B8%88+%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81&channel=user&sourceType=affiliate&sort=scoreDesc&rating=4&trackingCode=AF5249936",
+      "[AFFILIATE_LINK]": "https://untab.co.kr/category/government-support/",
+      "[LEAD_FORM_LINK]": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=untab&backend=https://fcf52fbb3e775a.lhr.life",
+      "[SERVICE_LINK]": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=untab&backend=https://fcf52fbb3e775a.lhr.life&intent=service_inquiry"
+    },
+    "skewese": {
+      "[COUPANG_LINK]": "https://www.coupang.com/np/search?q=%EC%98%A4%EB%A9%94%EA%B0%803+rTG+%EA%B3%A0%ED%95%A8%EB%9F%89&channel=user&sourceType=affiliate&sort=scoreDesc&rating=4&trackingCode=AF5249936",
+      "[LINKPRICE_LINK]": "https://lpweb.kr/click.php?m=soomgo&a=A100703472&l=0000",
+      "[LEAD_FORM_LINK]": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=skewese&backend=https://fcf52fbb3e775a.lhr.life",
+      "[AFFILIATE_LINK]": "https://skewese.com/category/health/"
+    }
+  },
+  "yt_links": {
+    "_note": "YT 설명란 링크. publish-shorts.mjs/publish-longform.mjs에서 descriptionSuffix로 이미 처리.",
+    "araelaver": {
+      "blog_link": "https://unpre.co.kr",
+      "subscribe_link": "https://www.youtube.com/@araelaver?sub_confirmation=1"
+    },
+    "kdowndan": {
+      "blog_link": "https://unpre.co.kr",
+      "subscribe_link": "https://www.youtube.com/@kdowndan?sub_confirmation=1"
+    },
+    "micheuhasi": {
+      "blog_link": "https://unpre.co.kr",
+      "subscribe_link": "https://www.youtube.com/@micheuhasi?sub_confirmation=1"
+    },
+    "untabcompany": {
+      "blog_link": "https://unpre.co.kr",
+      "subscribe_link": "https://www.youtube.com/@untabcompany?sub_confirmation=1"
+    }
+  },
+  "coupang_dynamic": {
+    "_note": "주제별 동적 쿠팡 링크. coupang_optimizer.py 키워드 → 검색 URL.",
+    "base_url": "https://www.coupang.com/np/search?component=&q=",
+    "tracking_suffix": "&channel=user&sourceType=affiliate&sort=scoreDesc&rating=4&trackingCode=AF5249936",
+    "partner_id": "AF5249936"
+  },
+  "_updated_at": "2026-05-07T22:36:11+09:00",
+  "_conversion_fix": "lead placeholders now route to GitHub Pages lead.html with current tracking backend param"
+}

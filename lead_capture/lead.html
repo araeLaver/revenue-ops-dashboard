@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>무료 체크리스트 신청 | Hermes Revenue Ops</title>
+  <style>
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#0f172a;color:#e5e7eb;margin:0;padding:32px;line-height:1.65}
+    .wrap{max-width:760px;margin:0 auto;background:#111827;border:1px solid #334155;border-radius:20px;padding:28px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+    h1{margin:0 0 8px;font-size:28px}.sub{color:#94a3b8;margin-bottom:24px}.grid{display:grid;gap:14px}
+    label{font-weight:700;color:#cbd5e1}.field{display:grid;gap:6px}input,select,textarea{width:100%;box-sizing:border-box;border-radius:12px;border:1px solid #475569;background:#020617;color:#f8fafc;padding:12px;font-size:16px}
+    button{border:0;border-radius:12px;background:#22c55e;color:#04130a;font-weight:900;padding:14px 18px;font-size:17px;cursor:pointer}.small{font-size:13px;color:#94a3b8}.ok{display:none;background:#052e16;border:1px solid #16a34a;color:#bbf7d0;padding:12px;border-radius:12px;margin-top:16px}.err{display:none;background:#450a0a;border:1px solid #ef4444;color:#fecaca;padding:12px;border-radius:12px;margin-top:16px}
+    .asset{background:#020617;border:1px solid #1e293b;border-radius:12px;padding:14px;margin:16px 0;color:#cbd5e1}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>무료 체크리스트 신청</h1>
+    <p class="sub">재테크·지원금·영양제 체크리스트를 이메일로 받을 수 있게 준비한 임시 신청 페이지입니다.</p>
+    <div class="asset" id="assetBox">신청 유형을 선택하면 받을 자료가 표시됩니다.</div>
+    <form id="leadForm" class="grid">
+      <div class="field"><label>신청 유형</label><select name="site" id="site">
+        <option value="unpre">재테크·보험료 절약 체크리스트</option>
+        <option value="untab">지원금 신청 자가진단 체크리스트</option>
+        <option value="skewese">영양제 조합 가이드</option>
+      </select></div>
+      <div class="field"><label>이메일</label><input name="email" type="email" placeholder="you@example.com" required /></div>
+      <div class="field"><label>관심 내용</label><textarea name="note" rows="4" placeholder="예: IRP/연금저축 계산, 지원금 자격, 오메가3 추천 등"></textarea></div>
+      <label class="small"><input type="checkbox" required /> 자료 발송과 운영 개선 목적의 최소 정보 수집에 동의합니다.</label>
+      <button type="submit">무료 자료 신청하기</button>
+    </form>
+    <div class="ok" id="okBox">신청 기록이 저장됐습니다. 실제 이메일 자동발송 연결 전까지는 운영자가 수동 확인합니다.</div>
+    <div class="err" id="errBox">신청 저장에 실패했습니다. 잠시 후 다시 시도해 주세요.</div>
+    <p class="small">개인 민감정보는 입력하지 마세요. 이메일은 브라우저에서 SHA-256 해시 처리 후 전송합니다.</p>
+  </main>
+<script>
+const assets={unpre:'재테크·보험료 절약 체크리스트',untab:'지원금 신청 자가진단 체크리스트',skewese:'영양제 조합 가이드'};
+const stable='https://araelaver.github.io/revenue-ops-dashboard/track.html';
+const defaultBackend='https://fcf52fbb3e775a.lhr.life';
+const backendParams=new URLSearchParams(location.search);
+function updateAsset(){assetBox.textContent='받을 자료: '+assets[site.value];} site.addEventListener('change',updateAsset); updateAsset();
+async function sha256(s){const b=new TextEncoder().encode(s.trim().toLowerCase());const h=await crypto.subtle.digest('SHA-256',b);return Array.from(new Uint8Array(h)).map(x=>x.toString(16).padStart(2,'0')).join('');}
+document.getElementById('leadForm').addEventListener('submit',async e=>{
+  e.preventDefault(); okBox.style.display='none'; errBox.style.display='none';
+  const fd=new FormData(e.target); const site=fd.get('site'); const email=fd.get('email'); const note=fd.get('note')||'';
+  const payload={site,content_id:new URLSearchParams(location.search).get('content_id')||'lead-page',offer_id:site+'_lead_magnet',lead_type:assets[site],email_hash:await sha256(email),source:'lead_capture_page',note:String(note).slice(0,500)};
+  const target='/lead';
+  try{
+    const url=stable+'?site='+encodeURIComponent(site)+'&slot=lead&offer_id='+encodeURIComponent(payload.offer_id)+'&content_id='+encodeURIComponent(payload.content_id)+'&target='+encodeURIComponent(target);
+    const direct=(new URLSearchParams(location.search).get('backend')||'').replace(/\/$/,'');
+    const endpoint=(direct||defaultBackend)? (direct||defaultBackend)+'/lead' : target;
+    const res=await fetch(endpoint,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});
+    if(!res.ok) throw new Error('bad status'); okBox.style.display='block'; e.target.reset(); updateAsset();
+  }catch(err){errBox.style.display='block';}
+});
+</script>
+</body>
+</html>

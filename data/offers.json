@@ -1,0 +1,138 @@
+{
+  "_description": "사이트/채널별 오퍼 정의. CTA 라이브러리와 post_processor가 참조.",
+  "wp_offers": {
+    "unpre": {
+      "niche": "보험/금융/대출/재테크",
+      "primary_offer": {
+        "type": "affiliate",
+        "name": "금융상품 비교 제휴",
+        "cta_action": "무료 견적 비교하기",
+        "description": "보험다모아/핀다/토스 등 금융 비교 서비스 제휴 링크"
+      },
+      "secondary_offer": {
+        "type": "coupang_affiliate",
+        "name": "쿠팡 재테크 도서",
+        "cta_action": "베스트셀러 확인하기",
+        "description": "재테크/투자/보험 관련 도서 쿠팡 파트너스"
+      },
+      "lead_magnet": {
+        "type": "lead_capture",
+        "name": "재테크 체크리스트 PDF",
+        "cta_action": "무료 체크리스트 받기",
+        "description": "20-30대 재테크 시작 체크리스트, 보험료 절약 체크리스트 등",
+        "delivery": "구글폼 → 이메일 자동 발송"
+      },
+      "cta_slots": {
+        "section_1": "secondary_offer",
+        "section_3": "primary_offer",
+        "conclusion": "lead_magnet"
+      }
+    },
+    "untab": {
+      "niche": "정부지원금/복지/소상공인",
+      "primary_offer": {
+        "type": "lead_capture",
+        "name": "지원금 신청 체크리스트",
+        "cta_action": "무료 체크리스트 받기",
+        "description": "월별 지원금 신청 일정 + 자격 자가진단 체크리스트"
+      },
+      "secondary_offer": {
+        "type": "coupang_affiliate",
+        "name": "쿠팡 경영/창업 도서",
+        "cta_action": "추천 도서 보기",
+        "description": "소상공인 경영, 청년 재테크 도서"
+      },
+      "service_offer": {
+        "type": "service_inquiry",
+        "name": "지원금 신청 대행 문의",
+        "cta_action": "무료 상담 신청하기",
+        "description": "복잡한 지원금 서류 작성/신청 대행 상담",
+        "delivery": "카카오톡 채널 or 구글폼"
+      },
+      "cta_slots": {
+        "section_1": "secondary_offer",
+        "section_3": "primary_offer",
+        "conclusion": "service_offer"
+      }
+    },
+    "skewese": {
+      "niche": "건강/다이어트/영양제",
+      "primary_offer": {
+        "type": "coupang_affiliate",
+        "name": "쿠팡 영양제 직접 링크",
+        "cta_action": "최저가 확인하기",
+        "description": "오메가3, 글루코사민, 프로바이오틱스 등 쿠팡 파트너스 직접 상품 링크"
+      },
+      "secondary_offer": {
+        "type": "linkprice_affiliate",
+        "name": "링크프라이스 건강식품",
+        "cta_action": "할인가 확인하기",
+        "description": "아이허브/GNC 등 건강식품 브랜드 제휴"
+      },
+      "lead_magnet": {
+        "type": "lead_capture",
+        "name": "영양제 조합 가이드 PDF",
+        "cta_action": "무료 가이드 받기",
+        "description": "나이/목적별 영양제 조합 추천 가이드",
+        "delivery": "구글폼 → 이메일 자동 발송"
+      },
+      "cta_slots": {
+        "section_1": "primary_offer",
+        "section_3": "secondary_offer",
+        "conclusion": "lead_magnet"
+      }
+    }
+  },
+  "yt_offers": {
+    "araelaver": {
+      "theme": "역사/세계사/미스터리",
+      "primary_cta": "구독 + 알림",
+      "secondary_cta": "롱폼 시청 유도",
+      "description_link": "wp:unpre 관련 블로그 글 링크",
+      "end_screen": "다음 에피소드 예고 + 구독 버튼"
+    },
+    "kdowndan": {
+      "theme": "공포/괴담",
+      "primary_cta": "구독 + 알림",
+      "secondary_cta": "롱폼 시청 유도",
+      "description_link": "wp:unpre 관련 블로그 글 링크",
+      "end_screen": "다음 에피소드 예고 + 구독 버튼"
+    },
+    "micheuhasi": {
+      "theme": "MBTI/심리/연애",
+      "primary_cta": "구독 + 알림",
+      "secondary_cta": "롱폼 시청 유도",
+      "description_link": "wp:unpre 관련 블로그 글 링크",
+      "end_screen": "다음 에피소드 예고 + 구독 버튼"
+    },
+    "untabcompany": {
+      "theme": "투자/재테크",
+      "primary_cta": "구독 + 알림",
+      "secondary_cta": "롱폼 시청 유도",
+      "description_link": "wp:unpre 재테크 블로그 글 링크",
+      "end_screen": "다음 에피소드 예고 + 구독 버튼"
+    }
+  },
+  "lead_capture_setup": {
+    "status": "interim_lead_page_connected",
+    "updated_at": "2026-05-07T22:34:38+09:00",
+    "assets_dir": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/lead_capture",
+    "manifest": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/lead_capture/lead_capture_forms_manifest.json",
+    "prepared_assets": [
+      "unpre_재테크_보험료_절약_체크리스트.md",
+      "untab_지원금_신청_자가진단_체크리스트.md",
+      "skewese_영양제_조합_가이드.md"
+    ],
+    "remaining_steps": [
+      "임시 lead.html은 연결 완료. 다음 단계는 Google Forms/이메일 자동발송 또는 CRM으로 교체",
+      "Cloudflare/VPS 고정 tracking backend 전환 후 backend 파라미터 고정 URL로 교체",
+      "WP live old posts CTA 재작성 또는 상위 클릭 글부터 수동 업데이트"
+    ],
+    "form_urls": {
+      "unpre": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=unpre&backend=https://fcf52fbb3e775a.lhr.life",
+      "untab": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=untab&backend=https://fcf52fbb3e775a.lhr.life",
+      "skewese": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=skewese&backend=https://fcf52fbb3e775a.lhr.life",
+      "kakao_channel": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=untab&backend=https://fcf52fbb3e775a.lhr.life"
+    }
+  }
+}
