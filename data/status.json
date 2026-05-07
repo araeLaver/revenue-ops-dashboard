@@ -1,16 +1,16 @@
 {
   "revenue_tracking": {
-    "last_healthcheck": "2026-05-07T13:29:35Z",
+    "last_healthcheck": "2026-05-07T14:01:16.478866Z",
     "status": "ok",
     "last_error": null
   },
-  "last_updated": "2026-05-07T22:37:32+09:00",
+  "last_updated": "2026-05-07T23:07:49+09:00",
   "tracking": {
     "status": "active_stable_gateway_backend_rotated",
     "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-    "public_tracking_url": "https://cd593c06f7bb71.lhr.life",
-    "current_backend_url": "https://cd593c06f7bb71.lhr.life",
-    "last_rotated_at": "2026-05-07T22:37:32+09:00",
+    "public_tracking_url": "https://4083f386b4e181.lhr.life",
+    "current_backend_url": "https://4083f386b4e181.lhr.life",
+    "last_rotated_at": "2026-05-07T23:07:49+09:00",
     "rotation_automation": "sync_tracking_tunnel.py",
     "backend_health_ok": true,
     "backend_redirect_ok": true,
@@ -23,8 +23,80 @@
       "root_cause": "localhost.run anonymous tunnel rotates frequently.",
       "next_action": "sync_tracking_tunnel.py updates backend config/track fallback and deploys Pages; migrate to account-backed tunnel or Cloudflare/VPS for durable fix.",
       "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-      "current_backend_url": "https://cd593c06f7bb71.lhr.life",
-      "last_rotated_at": "2026-05-07T22:37:32+09:00"
+      "current_backend_url": "https://4083f386b4e181.lhr.life",
+      "last_rotated_at": "2026-05-07T23:07:49+09:00"
     }
-  }
+  },
+  "queue": {
+    "pending": {
+      "total": 0,
+      "wp": 0,
+      "shorts": 0,
+      "longform": 0,
+      "other": 0
+    },
+    "reviewed": {
+      "total": 3,
+      "wp": 0,
+      "shorts": 0,
+      "longform": 3,
+      "other": 0
+    },
+    "revised": {
+      "total": 2,
+      "wp": 0,
+      "shorts": 2,
+      "longform": 0,
+      "other": 0
+    },
+    "published": {
+      "total": 314,
+      "wp": 231,
+      "shorts": 56,
+      "longform": 22,
+      "other": 5
+    },
+    "rejected": {
+      "total": 28,
+      "wp": 3,
+      "shorts": 19,
+      "longform": 6,
+      "other": 0
+    }
+  },
+  "youtube_quota": {
+    "date": "2026-05-07",
+    "used": 4800,
+    "uploads": 3,
+    "remaining": 4800,
+    "uploads_remaining": 3,
+    "safe_limit": 9600
+  },
+  "wp_conversion_fix": {
+    "status": "interim_lead_capture_connected_and_smoke_tested",
+    "public_lead_page": "https://araelaver.github.io/revenue-ops-dashboard/lead.html",
+    "backend": "https://cd593c06f7bb71.lhr.life",
+    "smoke": "POST /lead returned 200 and event_id generated",
+    "changed_files": [
+      "lead.html",
+      "lead_capture/lead.html",
+      "data/offers.json",
+      "data/link_registry.json",
+      "lead_capture/lead_capture_forms_manifest.json",
+      "scripts/cta_library.py"
+    ],
+    "remaining_risk": "localhost.run backend is still ephemeral; fixed Cloudflare/VPS backend required for durable conversion capture"
+  },
+  "longform_quality_fix": {
+    "status": "all_revised_longform_promoted_to_reviewed",
+    "fixed_count": 3,
+    "source_urls_added_per_file": 4,
+    "qa": "3/3 PASS at 8.0 threshold",
+    "publish_note": "reviewed inventory ready; publish after quota/cap confirmation due same-day historical mismatch"
+  },
+  "current_bottlenecks": [
+    "WP lead capture now connected, but backend is still ephemeral localhost.run; fixed backend required",
+    "Old already-published WP posts may still contain weaker historical CTAs; update top-click posts next",
+    "Longform 3 reviewed ready, but publish should respect daily quota/cap reconciliation"
+  ]
 }
