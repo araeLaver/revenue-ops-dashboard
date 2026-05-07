@@ -1,16 +1,16 @@
 {
   "revenue_tracking": {
-    "last_healthcheck": "2026-05-07T14:17:59Z",
+    "last_healthcheck": "2026-05-07T14:34:17Z",
     "status": "ok",
-    "last_error": ""
+    "last_error": null
   },
-  "last_updated": "2026-05-07T23:20:21+09:00",
+  "last_updated": "2026-05-07T23:40:23+09:00",
   "tracking": {
     "status": "active_stable_gateway_backend_rotated",
     "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-    "public_tracking_url": "https://46b601fe3888b7.lhr.life",
-    "current_backend_url": "https://46b601fe3888b7.lhr.life",
-    "last_rotated_at": "2026-05-07T23:20:21+09:00",
+    "public_tracking_url": "https://eae1bed9c85d5b.lhr.life",
+    "current_backend_url": "https://eae1bed9c85d5b.lhr.life",
+    "last_rotated_at": "2026-05-07T23:40:23+09:00",
     "rotation_automation": "sync_tracking_tunnel.py",
     "backend_health_ok": true,
     "backend_redirect_ok": true,
@@ -23,8 +23,182 @@
       "root_cause": "localhost.run anonymous tunnel rotates frequently.",
       "next_action": "sync_tracking_tunnel.py updates backend config/track fallback and deploys Pages; migrate to account-backed tunnel or Cloudflare/VPS for durable fix.",
       "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-      "current_backend_url": "https://46b601fe3888b7.lhr.life",
-      "last_rotated_at": "2026-05-07T23:20:21+09:00"
+      "current_backend_url": "https://eae1bed9c85d5b.lhr.life",
+      "last_rotated_at": "2026-05-07T23:40:23+09:00"
     }
+  },
+  "revenue_ops_live_fix": {
+    "updated_at": "2026-05-07T23:25:37+0900",
+    "wp_conversion_fix": {
+      "status": "lead_path_operational_but_tunnel_ephemeral",
+      "public_backend_url": "https://46b601fe3888b7.lhr.life",
+      "backend_health": "ok",
+      "lead_post_smoke": "ok",
+      "note": "GitHub Pages lead page -> rotating public backend -> local tracking server /lead verified. Fixed backend still required."
+    },
+    "conversion_event_rollup": {
+      "cta_clicks": 2548,
+      "leads": 3,
+      "revenue_events": 1
+    },
+    "queue": {
+      "pending": {
+        "total": 0,
+        "wp": 0,
+        "shorts": 0,
+        "longform": 0,
+        "other": 0
+      },
+      "reviewed": {
+        "total": 3,
+        "wp": 0,
+        "shorts": 0,
+        "longform": 3,
+        "other": 0
+      },
+      "revised": {
+        "total": 2,
+        "wp": 0,
+        "shorts": 2,
+        "longform": 0,
+        "other": 0
+      },
+      "published": {
+        "total": 314,
+        "wp": 231,
+        "shorts": 56,
+        "longform": 22,
+        "other": 5
+      },
+      "rejected": {
+        "total": 28,
+        "wp": 3,
+        "shorts": 19,
+        "longform": 6,
+        "other": 0
+      }
+    },
+    "youtube_quota": {
+      "date": "2026-05-07",
+      "used": 4800,
+      "uploads": 3,
+      "history": [
+        {
+          "ts": "2026-05-07",
+          "cost": 1600,
+          "label": "shorts:araelaver:20260507_yt-araelaver-shorts_나폴레옹의-키에-대한-오해-역사상-가장-성공한-가짜-뉴스"
+        },
+        {
+          "ts": "2026-05-07",
+          "cost": 1600,
+          "label": "shorts:micheuhasi:20260507_yt-micheuhasi-shorts_재활용-셀레늄-효능-갑상선-항산화-추천-2026"
+        },
+        {
+          "ts": "2026-05-07",
+          "cost": 1600,
+          "label": "shorts:untabcompany:20260507_yt-untabcompany-shorts_퇴직연금-dc형-수익률-올리는-법-기본-상품에-두면-얼마나-손해인지-계산"
+        }
+      ],
+      "limit": 10000,
+      "safe_limit": 9600,
+      "remaining": 4800,
+      "uploads_remaining": 3
+    },
+    "next_actions": [
+      "publish_one_reviewed_longform_with_quota_tracking",
+      "repair_remaining_2_shorts",
+      "rewrite_top_clicked_published_wp_ctas_if_needed",
+      "replace_ephemeral_tunnel_with_fixed_backend"
+    ]
+  },
+  "system_status": "active_progress_reported",
+  "live_ops_update": {
+    "updated_at": "2026-05-07T23:38:49+0900",
+    "queue": {
+      "pending": {
+        "total": 0,
+        "wp": 0,
+        "shorts": 0,
+        "longform": 0,
+        "other": 0
+      },
+      "reviewed": {
+        "total": 4,
+        "wp": 0,
+        "shorts": 1,
+        "longform": 3,
+        "other": 0
+      },
+      "revised": {
+        "total": 0,
+        "wp": 0,
+        "shorts": 0,
+        "longform": 0,
+        "other": 0
+      },
+      "published": {
+        "total": 315,
+        "wp": 231,
+        "shorts": 57,
+        "longform": 22,
+        "other": 5
+      },
+      "rejected": {
+        "total": 28,
+        "wp": 3,
+        "shorts": 19,
+        "longform": 6,
+        "other": 0
+      }
+    },
+    "youtube_quota": {
+      "date": "2026-05-07",
+      "used": 6400,
+      "uploads": 4,
+      "history": [
+        {
+          "ts": "2026-05-07",
+          "cost": 1600,
+          "label": "shorts:araelaver:20260507_yt-araelaver-shorts_나폴레옹의-키에-대한-오해-역사상-가장-성공한-가짜-뉴스"
+        },
+        {
+          "ts": "2026-05-07",
+          "cost": 1600,
+          "label": "shorts:micheuhasi:20260507_yt-micheuhasi-shorts_재활용-셀레늄-효능-갑상선-항산화-추천-2026"
+        },
+        {
+          "ts": "2026-05-07",
+          "cost": 1600,
+          "label": "shorts:untabcompany:20260507_yt-untabcompany-shorts_퇴직연금-dc형-수익률-올리는-법-기본-상품에-두면-얼마나-손해인지-계산"
+        },
+        {
+          "ts": "2026-05-07",
+          "cost": 1600,
+          "label": "shorts:kdowndan:20260507_yt-kdowndan-shorts_자신이-이미-죽었다고-믿는-사람들-코타르-증후군의-실제-사례"
+        }
+      ],
+      "limit": 10000,
+      "safe_limit": 9600,
+      "remaining": 3200,
+      "uploads_remaining": 2
+    },
+    "conversion_event_rollup": {
+      "cta_clicks": 2561,
+      "leads": 3,
+      "revenue_events": 1
+    },
+    "latest_actions": [
+      "restored public lead backend and verified /health + /lead",
+      "killed hung micheuhasi longform uploader and released stale quota",
+      "repaired 2 shorts to QA 8.33 PASS",
+      "published kdowndan shorts https://www.youtube.com/shorts/PKkoSVog-co",
+      "micheuhasi shorts kept reviewed due shorts daily cap 4/4"
+    ],
+    "public_backend_url": "https://46b601fe3888b7.lhr.life",
+    "remaining_blockers": [
+      "ephemeral lhr.life backend still needs fixed tunnel",
+      "micheuhasi longform uploader hung with no URL",
+      "micheuhasi shorts waits for next shorts slot"
+    ]
   }
 }
