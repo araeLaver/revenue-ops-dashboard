@@ -115,7 +115,7 @@
   },
   "lead_capture_setup": {
     "status": "interim_lead_page_connected",
-    "updated_at": "2026-05-07T22:34:38+09:00",
+    "updated_at": "2026-05-07T22:38:26+09:00",
     "assets_dir": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/lead_capture",
     "manifest": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/lead_capture/lead_capture_forms_manifest.json",
     "prepared_assets": [
@@ -129,10 +129,10 @@
       "WP live old posts CTA 재작성 또는 상위 클릭 글부터 수동 업데이트"
     ],
     "form_urls": {
-      "unpre": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=unpre&backend=https://fcf52fbb3e775a.lhr.life",
-      "untab": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=untab&backend=https://fcf52fbb3e775a.lhr.life",
-      "skewese": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=skewese&backend=https://fcf52fbb3e775a.lhr.life",
-      "kakao_channel": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=untab&backend=https://fcf52fbb3e775a.lhr.life"
+      "unpre": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=unpre&backend=https://cd593c06f7bb71.lhr.life",
+      "untab": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=untab&backend=https://cd593c06f7bb71.lhr.life",
+      "skewese": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=skewese&backend=https://cd593c06f7bb71.lhr.life",
+      "kakao_channel": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=untab&backend=https://cd593c06f7bb71.lhr.life&intent=service_inquiry"
     }
   }
 }

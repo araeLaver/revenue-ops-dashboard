@@ -1,6 +1,6 @@
 {
   "status": "interim_lead_page_connected",
-  "updated_at": "2026-05-07T22:34:38+09:00",
+  "updated_at": "2026-05-07T22:38:26+09:00",
   "forms": [
     {
       "id": "unpre-finance-checklist",
@@ -49,9 +49,9 @@
     "상위 클릭 WP 글의 CTA를 lead.html 링크로 업데이트"
   ],
   "live_form_urls": {
-    "unpre": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=unpre&backend=https://fcf52fbb3e775a.lhr.life",
-    "untab": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=untab&backend=https://fcf52fbb3e775a.lhr.life",
-    "skewese": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=skewese&backend=https://fcf52fbb3e775a.lhr.life",
-    "kakao_channel": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=untab&backend=https://fcf52fbb3e775a.lhr.life"
+    "unpre": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=unpre&backend=https://cd593c06f7bb71.lhr.life",
+    "untab": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=untab&backend=https://cd593c06f7bb71.lhr.life",
+    "skewese": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=skewese&backend=https://cd593c06f7bb71.lhr.life",
+    "kakao_channel": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=untab&backend=https://cd593c06f7bb71.lhr.life&intent=service_inquiry"
   }
 }

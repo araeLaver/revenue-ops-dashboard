@@ -36,7 +36,7 @@
 <script>
 const assets={unpre:'재테크·보험료 절약 체크리스트',untab:'지원금 신청 자가진단 체크리스트',skewese:'영양제 조합 가이드'};
 const stable='https://araelaver.github.io/revenue-ops-dashboard/track.html';
-const defaultBackend='https://fcf52fbb3e775a.lhr.life';
+const defaultBackend='https://cd593c06f7bb71.lhr.life';
 const backendParams=new URLSearchParams(location.search);
 function updateAsset(){assetBox.textContent='받을 자료: '+assets[site.value];} site.addEventListener('change',updateAsset); updateAsset();
 async function sha256(s){const b=new TextEncoder().encode(s.trim().toLowerCase());const h=await crypto.subtle.digest('SHA-256',b);return Array.from(new Uint8Array(h)).map(x=>x.toString(16).padStart(2,'0')).join('');}
