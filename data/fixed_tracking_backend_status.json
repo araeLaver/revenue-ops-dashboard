@@ -1,0 +1,79 @@
+{
+  "updated_at": "2026-05-10T11:41:32+09:00",
+  "task": "fixed-tracking-backend",
+  "current_backend_url": "https://vocal-tennis-ink-album.trycloudflare.com",
+  "kind": "cloudflare_quick_tunnel",
+  "stable": false,
+  "fixed_backend": false,
+  "health": {
+    "status": 200,
+    "ok": true,
+    "error": null
+  },
+  "lead_probe": {
+    "status": 200,
+    "ok": true,
+    "error": null
+  },
+  "prerequisites": {
+    "cloudflared_path": "/opt/homebrew/bin/cloudflared",
+    "cloudflare_cert_exists": false,
+    "cloudflare_config_exists": false,
+    "cloudflare_credentials_json_count": 0,
+    "localhostrun_ssh_key_candidates": 0
+  },
+  "blocked": true,
+  "blocker": "cloudflare_cert_or_managed_hostname_required",
+  "manager_log_markers_last_200_lines": {
+    "sync_start_recent": 0,
+    "skip_observe_recent": 4,
+    "sync_failed_recent": 0
+  },
+  "active_draft_direct_lhr_backend_matches": 0,
+  "git_ahead_behind": "0\t0",
+  "next_safe_state": "interim_cloudflare_quick_tunnel_watchdog",
+  "last_updated": "2026-05-10T11:41:32+09:00",
+  "localtunnel_tracking_backend": {
+    "updated_at": "2026-05-10T11:41:32+09:00",
+    "action": "localtunnel_started_and_healthy",
+    "public_tracking_url": "https://hermes-revenue-tracking-48.loca.lt",
+    "kind": "localtunnel_fixed_subdomain",
+    "stable": false,
+    "fixed_backend": true,
+    "pid": 75907,
+    "restarted": true,
+    "health": {
+      "status": 200,
+      "ok": true,
+      "tracking_ok": true
+    },
+    "redirect": {
+      "status": 302,
+      "location": "https://unpre.co.kr/",
+      "ok": true
+    },
+    "lead_probe": {
+      "status": 200,
+      "ok": true
+    },
+    "production_note": "No-auth fixed-subdomain fallback; Cloudflare named tunnel/VPS is still stronger for production SLA."
+  },
+  "tracking_backend": {
+    "current_backend_url": "https://hermes-revenue-tracking-48.loca.lt",
+    "kind": "localtunnel_fixed_subdomain",
+    "stable": false,
+    "fixed_backend": true,
+    "fixed_backend_level": "accountless_fixed_subdomain_watchdog_protected",
+    "public_health": {
+      "status": 200,
+      "ok": true,
+      "tracking_ok": true
+    },
+    "lead_probe": {
+      "status": 200,
+      "ok": true
+    },
+    "watchdog_status": "localtunnel_started_and_healthy",
+    "next_action": "Cloudflare named tunnel or VPS remains the production-grade final fix; localtunnel fixed subdomain is the no-auth operational replacement for lhr.life."
+  }
+}

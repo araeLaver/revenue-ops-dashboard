@@ -1,187 +1,276 @@
 {
-  "revenue_tracking": {
-    "last_healthcheck": "2026-05-07T14:34:17Z",
-    "status": "ok",
-    "last_error": null
-  },
-  "last_updated": "2026-05-07T23:40:23+09:00",
-  "tracking": {
-    "status": "active_stable_gateway_backend_rotated",
-    "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-    "public_tracking_url": "https://eae1bed9c85d5b.lhr.life",
-    "current_backend_url": "https://eae1bed9c85d5b.lhr.life",
-    "last_rotated_at": "2026-05-07T23:40:23+09:00",
-    "rotation_automation": "sync_tracking_tunnel.py",
-    "backend_health_ok": true,
-    "backend_redirect_ok": true,
-    "note": "localhost.run backend rotated; content CTA remains stable via GitHub Pages gateway."
+  "analytics_api_status": {
+    "wordpress": {
+      "collected": true,
+      "recent_post_count": 60,
+      "site_count": 3,
+      "source_file": "data/analytics/blog-analytics-2026-05-10.json",
+      "status": "ok",
+      "updated_at": "2026-05-10T00:16:47.887392+00:00"
+    },
+    "youtube": {
+      "source_file": "data/analytics/youtube-analytics-2026-05-10.json",
+      "status": "ok",
+      "summary": {
+        "subscribers": 116,
+        "unique_channels": 4,
+        "videos": 722,
+        "views": 348160
+      },
+      "updated_at": "2026-05-10T00:16:47.887392+00:00"
+    }
   },
   "bottleneck_board": {
     "tracking": {
-      "status": "watch",
-      "title": "CTA tracking backend",
-      "root_cause": "localhost.run anonymous tunnel rotates frequently.",
-      "next_action": "sync_tracking_tunnel.py updates backend config/track fallback and deploys Pages; migrate to account-backed tunnel or Cloudflare/VPS for durable fix.",
-      "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
-      "current_backend_url": "https://eae1bed9c85d5b.lhr.life",
-      "last_rotated_at": "2026-05-07T23:40:23+09:00"
+      "area": "Tracking",
+      "current_backend": "https://b180066bdc53e2.lhr.life",
+      "detail": "Stable gateway is preserved, but the current rotating backend is unhealthy.",
+      "gateway": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
+      "name": "Tracking",
+      "next_action": "Use account-backed localhost.run, Cloudflare Tunnel, VPS reverse proxy, or custom tracking domain for durable public tracking.",
+      "root_cause": "http_error kind=health code=503",
+      "status": "blocked",
+      "status_label": "provider_degraded",
+      "summary": "localhost.run anonymous tunnel is repeatedly failing health checks.",
+      "updated_at": "2026-05-10T02:40:05+09:00"
     }
   },
-  "revenue_ops_live_fix": {
-    "updated_at": "2026-05-07T23:25:37+0900",
-    "wp_conversion_fix": {
-      "status": "lead_path_operational_but_tunnel_ephemeral",
-      "public_backend_url": "https://46b601fe3888b7.lhr.life",
-      "backend_health": "ok",
-      "lead_post_smoke": "ok",
-      "note": "GitHub Pages lead page -> rotating public backend -> local tracking server /lead verified. Fixed backend still required."
+  "content_queue": {
+    "pending": {
+      "longform": 0,
+      "other": 0,
+      "shorts": 0,
+      "total": 0,
+      "wp": 0
     },
-    "conversion_event_rollup": {
-      "cta_clicks": 2548,
-      "leads": 3,
-      "revenue_events": 1
+    "published": {
+      "longform": 26,
+      "other": 2,
+      "shorts": 60,
+      "total": 330,
+      "wp": 242
     },
-    "queue": {
-      "pending": {
-        "total": 0,
-        "wp": 0,
-        "shorts": 0,
-        "longform": 0,
-        "other": 0
-      },
-      "reviewed": {
-        "total": 3,
-        "wp": 0,
-        "shorts": 0,
-        "longform": 3,
-        "other": 0
-      },
-      "revised": {
-        "total": 2,
-        "wp": 0,
-        "shorts": 2,
-        "longform": 0,
-        "other": 0
-      },
-      "published": {
-        "total": 314,
-        "wp": 231,
-        "shorts": 56,
-        "longform": 22,
-        "other": 5
-      },
-      "rejected": {
-        "total": 28,
-        "wp": 3,
-        "shorts": 19,
-        "longform": 6,
-        "other": 0
-      }
+    "rejected": {
+      "longform": 7,
+      "other": 0,
+      "shorts": 20,
+      "total": 30,
+      "wp": 3
     },
-    "youtube_quota": {
-      "date": "2026-05-07",
-      "used": 4800,
-      "uploads": 3,
-      "history": [
-        {
-          "ts": "2026-05-07",
-          "cost": 1600,
-          "label": "shorts:araelaver:20260507_yt-araelaver-shorts_나폴레옹의-키에-대한-오해-역사상-가장-성공한-가짜-뉴스"
-        },
-        {
-          "ts": "2026-05-07",
-          "cost": 1600,
-          "label": "shorts:micheuhasi:20260507_yt-micheuhasi-shorts_재활용-셀레늄-효능-갑상선-항산화-추천-2026"
-        },
-        {
-          "ts": "2026-05-07",
-          "cost": 1600,
-          "label": "shorts:untabcompany:20260507_yt-untabcompany-shorts_퇴직연금-dc형-수익률-올리는-법-기본-상품에-두면-얼마나-손해인지-계산"
-        }
-      ],
-      "limit": 10000,
-      "safe_limit": 9600,
-      "remaining": 4800,
-      "uploads_remaining": 3
+    "reviewed": {
+      "longform": 0,
+      "other": 0,
+      "shorts": 0,
+      "total": 0,
+      "wp": 0
     },
-    "next_actions": [
-      "publish_one_reviewed_longform_with_quota_tracking",
-      "repair_remaining_2_shorts",
-      "rewrite_top_clicked_published_wp_ctas_if_needed",
-      "replace_ephemeral_tunnel_with_fixed_backend"
-    ]
+    "revised": {
+      "longform": 3,
+      "other": 0,
+      "shorts": 7,
+      "total": 26,
+      "wp": 16
+    }
   },
-  "system_status": "active_progress_reported",
-  "live_ops_update": {
-    "updated_at": "2026-05-07T23:38:49+0900",
-    "queue": {
-      "pending": {
-        "total": 0,
-        "wp": 0,
-        "shorts": 0,
-        "longform": 0,
-        "other": 0
-      },
-      "reviewed": {
-        "total": 4,
-        "wp": 0,
-        "shorts": 1,
-        "longform": 3,
-        "other": 0
-      },
-      "revised": {
-        "total": 0,
-        "wp": 0,
-        "shorts": 0,
-        "longform": 0,
-        "other": 0
-      },
-      "published": {
-        "total": 315,
-        "wp": 231,
-        "shorts": 57,
-        "longform": 22,
-        "other": 5
-      },
-      "rejected": {
-        "total": 28,
-        "wp": 3,
-        "shorts": 19,
-        "longform": 6,
-        "other": 0
-      }
+  "conversion_event_rollup": {
+    "canonical_events": 0,
+    "cta_clicks": 8106,
+    "invalid_lines": {
+      "conversion_events": 0,
+      "cta_click_events": 0,
+      "lead_events": 0,
+      "revenue_events": 0
     },
-    "youtube_quota": {
-      "date": "2026-05-07",
-      "used": 6400,
-      "uploads": 4,
-      "history": [
-        {
-          "ts": "2026-05-07",
-          "cost": 1600,
-          "label": "shorts:araelaver:20260507_yt-araelaver-shorts_나폴레옹의-키에-대한-오해-역사상-가장-성공한-가짜-뉴스"
-        },
-        {
-          "ts": "2026-05-07",
-          "cost": 1600,
-          "label": "shorts:micheuhasi:20260507_yt-micheuhasi-shorts_재활용-셀레늄-효능-갑상선-항산화-추천-2026"
-        },
-        {
-          "ts": "2026-05-07",
-          "cost": 1600,
-          "label": "shorts:untabcompany:20260507_yt-untabcompany-shorts_퇴직연금-dc형-수익률-올리는-법-기본-상품에-두면-얼마나-손해인지-계산"
-        },
-        {
-          "ts": "2026-05-07",
-          "cost": 1600,
-          "label": "shorts:kdowndan:20260507_yt-kdowndan-shorts_자신이-이미-죽었다고-믿는-사람들-코타르-증후군의-실제-사례"
-        }
+    "latest_event_type": "cta_click",
+    "lead_rate_per_click_pct": 0.9129,
+    "leads": 74,
+    "revenue_event_rate_per_click_pct": 0.0123,
+    "revenue_events": 1,
+    "sources": {
+      "conversion_events": false,
+      "cta_click_events": true,
+      "lead_events": true,
+      "revenue_events": true
+    },
+    "updated_at": "2026-05-10T09:16:47+09:00"
+  },
+  "current_bottlenecks": [
+    {
+      "area": "wordpress_revenue",
+      "next": "상위 클릭 published WP live CTA 업데이트 및 실제 CRM/Form 연결",
+      "status": "watch",
+      "summary": "CTA clicks 대비 lead/revenue 전환율 낮음 — lead CTA/registry/offers emergency patch 적용"
+    },
+    {
+      "area": "tracking_public_url",
+      "next": "tracking tunnel을 재시작/교체한 뒤 data/tracking_public_url.json public_tracking_url을 갱신하고 /health 재확인",
+      "status": "blocked",
+      "summary": "tracking_public_url health check failed: url=https://887dbf17839b94.lhr.life/health curl_exit=0 http_code=503 body='<h1>no tunnel here :(</h1>'",
+      "updated_at": "2026-05-09T06:11:39Z"
+    },
+    "tracking backend is interim only; Cloudflare named tunnel cert/domain still required"
+  ],
+  "direct_backend_cleanup": {
+    "changed_files_count": 20,
+    "direct_lhr_cta_matches_after": 0,
+    "manifest": "data/direct_backend_cleanup_20260509.json",
+    "published_scope_touched": false,
+    "status": "completed",
+    "updated_at": "2026-05-09T11:08:25+0900"
+  },
+  "direct_backend_cleanup_status": {
+    "active_draft_direct_lhr_matches": 0,
+    "last_checked": "2026-05-09T11:18:17+09:00",
+    "published_scope_touched": false
+  },
+  "fixed_tracking_backend": {
+    "current_interim_backend": "cloudflare_quick_tunnel",
+    "fixed_backend_status": "blocked_auth_required",
+    "prerequisites": {
+      "checked_at": "2026-05-09T21:43:57+09:00",
+      "cloudflare_cert_exists": false,
+      "cloudflare_config_files": [],
+      "cloudflare_tunnel_creds_count": 0,
+      "cloudflared_exists": true,
+      "cloudflared_path": "/opt/homebrew/bin/cloudflared",
+      "current_backend": {
+        "fixed_backend": false,
+        "kind": "cloudflare_quick_tunnel",
+        "stable": false,
+        "url": "https://vocal-tennis-ink-album.trycloudflare.com"
+      },
+      "dashboard": {
+        "ok": true,
+        "status": 200,
+        "tracking_ok": true
+      },
+      "git_ahead_behind": "0\t0",
+      "git_exists": true,
+      "localhostrun_ssh_key_candidates_count": 0,
+      "node_exists": true,
+      "processes": [
+        "9233 85962       24:15 /bin/bash -lic set +m; python3 scripts/tracking_tunnel_manager.py --no-commit --no-push",
+        " 9236  9233       24:15 /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python scripts/tracking_tunnel_manager.py --no-commit --no-push",
+        "64115 85962 02-23:03:50 /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python scripts/tracking_server.py",
+        "76799 85962    10:37:31 /bin/bash -lic set +m; mkdir -p /Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/logs; cloudflared tunnel --url http://127.0.0.1:8431 --no-autoupdate --logfile /Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/logs/cloudflare_quick_tracking_tunnel.log --loglevel info",
+        "76803 76799    10:37:31 cloudflared tunnel --url http://127.0.0.1:8431 --no-autoupdate --logfile /Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/logs/cloudflare_quick_tracking_tunnel.log --loglevel info"
       ],
-      "limit": 10000,
-      "safe_limit": 9600,
-      "remaining": 3200,
-      "uploads_remaining": 2
+      "public_health": {
+        "ok": true,
+        "status": 200,
+        "tracking_ok": true
+      },
+      "public_lead": {
+        "ok": true,
+        "status": 200
+      },
+      "python3_exists": true,
+      "ssh_exists": true
     },
+    "required_user_inputs": [
+      "Cloudflare browser login certificate at ~/.cloudflared/cert.pem",
+      "Cloudflare-managed tracking hostname, e.g. track.<your-domain>"
+    ],
+    "stable": false,
+    "updated_at": "2026-05-09T21:43:57+09:00"
+  },
+  "fixed_tracking_backend_transition": {
+    "cert_exists": false,
+    "cloudflare_auth": "missing_cert_pem_login_required",
+    "cloudflared_installed": true,
+    "cloudflared_login_result": "browser_auth_waited_then_failed_to_write_certificate",
+    "completed_mitigations": [
+      "removed stale direct lhr.life backend from active draft CTA",
+      "lead.html now reads current backend from data/tracking_public_url.json instead of hardcoded dead lhr.life default",
+      "track.html now forwards offer_id to tracking backend",
+      "safe tunnel manager remains no-commit/no-push"
+    ],
+    "current_backend_url": "https://vocal-tennis-ink-album.trycloudflare.com",
+    "current_temporary_backend": "https://eb1f06ca2f69e7.lhr.life",
+    "download_search_result": "no cert.pem found in Downloads/Desktop",
+    "fixed_backend_status": "still_requires_named_tunnel_auth_domain",
+    "fixed_backend_target": "cloudflare_named_tunnel_preferred",
+    "lhr_life_dependency": "reduced_for_current_config_no_commit_push",
+    "local_tracking": "ok",
+    "localhostrun_account_key": "not_configured_no_ssh_key_found",
+    "next_action": "Complete cloudflared cert.pem and TRACKING_HOST for named tunnel.",
+    "next_operator_input_needed": "Cloudflare-managed hostname such as track.example.com",
+    "next_user_action": "Open the Cloudflare login URL from the alert or rerun cloudflared tunnel login, then ensure cert.pem is copied to /Users/down/.cloudflared/cert.pem.",
+    "operator_next_commands": [
+      "cloudflared tunnel login",
+      "TRACKING_HOST=track.<your-domain> TUNNEL_NAME=revenue-tracking bash /Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/scripts/setup_cloudflare_tracking_tunnel.sh",
+      "cloudflared tunnel --config ~/.cloudflared/revenue-tracking.yml run revenue-tracking",
+      "python3 /Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/scripts/configure_fixed_tracking_backend.py --url https://track.<your-domain> --kind cloudflare_named_tunnel --commit --push"
+    ],
+    "prepared_next_commands": [
+      "TRACKING_HOST=track.<your-domain> TUNNEL_NAME=revenue-tracking bash /Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/scripts/setup_cloudflare_tracking_tunnel.sh",
+      "cloudflared tunnel --config ~/.cloudflared/revenue-tracking.yml run revenue-tracking",
+      "python3 /Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/scripts/configure_fixed_tracking_backend.py --url https://track.<your-domain> --kind cloudflare_named_tunnel --commit --push"
+    ],
+    "prepared_scripts": [
+      "scripts/setup_cloudflare_tracking_tunnel.sh",
+      "scripts/configure_fixed_tracking_backend.py"
+    ],
+    "public_tracking": "cloudflare_quick_tunnel_verified_interim",
+    "quick_tunnel_session": "proc_b54c3b624dd5",
+    "required_cert_path": "/Users/down/.cloudflared/cert.pem",
+    "stable": false,
+    "status": "blocked_cloudflare_cert_manual_copy_required",
+    "updated_at": "2026-05-09T11:07:26+0900",
+    "verification": {
+      "event_id": "evt_1778292424983_752adf99",
+      "health": 200,
+      "lead": 200,
+      "redirect": 302
+    },
+    "vps_reverse_proxy": "not_configured",
+    "work_status": "in_progress_not_idle"
+  },
+  "last_updated": "2026-05-10T11:42:57+09:00",
+  "last_wp_publish": {
+    "draft_repair": "deterministic_no_llm",
+    "qa_score": 8.0,
+    "qa_threshold": 7.8,
+    "site": "skewese",
+    "state_moved": "revised_to_reviewed_to_published",
+    "time": "2026-05-09T11:18:17+09:00",
+    "url": "https://skewese.com/%ec%bd%9c%eb%9d%bc%ea%b2%90-%ed%8e%a9%ed%83%80%ec%9d%b4%eb%93%9c-%ed%94%bc%eb%b6%80-%ea%b4%80%ec%a0%88-%ec%b6%94%ec%b2%9c-2026/"
+  },
+  "latest_actions": [
+    {
+      "qa_score": 8.0,
+      "qa_threshold": 7.8,
+      "site": "skewese",
+      "source": "deterministic_revised_repair_then_publish",
+      "status": "published",
+      "time": "2026-05-09T11:18:17+09:00",
+      "type": "wp_publish",
+      "url": "https://skewese.com/%ec%bd%9c%eb%9d%bc%ea%b2%90-%ed%8e%a9%ed%83%80%ec%9d%b4%eb%93%9c-%ed%94%bc%eb%b6%80-%ea%b4%80%ec%a0%88-%ec%b6%94%ec%b2%9c-2026/"
+    }
+  ],
+  "latest_ops_note": "Cloudflare quick tunnel verified; 20 unpublished drafts cleaned of direct lhr.life backend params; fixed named tunnel still awaits cert/domain.",
+  "latest_published_shorts": {
+    "channel": "micheuhasi",
+    "published_at": "2026-05-08T04:46:22+0900",
+    "url": "https://www.youtube.com/shorts/6fw4EQt7Uk8"
+  },
+  "lead_ops_summary": {
+    "by_offer": {
+      "finance-checklist": 1,
+      "ops_smoke": 1,
+      "unpre_lead_magnet": 4,
+      "unpre_service_lead": 1,
+      "untab_lead_magnet": 1
+    },
+    "by_site": {
+      "unpre": 7,
+      "untab": 1
+    },
+    "csv": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/data/lead_ops_recent.csv",
+    "path": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/data/lead_ops_summary.json",
+    "updated_at": "2026-05-09T21:35:21+09:00"
+  },
+  "live_ops_update": {
     "conversion_event_rollup": {
       "cta_clicks": 2561,
       "leads": 3,
@@ -195,10 +284,720 @@
       "micheuhasi shorts kept reviewed due shorts daily cap 4/4"
     ],
     "public_backend_url": "https://46b601fe3888b7.lhr.life",
+    "queue": {
+      "pending": {
+        "longform": 0,
+        "other": 0,
+        "shorts": 0,
+        "total": 0,
+        "wp": 0
+      },
+      "published": {
+        "longform": 22,
+        "other": 5,
+        "shorts": 57,
+        "total": 315,
+        "wp": 231
+      },
+      "rejected": {
+        "longform": 6,
+        "other": 0,
+        "shorts": 19,
+        "total": 28,
+        "wp": 3
+      },
+      "reviewed": {
+        "longform": 3,
+        "other": 0,
+        "shorts": 1,
+        "total": 4,
+        "wp": 0
+      },
+      "revised": {
+        "longform": 0,
+        "other": 0,
+        "shorts": 0,
+        "total": 0,
+        "wp": 0
+      }
+    },
     "remaining_blockers": [
       "ephemeral lhr.life backend still needs fixed tunnel",
       "micheuhasi longform uploader hung with no URL",
       "micheuhasi shorts waits for next shorts slot"
+    ],
+    "updated_at": "2026-05-07T23:38:49+0900",
+    "youtube_quota": {
+      "date": "2026-05-07",
+      "history": [
+        {
+          "cost": 1600,
+          "label": "shorts:araelaver:20260507_yt-araelaver-shorts_나폴레옹의-키에-대한-오해-역사상-가장-성공한-가짜-뉴스",
+          "ts": "2026-05-07"
+        },
+        {
+          "cost": 1600,
+          "label": "shorts:micheuhasi:20260507_yt-micheuhasi-shorts_재활용-셀레늄-효능-갑상선-항산화-추천-2026",
+          "ts": "2026-05-07"
+        },
+        {
+          "cost": 1600,
+          "label": "shorts:untabcompany:20260507_yt-untabcompany-shorts_퇴직연금-dc형-수익률-올리는-법-기본-상품에-두면-얼마나-손해인지-계산",
+          "ts": "2026-05-07"
+        },
+        {
+          "cost": 1600,
+          "label": "shorts:kdowndan:20260507_yt-kdowndan-shorts_자신이-이미-죽었다고-믿는-사람들-코타르-증후군의-실제-사례",
+          "ts": "2026-05-07"
+        }
+      ],
+      "limit": 10000,
+      "remaining": 3200,
+      "safe_limit": 9600,
+      "uploads": 4,
+      "uploads_remaining": 2,
+      "used": 6400
+    }
+  },
+  "queue_by_type": {
+    "pending": {
+      "longform": 0,
+      "other": 0,
+      "shorts": 0,
+      "wp": 0
+    },
+    "published": {
+      "longform": 24,
+      "other": 2,
+      "shorts": 60,
+      "wp": 231
+    },
+    "rejected": {
+      "longform": 7,
+      "other": 0,
+      "shorts": 19,
+      "wp": 3
+    },
+    "reviewed": {
+      "longform": 2,
+      "other": 0,
+      "shorts": 0,
+      "wp": 6
+    },
+    "revised": {
+      "longform": 3,
+      "other": 0,
+      "shorts": 2,
+      "wp": 7
+    }
+  },
+  "queue_counts": {
+    "pending": 0,
+    "published": 317,
+    "rejected": 29,
+    "reviewed": 8,
+    "revised": 12
+  },
+  "queue_snapshot": {
+    "pending": {
+      "longform": 0,
+      "other": 0,
+      "shorts": 0,
+      "total": 0,
+      "wp": 0
+    },
+    "published": {
+      "longform": 26,
+      "other": 2,
+      "shorts": 60,
+      "total": 330,
+      "wp": 242
+    },
+    "rejected": {
+      "longform": 7,
+      "other": 0,
+      "shorts": 20,
+      "total": 30,
+      "wp": 3
+    },
+    "reviewed": {
+      "longform": 0,
+      "other": 0,
+      "shorts": 0,
+      "total": 0,
+      "wp": 0
+    },
+    "revised": {
+      "longform": 3,
+      "other": 0,
+      "shorts": 7,
+      "total": 26,
+      "wp": 16
+    }
+  },
+  "revenue_ops_live_fix": {
+    "conversion_event_rollup": {
+      "cta_clicks": 2548,
+      "leads": 3,
+      "revenue_events": 1
+    },
+    "next_actions": [
+      "publish_one_reviewed_longform_with_quota_tracking",
+      "repair_remaining_2_shorts",
+      "rewrite_top_clicked_published_wp_ctas_if_needed",
+      "replace_ephemeral_tunnel_with_fixed_backend"
+    ],
+    "queue": {
+      "pending": {
+        "longform": 0,
+        "other": 0,
+        "shorts": 0,
+        "total": 0,
+        "wp": 0
+      },
+      "published": {
+        "longform": 22,
+        "other": 5,
+        "shorts": 56,
+        "total": 314,
+        "wp": 231
+      },
+      "rejected": {
+        "longform": 6,
+        "other": 0,
+        "shorts": 19,
+        "total": 28,
+        "wp": 3
+      },
+      "reviewed": {
+        "longform": 3,
+        "other": 0,
+        "shorts": 0,
+        "total": 3,
+        "wp": 0
+      },
+      "revised": {
+        "longform": 0,
+        "other": 0,
+        "shorts": 2,
+        "total": 2,
+        "wp": 0
+      }
+    },
+    "updated_at": "2026-05-07T23:25:37+0900",
+    "wp_conversion_fix": {
+      "backend_health": "ok",
+      "lead_post_smoke": "ok",
+      "note": "GitHub Pages lead page -> rotating public backend -> local tracking server /lead verified. Fixed backend still required.",
+      "public_backend_url": "https://46b601fe3888b7.lhr.life",
+      "status": "lead_path_operational_but_tunnel_ephemeral"
+    },
+    "youtube_quota": {
+      "date": "2026-05-07",
+      "history": [
+        {
+          "cost": 1600,
+          "label": "shorts:araelaver:20260507_yt-araelaver-shorts_나폴레옹의-키에-대한-오해-역사상-가장-성공한-가짜-뉴스",
+          "ts": "2026-05-07"
+        },
+        {
+          "cost": 1600,
+          "label": "shorts:micheuhasi:20260507_yt-micheuhasi-shorts_재활용-셀레늄-효능-갑상선-항산화-추천-2026",
+          "ts": "2026-05-07"
+        },
+        {
+          "cost": 1600,
+          "label": "shorts:untabcompany:20260507_yt-untabcompany-shorts_퇴직연금-dc형-수익률-올리는-법-기본-상품에-두면-얼마나-손해인지-계산",
+          "ts": "2026-05-07"
+        }
+      ],
+      "limit": 10000,
+      "remaining": 4800,
+      "safe_limit": 9600,
+      "uploads": 3,
+      "uploads_remaining": 3,
+      "used": 4800
+    }
+  },
+  "revenue_tracking": {
+    "health_url": "http://127.0.0.1:8431/health",
+    "last_error": "",
+    "last_healthcheck": "2026-05-10T02:42:56.862933+00:00",
+    "last_restart_attempt": null,
+    "last_restart_attempted": false,
+    "status": "ok"
+  },
+  "system_status": "active_progress_reported",
+  "tracking": {
+    "backend_health_ok": true,
+    "backend_redirect_ok": true,
+    "current_backend_url": "https://279326a761e4fb.lhr.life",
+    "last_rotated_at": "2026-05-09T21:19:26+09:00",
+    "note": "localhost.run backend rotated; content CTA remains stable via GitHub Pages gateway.",
+    "public_tracking_url": "https://279326a761e4fb.lhr.life",
+    "rotation_automation": "sync_tracking_tunnel.py",
+    "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
+    "status": "active_stable_gateway_backend_rotated"
+  },
+  "tracking_backend": {
+    "active_manager_expected": "proc_2e8186459680",
+    "current_backend_url": "https://hermes-revenue-tracking-48.loca.lt",
+    "current_health": {
+      "error": "HTTPError",
+      "ok": false
+    },
+    "current_interim_backend": "cloudflare_quick_tunnel",
+    "current_json_before_check": "https://c1909bc5c41f55.lhr.life",
+    "current_json_health": {
+      "error": "HTTPError"
+    },
+    "durable_fix_required": "cloudflare_named_tunnel_or_vps_or_account_backed_tunnel",
+    "fixed_backend": true,
+    "fixed_backend_status": "blocked_auth_required",
+    "kind": "localtunnel_fixed_subdomain",
+    "last_checked": "2026-05-09T11:18:17+09:00",
+    "last_verified_at": "2026-05-09T21:17:26+09:00",
+    "lead_post_smoke": {
+      "ok": true,
+      "status": 200
+    },
+    "lead_probe": {
+      "status": 200,
+      "ok": true,
+      "attempt": 1
+    },
+    "manager_policy": "observe_only_skip_lhr_sync_when_no_commit_no_push",
+    "manager_process_check": [
+      "7500 85962       01:58 /bin/bash -lic set +m; python3 scripts/tracking_tunnel_manager.py --no-commit --no-push",
+      " 7503  7500       01:58 /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python scripts/tracking_tunnel_manager.py --no-commit --no-push",
+      "64115 85962 02-22:38:53 /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python scripts/tracking_server.py",
+      "76799 85962    10:12:34 /bin/bash -lic set +m; mkdir -p /Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/logs; cloudflared tunnel --url http://127.0.0.1:8431 --no-autoupdate --logfile /Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/logs/cloudflare_quick_tracking_tunnel.log --loglevel info",
+      "76803 76799    10:12:34 cloudflared tunnel --url http://127.0.0.1:8431 --no-autoupdate --logfile /Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/logs/cloudflare_quick_tracking_tunnel.log --loglevel info"
+    ],
+    "manager_processes": [
+      "9233 85962       01:13 /bin/bash -lic set +m; python3 scripts/tracking_tunnel_manager.py --no-commit --no-push",
+      " 9236  9233       01:13 /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python scripts/tracking_tunnel_manager.py --no-commit --no-push",
+      "64115 85962 02-22:40:48 /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python scripts/tracking_server.py",
+      "76799 85962    10:14:29 /bin/bash -lic set +m; mkdir -p /Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/logs; cloudflared tunnel --url http://127.0.0.1:8431 --no-autoupdate --logfile /Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/logs/cloudflare_quick_tracking_tunnel.log --loglevel info",
+      "76803 76799    10:14:29 cloudflared tunnel --url http://127.0.0.1:8431 --no-autoupdate --logfile /Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/logs/cloudflare_quick_tracking_tunnel.log --loglevel info"
+    ],
+    "manager_session": "proc_2e8186459680",
+    "old_manager_alert_proc_20aa83a5851c": "handled_completed_after_intentional_termination",
+    "old_manager_alert_proc_5f29ce481734": "handled_completed_after_intentional_replacement",
+    "public_health": {
+      "status": 200,
+      "ok": true,
+      "tracking_ok": true
+    },
+    "public_tracking_url": "https://vocal-tennis-ink-album.trycloudflare.com",
+    "recent_manager_log_relevant": [
+      "2026-05-09T21:19:09+09:00 SYNC_START url=https://7525fe24984cc2.lhr.life",
+      "2026-05-09T21:19:11+09:00 SYNC_OUT     raise RuntimeError(\"track.html embeddedFallbackBase replacement failed\")",
+      "2026-05-09T21:19:11+09:00 SYNC_OUT RuntimeError: track.html embeddedFallbackBase replacement failed",
+      "2026-05-09T21:19:11+09:00 SYNC_DONE url=https://7525fe24984cc2.lhr.life ok=False rc=1",
+      "2026-05-09T21:19:26+09:00 SYNC_START url=https://279326a761e4fb.lhr.life",
+      "2026-05-09T21:19:29+09:00 SYNC_OUT     raise RuntimeError(\"track.html embeddedFallbackBase replacement failed\")",
+      "2026-05-09T21:19:29+09:00 SYNC_OUT RuntimeError: track.html embeddedFallbackBase replacement failed",
+      "2026-05-09T21:19:29+09:00 SYNC_DONE url=https://279326a761e4fb.lhr.life ok=False rc=1",
+      "2026-05-09T21:19:47+09:00 SYNC_SKIPPED_OBSERVE_ONLY observed_lhr=https://e7c4b317e3e8c9.lhr.life reason=no_commit_no_push"
+    ],
+    "recent_relevant_log": [
+      "2026-05-09T21:19:26+09:00 SYNC_START url=https://279326a761e4fb.lhr.life",
+      "2026-05-09T21:19:29+09:00 SYNC_OUT     raise RuntimeError(\"track.html embeddedFallbackBase replacement failed\")",
+      "2026-05-09T21:19:29+09:00 SYNC_OUT RuntimeError: track.html embeddedFallbackBase replacement failed",
+      "2026-05-09T21:19:29+09:00 MANAGER_STOPPED",
+      "2026-05-09T21:19:47+09:00 SYNC_SKIPPED_OBSERVE_ONLY observed_lhr=https://e7c4b317e3e8c9.lhr.life reason=no_commit_no_push",
+      "2026-05-09T21:20:27+09:00 SYNC_SKIPPED_OBSERVE_ONLY observed_lhr=https://710b842dc92a47.lhr.life reason=no_commit_no_push"
+    ],
+    "smoke": {
+      "health": 200,
+      "lead": 200,
+      "t_location": "https://unpre.co.kr/",
+      "t_status": 302
+    },
+    "stable": false,
+    "status": "cloudflare_quick_tunnel_restored_lhr_observer_sync_disabled",
+    "status_path": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/data/fixed_tracking_backend_status.json",
+    "updated_at": "2026-05-09T21:43:57+09:00",
+    "watchdog_last_updated": "2026-05-10T11:42:57+09:00",
+    "watchdog_status": "current_backend_healthy",
+    "fixed_backend_level": "accountless_fixed_subdomain_watchdog_protected",
+    "next_action": "Cloudflare named tunnel or VPS remains the production-grade final fix; localtunnel fixed subdomain is the no-auth operational replacement for lhr.life."
+  },
+  "tracking_backend_status": {
+    "active_manager_session": "proc_20aa83a5851c",
+    "auto_pages_push": "disabled_until_fixed_backend",
+    "current_backend_url": "https://vocal-tennis-ink-album.trycloudflare.com",
+    "current_url": "https://eb1f06ca2f69e7.lhr.life",
+    "fixed_backend_status": "still_requires_named_tunnel_auth_domain",
+    "git_ahead": "0_0",
+    "legacy_proc_5d13bc6c09ec": "completed_old_pre_patch_no_current_impact",
+    "lhr_life_dependency": "reduced_for_current_config_no_commit_push",
+    "local_tracking": "ok",
+    "manager_mode": "safe_no_commit_no_push",
+    "next_action": "Complete cloudflared cert.pem and TRACKING_HOST for named tunnel.",
+    "note": "old pre-patch manager completed with 240s timeout log; current safe manager remains running and does not auto push",
+    "public_tracking": "cloudflare_quick_tunnel_verified_interim",
+    "quick_tunnel_session": "proc_b54c3b624dd5",
+    "required_fix": "Cloudflare Tunnel named tunnel / VPS reverse proxy / localhost.run account key",
+    "stable": false,
+    "updated_at": "2026-05-09T11:07:26+0900",
+    "verification": {
+      "event_id": "evt_1778292424983_752adf99",
+      "health": 200,
+      "lead": 200,
+      "redirect": 302
+    }
+  },
+  "tracking_backend_watchdog": {
+    "action": "current_backend_healthy",
+    "checked_trycloudflare_candidates": [],
+    "current_backend_url": "https://hermes-revenue-tracking-48.loca.lt",
+    "current_health": {
+      "status": 200,
+      "ok": true,
+      "tracking_ok": true
+    },
+    "fixed_backend": true,
+    "fixed_backend_blocker": null,
+    "kind": "localtunnel_fixed_subdomain",
+    "lead_probe": {
+      "status": 200,
+      "ok": true,
+      "attempt": 1
+    },
+    "stable": false,
+    "updated_at": "2026-05-10T11:42:57+09:00"
+  },
+  "tracking_gateway_status": "provider_degraded",
+  "tracking_last_error": "http_error kind=health code=503",
+  "tracking_public_backend_status": {
+    "area": "Tracking",
+    "current_backend": "https://b180066bdc53e2.lhr.life",
+    "detail": "Stable gateway is preserved, but the current rotating backend is unhealthy.",
+    "gateway": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
+    "name": "Tracking",
+    "next_action": "Use account-backed localhost.run, Cloudflare Tunnel, VPS reverse proxy, or custom tracking domain for durable public tracking.",
+    "root_cause": "http_error kind=health code=503",
+    "status": "blocked",
+    "status_label": "provider_degraded",
+    "summary": "localhost.run anonymous tunnel is repeatedly failing health checks.",
+    "updated_at": "2026-05-10T02:40:05+09:00"
+  },
+  "updated_at": "2026-05-10T11:41:32+09:00",
+  "wordpress_revenue_sprint": {
+    "active_draft_direct_lhr_matches": 0,
+    "active_draft_stale_lhr_matches": 0,
+    "config_direct_lhr_matches": [],
+    "latest_batch_expected_updated": 90,
+    "latest_conversion_focused_publish": "https://unpre.co.kr/%ea%b5%ad%eb%af%bc%ec%97%b0%ea%b8%88-%ea%b8%b0%ea%b8%88%ec%9c%84%ec%9b%90%ed%9a%8c-2026-%ed%95%b5%ec%8b%ac-%ea%b2%b0%ec%a0%95-top-5/",
+    "latest_expansion_newly_updated": 40,
+    "lead_page_checks": {
+      "backend_health": {
+        "error": "HTTPError",
+        "ok": false
+      },
+      "dashboard_status": {
+        "body_hint": "{\n  \"revenue_tracking\": {\n    \"last_healthcheck\": \"2026-05-09T12:09:34.160369Z\",\n    \"status\": \"ok\",\n    \"last_error\": \"",
+        "ok": true,
+        "status": 200
+      },
+      "lead_post": {
+        "error": "HTTPError",
+        "ok": false
+      },
+      "local_lead_html": {
+        "body_hint": "<!doctype html>\n<html lang=\"ko\">\n<head>\n  <meta charset=\"utf-8\" />\n  <meta name=\"viewport\" content=\"width=device-width,i",
+        "ok": true,
+        "status": 200
+      }
+    },
+    "lead_page_patch": "site_specific_copy_and_offer_id_preservation_applied",
+    "lead_page_patch_verified_at": "2026-05-09T21:16:03+09:00",
+    "lead_rate_per_click_pct": 0.0702,
+    "live_page_has_lead_html": true,
+    "live_wp_limit50_dryrun": {
+      "errors_like": 0,
+      "rc": 0,
+      "skip": 60,
+      "would_update": 90
+    },
+    "manifest": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/data/live_wp_lead_cta_expand_50_20260509.json",
+    "post_apply_remaining_without_lead_cta": 0,
+    "post_apply_skip_with_lead_cta": 150,
+    "recent_live_wp_checked": 15,
+    "recent_live_wp_checked_total": 150,
+    "recent_live_wp_updated_with_lead_cta": 14,
+    "recent_live_wp_updated_with_lead_cta_cumulative": 54,
+    "revenue_event_rate_per_click_pct": 0.0176,
+    "revised_wp_lead_cta_patched": 17,
+    "sample_live_checks": {
+      "skewese_new_batch": {
+        "lead_html": true,
+        "marker": true,
+        "offer_id": true,
+        "ok": true,
+        "status": 200
+      },
+      "unpre_new_batch": {
+        "lead_html": true,
+        "marker": true,
+        "offer_id": true,
+        "ok": true,
+        "status": 200
+      },
+      "untab_new_batch": {
+        "lead_html": true,
+        "marker": true,
+        "offer_id": true,
+        "ok": true,
+        "status": 200
+      }
+    },
+    "status": "live_wp_recent_50_each_lead_cta_applied",
+    "tracking_backend_protected_from_lhr_overwrite": true,
+    "tracking_backend_stable": false,
+    "tracking_backend_url": "https://vocal-tennis-ink-album.trycloudflare.com",
+    "tracking_health": {
+      "dashboard": {
+        "ok": true,
+        "status": 200,
+        "tracking_ok": true
+      },
+      "local_health": {
+        "ok": true,
+        "status": 200,
+        "tracking_ok": true
+      },
+      "public_health": {
+        "ok": true,
+        "status": 200,
+        "tracking_ok": true
+      }
+    },
+    "updated_at": "2026-05-09T21:39:03+09:00"
+  },
+  "youtube_quota": {
+    "date": "2026-05-08",
+    "history": [
+      {
+        "cost": 1600,
+        "label": "shorts:micheuhasi:20260507_yt-micheuhasi-shorts_친구인-줄-알았는데-이용당한-것-같아요-공감-능력-없는-사람-알아보기",
+        "ts": "2026-05-08"
+      }
+    ],
+    "limit": 10000,
+    "remaining": 8000,
+    "safe_limit": 9600,
+    "uploads": 1,
+    "uploads_remaining": 5,
+    "used": 1600
+  },
+  "youtube_ops_latest": {
+    "updated_at": "2026-05-10T10:10:58+09:00",
+    "date": "2026-05-10",
+    "youtube_shorts_published_today": [
+      {
+        "channel": "untabcompany",
+        "url": "https://www.youtube.com/shorts/TWeBslp0UbU",
+        "title": "국민연금 1,100조 원, 누가 어떻게 굴릴까"
+      },
+      {
+        "channel": "micheuhasi",
+        "url": "https://www.youtube.com/shorts/N4UKnupTpaI",
+        "title": "콜라겐 펩타이드, 피부용과 관절용은 다릅니다"
+      },
+      {
+        "channel": "araelaver",
+        "url": "https://www.youtube.com/shorts/8F1pe261pHk",
+        "title": "1843년, 최초의 프로그래머는 여성이었습니다"
+      },
+      {
+        "channel": "kdowndan",
+        "url": "https://www.youtube.com/shorts/qIpNvM0dzp0",
+        "title": "개구리 소년 사건, 11년 뒤 드러난 미제의 기록"
+      }
+    ],
+    "quota": {
+      "date": "2026-05-10",
+      "used": 6400,
+      "uploads": 4,
+      "history": [
+        {
+          "ts": "2026-05-10",
+          "cost": 1600,
+          "label": "shorts:untabcompany:20260510_yt-untabcompany-shorts_재활용-국민연금-기금위"
+        },
+        {
+          "ts": "2026-05-10",
+          "cost": 1600,
+          "label": "shorts:micheuhasi:20260510_yt-micheuhasi-shorts_재활용-콜라겐-펩타이드-피부-관절-추천-2026"
+        },
+        {
+          "ts": "2026-05-10",
+          "cost": 1600,
+          "label": "shorts:araelaver:20260509_yt-araelaver-shorts_세계-최초로-컴퓨터를-만든-사람은-남자가-아니었다-에이다-러브레이스-이야"
+        },
+        {
+          "ts": "2026-05-10",
+          "cost": 1600,
+          "label": "shorts:kdowndan:20260509_yt-kdowndan-shorts_개구리-소년-사건-11년-만에-발견된-진실과-여전히-남은-의문"
+        }
+      ]
+    },
+    "queue_counts": {
+      "pending": {
+        "total": 0,
+        "shorts": 0,
+        "longform": 0,
+        "wp": 0
+      },
+      "reviewed": {
+        "total": 0,
+        "shorts": 0,
+        "longform": 0,
+        "wp": 0
+      },
+      "revised": {
+        "total": 34,
+        "shorts": 5,
+        "longform": 7,
+        "wp": 22
+      },
+      "published": {
+        "total": 340,
+        "shorts": 64,
+        "longform": 26,
+        "wp": 248
+      },
+      "rejected": {
+        "total": 30,
+        "shorts": 20,
+        "longform": 7,
+        "wp": 3
+      }
+    },
+    "tracking_backend": {
+      "url": "https://vocal-tennis-ink-album.trycloudflare.com",
+      "kind": "cloudflare_quick_tunnel",
+      "stable": false,
+      "health": {
+        "status": 200,
+        "ok": true
+      },
+      "lead_probe": {
+        "status": 200,
+        "ok": true
+      }
+    },
+    "next_actions": [
+      "Shorts daily cap filled; do not publish more Shorts today unless cap policy changes",
+      "Fixed tracking backend still requires Cloudflare named tunnel/VPS/localhost.run account key",
+      "Continue WP conversion and Longform uploader hardening"
     ]
+  },
+  "latest_manual_ops_progress": {
+    "updated_at": "2026-05-10T10:57:26+09:00",
+    "latest_published": "https://unpre.co.kr/%ec%97%b0%ea%b8%88%ec%a0%80%ec%b6%95-%ec%84%b8%ec%95%a1%ea%b3%b5%ec%a0%9c-2026-%ed%95%9c%eb%8f%84%c2%b7%eb%82%a9%ec%9e%85-3%eb%8b%a8%ea%b3%84-%ec%99%84%eb%b2%bd-%eb%b9%84%ea%b5%90/",
+    "checks": {
+      "status": 200,
+      "ok": true,
+      "has_tracking": true,
+      "has_lead": true,
+      "internal_memo_leak": false,
+      "placeholder_leak": false
+    },
+    "queue_counts": {
+      "pending": {
+        "total": 0,
+        "wp": 0,
+        "shorts": 0,
+        "longform": 0
+      },
+      "reviewed": {
+        "total": 0,
+        "wp": 0,
+        "shorts": 0,
+        "longform": 0
+      },
+      "revised": {
+        "total": 31,
+        "wp": 19,
+        "shorts": 5,
+        "longform": 7
+      },
+      "published": {
+        "total": 344,
+        "wp": 252,
+        "shorts": 64,
+        "longform": 26
+      },
+      "rejected": {
+        "total": 30,
+        "wp": 3,
+        "shorts": 20,
+        "longform": 7
+      }
+    }
+  },
+  "fixed_tracking_backend_status": {
+    "updated_at": "2026-05-10T11:03:42+09:00",
+    "task": "fixed-tracking-backend",
+    "current_backend_url": "https://vocal-tennis-ink-album.trycloudflare.com",
+    "kind": "cloudflare_quick_tunnel",
+    "stable": false,
+    "fixed_backend": false,
+    "health": {
+      "status": 200,
+      "ok": true,
+      "error": null
+    },
+    "lead_probe": {
+      "status": 200,
+      "ok": true,
+      "error": null
+    },
+    "prerequisites": {
+      "cloudflared_path": "/opt/homebrew/bin/cloudflared",
+      "cloudflare_cert_exists": false,
+      "cloudflare_config_exists": false,
+      "cloudflare_credentials_json_count": 0,
+      "localhostrun_ssh_key_candidates": 0
+    },
+    "blocked": true,
+    "blocker": "cloudflare_cert_or_managed_hostname_required",
+    "manager_log_markers_last_200_lines": {
+      "sync_start_recent": 0,
+      "skip_observe_recent": 4,
+      "sync_failed_recent": 0
+    },
+    "active_draft_direct_lhr_backend_matches": 0,
+    "git_ahead_behind": "0\t0",
+    "next_safe_state": "interim_cloudflare_quick_tunnel_watchdog"
+  },
+  "localtunnel_tracking_backend": {
+    "updated_at": "2026-05-10T11:41:32+09:00",
+    "action": "localtunnel_started_and_healthy",
+    "public_tracking_url": "https://hermes-revenue-tracking-48.loca.lt",
+    "kind": "localtunnel_fixed_subdomain",
+    "stable": false,
+    "fixed_backend": true,
+    "pid": 75907,
+    "restarted": true,
+    "health": {
+      "status": 200,
+      "ok": true,
+      "tracking_ok": true
+    },
+    "redirect": {
+      "status": 302,
+      "location": "https://unpre.co.kr/",
+      "ok": true
+    },
+    "lead_probe": {
+      "status": 200,
+      "ok": true
+    },
+    "production_note": "No-auth fixed-subdomain fallback; Cloudflare named tunnel/VPS is still stronger for production SLA."
   }
 }

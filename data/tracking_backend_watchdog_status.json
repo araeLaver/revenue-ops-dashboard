@@ -1,0 +1,20 @@
+{
+  "updated_at": "2026-05-10T11:42:57+09:00",
+  "action": "current_backend_healthy",
+  "current_backend_url": "https://hermes-revenue-tracking-48.loca.lt",
+  "kind": "localtunnel_fixed_subdomain",
+  "stable": false,
+  "fixed_backend": true,
+  "current_health": {
+    "status": 200,
+    "ok": true,
+    "tracking_ok": true
+  },
+  "lead_probe": {
+    "status": 200,
+    "ok": true,
+    "attempt": 1
+  },
+  "checked_trycloudflare_candidates": [],
+  "fixed_backend_blocker": null
+}
