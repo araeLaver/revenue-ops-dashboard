@@ -1,0 +1,5 @@
+{
+  "status": "ok",
+  "last_error_summary": "Gateway status command succeeded; no recent delivery-related errors found in gateway.log, gateway.error.log.",
+  "next_action": "No action needed beyond normal monitoring."
+}

@@ -1,0 +1,110 @@
+{
+  "_description": "Hermes 풀가동 라우팅 (사이트/채널별 시리즈 마스터)",
+  "_legacy_series": {
+    "_note": "이전 시리즈 매핑은 status.json content_queue에서 운영 메타로 관리. 발행은 wp_sites/yt_channels 사용.",
+    "초보자 실수 시리즈": {"wp_site": "unpre", "yt_channel": "untabcompany"},
+    "툴 비교 시리즈": {"wp_site": "unpre", "yt_channel": "untabcompany"},
+    "실행 체크리스트 시리즈": {"wp_site": "untab", "yt_channel": "untabcompany"},
+    "성과 개선 시리즈": {"wp_site": "unpre", "yt_channel": "untabcompany"},
+    "WordPress/YouTube 발행 안전화": {"wp_site": "unpre", "yt_channel": "araelaver"}
+  },
+  "_default": {"wp_site": "unpre", "yt_channel": "araelaver"},
+
+  "wp_sites": {
+    "unpre": {
+      "prompt_file": "bohum.txt",
+      "topic": "보험/금융/대출/재테크",
+      "daily_count": 4,
+      "publish_hours": [7, 11, 15, 19],
+      "series_master": [
+        {"name": "보험 사기 피해 사례 시리즈", "rationale": "공포 + 검색 의도 강함"},
+        {"name": "ISA vs IRP vs 연금저축 비교 시리즈", "rationale": "구매 의도, 제휴 수익"},
+        {"name": "20-30대 재테크 입문 시리즈", "rationale": "장기 유입"},
+        {"name": "실손보험 청구 노하우 시리즈", "rationale": "실용 검색 키워드"},
+        {"name": "신용대출 금리비교 시리즈", "rationale": "고CPC, 전환율 최상"},
+        {"name": "전세자금대출 완전정복 시리즈", "rationale": "청년 타겟, 고CPC"},
+        {"name": "자동차보험 저렴하게 가입 시리즈", "rationale": "연간 검색량 최상위"}
+      ]
+    },
+    "untab": {
+      "prompt_file": "jiwon.txt",
+      "topic": "정부지원금/복지/소상공인",
+      "daily_count": 4,
+      "publish_hours": [8, 12, 16, 20],
+      "series_master": [
+        {"name": "청년수당·청년지원금 신청 가이드 시리즈", "rationale": "고검색량 키워드"},
+        {"name": "소상공인 정부지원금 분석 시리즈", "rationale": "구체 자격/금액 정보"},
+        {"name": "월별 신규 정부지원사업 정리 시리즈", "rationale": "주기적 갱신 = 유입 누적"},
+        {"name": "근로장려금 EITC 완벽가이드 시리즈", "rationale": "5월 시즌 대비"},
+        {"name": "실업급여 신청 완전정복 시리즈", "rationale": "고검색량, 실용성 최상"}
+      ]
+    },
+    "skewese": {
+      "prompt_file": "health.txt",
+      "topic": "건강/다이어트/영양제",
+      "daily_count": 4,
+      "publish_hours": [9, 13, 17, 21],
+      "series_master": [
+        {"name": "오메가3·종합비타민 비교 시리즈", "rationale": "쿠팡 제휴 수익 강함"},
+        {"name": "다이어트 보조제 성분 분석 시리즈", "rationale": "건강 검색 의도"},
+        {"name": "관절·근력 영양제 시리즈", "rationale": "중장년 타겟, 고객단가 높음"},
+        {"name": "프로바이오틱스 TOP5 비교 시리즈", "rationale": "쿠팡 전환율 최상"},
+        {"name": "단백질 보충제 가성비 랭킹 시리즈", "rationale": "MZ세대 타겟, 고단가"}
+      ]
+    }
+  },
+
+  "yt_channels": {
+    "araelaver": {
+      "channel_name": "Void Petal",
+      "theme": "역사/세계사/미스터리",
+      "use_topic_pool": true,
+      "shorts_hour": 6,
+      "longform_hour": 2,
+      "longform_minute": 0
+    },
+    "kdowndan": {
+      "channel_name": "Untab",
+      "theme": "공포/괴담",
+      "use_topic_pool": true,
+      "shorts_hour": 10,
+      "longform_hour": 8,
+      "longform_minute": 0
+    },
+    "micheuhasi": {
+      "channel_name": "날줄씨줄",
+      "theme": "MBTI/심리/연애",
+      "use_topic_pool": true,
+      "shorts_hour": 14,
+      "longform_hour": 15,
+      "longform_minute": 30
+    },
+    "untabcompany": {
+      "channel_name": "시세박사",
+      "theme": "투자/재테크",
+      "use_topic_pool": true,
+      "shorts_hour": 18,
+      "longform_hour": 20,
+      "longform_minute": 30
+    }
+  },
+
+  "quota": {
+    "youtube_daily_limit": 10000,
+    "upload_cost": 1600,
+    "safety_margin": 400,
+    "comment": "9600 / 1600 = 6개 안전. 격일제로 매일 4개 사용 예정 (6400)."
+  },
+
+  "cadence": {
+    "shorts_days": "even",
+    "longform_days": "odd",
+    "comment": "date -v-4H +%d 짝수일=쇼츠, 홀수일=롱폼. WP는 매일."
+  },
+
+  "retry": {
+    "draft_max_retries": 3,
+    "publish_max_retries": 3,
+    "ollama_timeout_sec": 300
+  }
+}

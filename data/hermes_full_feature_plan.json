@@ -1,0 +1,265 @@
+{
+  "updated": "2026-05-05 16:15:39 KST",
+  "status": "in_progress",
+  "objective": "Hermes를 발행 대행이 아니라 수익화 운영 OS로 연결: memory/skills/cron/tools/dashboard/reporting/analytics/event automation/delegation/profile split",
+  "phases": [
+    {
+      "phase": "Phase 1 - Core Ops",
+      "status": "done",
+      "items": [
+        "Memory",
+        "Skills",
+        "Cron",
+        "File/Terminal/Browser tools",
+        "Dashboard",
+        "Quality gates",
+        "Quota-aware YT publish caps"
+      ]
+    },
+    {
+      "phase": "Phase 2 - Visibility",
+      "status": "done",
+      "items": [
+        "Daily goal board",
+        "Bottleneck board",
+        "Performance snapshot 274 sync",
+        "Reporting status",
+        "Hermes feature matrix"
+      ]
+    },
+    {
+      "phase": "Phase 3 - Analytics Contracts",
+      "status": "done",
+      "items": [
+        "CTA click JSONL contract",
+        "Lead events JSONL contract",
+        "Revenue events JSONL contract",
+        "YouTube/WordPress daily metric schema"
+      ]
+    },
+    {
+      "phase": "Phase 4 - Event Automation",
+      "status": "in_progress",
+      "items": [
+        "dashboard event schema",
+        "apply_event.py merger",
+        "webhook subscription for draft-created/publish-success"
+      ]
+    },
+    {
+      "phase": "Phase 5 - External Data/MCP",
+      "status": "planned",
+      "items": [
+        "Google Sheets/Form lead feed",
+        "YouTube Analytics API feed",
+        "WP click/CTA tracker",
+        "MCP service wrappers if credentials available"
+      ]
+    },
+    {
+      "phase": "Phase 6 - Multi-agent/Profile Split",
+      "status": "planned",
+      "items": [
+        "wp-ops profile",
+        "yt-ops profile",
+        "music-ops profile",
+        "revenue-analyst profile",
+        "delegated QA/research agents"
+      ]
+    },
+    {
+      "phase": "Phase 4A",
+      "name": "Revenue Tracking Server",
+      "status": "done",
+      "evidence": [
+        "/health OK",
+        "/t redirect OK",
+        "/lead OK",
+        "/revenue OK",
+        "performance rollup OK"
+      ]
+    }
+  ],
+  "next_implementation_order": [
+    "Wire analytics JSONL producers into CTA/link redirects",
+    "Create dashboard apply_event.py and event schema",
+    "Run one reporting send verification without exposing secrets",
+    "Prepare profile split docs and cron mapping",
+    "Use delegate_task for parallel QA/research after quota reset"
+  ],
+  "operating_rules": [
+    "Do not publish YT above safe quota 9600/day",
+    "Keep reviewed queue and external URL confirmation separated",
+    "Every asset requires offer/CTA path",
+    "Report published delta, queue, quota, bottleneck after each batch"
+  ],
+  "latest_completed": [
+    "Analytics contract files created and rendered",
+    "apply_event.py event merger created and smoke-tested",
+    "Telegram publish notification logs verified for WP/Shorts/Longform"
+  ],
+  "updated_at": "2026-05-05 17:10:14 KST",
+  "feature_activation": {
+    "event_tracking_server": {
+      "status": "active",
+      "port": 8431,
+      "files": [
+        "scripts/tracking_server.py",
+        "data/analytics/*.jsonl"
+      ],
+      "monetization_use": "CTA click, lead, revenue event capture"
+    },
+    "analytics_api": {
+      "status": "partial_ok",
+      "wordpress": "partial_ok",
+      "youtube": "degraded_reauth_required",
+      "next": "refresh YouTube OAuth tokens and enable WP-Statistics/API"
+    },
+    "music_ip_distribution": {
+      "status": "last_mile_ready_artwork_pending",
+      "tracks": [
+        "TRK-001",
+        "TRK-002"
+      ],
+      "next": "generate artwork and portal submit"
+    }
+  },
+  "last_updated": "2026-05-05 19:25:56 KST",
+  "cta_tracking_rewrite": {
+    "updated_at": "2026-05-05 19:25:56 KST",
+    "status": "active",
+    "script": "scripts/rewrite_cta_tracking_links.py",
+    "cron": "hermes-cta-tracking-rewrite",
+    "target_states": [
+      "pending",
+      "reviewed",
+      "revised"
+    ],
+    "published_policy": "skip_archival_sources",
+    "summary": {
+      "scanned": 5,
+      "changed_files": 1,
+      "changes": 4
+    },
+    "next_public_requirement": "tracking server must be exposed via public domain/reverse proxy before external visitors can use local tracking URLs"
+  },
+  "music_ip_routenote_status": {
+    "updated_at": "2026-05-05 19:27:06 KST",
+    "status": "package_hardened_artwork_pending",
+    "manifest": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/music_ip/routenote/routenote_last_mile_manifest.json",
+    "tracks": [
+      {
+        "track_id": "TRK-001",
+        "title": "Midnight Brief Lo-fi",
+        "core_audio_ready": true,
+        "artwork_status": "required_missing",
+        "status_file": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/music_ip/routenote/TRK-001_submission_status.json",
+        "checklist": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/music_ip/routenote/TRK-001_routenote_submission_checklist.md",
+        "cover_spec": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/music_ip/artwork/TRK-001_cover_spec.json",
+        "ready_for_submit": false,
+        "next_action": "generate/upload cover artwork then portal submit"
+      },
+      {
+        "track_id": "TRK-002",
+        "title": "City Pulse News Bed",
+        "core_audio_ready": true,
+        "artwork_status": "required_missing",
+        "status_file": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/music_ip/routenote/TRK-002_submission_status.json",
+        "checklist": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/music_ip/routenote/TRK-002_routenote_submission_checklist.md",
+        "cover_spec": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/music_ip/artwork/TRK-002_cover_spec.json",
+        "ready_for_submit": false,
+        "next_action": "generate/upload cover artwork then portal submit"
+      }
+    ],
+    "blocked_by": [
+      "cover artwork generation requires image provider key or manual design",
+      "RouteNote portal login/human submission required"
+    ],
+    "do_not_store_credentials": true
+  },
+  "hermes_feature_activation_matrix": {
+    "updated_at": "2026-05-05 19:27:33 KST",
+    "summary": "Hermes revenue operations feature activation matrix",
+    "features": [
+      {
+        "feature": "skills",
+        "status": "active",
+        "revenue_use": "content revenue automation, live ops dashboard, Hermes config workflows",
+        "evidence": "skills loaded and used"
+      },
+      {
+        "feature": "memory",
+        "status": "active",
+        "revenue_use": "operator preferences and pipeline conventions retained",
+        "evidence": "persistent memory injected"
+      },
+      {
+        "feature": "cron",
+        "status": "active",
+        "revenue_use": "generate/review/publish/analytics/tracking healthcheck automation",
+        "evidence": "15 active jobs including revenue tracking and analytics refresh"
+      },
+      {
+        "feature": "event_automation",
+        "status": "active",
+        "revenue_use": "operation events merge into status/performance snapshots",
+        "evidence": "scripts/apply_event.py and data/events.jsonl"
+      },
+      {
+        "feature": "delegation",
+        "status": "active",
+        "revenue_use": "parallel analytics and RouteNote inspections",
+        "evidence": "subagents completed two inspection tasks"
+      },
+      {
+        "feature": "profile",
+        "status": "partial_active",
+        "revenue_use": "dedicated revenueops profile created for isolated monetization operations",
+        "evidence": "/Users/down/.hermes/profiles/revenueops"
+      },
+      {
+        "feature": "reporting",
+        "status": "active_project_notify",
+        "revenue_use": "publish/reporting Telegram proof via dashboard notify script",
+        "evidence": "notify-telegram ok logs for WP/Shorts/Longform"
+      },
+      {
+        "feature": "gateway_native_telegram",
+        "status": "not_configured",
+        "revenue_use": "future direct Hermes chat delivery",
+        "evidence": "Hermes Gateway service running but Telegram platform not configured"
+      },
+      {
+        "feature": "mcp",
+        "status": "runtime_ready_server_not_connected",
+        "revenue_use": "future external tool/data integrations",
+        "evidence": "python mcp, npx, uvx available; dashboardfs connection closed"
+      },
+      {
+        "feature": "tracking_server",
+        "status": "active",
+        "revenue_use": "CTA click, lead, revenue event capture",
+        "evidence": "/health, /t, /lead, /revenue smoke tests passed"
+      },
+      {
+        "feature": "analytics_api",
+        "status": "partial",
+        "revenue_use": "WP recent posts collected; YouTube pipeline ready but reauth required",
+        "evidence": "blog analytics ok; youtube invalid_grant"
+      },
+      {
+        "feature": "image_generation",
+        "status": "blocked_missing_provider_key",
+        "revenue_use": "RouteNote artwork and thumbnails",
+        "evidence": "FAL_KEY environment variable not set"
+      }
+    ],
+    "next_unlocks": [
+      "YouTube OAuth reauth",
+      "public tracking domain/reverse proxy",
+      "Hermes native Telegram setup if desired",
+      "MCP dashboardfs config retry after restart",
+      "image provider key or manual artwork generation"
+    ]
+  }
+}

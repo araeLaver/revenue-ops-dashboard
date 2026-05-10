@@ -23,16 +23,16 @@
   "bottleneck_board": {
     "tracking": {
       "area": "Tracking",
-      "current_backend": "https://b180066bdc53e2.lhr.life",
-      "detail": "Stable gateway is preserved, but the current rotating backend is unhealthy.",
-      "gateway": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
       "name": "Tracking",
-      "next_action": "Use account-backed localhost.run, Cloudflare Tunnel, VPS reverse proxy, or custom tracking domain for durable public tracking.",
-      "root_cause": "http_error kind=health code=503",
-      "status": "blocked",
-      "status_label": "provider_degraded",
-      "summary": "localhost.run anonymous tunnel is repeatedly failing health checks.",
-      "updated_at": "2026-05-10T02:40:05+09:00"
+      "status": "watch",
+      "status_label": "temporary_backend_ok",
+      "summary": "외부 tracking backend는 Cloudflare quick tunnel로 복구됨",
+      "detail": "/health 200, /t 302, /lead POST 200 확인. 다만 quick tunnel이라 stable=false.",
+      "current_backend": "https://vocal-tennis-ink-album.trycloudflare.com",
+      "gateway": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
+      "root_cause": "localtunnel /t timeout after external URL check",
+      "next_action": "Cloudflare named tunnel 또는 VPS reverse proxy로 stable=true 전환",
+      "updated_at": "2026-05-10T21:40:56+09:00"
     }
   },
   "content_queue": {
@@ -73,42 +73,29 @@
     }
   },
   "conversion_event_rollup": {
-    "canonical_events": 0,
-    "cta_clicks": 8106,
-    "invalid_lines": {
-      "conversion_events": 0,
-      "cta_click_events": 0,
-      "lead_events": 0,
-      "revenue_events": 0
-    },
-    "latest_event_type": "cta_click",
-    "lead_rate_per_click_pct": 0.9129,
-    "leads": 74,
-    "revenue_event_rate_per_click_pct": 0.0123,
-    "revenue_events": 1,
-    "sources": {
-      "conversion_events": false,
-      "cta_click_events": true,
-      "lead_events": true,
-      "revenue_events": true
-    },
-    "updated_at": "2026-05-10T09:16:47+09:00"
+    "cta_clicks": 70,
+    "leads": 120,
+    "revenue_events": 0,
+    "lead_rate_pct": 171.4286,
+    "revenue_event_rate_pct": 0.0,
+    "lead_to_revenue_pct": 0.0
   },
   "current_bottlenecks": [
     {
-      "area": "wordpress_revenue",
-      "next": "상위 클릭 published WP live CTA 업데이트 및 실제 CRM/Form 연결",
-      "status": "watch",
-      "summary": "CTA clicks 대비 lead/revenue 전환율 낮음 — lead CTA/registry/offers emergency patch 적용"
-    },
-    {
-      "area": "tracking_public_url",
-      "next": "tracking tunnel을 재시작/교체한 뒤 data/tracking_public_url.json public_tracking_url을 갱신하고 /health 재확인",
+      "area": "revenue_strategy",
       "status": "blocked",
-      "summary": "tracking_public_url health check failed: url=https://887dbf17839b94.lhr.life/health curl_exit=0 http_code=503 body='<h1>no tunnel here :(</h1>'",
-      "updated_at": "2026-05-09T06:11:39Z"
+      "summary": "raw KPI 대부분이 probe/health 이벤트이며 real revenue event는 0건",
+      "next_action": "money-intent offer/lead form/후속 세일즈 자동화로 전환",
+      "updated_at": "2026-05-10T21:04:16+0900"
     },
-    "tracking backend is interim only; Cloudflare named tunnel cert/domain still required"
+    "tracking backend is interim only; Cloudflare named tunnel cert/domain still required",
+    {
+      "area": "tracking_backend_stability",
+      "status": "watch",
+      "summary": "현재 외부 tracking은 동작하지만 Cloudflare quick tunnel이라 임시 주소",
+      "next_action": "named tunnel/VPS 전환 전까지 watchdog로 유지",
+      "updated_at": "2026-05-10T21:40:56+09:00"
+    }
   ],
   "direct_backend_cleanup": {
     "changed_files_count": 20,
@@ -226,7 +213,7 @@
     "vps_reverse_proxy": "not_configured",
     "work_status": "in_progress_not_idle"
   },
-  "last_updated": "2026-05-10T11:42:57+09:00",
+  "last_updated": "2026-05-10T21:40:56+09:00",
   "last_wp_publish": {
     "draft_repair": "deterministic_no_llm",
     "qa_score": 8.0,
@@ -520,12 +507,13 @@
     }
   },
   "revenue_tracking": {
-    "health_url": "http://127.0.0.1:8431/health",
+    "health_url": "https://vocal-tennis-ink-album.trycloudflare.com/health",
     "last_error": "",
-    "last_healthcheck": "2026-05-10T02:42:56.862933+00:00",
+    "last_healthcheck": "2026-05-10T21:40:56+09:00",
     "last_restart_attempt": null,
     "last_restart_attempted": false,
-    "status": "ok"
+    "status": "ok",
+    "public_tracking_url": "https://vocal-tennis-ink-album.trycloudflare.com"
   },
   "system_status": "active_progress_reported",
   "tracking": {
@@ -563,8 +551,7 @@
     },
     "lead_probe": {
       "status": 200,
-      "ok": true,
-      "attempt": 1
+      "ok": true
     },
     "manager_policy": "observe_only_skip_lhr_sync_when_no_commit_no_push",
     "manager_process_check": [
@@ -619,8 +606,8 @@
     "status": "cloudflare_quick_tunnel_restored_lhr_observer_sync_disabled",
     "status_path": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/data/fixed_tracking_backend_status.json",
     "updated_at": "2026-05-09T21:43:57+09:00",
-    "watchdog_last_updated": "2026-05-10T11:42:57+09:00",
-    "watchdog_status": "current_backend_healthy",
+    "watchdog_last_updated": "2026-05-10T21:32:58+09:00",
+    "watchdog_status": "localtunnel_fixed_subdomain_healthy",
     "fixed_backend_level": "accountless_fixed_subdomain_watchdog_protected",
     "next_action": "Cloudflare named tunnel or VPS remains the production-grade final fix; localtunnel fixed subdomain is the no-auth operational replacement for lhr.life."
   },
@@ -652,39 +639,39 @@
   "tracking_backend_watchdog": {
     "action": "current_backend_healthy",
     "checked_trycloudflare_candidates": [],
-    "current_backend_url": "https://hermes-revenue-tracking-48.loca.lt",
+    "current_backend_url": "https://vocal-tennis-ink-album.trycloudflare.com",
     "current_health": {
       "status": 200,
       "ok": true,
       "tracking_ok": true
     },
-    "fixed_backend": true,
-    "fixed_backend_blocker": null,
-    "kind": "localtunnel_fixed_subdomain",
+    "fixed_backend": false,
+    "fixed_backend_blocker": "cloudflare_cert_or_managed_hostname_required",
+    "kind": "cloudflare_quick_tunnel",
     "lead_probe": {
       "status": 200,
       "ok": true,
       "attempt": 1
     },
     "stable": false,
-    "updated_at": "2026-05-10T11:42:57+09:00"
+    "updated_at": "2026-05-10T21:32:58+09:00"
   },
   "tracking_gateway_status": "provider_degraded",
-  "tracking_last_error": "http_error kind=health code=503",
+  "tracking_last_error": "exception kind=health error=timeout: The read operation timed out",
   "tracking_public_backend_status": {
     "area": "Tracking",
-    "current_backend": "https://b180066bdc53e2.lhr.life",
-    "detail": "Stable gateway is preserved, but the current rotating backend is unhealthy.",
-    "gateway": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
     "name": "Tracking",
-    "next_action": "Use account-backed localhost.run, Cloudflare Tunnel, VPS reverse proxy, or custom tracking domain for durable public tracking.",
-    "root_cause": "http_error kind=health code=503",
     "status": "blocked",
     "status_label": "provider_degraded",
     "summary": "localhost.run anonymous tunnel is repeatedly failing health checks.",
-    "updated_at": "2026-05-10T02:40:05+09:00"
+    "detail": "Stable gateway is preserved, but the current rotating backend is unhealthy.",
+    "current_backend": "https://b2f5f04e2bbc15.lhr.life",
+    "gateway": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
+    "root_cause": "exception kind=health error=timeout: The read operation timed out",
+    "next_action": "Use account-backed localhost.run, Cloudflare Tunnel, VPS reverse proxy, or custom tracking domain for durable public tracking.",
+    "updated_at": "2026-05-10T21:40:18+09:00"
   },
-  "updated_at": "2026-05-10T11:41:32+09:00",
+  "updated_at": "2026-05-10T21:37:11+09:00",
   "wordpress_revenue_sprint": {
     "active_draft_direct_lhr_matches": 0,
     "active_draft_stale_lhr_matches": 0,
@@ -897,16 +884,19 @@
     ]
   },
   "latest_manual_ops_progress": {
-    "updated_at": "2026-05-10T10:57:26+09:00",
-    "latest_published": "https://unpre.co.kr/%ec%97%b0%ea%b8%88%ec%a0%80%ec%b6%95-%ec%84%b8%ec%95%a1%ea%b3%b5%ec%a0%9c-2026-%ed%95%9c%eb%8f%84%c2%b7%eb%82%a9%ec%9e%85-3%eb%8b%a8%ea%b3%84-%ec%99%84%eb%b2%bd-%eb%b9%84%ea%b5%90/",
-    "checks": {
-      "status": 200,
-      "ok": true,
-      "has_tracking": true,
-      "has_lead": true,
-      "internal_memo_leak": false,
-      "placeholder_leak": false
+    "updated_at": "2026-05-10T14:46:30+09:00",
+    "wp_published_this_step": {
+      "site": "skewese",
+      "url": "https://skewese.com/nac-%ea%b0%84-%ed%95%b4%eb%8f%85-%ed%9a%a8%ea%b3%bc-top-3-%ec%98%81%ec%96%91%ec%a0%9c-%ec%b6%94%ec%b2%9c-2026/",
+      "verified": true
     },
+    "tracking_backend": {
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "kind": "localtunnel_fixed_subdomain",
+      "fixed_backend": true,
+      "stable": false
+    },
+    "youtube_today": "shorts cap 4/4, no more uploads today",
     "queue_counts": {
       "pending": {
         "total": 0,
@@ -921,14 +911,14 @@
         "longform": 0
       },
       "revised": {
-        "total": 31,
-        "wp": 19,
+        "total": 29,
+        "wp": 17,
         "shorts": 5,
         "longform": 7
       },
       "published": {
-        "total": 344,
-        "wp": 252,
+        "total": 346,
+        "wp": 254,
         "shorts": 64,
         "longform": 26
       },
@@ -976,14 +966,14 @@
     "next_safe_state": "interim_cloudflare_quick_tunnel_watchdog"
   },
   "localtunnel_tracking_backend": {
-    "updated_at": "2026-05-10T11:41:32+09:00",
-    "action": "localtunnel_started_and_healthy",
+    "updated_at": "2026-05-10T21:37:11+09:00",
+    "action": "localtunnel_fixed_subdomain_healthy",
     "public_tracking_url": "https://hermes-revenue-tracking-48.loca.lt",
     "kind": "localtunnel_fixed_subdomain",
     "stable": false,
     "fixed_backend": true,
-    "pid": 75907,
-    "restarted": true,
+    "pid": 14850,
+    "restarted": false,
     "health": {
       "status": 200,
       "ok": true,
@@ -999,5 +989,240 @@
       "ok": true
     },
     "production_note": "No-auth fixed-subdomain fallback; Cloudflare named tunnel/VPS is still stronger for production SLA."
+  },
+  "draft_queue_counts": {
+    "pending": {
+      "total": 0,
+      "wp": 0,
+      "shorts": 0,
+      "longform": 0
+    },
+    "reviewed": {
+      "total": 0,
+      "wp": 0,
+      "shorts": 0,
+      "longform": 0
+    },
+    "revised": {
+      "total": 29,
+      "wp": 17,
+      "shorts": 5,
+      "longform": 7
+    },
+    "published": {
+      "total": 348,
+      "wp": 256,
+      "shorts": 64,
+      "longform": 26
+    },
+    "rejected": {
+      "total": 30,
+      "wp": 3,
+      "shorts": 20,
+      "longform": 7
+    }
+  },
+  "latest_wp_publish": {
+    "site": "untab",
+    "title": "에너지바우처 2026 신청 자격·금액 3가지 핵심 정리",
+    "url": "https://untab.co.kr/%ec%97%90%eb%84%88%ec%a7%80%eb%b0%94%ec%9a%b0%ec%b2%98-2026-%ec%8b%a0%ec%b2%ad-%ec%9e%90%ea%b2%a9%c2%b7%ea%b8%88%ec%95%a1-3%ea%b0%80%ec%a7%80-%ed%95%b5%ec%8b%ac-%ec%a0%95%eb%a6%ac/",
+    "verified": {
+      "url": "https://untab.co.kr/%ec%97%90%eb%84%88%ec%a7%80%eb%b0%94%ec%9a%b0%ec%b2%98-2026-%ec%8b%a0%ec%b2%ad-%ec%9e%90%ea%b2%a9%c2%b7%ea%b8%88%ec%95%a1-3%ea%b0%80%ec%a7%80-%ed%95%b5%ec%8b%ac-%ec%a0%95%eb%a6%ac/",
+      "status": 200,
+      "has_tracking": true,
+      "has_lead": true,
+      "internal_memo_leak": false,
+      "placeholder_leak": false,
+      "title": true
+    },
+    "updated_at": "2026-05-10T17:28:16+0900"
+  },
+  "current_tracking_backend": "https://hermes-revenue-tracking-48.loca.lt",
+  "latest_wp_publish_batch": {
+    "site": "untab",
+    "count": 2,
+    "urls": [
+      "https://untab.co.kr/%ec%97%90%eb%84%88%ec%a7%80%eb%b0%94%ec%9a%b0%ec%b2%98-2026-%ec%8b%a0%ec%b2%ad-%ec%9e%90%ea%b2%a9%c2%b7%ea%b8%88%ec%95%a1-3%ea%b0%80%ec%a7%80-%ed%95%b5%ec%8b%ac-%ec%a0%95%eb%a6%ac/",
+      "https://untab.co.kr/%ec%a0%84%ec%84%b8%ec%82%ac%ea%b8%b0-%ed%94%bc%ed%95%b4-%ec%a7%80%ec%9b%90%ea%b8%88-%ec%8b%a0%ec%b2%ad-5%eb%8b%a8%ea%b3%84-%ec%b4%9d%ec%a0%95%eb%a6%ac-2026/"
+    ],
+    "verified": [
+      {
+        "url": "https://untab.co.kr/%ec%97%90%eb%84%88%ec%a7%80%eb%b0%94%ec%9a%b0%ec%b2%98-2026-%ec%8b%a0%ec%b2%ad-%ec%9e%90%ea%b2%a9%c2%b7%ea%b8%88%ec%95%a1-3%ea%b0%80%ec%a7%80-%ed%95%b5%ec%8b%ac-%ec%a0%95%eb%a6%ac/",
+        "status": 200,
+        "has_tracking": true,
+        "has_lead": true,
+        "internal_memo_leak": false,
+        "placeholder_leak": false
+      },
+      {
+        "url": "https://untab.co.kr/%ec%a0%84%ec%84%b8%ec%82%ac%ea%b8%b0-%ed%94%bc%ed%95%b4-%ec%a7%80%ec%9b%90%ea%b8%88-%ec%8b%a0%ec%b2%ad-5%eb%8b%a8%ea%b3%84-%ec%b4%9d%ec%a0%95%eb%a6%ac-2026/",
+        "status": 200,
+        "has_tracking": true,
+        "has_lead": true,
+        "internal_memo_leak": false,
+        "placeholder_leak": false
+      }
+    ],
+    "updated_at": "2026-05-10T17:29:43+0900"
+  },
+  "conversion_event_rollup_raw": {
+    "cta_clicks": 8300,
+    "leads": 191,
+    "revenue_events": 1,
+    "lead_rate_pct": 2.3012,
+    "revenue_event_rate_pct": 0.012
+  },
+  "real_conversion_event_rollup": {
+    "updated_at": "2026-05-10T18:02:22+0900",
+    "filter": "exclude manager-health/sync-check/smoke/probe/test/verify/rotation/localtunnel health events",
+    "raw": {
+      "cta_clicks": 8337,
+      "leads": 199,
+      "revenue_events": 1
+    },
+    "probe_excluded": {
+      "cta_clicks": 8267,
+      "leads": 79,
+      "revenue_events": 1
+    },
+    "real": {
+      "cta_clicks": 70,
+      "leads": 120,
+      "revenue_events": 0
+    },
+    "real_rates": {
+      "lead_rate_pct": 171.4286,
+      "revenue_event_rate_pct": 0.0,
+      "lead_to_revenue_pct": 0.0
+    },
+    "top_real_click_offers": [
+      [
+        "unpre_check",
+        66
+      ],
+      [
+        "debug",
+        1
+      ],
+      [
+        "manager-restart",
+        1
+      ],
+      [
+        "tracking_backend_check",
+        1
+      ],
+      [
+        "healthcheck",
+        1
+      ]
+    ],
+    "top_real_lead_offers": [
+      [
+        "unpre_lead_magnet",
+        119
+      ],
+      [
+        "unknown",
+        1
+      ]
+    ],
+    "top_real_revenue_offers": []
+  },
+  "revenue_strategy_reset": {
+    "status": "active",
+    "updated_at": "2026-05-10T21:04:16+0900",
+    "diagnosis": "발행량 부족이 아니라 실제 수익 오퍼/후속 세일즈/유효 KPI 분리 부재",
+    "north_star": "유효 트래픽을 고의도 오퍼로 보내고 lead 후속 처리까지 연결",
+    "next_execution_order": [
+      "real KPI rollup: probe/manager/smoke 제외",
+      "offer_id 표준화 및 offers.json 재정리",
+      "lead.html copy/form을 site/offer별 고의도 전환형으로 수정",
+      "money WP만 발행: 보험/대출/정책자금/건강 구매형 우선",
+      "mid-article CTA 삽입: 첫 H2 뒤 + 비교표 뒤 + 결론"
+    ],
+    "strategy_file": "data/revenue_strategy_20260510.md",
+    "real_rollup_file": "data/real_conversion_rollup_20260510.json"
+  },
+  "lead_followup_automation": {
+    "status": "active",
+    "updated_at": "2026-05-10T21:09:39+0900",
+    "summary_file": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/data/leads/followup_summary.json",
+    "csv_file": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/data/leads/followup_leads.csv",
+    "exported_unique": 137,
+    "by_priority": {
+      "medium": 136,
+      "low": 1
+    },
+    "next_actions": [
+      "high priority lead는 당일 후속 메시지/상담 가능성 확인",
+      "legacy lead_magnet은 unpre/untab/skewese money offer로 재분류",
+      "revenue_proxy event를 affiliate outbound 또는 상담 진행 상태와 연결"
+    ]
+  },
+  "last_money_post_publish": {
+    "updated_at": "2026-05-10T21:11:35+0900",
+    "site": "unpre",
+    "topic": "자동차보험 다이렉트",
+    "url": "https://unpre.co.kr/2026-%ec%9e%90%eb%8f%99%ec%b0%a8%eb%b3%b4%ed%97%98-%eb%8b%a4%ec%9d%b4%eb%a0%89%ed%8a%b8-%eb%b9%84%ea%b5%90-%ea%b0%80%ec%9e%85-%ea%b0%b1%ec%8b%a0-%ec%a0%84-%ea%bc%ad-%ed%99%95%ec%9d%b8%ed%95%a0-5/",
+    "qa_score": 8.0,
+    "money_offer_id": "unpre_insurance_quote",
+    "live_verification": {
+      "url": "https://unpre.co.kr/2026-%ec%9e%90%eb%8f%99%ec%b0%a8%eb%b3%b4%ed%97%98-%eb%8b%a4%ec%9d%b4%eb%a0%89%ed%8a%b8-%eb%b9%84%ea%b5%90-%ea%b0%80%ec%9e%85-%ea%b0%b1%ec%8b%a0-%ec%a0%84-%ea%bc%ad-%ed%99%95%ec%9d%b8%ed%95%a0-5/",
+      "status": 200,
+      "bytes": 179552,
+      "has_track_gateway": true,
+      "has_money_offer": true,
+      "has_lead_page": true,
+      "has_placeholder": false,
+      "has_internal_memo": false,
+      "title_found": true
+    }
+  },
+  "content_queue_latest": {
+    "pending": {
+      "total": 0,
+      "wp": 0,
+      "shorts": 0,
+      "longform": 0
+    },
+    "reviewed": {
+      "total": 0,
+      "wp": 0,
+      "shorts": 0,
+      "longform": 0
+    },
+    "revised": {
+      "total": 28,
+      "wp": 16,
+      "shorts": 5,
+      "longform": 7
+    },
+    "published": {
+      "total": 349,
+      "wp": 257,
+      "shorts": 64,
+      "longform": 26
+    },
+    "rejected": {
+      "total": 30,
+      "wp": 3,
+      "shorts": 20,
+      "longform": 7
+    }
+  },
+  "external_dashboard_data_fix": {
+    "updated_at": "2026-05-10T21:40:56+09:00",
+    "status": "fixed_pending_pages_deploy",
+    "root_cause": "GitHub Pages was serving stale status.json and 11 dashboard JSON dependencies returned 404.",
+    "external_dashboard": "https://araelaver.github.io/revenue-ops-dashboard/",
+    "current_tracking_backend": "https://vocal-tennis-ink-album.trycloudflare.com",
+    "validated": {
+      "dashboard_http": 200,
+      "status_json_http_before_fix": 200,
+      "tracking_health_http": 200,
+      "tracking_t_302": true,
+      "lead_post_200": true
+    }
   }
 }

@@ -3,54 +3,72 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>무료 체크리스트 신청 | Hermes Revenue Ops</title>
+  <title>30초 자가진단 | Hermes Revenue Ops</title>
   <style>
-    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#0f172a;color:#e5e7eb;margin:0;padding:32px;line-height:1.65}
-    .wrap{max-width:760px;margin:0 auto;background:#111827;border:1px solid #334155;border-radius:20px;padding:28px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
-    h1{margin:0 0 8px;font-size:28px}.sub{color:#94a3b8;margin-bottom:24px}.grid{display:grid;gap:14px}
-    label{font-weight:700;color:#cbd5e1}.field{display:grid;gap:6px}input,select,textarea{width:100%;box-sizing:border-box;border-radius:12px;border:1px solid #475569;background:#020617;color:#f8fafc;padding:12px;font-size:16px}
-    button{border:0;border-radius:12px;background:#22c55e;color:#04130a;font-weight:900;padding:14px 18px;font-size:17px;cursor:pointer}.small{font-size:13px;color:#94a3b8}.ok{display:none;background:#052e16;border:1px solid #16a34a;color:#bbf7d0;padding:12px;border-radius:12px;margin-top:16px}.err{display:none;background:#450a0a;border:1px solid #ef4444;color:#fecaca;padding:12px;border-radius:12px;margin-top:16px}
-    .asset{background:#020617;border:1px solid #1e293b;border-radius:12px;padding:14px;margin:16px 0;color:#cbd5e1}
+    :root{--bg:#0f172a;--card:#111827;--muted:#94a3b8;--line:#334155;--input:#020617;--txt:#e5e7eb;--accent:#22c55e;--warn:#f59e0b;--bad:#ef4444}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at top,#1e293b 0,#0f172a 46%,#020617 100%);color:var(--txt);margin:0;padding:32px;line-height:1.65}
+    .wrap{max-width:820px;margin:0 auto;background:rgba(17,24,39,.96);border:1px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 24px 80px rgba(0,0,0,.42)}
+    .badge{display:inline-block;border:1px solid #14532d;background:#052e16;color:#bbf7d0;border-radius:999px;padding:4px 10px;font-size:13px;font-weight:800;margin-bottom:10px}
+    h1{margin:0 0 8px;font-size:30px;letter-spacing:-.02em}.sub{color:var(--muted);margin:0 0 20px}.grid{display:grid;gap:14px}.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:720px){.two{grid-template-columns:1fr}}
+    label{font-weight:800;color:#cbd5e1}.field{display:grid;gap:6px}input,select,textarea{width:100%;box-sizing:border-box;border-radius:13px;border:1px solid #475569;background:var(--input);color:#f8fafc;padding:12px;font-size:16px}
+    button{border:0;border-radius:13px;background:var(--accent);color:#04130a;font-weight:950;padding:15px 18px;font-size:17px;cursor:pointer}.small{font-size:13px;color:var(--muted)}.ok{display:none;background:#052e16;border:1px solid #16a34a;color:#bbf7d0;padding:13px;border-radius:13px;margin-top:16px}.err{display:none;background:#450a0a;border:1px solid var(--bad);color:#fecaca;padding:13px;border-radius:13px;margin-top:16px}
+    .asset{background:#020617;border:1px solid #1e293b;border-radius:15px;padding:16px;margin:18px 0;color:#cbd5e1}.asset strong{color:#f8fafc}.asset ul{margin:8px 0 0 20px;padding:0}.hint{border-left:4px solid var(--warn);background:#1f2937;padding:10px 12px;border-radius:10px;color:#fde68a}.hidden{display:none!important}
   </style>
 </head>
 <body>
   <main class="wrap">
-    <h1>무료 체크리스트 신청</h1>
-    <p class="sub">재테크·지원금·영양제 체크리스트를 이메일로 받을 수 있게 준비한 임시 신청 페이지입니다.</p>
-    <div class="asset" id="assetBox">신청 유형을 선택하면 받을 자료가 표시됩니다.</div>
+    <span class="badge" id="badge">수익형 30초 자가진단</span>
+    <h1 id="pageTitle">신청 전 30초 자가진단</h1>
+    <p class="sub" id="pageSub">글만 읽고 끝내지 말고, 지금 신청·견적·구매로 이어질 수 있는 항목을 먼저 확인하세요.</p>
+    <div class="asset" id="assetBox"></div>
     <form id="leadForm" class="grid">
-      <div class="field"><label>신청 유형</label><select name="site" id="site">
-        <option value="unpre">재테크·보험료 절약 체크리스트</option>
-        <option value="untab">지원금 신청 자가진단 체크리스트</option>
-        <option value="skewese">영양제 조합 가이드</option>
-      </select></div>
-      <div class="field"><label>이메일</label><input name="email" type="email" placeholder="you@example.com" required /></div>
-      <div class="field"><label>관심 내용</label><textarea name="note" rows="4" placeholder="예: IRP/연금저축 계산, 지원금 자격, 오메가3 추천 등"></textarea></div>
-      <label class="small"><input type="checkbox" required /> 자료 발송과 운영 개선 목적의 최소 정보 수집에 동의합니다.</label>
-      <button type="submit">무료 자료 신청하기</button>
+      <div class="field"><label>진단 유형</label><select name="offer_id" id="offerSelect"></select></div>
+      <div class="two">
+        <div class="field"><label>이메일</label><input name="email" type="email" placeholder="you@example.com" required /></div>
+        <div class="field"><label>연락 선호 채널</label><select name="contact_channel"><option value="email">이메일</option><option value="kakao">카카오톡</option><option value="phone">전화</option><option value="none">자료만 받기</option></select></div>
+      </div>
+      <div id="dynamicFields" class="grid"></div>
+      <div class="field"><label>추가 메모</label><textarea name="note" rows="4" placeholder="예: 자동차보험 갱신이 다음 달입니다 / 정책자금 신청 마감일이 임박했습니다 / 피로 때문에 영양제를 보고 있습니다"></textarea></div>
+      <label class="small"><input type="checkbox" required /> 자료 발송과 신청/견적/구매 체크를 위한 최소 정보 수집에 동의합니다. 민감정보는 입력하지 않습니다.</label>
+      <button type="submit" id="submitBtn">30초 진단 신청하기</button>
     </form>
-    <div class="ok" id="okBox">신청 기록이 저장됐습니다. 실제 이메일 자동발송 연결 전까지는 운영자가 수동 확인합니다.</div>
+    <div class="ok" id="okBox"></div>
     <div class="err" id="errBox">신청 저장에 실패했습니다. 잠시 후 다시 시도해 주세요.</div>
-    <p class="small">개인 민감정보는 입력하지 마세요. 이메일은 브라우저에서 SHA-256 해시 처리 후 전송합니다.</p>
+    <p class="small">이메일은 브라우저에서 SHA-256 해시 처리 후 전송됩니다. 주민번호, 계좌번호, 카드번호, 질병명 등 민감정보는 입력하지 마세요.</p>
   </main>
 <script>
-const assets={unpre:'재테크·보험료 절약 체크리스트',untab:'지원금 신청 자가진단 체크리스트',skewese:'영양제 조합 가이드'};
-const stable='https://araelaver.github.io/revenue-ops-dashboard/track.html';
-const defaultBackend='https://cd593c06f7bb71.lhr.life';
-const backendParams=new URLSearchParams(location.search);
-function updateAsset(){assetBox.textContent='받을 자료: '+assets[site.value];} site.addEventListener('change',updateAsset); updateAsset();
+const offers={
+  unpre_insurance_quote:{site:'unpre',intent:'insurance_quote',badge:'보험료 절약',title:'자동차·보험료 30초 점검',sub:'갱신 전 보험료를 낮출 수 있는지 먼저 확인하세요. 글을 읽고 끝내는 대신 견적/비교 행동으로 이어지게 기록합니다.',name:'보험료 30초 견적 점검',button:'내 보험료 점검 신청하기',bullets:['자동차보험·운전자보험·실손·암보험 중 관심 유형 선택','갱신월과 현재 보험료 범위 기록','고의도 lead로 분류해 후속 비교/상담 대상 표시'],fields:[['insurance_type','보험 유형','select',['자동차보험','운전자보험','실손보험','암보험','기타 보험']],['renewal_month','갱신 예정','select',['이번 달','1~2개월 이내','3개월 이내','아직 모름']],['current_premium_range','현재 월 보험료','select',['5만원 미만','5~10만원','10~20만원','20만원 이상','모름']],['age_range','연령대','select',['20대','30대','40대','50대','60대 이상']]]},
+  unpre_loan_rate_check:{site:'unpre',intent:'loan_rate',badge:'금리 절감',title:'대출 갈아타기 금리 30초 체크',sub:'현재 금리가 부담된다면 갈아타기/비교 가능성을 먼저 기록하세요.',name:'대출 갈아타기 금리 체크',button:'금리 낮출 수 있는지 확인하기',bullets:['대출 종류와 금액 범위 확인','현재 금리 구간 기록','갈아타기 상담/비교 가능 lead로 분류'],fields:[['loan_type','대출 유형','select',['신용대출','전세대출','주택담보대출','사업자대출','기타']],['loan_amount_range','대출 잔액','select',['1천만원 미만','1천만~5천만원','5천만~1억원','1억원 이상','모름']],['current_rate_range','현재 금리','select',['4% 미만','4~6%','6~10%','10% 이상','모름']],['income_type','소득 유형','select',['직장인','사업자','프리랜서','무직/기타']]]},
+  unpre_tax_saving_check:{site:'unpre',intent:'tax_saving',badge:'세액공제',title:'연금저축·IRP 세액공제 한도 체크',sub:'연말정산 전에 내 한도와 가입 우선순위를 확인하세요.',name:'세액공제 한도 계산 체크',button:'세액공제 한도 확인하기',bullets:['소득 구간과 현재 가입 상품 확인','추가 납입 여력 기록','금융상품 비교/가입 전환 후보로 분류'],fields:[['income_range','연소득 구간','select',['3천만원 미만','3천만~5천5백만원','5천5백만~1억원','1억원 이상','모름']],['current_saving_product','현재 상품','select',['없음','연금저축','IRP','ISA','여러 개']],['target_amount','올해 납입 예정','select',['100만원 미만','100~300만원','300~700만원','700만원 이상','모름']]]},
+  untab_subsidy_eligibility:{site:'untab',intent:'subsidy_eligibility',badge:'지원금 자격',title:'지원금 신청 가능성 30초 자가진단',sub:'지원금 글을 읽고 끝내지 말고, 대상 여부·마감일·서류 누락 가능성을 먼저 확인하세요.',name:'지원금 신청 가능성 30초 자가진단',button:'지원금 대상 여부 확인하기',bullets:['개인/사업자와 지역 확인','관심 지원금과 마감일 인지 여부 기록','상담/대행 문의 우선순위로 분류'],fields:[['applicant_type','신청자 유형','select',['개인','청년','소상공인','법인/사업자','가구']],['region','지역','text','예: 서울, 경기, 부산'],['subsidy_topic','관심 지원금','select',['청년월세','긴급복지','에너지/고유가','국가장학금','전세사기 피해지원','기타']],['deadline_known','마감일 확인 여부','select',['확인함','모름','이미 임박함']]]},
+  untab_policy_fund_consult:{site:'untab',intent:'policy_fund',badge:'정책자금 상담',title:'소상공인 정책자금·폐업지원 상담 체크',sub:'정책자금/희망리턴패키지는 서류와 시기가 핵심입니다. 상담 가능성을 먼저 기록하세요.',name:'정책자금/폐업지원 상담 체크',button:'정책자금 상담 가능성 확인하기',bullets:['사업 상태와 업종 확인','자금 필요 규모와 신청 목적 기록','상담/대행 전환 lead로 우선 처리'],fields:[['business_status','사업 상태','select',['운영 중','창업 준비','폐업 예정','이미 폐업','기타']],['business_type','업종','text','예: 음식점, 온라인 쇼핑몰, 서비스업'],['funding_need','필요 자금/지원','select',['운영자금','시설자금','폐업지원','재창업','모름']],['region','사업장 지역','text','예: 서울 강남구']]]},
+  skewese_supplement_buying_check:{site:'skewese',intent:'supplement_buying',badge:'영양제 구매',title:'영양제 구매 전 성분 30초 체크',sub:'광고 문구보다 목적·함량·주의사항을 먼저 확인하고 구매 링크로 이동하세요.',name:'영양제 구매 전 성분 체크',button:'내 목적에 맞는 성분 확인하기',bullets:['피로·수면·혈행·관절 등 목적 확인','현재 복용 중인 영양제와 구매 시점 기록','구매 의도 affiliate lead로 분류'],fields:[['health_goal','목적','select',['피로/활력','수면/스트레스','혈행/오메가3','관절/콜라겐','장 건강/유산균','다이어트/카르니틴']],['age_range','연령대','select',['20대','30대','40대','50대','60대 이상']],['current_supplements','현재 복용 중인 영양제','text','예: 오메가3, 마그네슘'],['purchase_timing','구매 시점','select',['오늘 바로','이번 주','가격 비교 중','정보만 확인']]]}
+};
+const legacyBySite={unpre:'unpre_insurance_quote',untab:'untab_subsidy_eligibility',skewese:'skewese_supplement_buying_check'};
+const params=new URLSearchParams(location.search);
+const initialOffer=params.get('offer_id')||legacyBySite[params.get('site')]||'unpre_insurance_quote';
+Object.entries(offers).forEach(([id,o])=>{const opt=document.createElement('option');opt.value=id;opt.textContent=o.name;offerSelect.appendChild(opt);});
+if(offers[initialOffer]) offerSelect.value=initialOffer;
+function fieldHtml(def){const [name,label,type,options]=def;if(type==='select'){return `<div class="field"><label>${label}</label><select name="${name}">${options.map(v=>`<option value="${v}">${v}</option>`).join('')}</select></div>`;}return `<div class="field"><label>${label}</label><input name="${name}" type="text" placeholder="${options||''}" /></div>`;}
+function updateOffer(){const o=offers[offerSelect.value]||offers.unpre_insurance_quote;badge.textContent=o.badge;pageTitle.textContent=o.title;pageSub.textContent=o.sub;submitBtn.textContent=o.button;assetBox.innerHTML=`<strong>받을 자료/진단: ${o.name}</strong><ul>${o.bullets.map(x=>`<li>${x}</li>`).join('')}</ul><p class="hint">제출 후 운영 이벤트와 분리된 실제 lead로 기록됩니다. 상담/견적/구매 의도가 높은 항목부터 우선 확인합니다.</p>`;dynamicFields.innerHTML=o.fields.map(fieldHtml).join('');}
+offerSelect.addEventListener('change',updateOffer);updateOffer();
 async function sha256(s){const b=new TextEncoder().encode(s.trim().toLowerCase());const h=await crypto.subtle.digest('SHA-256',b);return Array.from(new Uint8Array(h)).map(x=>x.toString(16).padStart(2,'0')).join('');}
 document.getElementById('leadForm').addEventListener('submit',async e=>{
   e.preventDefault(); okBox.style.display='none'; errBox.style.display='none';
-  const fd=new FormData(e.target); const site=fd.get('site'); const email=fd.get('email'); const note=fd.get('note')||'';
-  const payload={site,content_id:new URLSearchParams(location.search).get('content_id')||'lead-page',offer_id:site+'_lead_magnet',lead_type:assets[site],email_hash:await sha256(email),source:'lead_capture_page',note:String(note).slice(0,500)};
-  const target='/lead';
+  const fd=new FormData(e.target); const offerId=fd.get('offer_id'); const o=offers[offerId]||offers.unpre_insurance_quote; const email=fd.get('email');
+  const details={}; for(const [k,v] of fd.entries()){ if(!['email','note','offer_id'].includes(k)) details[k]=String(v).slice(0,120); }
+  const payload={site:o.site,content_id:params.get('content_id')||'lead-page',offer_id:offerId,intent:o.intent,lead_type:o.name,lead_priority:offerId.includes('insurance')||offerId.includes('loan')||offerId.includes('policy')||offerId.includes('subsidy')?'high':'medium',email_hash:await sha256(email),source:'money_intent_lead_page',note:String(fd.get('note')||'').slice(0,500),details};
   try{
-    const url=stable+'?site='+encodeURIComponent(site)+'&slot=lead&offer_id='+encodeURIComponent(payload.offer_id)+'&content_id='+encodeURIComponent(payload.content_id)+'&target='+encodeURIComponent(target);
-    const direct=(new URLSearchParams(location.search).get('backend')||'').replace(/\/$/,'');
-    const endpoint=(direct||defaultBackend)? (direct||defaultBackend)+'/lead' : target;
+    const cfg=await fetch('data/tracking_public_url.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({}));
+    const cfgBackend=String(cfg.public_tracking_url||cfg.current_backend_url||'').replace(/\/$/,'');
+    const direct=String(params.get('backend')||'').replace(/\/$/,'');
+    const chosenBackend=cfgBackend || (direct && !/\.lhr\.life$/.test(direct) ? direct : '');
+    const endpoint=chosenBackend ? chosenBackend+'/lead' : '/lead';
     const res=await fetch(endpoint,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});
-    if(!res.ok) throw new Error('bad status'); okBox.style.display='block'; e.target.reset(); updateAsset();
+    if(!res.ok) throw new Error('bad status');
+    okBox.textContent='신청 기록이 저장됐습니다. '+o.name+' 항목으로 분류되어 후속 확인 대상에 올라갑니다.';
+    okBox.style.display='block'; e.target.reset(); offerSelect.value=offerId; updateOffer();
   }catch(err){errBox.style.display='block';}
 });
 </script>

@@ -1,0 +1,130 @@
+{
+  "by_state": {
+    "pending": {
+      "longform": 0,
+      "other": 0,
+      "shorts": 0,
+      "total": 0,
+      "wp": 0
+    },
+    "published": {
+      "longform": 23,
+      "other": 0,
+      "shorts": 55,
+      "total": 296,
+      "wp": 218
+    },
+    "rejected": {
+      "longform": 6,
+      "other": 0,
+      "shorts": 19,
+      "total": 28,
+      "wp": 3
+    },
+    "reviewed": {
+      "longform": 0,
+      "other": 0,
+      "shorts": 0,
+      "total": 0,
+      "wp": 0
+    },
+    "revised": {
+      "longform": 3,
+      "other": 0,
+      "shorts": 5,
+      "total": 21,
+      "wp": 13
+    }
+  },
+  "counts": {
+    "pending": {
+      "longform": 0,
+      "other": 0,
+      "shorts": 0,
+      "total": 0,
+      "wp": 0
+    },
+    "published": {
+      "longform": 23,
+      "other": 0,
+      "shorts": 55,
+      "total": 296,
+      "wp": 218
+    },
+    "rejected": {
+      "longform": 6,
+      "other": 0,
+      "shorts": 19,
+      "total": 28,
+      "wp": 3
+    },
+    "reviewed": {
+      "longform": 0,
+      "other": 0,
+      "shorts": 0,
+      "total": 0,
+      "wp": 0
+    },
+    "revised": {
+      "longform": 3,
+      "other": 0,
+      "shorts": 5,
+      "total": 21,
+      "wp": 13
+    }
+  },
+  "format_queue": {
+    "pending": {
+      "longform": 0,
+      "other": 0,
+      "shorts": 0,
+      "wp": 0
+    },
+    "published": {
+      "longform": 23,
+      "other": 0,
+      "shorts": 55,
+      "wp": 218
+    },
+    "rejected": {
+      "longform": 6,
+      "other": 0,
+      "shorts": 19,
+      "wp": 3
+    },
+    "reviewed": {
+      "longform": 0,
+      "other": 0,
+      "shorts": 0,
+      "wp": 0
+    },
+    "revised": {
+      "longform": 3,
+      "other": 0,
+      "shorts": 5,
+      "wp": 13
+    }
+  },
+  "last_updated": "2026-05-07T12:24:09+09:00",
+  "latest_confirmed": {
+    "longform_published": 19,
+    "published": 274,
+    "reviewed": 0,
+    "revised": 4,
+    "shorts_published": 52,
+    "wp_published": 201
+  },
+  "pending": 0,
+  "published": 296,
+  "queue_snapshot": {
+    "pending": 0,
+    "published": 296,
+    "rejected": 28,
+    "reviewed": 0,
+    "revised": 21
+  },
+  "rejected": 28,
+  "reviewed": 0,
+  "revised": 21,
+  "updated_at": "2026-05-07 12:24:09 KST"
+}

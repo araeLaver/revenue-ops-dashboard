@@ -1,130 +1,299 @@
 <!doctype html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Revenue Ops Dashboard</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="shell">
-      <header class="hero">
-        <div>
-          <p class="eyebrow">Hermes Revenue Operating System</p>
-          <h1 id="dashboard-title">Revenue Ops Dashboard</h1>
-          <p id="dashboard-subtitle" class="subtitle"></p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hermes Control Center</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Hermes Revenue Operating System</p>
+        <h1>Control Center</h1>
+        <p class="subtitle" id="dashboard-subtitle"></p>
+      </div>
+      <div class="hero-meta">
+        <div class="meta-card">
+          <span>갱신</span>
+          <strong id="last-updated">-</strong>
         </div>
-        <div class="hero-meta">
-          <div class="meta-card">
-            <span>마지막 갱신</span>
-            <strong id="last-updated">-</strong>
-          </div>
-          <div class="meta-card">
-            <span>운영 상태</span>
-            <strong id="system-status">-</strong>
-          </div>
+        <div class="meta-card" id="status-card">
+          <span>시스템</span>
+          <strong id="system-status">-</strong>
         </div>
-      </header>
+      </div>
+    </header>
 
-      <main class="grid">
-        <section class="card span-12">
-          <div class="card-head">
-            <h2>현재 핵심 포커스</h2>
-            <span class="badge" id="primary-goal">-</span>
-          </div>
-          <div class="focus-grid" id="focus-grid"></div>
-        </section>
+    <!-- TAB NAV -->
+    <nav class="tabs" id="tabs">
+      <button class="tab active" data-tab="overview">Overview</button>
+      <button class="tab" data-tab="pipeline">Pipeline</button>
+      <button class="tab" data-tab="channels">Channels</button>
+      <button class="tab" data-tab="keywords">Keywords</button>
+      <button class="tab" data-tab="offers">Offers</button>
+      <button class="tab" data-tab="logs">Logs</button>
+    </nav>
 
-        <section class="card span-4">
-          <div class="card-head">
-            <h2>핵심 KPI</h2>
-            <span class="muted">주간 기준</span>
-          </div>
-          <div class="kpi-list" id="kpi-list"></div>
-        </section>
+    <!-- ===== OVERVIEW ===== -->
+    <main class="grid tab-content active" id="tab-overview">
+      <!-- 상단 수치 카드 -->
+      <section class="card span-3" id="stat-published">
+        <div class="stat-number">-</div>
+        <div class="stat-label">Published</div>
+      </section>
+      <section class="card span-3" id="stat-pending">
+        <div class="stat-number">-</div>
+        <div class="stat-label">Pending</div>
+      </section>
+      <section class="card span-3" id="stat-revised">
+        <div class="stat-number">-</div>
+        <div class="stat-label">Revised</div>
+      </section>
+      <section class="card span-3" id="stat-yt-quota">
+        <div class="stat-number">-</div>
+        <div class="stat-label">YT Quota 잔여</div>
+      </section>
 
-        <section class="card span-4">
-          <div class="card-head">
-            <h2>수익 경로</h2>
-            <span class="muted">우선순위</span>
-          </div>
-          <div id="revenue-paths" class="stack"></div>
-        </section>
+      <!-- 운영 스냅샷 -->
+      <section class="card span-12 ops-hero-card">
+        <div class="card-head">
+          <h2>오늘 운영 한눈에 보기</h2>
+          <span class="muted" id="ops-as-of">-</span>
+        </div>
+        <div class="ops-summary-grid" id="ops-summary"></div>
+      </section>
 
-        <section class="card span-4">
-          <div class="card-head">
-            <h2>퍼널</h2>
-            <span class="muted">Short → Long → Blog → Offer</span>
-          </div>
-          <div id="funnel" class="funnel"></div>
-        </section>
+      <section class="card span-12">
+        <div class="card-head">
+          <h2>일일 목표 · 달성 · 실패</h2>
+          <span class="muted" id="daily-goal-updated">target / actual / fail reason</span>
+        </div>
+        <div id="daily-goal-status" class="daily-goal-wrap"></div>
+      </section>
 
-        <section class="card span-7">
-          <div class="card-head">
-            <h2>콘텐츠 필러 & 시리즈</h2>
-            <span class="muted">장기 운영 구조</span>
-          </div>
-          <div id="pillars" class="pillars"></div>
-        </section>
+      <section class="card span-7">
+        <div class="card-head">
+          <h2>포맷별 큐 현황</h2>
+          <span class="muted">pending / reviewed / revised / published</span>
+        </div>
+        <div id="queue-matrix" class="queue-matrix"></div>
+      </section>
 
-        <section class="card span-5">
-          <div class="card-head">
-            <h2>실시간 작업 현황</h2>
-            <span class="muted">폴링 기반</span>
-          </div>
-          <div id="active-work" class="task-list"></div>
-        </section>
+      <section class="card span-5">
+        <div class="card-head">
+          <h2>병목 보드</h2>
+          <span class="muted">blocked / watch / ok</span>
+        </div>
+        <div id="bottleneck-board" class="stack"></div>
+      </section>
 
-        <section class="card span-6">
-          <div class="card-head">
-            <h2>이번 주 실행 규칙</h2>
-            <span class="muted">반드시 지킬 것</span>
-          </div>
-          <ul id="rules" class="rules"></ul>
-        </section>
+      <section class="card span-12">
+        <div class="card-head">
+          <h2>하루 자동화 스케줄</h2>
+          <span class="muted">병목 방지용 분리 스케줄 포함</span>
+        </div>
+        <div id="daily-schedule" class="schedule-table-wrap"></div>
+      </section>
 
-        <section class="card span-6">
-          <div class="card-head">
-            <h2>리스크 & 병목</h2>
-            <span class="muted">즉시 모니터링</span>
-          </div>
-          <div id="risks" class="stack"></div>
-        </section>
+      <section class="card span-6">
+        <div class="card-head">
+          <h2>Hermes 기능 사용 현황</h2>
+          <span class="muted">memory / skills / cron / gateway / mcp</span>
+        </div>
+        <div id="hermes-feature-usage" class="feature-grid"></div>
+      </section>
 
-        <section class="card span-6">
-          <div class="card-head">
-            <h2>주간 운영 리듬</h2>
-            <span class="muted">weekly cadence</span>
-          </div>
-          <div id="weekly-cadence" class="stack"></div>
-        </section>
+      <section class="card span-6">
+        <div class="card-head">
+          <h2>성과·전환 추적</h2>
+          <span class="muted">traffic / click / lead / revenue</span>
+        </div>
+        <div id="performance-snapshot" class="stack"></div>
+      </section>
 
-        <section class="card span-6">
-          <div class="card-head">
-            <h2>월간 리뷰</h2>
-            <span class="muted">winner / middle / loser</span>
-          </div>
-          <div id="monthly-review" class="stack"></div>
-        </section>
+      <section class="card span-6">
+        <div class="card-head">
+          <h2>보고 경로 상태</h2>
+          <span class="muted">gateway / local / dashboard</span>
+        </div>
+        <div id="reporting-status" class="stack"></div>
+      </section>
 
-        <section class="card span-12">
-          <div class="card-head">
-            <h2>콘텐츠 큐</h2>
-            <span class="muted">series pipeline</span>
-          </div>
-          <div id="content-queue" class="pillars"></div>
-        </section>
+      <section class="card span-6">
+        <div class="card-head">
+          <h2>Hermes 전체 기능 연결 단계</h2>
+          <span class="muted">core / visibility / webhook / mcp / profiles</span>
+        </div>
+        <div id="hermes-full-feature-plan" class="stack"></div>
+      </section>
 
-        <section class="card span-12">
-          <div class="card-head">
-            <h2>메모</h2>
-            <span class="muted">운영 노트</span>
-          </div>
-          <div id="notes" class="notes"></div>
-        </section>
-      </main>
-    </div>
+      <!-- 실시간 작업 -->
+      <section class="card span-7">
+        <div class="card-head">
+          <h2>실시간 작업</h2>
+          <span class="muted">active_work</span>
+        </div>
+        <div id="active-work" class="task-list"></div>
+      </section>
 
-    <script src="app.js"></script>
-  </body>
+      <!-- 리스크 -->
+      <section class="card span-5">
+        <div class="card-head">
+          <h2>리스크</h2>
+        </div>
+        <div id="risks" class="stack"></div>
+      </section>
+
+      <!-- LLM 응답 상태 -->
+      <section class="card span-12">
+        <div class="card-head">
+          <h2>LLM 응답 현황</h2>
+          <span class="muted" id="llm-last-updated">-</span>
+        </div>
+        <div id="llm-status" class="stack"></div>
+      </section>
+
+      <!-- KPI -->
+      <section class="card span-4">
+        <div class="card-head"><h2>KPI</h2></div>
+        <div class="kpi-list" id="kpi-list"></div>
+      </section>
+
+      <!-- 콘텐츠 큐 -->
+      <section class="card span-8">
+        <div class="card-head">
+          <h2>콘텐츠 큐</h2>
+          <span class="muted">score + stage</span>
+        </div>
+        <div id="content-queue"></div>
+      </section>
+
+      <!-- 트렌드 -->
+      <section class="card span-6">
+        <div class="card-head"><h2>트렌드 키워드</h2><span class="muted" id="trend-date">-</span></div>
+        <div id="trend-keywords" class="tag-cloud"></div>
+      </section>
+
+      <section class="card span-12">
+        <div class="card-head">
+          <h2>트렌드 점수 보드</h2>
+          <span class="muted">source / score / growth / sentiment</span>
+        </div>
+        <div id="trend-signal-board" class="trend-signal-board"></div>
+      </section>
+
+      <!-- 메모 -->
+      <section class="card span-6">
+        <div class="card-head"><h2>메모</h2></div>
+        <div id="notes" class="notes"></div>
+      </section>
+    </main>
+
+    <!-- ===== PIPELINE ===== -->
+    <main class="grid tab-content" id="tab-pipeline">
+      <section class="card span-12">
+        <div class="card-head"><h2>파이프라인 흐름</h2></div>
+        <div class="pipeline-flow" id="pipeline-flow"></div>
+      </section>
+
+      <section class="card span-6">
+        <div class="card-head"><h2>발행 현황 (사이트별)</h2></div>
+        <div id="publish-by-site"></div>
+      </section>
+      <section class="card span-6">
+        <div class="card-head"><h2>발행 현황 (타입별)</h2></div>
+        <div id="publish-by-type"></div>
+      </section>
+
+      <section class="card span-12">
+        <div class="card-head"><h2>최근 발행 (20건)</h2></div>
+        <div id="recent-published" class="recent-list"></div>
+      </section>
+    </main>
+
+    <!-- ===== CHANNELS ===== -->
+    <main class="grid tab-content" id="tab-channels">
+      <section class="card span-12">
+        <div class="card-head"><h2>채널 & 사이트</h2></div>
+        <div class="channel-grid" id="channel-grid"></div>
+      </section>
+
+      <section class="card span-6">
+        <div class="card-head"><h2>YT Quota</h2></div>
+        <div id="yt-quota-detail"></div>
+      </section>
+
+      <section class="card span-6">
+        <div class="card-head"><h2>주간 운영 리듬</h2></div>
+        <div id="weekly-cadence" class="stack"></div>
+      </section>
+    </main>
+
+    <!-- ===== KEYWORDS ===== -->
+    <main class="grid tab-content" id="tab-keywords">
+      <section class="card span-4">
+        <div class="card-head"><h2>unpre</h2><span class="muted">보험/금융</span></div>
+        <div id="bank-unpre"></div>
+      </section>
+      <section class="card span-4">
+        <div class="card-head"><h2>untab</h2><span class="muted">정부지원금</span></div>
+        <div id="bank-untab"></div>
+      </section>
+      <section class="card span-4">
+        <div class="card-head"><h2>skewese</h2><span class="muted">건강/영양제</span></div>
+        <div id="bank-skewese"></div>
+      </section>
+
+      <section class="card span-6">
+        <div class="card-head"><h2>YT 쇼츠 토픽풀</h2></div>
+        <div id="yt-topic-pools"></div>
+      </section>
+      <section class="card span-6">
+        <div class="card-head"><h2>시즌 키워드</h2></div>
+        <div id="seasonal-keywords" class="tag-cloud"></div>
+      </section>
+    </main>
+
+    <!-- ===== OFFERS ===== -->
+    <main class="grid tab-content" id="tab-offers">
+      <section class="card span-12">
+        <div class="card-head"><h2>오퍼 & 링크 상태</h2></div>
+        <div id="offer-status"></div>
+      </section>
+
+      <section class="card span-6">
+        <div class="card-head"><h2>수익 경로</h2></div>
+        <div id="revenue-paths" class="stack"></div>
+      </section>
+      <section class="card span-6">
+        <div class="card-head"><h2>퍼널</h2></div>
+        <div id="funnel" class="funnel"></div>
+      </section>
+    </main>
+
+    <!-- ===== LOGS ===== -->
+    <main class="grid tab-content" id="tab-logs">
+      <section class="card span-12">
+        <div class="card-head"><h2>운영 규칙</h2></div>
+        <ul id="rules" class="rules"></ul>
+      </section>
+      <section class="card span-6">
+        <div class="card-head"><h2>포커스</h2></div>
+        <div class="focus-grid" id="focus-grid"></div>
+      </section>
+      <section class="card span-6">
+        <div class="card-head"><h2>월간 리뷰</h2></div>
+        <div id="monthly-review" class="stack"></div>
+      </section>
+      <section class="card span-12">
+        <div class="card-head"><h2>콘텐츠 필러 & 시리즈</h2></div>
+        <div id="pillars" class="pillars"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js?v=20260505-274-quota-safe"></script>
+</body>
 </html>

@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-05-10T11:41:32+09:00",
-  "action": "localtunnel_started_and_healthy",
+  "updated_at": "2026-05-10T21:37:11+09:00",
+  "action": "localtunnel_fixed_subdomain_healthy",
   "public_tracking_url": "https://hermes-revenue-tracking-48.loca.lt",
   "kind": "localtunnel_fixed_subdomain",
   "stable": false,
   "fixed_backend": true,
-  "pid": 75907,
-  "restarted": true,
+  "pid": 14850,
+  "restarted": false,
   "health": {
     "status": 200,
     "ok": true,

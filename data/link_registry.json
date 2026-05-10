@@ -5,19 +5,19 @@
     "unpre": {
       "[COUPANG_LINK]": "https://www.coupang.com/np/search?q=%EC%9E%AC%ED%85%8C%ED%81%AC+%EB%B2%A0%EC%8A%A4%ED%8A%B8%EC%85%80%EB%9F%AC&channel=user&sourceType=affiliate&sort=scoreDesc&rating=4&trackingCode=AF5249936",
       "[AFFILIATE_LINK]": "https://unpre.co.kr/category/finance/",
-      "[LEAD_FORM_LINK]": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=unpre&backend=https://cd593c06f7bb71.lhr.life",
+      "[LEAD_FORM_LINK]": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=unpre&intent=lead_magnet&offer_id=unpre_lead_magnet",
       "[LINKPRICE_LINK]": "https://lpweb.kr/click.php?m=udemy&a=A100703472&l=0000"
     },
     "untab": {
       "[COUPANG_LINK]": "https://www.coupang.com/np/search?q=%EC%A0%95%EB%B6%80%EC%A7%80%EC%9B%90%EA%B8%88+%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81&channel=user&sourceType=affiliate&sort=scoreDesc&rating=4&trackingCode=AF5249936",
       "[AFFILIATE_LINK]": "https://untab.co.kr/category/government-support/",
-      "[LEAD_FORM_LINK]": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=untab&backend=https://cd593c06f7bb71.lhr.life",
-      "[SERVICE_LINK]": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=untab&backend=https://cd593c06f7bb71.lhr.life&intent=service_inquiry"
+      "[LEAD_FORM_LINK]": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=untab&intent=lead_magnet&offer_id=untab_lead_magnet",
+      "[SERVICE_LINK]": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=untab&intent=service_inquiry&offer_id=untab_service_inquiry"
     },
     "skewese": {
       "[COUPANG_LINK]": "https://www.coupang.com/np/search?q=%EC%98%A4%EB%A9%94%EA%B0%803+rTG+%EA%B3%A0%ED%95%A8%EB%9F%89&channel=user&sourceType=affiliate&sort=scoreDesc&rating=4&trackingCode=AF5249936",
       "[LINKPRICE_LINK]": "https://lpweb.kr/click.php?m=soomgo&a=A100703472&l=0000",
-      "[LEAD_FORM_LINK]": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=skewese&backend=https://cd593c06f7bb71.lhr.life",
+      "[LEAD_FORM_LINK]": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=skewese&intent=lead_magnet&offer_id=skewese_lead_magnet",
       "[AFFILIATE_LINK]": "https://skewese.com/category/health/"
     }
   },
@@ -46,6 +46,14 @@
     "tracking_suffix": "&channel=user&sourceType=affiliate&sort=scoreDesc&rating=4&trackingCode=AF5249936",
     "partner_id": "AF5249936"
   },
-  "_updated_at": "2026-05-07T22:38:26+09:00",
-  "_conversion_fix": "lead placeholders now route to GitHub Pages lead.html with current tracking backend param"
+  "_updated_at": "2026-05-10T21:04:16+0900",
+  "_conversion_fix": "lead placeholders route to GitHub Pages lead.html without stale direct backend; lead.html resolves canonical backend from data/tracking_public_url.json",
+  "money_intent_links": {
+    "[UNPRE_INSURANCE_QUOTE_LINK]": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=unpre&intent=insurance_quote&offer_id=unpre_insurance_quote",
+    "[UNPRE_LOAN_RATE_LINK]": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=unpre&intent=loan_rate&offer_id=unpre_loan_rate_check",
+    "[UNPRE_TAX_SAVING_LINK]": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=unpre&intent=tax_saving&offer_id=unpre_tax_saving_check",
+    "[UNTAB_SUBSIDY_ELIGIBILITY_LINK]": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=untab&intent=subsidy_eligibility&offer_id=untab_subsidy_eligibility",
+    "[UNTAB_POLICY_FUND_CONSULT_LINK]": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=untab&intent=policy_fund&offer_id=untab_policy_fund_consult",
+    "[SKEWESE_SUPPLEMENT_BUYING_LINK]": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=skewese&intent=supplement_buying&offer_id=skewese_supplement_buying_check"
+  }
 }

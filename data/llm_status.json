@@ -1,0 +1,37 @@
+{
+  "updated": "2026-04-29 20:06:30",
+  "providers": [
+    {
+      "name": "claude",
+      "status": "bad",
+      "status_label": "실패",
+      "success_rate": 0,
+      "avg_latency_sec": null,
+      "last_error": "claude exit 1"
+    },
+    {
+      "name": "codex",
+      "status": "bad",
+      "status_label": "타임아웃",
+      "success_rate": 20,
+      "avg_latency_sec": 600,
+      "last_error": "codex 타임아웃 (600s)"
+    },
+    {
+      "name": "ollama",
+      "status": "bad",
+      "status_label": "엔드포인트 오류",
+      "success_rate": 0,
+      "avg_latency_sec": null,
+      "last_error": "HTTP 404 /api/tags"
+    },
+    {
+      "name": "rule-based gate",
+      "status": "ok",
+      "status_label": "가동중",
+      "success_rate": 100,
+      "avg_latency_sec": 1.2,
+      "last_error": ""
+    }
+  ]
+}

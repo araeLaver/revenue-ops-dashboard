@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-05-10T11:41:32+09:00",
-  "public_tracking_url": "https://hermes-revenue-tracking-48.loca.lt",
-  "kind": "localtunnel_fixed_subdomain",
+  "updated_at": "2026-05-10T21:40:56+09:00",
+  "public_tracking_url": "https://vocal-tennis-ink-album.trycloudflare.com",
+  "kind": "cloudflare_quick_tunnel",
   "stable": false,
   "local_server": "http://127.0.0.1:8431",
   "history": [
@@ -28,266 +28,6 @@
     {
       "updated_at": "2026-05-05T22:06:06+09:00",
       "url": "https://efb4df1b262767.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T20:56:57+09:00",
-      "url": "https://94b30c5db78546.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T20:57:14+09:00",
-      "url": "https://b65448b8bb5430.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T20:57:31+09:00",
-      "url": "https://08c458b7a7f50e.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T20:57:48+09:00",
-      "url": "https://a3b12a3f189bfa.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T20:58:05+09:00",
-      "url": "https://a88ec9c76ef4a5.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T20:58:22+09:00",
-      "url": "https://ce43434bd46de5.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T20:58:39+09:00",
-      "url": "https://7931d12e1d178a.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T20:58:56+09:00",
-      "url": "https://fd868a7715f8d1.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T20:59:13+09:00",
-      "url": "https://fcc9009b7dadd4.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T20:59:30+09:00",
-      "url": "https://10b07b98929b26.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T20:59:48+09:00",
-      "url": "https://3513f0cc609d01.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:00:39+09:00",
-      "url": "https://8f7d4868931c4c.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:00:56+09:00",
-      "url": "https://24363f25653a70.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:01:13+09:00",
-      "url": "https://da13b76d07b5a5.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:01:30+09:00",
-      "url": "https://db66c8b85bf4a0.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:01:47+09:00",
-      "url": "https://850376c730c57c.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:02:05+09:00",
-      "url": "https://0130990b352382.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:02:22+09:00",
-      "url": "https://1f618a7a00de2b.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:02:39+09:00",
-      "url": "https://a9757f8ac06708.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:02:56+09:00",
-      "url": "https://71ad9e3aef52e9.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:03:13+09:00",
-      "url": "https://657ec064ac6d04.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:03:30+09:00",
-      "url": "https://e46cc1e8631ff4.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:03:48+09:00",
-      "url": "https://909500461c9451.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:04:05+09:00",
-      "url": "https://1f7cbdc1ff25d7.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:04:22+09:00",
-      "url": "https://e54d4d0c3c84a6.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:04:39+09:00",
-      "url": "https://fd369d6006cef1.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:04:56+09:00",
-      "url": "https://07d055abf4109e.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:05:13+09:00",
-      "url": "https://04fc2b3038a4fb.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:05:30+09:00",
-      "url": "https://75d84be57648ff.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:05:47+09:00",
-      "url": "https://0f37920a588cd0.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:06:06+09:00",
-      "url": "https://23125c5601c7f0.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:06:23+09:00",
-      "url": "https://87c850eda3b33b.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:06:40+09:00",
-      "url": "https://ec868d8b4d8e9f.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:06:57+09:00",
-      "url": "https://972c45c6108935.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:07:14+09:00",
-      "url": "https://774d314240cde0.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:07:31+09:00",
-      "url": "https://ac92b64aea1e4b.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:07:48+09:00",
-      "url": "https://008a114877033c.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:08:05+09:00",
-      "url": "https://7a8c4c6af29249.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:08:23+09:00",
-      "url": "https://1740e88a119271.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:08:40+09:00",
-      "url": "https://6e839471e66fdd.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:08:58+09:00",
-      "url": "https://77d8f72eacf40d.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:09:15+09:00",
-      "url": "https://7494af95d9ed58.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:09:32+09:00",
-      "url": "https://b6219e0df2d16d.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:09:49+09:00",
-      "url": "https://1f3549b0284007.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:10:07+09:00",
-      "url": "https://329498700137f8.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:10:24+09:00",
-      "url": "https://1fc5566b2fed77.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:10:41+09:00",
-      "url": "https://c1477f922b05f1.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:10:58+09:00",
-      "url": "https://df06a82e5bd195.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:11:15+09:00",
-      "url": "https://b4392832deae78.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:11:32+09:00",
-      "url": "https://e41165d7fba1b9.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:11:50+09:00",
-      "url": "https://0e2800a9f0bace.lhr.life",
-      "source": "sync_tracking_tunnel.py"
-    },
-    {
-      "updated_at": "2026-05-09T21:12:07+09:00",
-      "url": "https://312a3810d57209.lhr.life",
       "source": "sync_tracking_tunnel.py"
     },
     {
@@ -438,15 +178,519 @@
       "url": "https://hermes-revenue-tracking-48.loca.lt",
       "source": "localtunnel_tracking_manager",
       "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T11:53:00+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T11:59:02+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T12:05:10+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T12:12:17+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T12:19:53+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T12:26:02+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T12:31:48+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T12:36:17+09:00",
+      "url": "https://vocal-tennis-ink-album.trycloudflare.com",
+      "source": "tracking_backend_watchdog_restore",
+      "stable": false
+    },
+    {
+      "updated_at": "2026-05-10T12:37:40+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T12:43:57+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T12:49:52+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T12:55:18+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T13:01:24+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T13:07:32+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T13:19:17+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T13:22:16+09:00",
+      "url": "https://vocal-tennis-ink-album.trycloudflare.com",
+      "source": "tracking_backend_watchdog_restore",
+      "stable": false
+    },
+    {
+      "updated_at": "2026-05-10T13:24:44+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T13:30:48+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T13:36:18+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T13:44:39+09:00",
+      "url": "https://vocal-tennis-ink-album.trycloudflare.com",
+      "source": "tracking_backend_watchdog_restore",
+      "stable": false
+    },
+    {
+      "updated_at": "2026-05-10T14:07:26+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T14:19:18+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T14:28:55+09:00",
+      "url": "https://vocal-tennis-ink-album.trycloudflare.com",
+      "source": "tracking_backend_watchdog_restore",
+      "stable": false
+    },
+    {
+      "updated_at": "2026-05-10T14:38:50+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T14:40:48+09:00",
+      "url": "https://vocal-tennis-ink-album.trycloudflare.com",
+      "source": "tracking_backend_watchdog_restore",
+      "stable": false
+    },
+    {
+      "updated_at": "2026-05-10T14:45:18+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T14:46:12+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T14:50:42+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T15:02:44+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T15:22:38+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T15:24:59+09:00",
+      "url": "https://vocal-tennis-ink-album.trycloudflare.com",
+      "source": "tracking_backend_watchdog_restore",
+      "stable": false
+    },
+    {
+      "updated_at": "2026-05-10T15:25:51+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T15:28:44+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T15:34:36+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T15:40:02+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T16:03:11+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T16:09:10+09:00",
+      "url": "https://vocal-tennis-ink-album.trycloudflare.com",
+      "source": "tracking_backend_watchdog_restore",
+      "stable": false
+    },
+    {
+      "updated_at": "2026-05-10T16:09:32+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T16:15:25+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T16:22:50+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T16:28:18+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T16:34:10+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T16:42:55+09:00",
+      "url": "https://vocal-tennis-ink-album.trycloudflare.com",
+      "source": "tracking_backend_watchdog_restore",
+      "stable": false
+    },
+    {
+      "updated_at": "2026-05-10T16:45:17+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T16:53:18+09:00",
+      "url": "https://vocal-tennis-ink-album.trycloudflare.com",
+      "source": "tracking_backend_watchdog_restore",
+      "stable": false
+    },
+    {
+      "updated_at": "2026-05-10T17:08:37+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T17:14:41+09:00",
+      "url": "https://vocal-tennis-ink-album.trycloudflare.com",
+      "source": "tracking_backend_watchdog_restore",
+      "stable": false
+    },
+    {
+      "updated_at": "2026-05-10T17:15:02+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T17:21:08+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T17:26:41+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T17:26:57+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T17:38:41+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T17:44:01+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T17:47:20+09:00",
+      "url": "https://vocal-tennis-ink-album.trycloudflare.com",
+      "source": "tracking_backend_watchdog_restore",
+      "stable": false
+    },
+    {
+      "updated_at": "2026-05-10T17:49:43+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T17:58:21+09:00",
+      "url": "https://vocal-tennis-ink-album.trycloudflare.com",
+      "source": "tracking_backend_watchdog_restore",
+      "stable": false
+    },
+    {
+      "updated_at": "2026-05-10T18:09:21+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T18:15:10+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T18:30:26+09:00",
+      "url": "https://vocal-tennis-ink-album.trycloudflare.com",
+      "source": "tracking_backend_watchdog_restore",
+      "stable": false
+    },
+    {
+      "updated_at": "2026-05-10T18:34:53+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T18:52:00+09:00",
+      "url": "https://vocal-tennis-ink-album.trycloudflare.com",
+      "source": "tracking_backend_watchdog_restore",
+      "stable": false
+    },
+    {
+      "updated_at": "2026-05-10T18:52:24+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T19:10:06+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T19:16:57+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T19:29:03+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T19:35:00+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T19:40:35+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T19:52:32+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T19:57:53+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T20:04:43+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T20:12:07+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T20:29:29+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T20:34:05+09:00",
+      "url": "https://vocal-tennis-ink-album.trycloudflare.com",
+      "source": "tracking_backend_watchdog_restore",
+      "stable": false
+    },
+    {
+      "updated_at": "2026-05-10T20:35:54+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T20:41:40+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T20:45:14+09:00",
+      "url": "https://vocal-tennis-ink-album.trycloudflare.com",
+      "source": "tracking_backend_watchdog_restore",
+      "stable": false
+    },
+    {
+      "updated_at": "2026-05-10T20:59:53+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T21:14:01+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T21:19:37+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T21:25:50+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T21:31:25+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T21:32:14+09:00",
+      "url": "https://vocal-tennis-ink-album.trycloudflare.com",
+      "source": "tracking_backend_watchdog_restore",
+      "stable": false
+    },
+    {
+      "updated_at": "2026-05-10T21:37:11+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "localtunnel_tracking_manager",
+      "kind": "localtunnel_fixed_subdomain"
+    },
+    {
+      "updated_at": "2026-05-10T21:40:56+09:00",
+      "url": "https://hermes-revenue-tracking-48.loca.lt",
+      "source": "external_dashboard_data_fix_previous_backend",
+      "status": "fallback_or_degraded"
     }
   ],
   "note": "interim Cloudflare quick tunnel; not stable until named tunnel/VPS/account-backed backend is configured",
   "stable_gateway_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
   "cta_canonical_url_mode": "stable_gateway_to_current_tunnel",
-  "current_backend_url": "https://hermes-revenue-tracking-48.loca.lt",
+  "current_backend_url": "https://vocal-tennis-ink-album.trycloudflare.com",
   "mode": "fixed_subdomain_to_local_tracking_server",
-  "last_rotated_at": "2026-05-09T21:19:26+09:00",
-  "last_updated": "2026-05-10T11:41:32+09:00",
+  "last_rotated_at": "2026-05-10T21:40:56+09:00",
+  "last_updated": "2026-05-10T21:37:11+09:00",
   "source": "sync_tracking_tunnel.py",
   "rotation_automation": {
     "status": "script_managed",
@@ -454,7 +698,7 @@
     "manual_update_needed": false,
     "long_term_recommendation": "Replace anonymous localhost.run with account-backed localhost.run, Cloudflare Tunnel, VPS, or custom domain."
   },
-  "fixed_backend": true,
+  "fixed_backend": false,
   "cloudflare_quick_tunnel": {
     "status": "verified_interim",
     "session_id": "proc_b54c3b624dd5",
@@ -472,7 +716,7 @@
   },
   "manager_policy": "localtunnel_fixed_subdomain_preferred_over_lhr_and_trycloudflare_when_healthy",
   "fixed_backend_level": "accountless_fixed_subdomain_watchdog_protected",
-  "last_fixed_backend_verified_at": "2026-05-10T11:41:32+09:00",
+  "last_fixed_backend_verified_at": "2026-05-10T21:37:11+09:00",
   "last_fixed_backend_verification": {
     "health": {
       "status": 200,
@@ -489,6 +733,10 @@
       "ok": true
     }
   },
-  "localtunnel_pid": 75907,
-  "localtunnel_restarted": true
+  "localtunnel_pid": 14850,
+  "localtunnel_restarted": false,
+  "watchdog_restored_at": "2026-05-10T21:32:14+09:00",
+  "watchdog_reason": "current_unhealthy_or_lhr",
+  "health_url": "https://vocal-tennis-ink-album.trycloudflare.com/health",
+  "production_note": "Temporary Cloudflare quick tunnel restored after localtunnel /t timeout; production stable backend still requires Cloudflare named tunnel or VPS."
 }

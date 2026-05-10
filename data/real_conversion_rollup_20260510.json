@@ -1,0 +1,57 @@
+{
+  "updated_at": "2026-05-10T18:02:22+0900",
+  "filter": "exclude manager-health/sync-check/smoke/probe/test/verify/rotation/localtunnel health events",
+  "raw": {
+    "cta_clicks": 8337,
+    "leads": 199,
+    "revenue_events": 1
+  },
+  "probe_excluded": {
+    "cta_clicks": 8267,
+    "leads": 79,
+    "revenue_events": 1
+  },
+  "real": {
+    "cta_clicks": 70,
+    "leads": 120,
+    "revenue_events": 0
+  },
+  "real_rates": {
+    "lead_rate_pct": 171.4286,
+    "revenue_event_rate_pct": 0.0,
+    "lead_to_revenue_pct": 0.0
+  },
+  "top_real_click_offers": [
+    [
+      "unpre_check",
+      66
+    ],
+    [
+      "debug",
+      1
+    ],
+    [
+      "manager-restart",
+      1
+    ],
+    [
+      "tracking_backend_check",
+      1
+    ],
+    [
+      "healthcheck",
+      1
+    ]
+  ],
+  "top_real_lead_offers": [
+    [
+      "unpre_lead_magnet",
+      119
+    ],
+    [
+      "unknown",
+      1
+    ]
+  ],
+  "top_real_revenue_offers": []
+}

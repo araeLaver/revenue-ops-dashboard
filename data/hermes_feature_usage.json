@@ -1,0 +1,1032 @@
+{
+  "analytics": {
+    "latest_blog_analytics": {
+      "date": "2026-05-10",
+      "file": "data/analytics/blog-analytics-2026-05-10.json",
+      "present": true,
+      "site_count": 3,
+      "sites": [
+        {
+          "recentPostCount": 20,
+          "sample_recent_titles": [
+            "소상공인 희망리턴패키지 2026 신청 자격 3가지 총정리",
+            "개인형퇴직연금 IRP 세액공제 한도 2026",
+            "2026 종합소득세 신고 방법 5단계 완벽정리"
+          ],
+          "site": "unpre",
+          "siteName": "마인드멜드 접합",
+          "url": "https://unpre.co.kr",
+          "wpStatistics_present": false
+        },
+        {
+          "recentPostCount": 20,
+          "sample_recent_titles": [
+            "2026 청년내일저축계좌 신청 자격 3가지 총정리",
+            "주거급여 신청 자격 금액 2026",
+            "2026 자녀장려금 신청 자격 3가지 완전 정리"
+          ],
+          "site": "untab",
+          "siteName": "한번에 하나의 이야기",
+          "url": "https://untab.co.kr",
+          "wpStatistics_present": false
+        },
+        {
+          "recentPostCount": 20,
+          "sample_recent_titles": [
+            "케르세틴 효능 TOP 3 추천 2026",
+            "면역력 떨어질 때 아연 보충제 TOP 3 비교 2026",
+            "콜라겐 펩타이드 피부 관절 추천 2026"
+          ],
+          "site": "skewese",
+          "siteName": "Unpretictable",
+          "url": "https://skewese.com",
+          "wpStatistics_present": false
+        }
+      ],
+      "total_recent_posts": 60
+    },
+    "latest_youtube_analytics": {
+      "date": "2026-05-10",
+      "file": "data/analytics/youtube-analytics-2026-05-10.json",
+      "present": true,
+      "status": "ok",
+      "summary": {
+        "totalSubscribers": 116,
+        "totalVideos": 722,
+        "totalViews": 348160,
+        "uniqueChannels": 4
+      },
+      "warnings": {
+        "duplicateChannelIds": []
+      }
+    },
+    "updated_at": "2026-05-10T19:21:36+09:00"
+  },
+  "bottleneck_notes": [
+    "Quality/revision backlog dominates: revised=31 vs reviewed=0; promote or reject revised drafts before generating more.",
+    "Publishable inventory is empty while revised backlog exists; run targeted quality repair before publish windows."
+  ],
+  "canonical_draft_counts_excluding_backups": {
+    "active_queue": 29,
+    "by_channel": {
+      "longform": 40,
+      "shorts": 89,
+      "wp": 276
+    },
+    "by_status": {
+      "pending": 0,
+      "published": 348,
+      "rejected": 30,
+      "reviewed": 0,
+      "revised": 29
+    },
+    "examples_by_status": {
+      "pending": [],
+      "published": [
+        "20260417_wp-skewese_오메가3-vs-종합비타민-겨울철-관절-건강과-면역-강화를-위한-최적-선택.md",
+        "20260417_wp-skewese_오메가3와-종합비타민-병행-섭취로-다이어트-중-혈중-중성지방-수치-개선-.md",
+        "20260417_wp-unpre_isa와-irp-중-누가-장기-투자-수익률에-더-유리한가-실제-데이터-분.md",
+        "20260417_wp-unpre_년-실손보험-청구-시-빈번한-거절-사유와-회피-전략.md",
+        "20260417_wp-unpre_년-실손보험-청구-시-효율적인-서류-준비-팁으로-보험금-지급-속도-높이는.md"
+      ],
+      "rejected": [
+        "20260423_yt-araelaver-shorts_타이타닉-침몰-숨겨진-진실.md",
+        "20260423_yt-kdowndan-shorts_세계에서-가장-저주받은-장소.md",
+        "20260423_yt-micheuhasi-shorts_나르시시스트-구별법-체크리스트.md",
+        "20260423_yt-untabcompany-shorts_재활용-청년도약계좌-vs-청년희망적금-비교.md",
+        "20260424_yt-micheuhasi-longform_먼저-연락하면-안-된다고-배웠어요-그-전략이-틀린-이유.md"
+      ],
+      "reviewed": [],
+      "revised": [
+        "20260508_wp-unpre_자동차보험-다이렉트-비교-가입-2026.md",
+        "20260508_wp-untab_청년월세지원-신청-자격-조건-2026.md",
+        "20260508_yt-araelaver-longform_세계-최초로-컴퓨터를-만든-사람은-남자가-아니었다-에이다-러브레이스-이야.md",
+        "20260508_yt-kdowndan-longform_개구리-소년-사건-11년-만에-발견된-진실과-여전히-남은-의문.md",
+        "20260508_yt-untabcompany-longform_qqq-폭락-때-샀다가-버틴-1년-실제-수익률과-그때-내-판단의-오류.md"
+      ]
+    },
+    "other": 2,
+    "status_channel_matrix": {
+      "pending": {
+        "longform": 0,
+        "other": 0,
+        "shorts": 0,
+        "wp": 0
+      },
+      "published": {
+        "longform": 26,
+        "other": 2,
+        "shorts": 64,
+        "wp": 256
+      },
+      "rejected": {
+        "longform": 7,
+        "other": 0,
+        "shorts": 20,
+        "wp": 3
+      },
+      "reviewed": {
+        "longform": 0,
+        "other": 0,
+        "shorts": 0,
+        "wp": 0
+      },
+      "revised": {
+        "longform": 7,
+        "other": 0,
+        "shorts": 5,
+        "wp": 17
+      }
+    },
+    "total": 407
+  },
+  "conversion_event_rollup": {
+    "conversion_events_jsonl_nonempty_lines": 0,
+    "probe_excluded": {
+      "cta_clicks": 8267,
+      "leads": 79,
+      "revenue_events": 1
+    },
+    "raw": {
+      "cta_clicks": 8337,
+      "leads": 199,
+      "revenue_events": 1
+    },
+    "real": {
+      "cta_clicks": 70,
+      "leads": 120,
+      "revenue_events": 0
+    },
+    "real_rates": {
+      "lead_rate_pct": 171.4286,
+      "lead_to_revenue_pct": 0.0,
+      "revenue_event_rate_pct": 0.0
+    },
+    "source": "data/real_conversion_rollup_20260510.json",
+    "updated_at": "2026-05-10T18:02:22+0900"
+  },
+  "conversion_funnel_status": {
+    "draft_inventory": {
+      "pending": 2,
+      "reviewed_publishable": 0,
+      "revised_quality_backlog": 31,
+      "published_total": 349,
+      "rejected_total": 30
+    },
+    "by_format_total": {
+      "wp": 281,
+      "shorts": 90,
+      "longform": 41
+    },
+    "unpublished_by_format": {
+      "wp": 19,
+      "shorts": 6,
+      "longform": 8
+    },
+    "telemetry": {
+      "cta_clicks": 8569,
+      "leads": 249,
+      "revenue_events": 1,
+      "lead_rate_from_clicks": 0.0291,
+      "revenue_event_rate_from_leads": 0.004
+    },
+    "status_note": "Revenue events are present; optimize source/channel attribution next."
+  },
+  "conversion_metrics_bridge": {
+    "available_now": {
+      "draft_lifecycle_counts": {
+        "pending": 0,
+        "published": 252,
+        "rejected": 27,
+        "reviewed": 0,
+        "revised": 26
+      },
+      "latest_blog_inventory_file": "data/analytics/blog-analytics-2026-05-05.json",
+      "published_by_format": {
+        "longform": 17,
+        "other": 0,
+        "shorts": 48,
+        "wp": 187
+      },
+      "site_recent_inventory": {
+        "skewese": {
+          "has_wp_statistics": false,
+          "latest_titles": [
+            "2026 스피루리나 vs 단백질보충제 다이어트 비교 TOP 3",
+            "락토페린 효능 면역 추천 2026",
+            "2026 암호화폐 거래소 TOP 5 비교 추천",
+            "알파리포산 효능 TOP 5 혈당·항산화 2026 비교",
+            "가르시니아 캄보지아 효과 부작용 2026"
+          ],
+          "recent_post_count": 20,
+          "reported_recent_post_count": 20
+        },
+        "unpre": {
+          "has_wp_statistics": false,
+          "latest_titles": [
+            "햇살론15 신청 자격 3가지 소득기준 2026 총정리",
+            "카카오뱅크 신용대출 2026 — 한도 높이는 5단계 신청법",
+            "청년도약계좌 vs 희망적금 2026 비교 3가지",
+            "2026 주식 입문자 추천 TOP 5종목 완벽 정리",
+            "종합소득세 프리랜서 신고 TOP 3 실수와 해결법 2026"
+          ],
+          "recent_post_count": 20,
+          "reported_recent_post_count": 20
+        },
+        "untab": {
+          "has_wp_statistics": false,
+          "latest_titles": [
+            "소상공인 희망리턴패키지 신청 3단계 방법 2026",
+            "부모급여 신청방법 3단계로 끝내기 2026",
+            "2026 부모급여 신청 자격·금액·방법 총정리",
+            "긴급복지지원 신청 자격 생계비 2026",
+            "청년내일저축계좌 2026 신청자격 3가지 총정리"
+          ],
+          "recent_post_count": 20,
+          "reported_recent_post_count": 20
+        }
+      }
+    },
+    "data_quality": "partial",
+    "last_updated": "2026-05-05T11:21:43+09:00",
+    "missing_live_feeds": {
+      "cta_clicks": {
+        "connected": false,
+        "reason": "no click tracker/UTM event feed populated yet"
+      },
+      "lead_submissions": {
+        "connected": false,
+        "reason": "lead capture assets exist, submission event feed not connected"
+      },
+      "revenue": {
+        "connected": false,
+        "reason": "no affiliate/ads/sales revenue import feed connected"
+      },
+      "wp_pageviews": {
+        "connected": false,
+        "reason": "latest blog analytics wpStatistics empty/missing"
+      },
+      "youtube_views_ctr_retention": {
+        "connected": false,
+        "reason": "youtube analytics script exists but no current merged snapshot found in performance file"
+      }
+    },
+    "next_feed_contract": {
+      "event_types": [
+        "pageview",
+        "cta_click",
+        "lead_submit",
+        "affiliate_click",
+        "revenue",
+        "youtube_view",
+        "youtube_ctr",
+        "youtube_retention"
+      ],
+      "file": "data/conversion_events.jsonl",
+      "required_fields": [
+        "ts",
+        "source",
+        "channel",
+        "content_id",
+        "event_type",
+        "offer_id",
+        "url",
+        "value",
+        "currency",
+        "metadata"
+      ]
+    },
+    "operator_summary": "콘텐츠 생산/발행 지표는 측정 가능하지만, 수익 전환 판단에 필요한 click/lead/revenue feed는 아직 미연결입니다.",
+    "snapshot_type": "conversion_metrics_bridge"
+  },
+  "cta_tracking_rewrite": {
+    "apply": true,
+    "base_url": "https://araelaver.github.io/revenue-ops-dashboard/track.html",
+    "files": [],
+    "states": [
+      "pending",
+      "reviewed",
+      "revised"
+    ],
+    "summary": {
+      "changed_files": 0,
+      "changes": 0,
+      "scanned": 29
+    },
+    "updated_at": "2026-05-10 18:12:20 KST"
+  },
+  "draft_counts": {
+    "by_state": {
+      "pending": 2,
+      "reviewed": 0,
+      "revised": 31,
+      "published": 349,
+      "rejected": 30
+    },
+    "by_format": {
+      "wp": 281,
+      "shorts": 90,
+      "longform": 41
+    },
+    "by_state_and_format": {
+      "pending": {
+        "wp": 2,
+        "shorts": 0,
+        "longform": 0
+      },
+      "reviewed": {
+        "wp": 0,
+        "shorts": 0,
+        "longform": 0
+      },
+      "revised": {
+        "wp": 17,
+        "shorts": 6,
+        "longform": 8
+      },
+      "published": {
+        "wp": 259,
+        "shorts": 64,
+        "longform": 26
+      },
+      "rejected": {
+        "wp": 3,
+        "shorts": 20,
+        "longform": 7
+      }
+    },
+    "unknown_examples": []
+  },
+  "feature_usage": {
+    "content_pipeline": {
+      "active_queue": 29,
+      "draft_states_tracked": [
+        "pending",
+        "reviewed",
+        "revised",
+        "published",
+        "rejected"
+      ],
+      "formats_tracked": [
+        "wp",
+        "shorts",
+        "longform",
+        "other"
+      ],
+      "published_total": 348
+    },
+    "conversion_tracking": {
+      "backend_status": "healthy_interim_fixed_subdomain",
+      "backend_url": "https://hermes-revenue-tracking-48.loca.lt",
+      "real_cta_clicks": 70,
+      "real_leads": 120,
+      "real_revenue_events": 0
+    },
+    "cta_rewrite": {
+      "changed_files": 0,
+      "changes": 0,
+      "scanned": 29
+    },
+    "wordpress_blog_analytics": {
+      "latest_file": "data/analytics/blog-analytics-2026-05-10.json",
+      "site_count": 3,
+      "total_recent_posts": 60,
+      "wp_statistics_present_sites": 0
+    },
+    "youtube_analytics": {
+      "date": "2026-05-10",
+      "file": "data/analytics/youtube-analytics-2026-05-10.json",
+      "present": true,
+      "status": "ok",
+      "summary": {
+        "totalSubscribers": 116,
+        "totalVideos": 722,
+        "totalViews": 348160,
+        "uniqueChannels": 4
+      },
+      "warnings": {
+        "duplicateChannelIds": []
+      }
+    }
+  },
+  "feature_usage_snapshot": {
+    "features": {
+      "content_pipeline": {
+        "active_queue": 29,
+        "draft_states_tracked": [
+          "pending",
+          "reviewed",
+          "revised",
+          "published",
+          "rejected"
+        ],
+        "formats_tracked": [
+          "wp",
+          "shorts",
+          "longform",
+          "other"
+        ],
+        "published_total": 348
+      },
+      "conversion_tracking": {
+        "backend_status": "healthy_interim_fixed_subdomain",
+        "backend_url": "https://hermes-revenue-tracking-48.loca.lt",
+        "real_cta_clicks": 70,
+        "real_leads": 120,
+        "real_revenue_events": 0
+      },
+      "cta_rewrite": {
+        "changed_files": 0,
+        "changes": 0,
+        "scanned": 29
+      },
+      "wordpress_blog_analytics": {
+        "latest_file": "data/analytics/blog-analytics-2026-05-10.json",
+        "site_count": 3,
+        "total_recent_posts": 60,
+        "wp_statistics_present_sites": 0
+      },
+      "youtube_analytics": {
+        "date": "2026-05-10",
+        "file": "data/analytics/youtube-analytics-2026-05-10.json",
+        "present": true,
+        "status": "ok",
+        "summary": {
+          "totalSubscribers": 116,
+          "totalVideos": 722,
+          "totalViews": 348160,
+          "uniqueChannels": 4
+        },
+        "warnings": {
+          "duplicateChannelIds": []
+        }
+      }
+    },
+    "updated_at": "2026-05-10T18:21:57+09:00"
+  },
+  "features": {
+    "content_pipeline": {
+      "active_queue": 29,
+      "draft_states_tracked": [
+        "pending",
+        "reviewed",
+        "revised",
+        "published",
+        "rejected"
+      ],
+      "formats_tracked": [
+        "wp",
+        "shorts",
+        "longform",
+        "other"
+      ],
+      "published_total": 348
+    },
+    "conversion_tracking": {
+      "backend_status": "healthy_interim_fixed_subdomain",
+      "backend_url": "https://hermes-revenue-tracking-48.loca.lt",
+      "real_cta_clicks": 70,
+      "real_leads": 120,
+      "real_revenue_events": 0
+    },
+    "cta_rewrite": {
+      "changed_files": 0,
+      "changes": 0,
+      "scanned": 29
+    },
+    "wordpress_blog_analytics": {
+      "latest_file": "data/analytics/blog-analytics-2026-05-10.json",
+      "site_count": 3,
+      "total_recent_posts": 60,
+      "wp_statistics_present_sites": 0
+    },
+    "youtube_analytics": {
+      "date": "2026-05-10",
+      "file": "data/analytics/youtube-analytics-2026-05-10.json",
+      "present": true,
+      "status": "ok",
+      "summary": {
+        "totalSubscribers": 116,
+        "totalVideos": 722,
+        "totalViews": 348160,
+        "uniqueChannels": 4
+      },
+      "warnings": {
+        "duplicateChannelIds": []
+      }
+    },
+    "content_inventory_tracking": {
+      "status": "active",
+      "last_counted_at": "2026-05-10T21:21:46.629611+09:00",
+      "counts": {
+        "by_state": {
+          "pending": 2,
+          "reviewed": 0,
+          "revised": 31,
+          "published": 349,
+          "rejected": 30
+        },
+        "by_format": {
+          "wp": 281,
+          "shorts": 90,
+          "longform": 41
+        },
+        "by_state_and_format": {
+          "pending": {
+            "wp": 2,
+            "shorts": 0,
+            "longform": 0
+          },
+          "reviewed": {
+            "wp": 0,
+            "shorts": 0,
+            "longform": 0
+          },
+          "revised": {
+            "wp": 17,
+            "shorts": 6,
+            "longform": 8
+          },
+          "published": {
+            "wp": 259,
+            "shorts": 64,
+            "longform": 26
+          },
+          "rejected": {
+            "wp": 3,
+            "shorts": 20,
+            "longform": 7
+          }
+        },
+        "unknown_examples": []
+      }
+    },
+    "blog_analytics_ingestion": {
+      "status": "ok",
+      "latest": {
+        "present": true,
+        "path": "data/analytics/blog-analytics-2026-05-10.json",
+        "modified_at": "2026-05-10T09:16:00+09:00",
+        "top_level_keys": [
+          "date",
+          "sites"
+        ],
+        "site_count": 3,
+        "ok_site_count": 0,
+        "recent_post_count": 0,
+        "sites": [
+          {
+            "site": "unpre",
+            "status": null,
+            "recent_posts": 0
+          },
+          {
+            "site": "untab",
+            "status": null,
+            "recent_posts": 0
+          },
+          {
+            "site": "skewese",
+            "status": null,
+            "recent_posts": 0
+          }
+        ]
+      }
+    },
+    "conversion_funnel_monitoring": {
+      "status": "active",
+      "rollup": {
+        "cta_clicks": {
+          "present": true,
+          "valid_lines": 8569,
+          "invalid_lines": 0
+        },
+        "leads": {
+          "present": true,
+          "valid_lines": 249,
+          "invalid_lines": 0
+        },
+        "revenue_events": {
+          "present": true,
+          "valid_lines": 1,
+          "invalid_lines": 0
+        },
+        "canonical_events": {
+          "present": true,
+          "valid_lines": 0,
+          "invalid_lines": 0
+        }
+      },
+      "funnel_status": {
+        "draft_inventory": {
+          "pending": 2,
+          "reviewed_publishable": 0,
+          "revised_quality_backlog": 31,
+          "published_total": 349,
+          "rejected_total": 30
+        },
+        "by_format_total": {
+          "wp": 281,
+          "shorts": 90,
+          "longform": 41
+        },
+        "unpublished_by_format": {
+          "wp": 19,
+          "shorts": 6,
+          "longform": 8
+        },
+        "telemetry": {
+          "cta_clicks": 8569,
+          "leads": 249,
+          "revenue_events": 1,
+          "lead_rate_from_clicks": 0.0291,
+          "revenue_event_rate_from_leads": 0.004
+        },
+        "status_note": "Revenue events are present; optimize source/channel attribution next."
+      }
+    },
+    "bottleneck_detection": {
+      "status": "active",
+      "notes": [
+        "Quality/revision backlog dominates: revised=31 vs reviewed=0; promote or reject revised drafts before generating more.",
+        "Publishable inventory is empty while revised backlog exists; run targeted quality repair before publish windows."
+      ]
+    }
+  },
+  "fixed_tracking_backend_status": {
+    "active_draft_direct_lhr_backend_matches": 0,
+    "blocked": true,
+    "blocker": "cloudflare_cert_or_managed_hostname_required",
+    "current_backend_url": "https://vocal-tennis-ink-album.trycloudflare.com",
+    "fixed_backend": false,
+    "git_ahead_behind": "0\t0",
+    "health": {
+      "error": null,
+      "ok": true,
+      "status": 200
+    },
+    "kind": "cloudflare_quick_tunnel",
+    "last_updated": "2026-05-10T18:15:10+09:00",
+    "lead_probe": {
+      "error": null,
+      "ok": true,
+      "status": 200
+    },
+    "localtunnel_tracking_backend": {
+      "action": "localtunnel_fixed_subdomain_healthy",
+      "fixed_backend": true,
+      "health": {
+        "ok": true,
+        "status": 200,
+        "tracking_ok": true
+      },
+      "kind": "localtunnel_fixed_subdomain",
+      "lead_probe": {
+        "ok": true,
+        "status": 200
+      },
+      "pid": 14850,
+      "production_note": "No-auth fixed-subdomain fallback; Cloudflare named tunnel/VPS is still stronger for production SLA.",
+      "public_tracking_url": "https://hermes-revenue-tracking-48.loca.lt",
+      "redirect": {
+        "location": "https://unpre.co.kr/",
+        "ok": true,
+        "status": 302
+      },
+      "restarted": false,
+      "stable": false,
+      "updated_at": "2026-05-10T18:15:10+09:00"
+    },
+    "manager_log_markers_last_200_lines": {
+      "skip_observe_recent": 4,
+      "sync_failed_recent": 0,
+      "sync_start_recent": 0
+    },
+    "next_safe_state": "interim_cloudflare_quick_tunnel_watchdog",
+    "prerequisites": {
+      "cloudflare_cert_exists": false,
+      "cloudflare_config_exists": false,
+      "cloudflare_credentials_json_count": 0,
+      "cloudflared_path": "/opt/homebrew/bin/cloudflared",
+      "localhostrun_ssh_key_candidates": 0
+    },
+    "stable": false,
+    "task": "fixed-tracking-backend",
+    "tracking_backend": {
+      "current_backend_url": "https://hermes-revenue-tracking-48.loca.lt",
+      "fixed_backend": true,
+      "fixed_backend_level": "accountless_fixed_subdomain_watchdog_protected",
+      "kind": "localtunnel_fixed_subdomain",
+      "lead_probe": {
+        "ok": true,
+        "status": 200
+      },
+      "next_action": "Cloudflare named tunnel or VPS remains the production-grade final fix; localtunnel fixed subdomain is the no-auth operational replacement for lhr.life.",
+      "public_health": {
+        "ok": true,
+        "status": 200,
+        "tracking_ok": true
+      },
+      "stable": false,
+      "watchdog_status": "localtunnel_fixed_subdomain_healthy"
+    },
+    "updated_at": "2026-05-10T18:15:10+09:00"
+  },
+  "last_updated": "2026-05-10T21:21:46.629611+09:00",
+  "latest_blog_analytics": {
+    "date": "2026-05-10",
+    "file": "data/analytics/blog-analytics-2026-05-10.json",
+    "present": true,
+    "site_count": 3,
+    "sites": [
+      {
+        "recentPostCount": 20,
+        "sample_recent_titles": [
+          "소상공인 희망리턴패키지 2026 신청 자격 3가지 총정리",
+          "개인형퇴직연금 IRP 세액공제 한도 2026",
+          "2026 종합소득세 신고 방법 5단계 완벽정리"
+        ],
+        "site": "unpre",
+        "siteName": "마인드멜드 접합",
+        "url": "https://unpre.co.kr",
+        "wpStatistics_present": false
+      },
+      {
+        "recentPostCount": 20,
+        "sample_recent_titles": [
+          "2026 청년내일저축계좌 신청 자격 3가지 총정리",
+          "주거급여 신청 자격 금액 2026",
+          "2026 자녀장려금 신청 자격 3가지 완전 정리"
+        ],
+        "site": "untab",
+        "siteName": "한번에 하나의 이야기",
+        "url": "https://untab.co.kr",
+        "wpStatistics_present": false
+      },
+      {
+        "recentPostCount": 20,
+        "sample_recent_titles": [
+          "케르세틴 효능 TOP 3 추천 2026",
+          "면역력 떨어질 때 아연 보충제 TOP 3 비교 2026",
+          "콜라겐 펩타이드 피부 관절 추천 2026"
+        ],
+        "site": "skewese",
+        "siteName": "Unpretictable",
+        "url": "https://skewese.com",
+        "wpStatistics_present": false
+      }
+    ],
+    "total_recent_posts": 60
+  },
+  "previous_updated_at": "2026-05-10T15:22:06+09:00",
+  "publish_action_note": "No content was published by this refresh job.",
+  "publish_action_taken": false,
+  "publish_safety": "read/update snapshot only; publish steps intentionally skipped",
+  "revenue_performance_snapshot": {
+    "bottleneck_notes": [
+      "Revision/QA backlog remains: revised=29 (wp=17, shorts=5, longform=7, other=0).",
+      "Revenue proof missing: real revenue_events=0 despite real CTA clicks=70 and leads=120.",
+      "Measurement anomaly: real leads exceed real CTA clicks; audit event identity/dedupe/source filtering before trusting funnel rates.",
+      "Tracking backend remains operational but ephemeral; fixed Cloudflare/VPS endpoint still required for SLA-grade attribution.",
+      "Blog inventory is present, but WP Statistics/pageview metrics are absent; traffic-to-revenue attribution remains incomplete."
+    ],
+    "canonical_draft_counts_excluding_backups": {
+      "active_queue": 29,
+      "by_channel": {
+        "longform": 40,
+        "shorts": 89,
+        "wp": 276
+      },
+      "by_status": {
+        "pending": 0,
+        "published": 348,
+        "rejected": 30,
+        "reviewed": 0,
+        "revised": 29
+      },
+      "examples_by_status": {
+        "pending": [],
+        "published": [
+          "20260417_wp-skewese_오메가3-vs-종합비타민-겨울철-관절-건강과-면역-강화를-위한-최적-선택.md",
+          "20260417_wp-skewese_오메가3와-종합비타민-병행-섭취로-다이어트-중-혈중-중성지방-수치-개선-.md",
+          "20260417_wp-unpre_isa와-irp-중-누가-장기-투자-수익률에-더-유리한가-실제-데이터-분.md",
+          "20260417_wp-unpre_년-실손보험-청구-시-빈번한-거절-사유와-회피-전략.md",
+          "20260417_wp-unpre_년-실손보험-청구-시-효율적인-서류-준비-팁으로-보험금-지급-속도-높이는.md"
+        ],
+        "rejected": [
+          "20260423_yt-araelaver-shorts_타이타닉-침몰-숨겨진-진실.md",
+          "20260423_yt-kdowndan-shorts_세계에서-가장-저주받은-장소.md",
+          "20260423_yt-micheuhasi-shorts_나르시시스트-구별법-체크리스트.md",
+          "20260423_yt-untabcompany-shorts_재활용-청년도약계좌-vs-청년희망적금-비교.md",
+          "20260424_yt-micheuhasi-longform_먼저-연락하면-안-된다고-배웠어요-그-전략이-틀린-이유.md"
+        ],
+        "reviewed": [],
+        "revised": [
+          "20260508_wp-unpre_자동차보험-다이렉트-비교-가입-2026.md",
+          "20260508_wp-untab_청년월세지원-신청-자격-조건-2026.md",
+          "20260508_yt-araelaver-longform_세계-최초로-컴퓨터를-만든-사람은-남자가-아니었다-에이다-러브레이스-이야.md",
+          "20260508_yt-kdowndan-longform_개구리-소년-사건-11년-만에-발견된-진실과-여전히-남은-의문.md",
+          "20260508_yt-untabcompany-longform_qqq-폭락-때-샀다가-버틴-1년-실제-수익률과-그때-내-판단의-오류.md"
+        ]
+      },
+      "other": 2,
+      "status_channel_matrix": {
+        "pending": {
+          "longform": 0,
+          "other": 0,
+          "shorts": 0,
+          "wp": 0
+        },
+        "published": {
+          "longform": 26,
+          "other": 2,
+          "shorts": 64,
+          "wp": 256
+        },
+        "rejected": {
+          "longform": 7,
+          "other": 0,
+          "shorts": 20,
+          "wp": 3
+        },
+        "reviewed": {
+          "longform": 0,
+          "other": 0,
+          "shorts": 0,
+          "wp": 0
+        },
+        "revised": {
+          "longform": 7,
+          "other": 0,
+          "shorts": 5,
+          "wp": 17
+        }
+      },
+      "total": 407
+    },
+    "conversion_events": {
+      "backend_health": "ok",
+      "backend_status": "lead_path_operational_but_tunnel_ephemeral",
+      "real": {
+        "cta_clicks": 70,
+        "leads": 120,
+        "revenue_events": 0
+      },
+      "real_rates": {
+        "lead_rate_pct": 171.4286,
+        "lead_to_revenue_pct": 0.0,
+        "revenue_event_rate_pct": 0.0
+      },
+      "source_file": "data/real_conversion_rollup_20260510.json"
+    },
+    "conversion_funnel_status": "blocked_at_revenue_attribution",
+    "last_run_at": "2026-05-10T19:21:36+09:00",
+    "latest_blog_analytics_file": "data/analytics/blog-analytics-2026-05-10.json",
+    "raw_draft_counts_including_backups": {
+      "by_channel": {
+        "longform": 41,
+        "shorts": 90,
+        "wp": 279
+      },
+      "by_status": {
+        "pending": 2,
+        "published": 348,
+        "rejected": 30,
+        "reviewed": 0,
+        "revised": 32
+      },
+      "other": 2,
+      "total": 412
+    },
+    "snapshot_file": "data/performance_snapshot.json"
+  },
+  "revenue_snapshot_refresh": {
+    "analytics_source": "data/analytics/youtube-analytics-2026-05-10.json",
+    "bottleneck_notes": [
+      "No major bottleneck detected from available local data."
+    ],
+    "conversion_funnel_status": "ok",
+    "draft_counts": {
+      "by_channel": {
+        "longform": 18,
+        "shorts": 52,
+        "wp": 189
+      },
+      "by_status": {
+        "pending": 0,
+        "published": 0,
+        "rejected": 0,
+        "reviewed": 0,
+        "revised": 0
+      },
+      "detected_records": 259
+    },
+    "last_run_at": "2026-05-10T10:20:29.692247+00:00"
+  },
+  "snapshot_refresh": {
+    "blog_analytics_latest_path": "data/analytics/blog-analytics-2026-05-10.json",
+    "bottleneck_notes": [
+      "Revised queue (21) is the main active bottleneck; promote fixed items to reviewed/published or reject stale ones.",
+      "WP dominates inventory (234/345); keep CTA/conversion tracking on WP posts before increasing volume.",
+      "Longform inventory trails Shorts; use Shorts winners as bridge candidates into higher-intent longform/blog assets.",
+      "Rejected inventory is 28 (8.1%); mine rejection reasons before generating replacements.",
+      "Blog analytics present for 2026-05-10 with 3 sites and 60 recent post records.",
+      "No publish action performed; this run only refreshed JSON snapshots."
+    ],
+    "conversion_funnel_status": {
+      "inventory_total": 345,
+      "pending": 0,
+      "publish_rate": 0.858,
+      "published": 296,
+      "reject_rate": 0.0812,
+      "rejected": 28,
+      "review_ready_queue": 21,
+      "reviewed": 0,
+      "revised": 21,
+      "revision_queue_rate": 0.0609,
+      "source": "data/draft_manifest.json"
+    },
+    "draft_counts": {
+      "by_channel": {
+        "longform": 32,
+        "shorts": 79,
+        "wp": 234
+      },
+      "by_status": {
+        "pending": 0,
+        "published": 296,
+        "rejected": 28,
+        "reviewed": 0,
+        "revised": 21
+      },
+      "source": "data/draft_manifest.json",
+      "status_channel_matrix": {
+        "pending": {
+          "longform": 0,
+          "shorts": 0,
+          "total": 0,
+          "wp": 0
+        },
+        "published": {
+          "longform": 23,
+          "shorts": 55,
+          "total": 296,
+          "wp": 218
+        },
+        "rejected": {
+          "longform": 6,
+          "shorts": 19,
+          "total": 28,
+          "wp": 3
+        },
+        "reviewed": {
+          "longform": 0,
+          "shorts": 0,
+          "total": 0,
+          "wp": 0
+        },
+        "revised": {
+          "longform": 3,
+          "shorts": 5,
+          "total": 21,
+          "wp": 13
+        }
+      },
+      "total": 345
+    },
+    "last_run": "2026-05-10T20:21:44+09:00",
+    "publish_action": "none"
+  },
+  "snapshot_type": "hermes_feature_usage_revenue_performance_snapshot",
+  "source_workdir": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard",
+  "tracking_backend": {
+    "current_backend_url": "https://hermes-revenue-tracking-48.loca.lt",
+    "fixed_backend": true,
+    "kind": "localtunnel_fixed_subdomain",
+    "stable": false,
+    "status": "healthy_interim_fixed_subdomain",
+    "watchdog_action": "current_backend_healthy"
+  },
+  "tracking_backend_watchdog": {
+    "action": "current_backend_healthy",
+    "checked_trycloudflare_candidates": [],
+    "current_backend_url": "https://hermes-revenue-tracking-48.loca.lt",
+    "current_health": {
+      "ok": true,
+      "status": 200,
+      "tracking_ok": true
+    },
+    "fixed_backend": true,
+    "fixed_backend_blocker": null,
+    "kind": "localtunnel_fixed_subdomain",
+    "lead_probe": {
+      "attempt": 1,
+      "ok": true,
+      "status": 200
+    },
+    "stable": false,
+    "updated_at": "2026-05-10T18:19:29+09:00"
+  },
+  "updated": "2026-05-10T20:21:44+09:00",
+  "updated_at": "2026-05-10T19:21:36+09:00"
+}

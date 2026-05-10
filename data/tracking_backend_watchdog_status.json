@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-05-10T11:42:57+09:00",
+  "updated_at": "2026-05-10T21:32:58+09:00",
   "action": "current_backend_healthy",
-  "current_backend_url": "https://hermes-revenue-tracking-48.loca.lt",
-  "kind": "localtunnel_fixed_subdomain",
+  "current_backend_url": "https://vocal-tennis-ink-album.trycloudflare.com",
+  "kind": "cloudflare_quick_tunnel",
   "stable": false,
-  "fixed_backend": true,
+  "fixed_backend": false,
   "current_health": {
     "status": 200,
     "ok": true,
@@ -16,5 +16,5 @@
     "attempt": 1
   },
   "checked_trycloudflare_candidates": [],
-  "fixed_backend_blocker": null
+  "fixed_backend_blocker": "cloudflare_cert_or_managed_hostname_required"
 }

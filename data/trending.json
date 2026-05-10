@@ -1,0 +1,875 @@
+{
+  "date": "2026-05-10",
+  "updated": "2026-05-10 18:01:50",
+  "google_trends": [
+    "실손보험 보험료 비교",
+    "보험 비교 견적",
+    "건강보험료 조회",
+    "다이어트 식단 추천",
+    "건강검진 대상자 조회",
+    "혈당 관리 식단",
+    "ETF 투자 방법",
+    "코스피 투자 전략",
+    "종합소득세 신고",
+    "정부지원금 신청",
+    "정부 보조금 신청",
+    "국세 환급금 조회"
+  ],
+  "seasonal": [
+    "종합소득세 신고",
+    "종합소득세 환급",
+    "근로장려금 신청",
+    "자녀장려금 신청",
+    "건강검진 대상자 조회",
+    "청년월세 지원금 신청",
+    "대상포진 예방접종 가격"
+  ],
+  "all_keywords": [
+    "실손보험 보험료 비교",
+    "보험 비교 견적",
+    "건강보험료 조회",
+    "다이어트 식단 추천",
+    "건강검진 대상자 조회",
+    "혈당 관리 식단",
+    "ETF 투자 방법",
+    "코스피 투자 전략",
+    "종합소득세 신고",
+    "정부지원금 신청",
+    "정부 보조금 신청",
+    "국세 환급금 조회",
+    "종합소득세 환급",
+    "근로장려금 신청",
+    "자녀장려금 신청",
+    "청년월세 지원금 신청",
+    "대상포진 예방접종 가격"
+  ],
+  "top_signals": [
+    {
+      "keyword": "실손보험 보험료 비교",
+      "domain": "보험",
+      "channel": "unpre",
+      "source": "google_news_rss",
+      "score": 100,
+      "frequency": 266,
+      "growth_rate": 6.0,
+      "sentiment": 0,
+      "score_breakdown": {
+        "source_weight": 25,
+        "rank_bonus": 10,
+        "seasonal_bonus": 0,
+        "domain_bonus": 15,
+        "intent_bonus": 10,
+        "sentiment": 0,
+        "frequency": 266,
+        "growth": 20
+      },
+      "captured_at": "2026-05-10T18:01:50.232530+09:00",
+      "metadata": {
+        "example_title": "'5부제' 참여 차량 보험료 연 2% 할인…1700만 대 차주 혜택",
+        "query": "보험",
+        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oTU45eXVuWUUwelZnRDZxQjhDc2ZzeXltNzFTb1puS1B3cmhXcjc5ektoaGg1S094WTIzM3Bjc3ExVFNOZDBUQUhoY3J0X1NZbk1JZ2VyeEs5SmhZWlR6eGtGY0xDeXRTNy1fcQ?oc=5",
+        "pub_date": "Sun, 10 May 2026 06:50:51 GMT"
+      }
+    },
+    {
+      "keyword": "보험 비교 견적",
+      "domain": "보험",
+      "channel": "unpre",
+      "source": "google_news_rss",
+      "score": 100,
+      "frequency": 201,
+      "growth_rate": 6.0,
+      "sentiment": 0,
+      "score_breakdown": {
+        "source_weight": 25,
+        "rank_bonus": 8,
+        "seasonal_bonus": 0,
+        "domain_bonus": 15,
+        "intent_bonus": 10,
+        "sentiment": 0,
+        "frequency": 201,
+        "growth": 20
+      },
+      "captured_at": "2026-05-10T18:01:50.232530+09:00",
+      "metadata": {
+        "example_title": "GA \"소비자 보호 위해 보험판매전문회사 도입해야\"",
+        "query": "보험",
+        "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE4tU0JnMHBoaEc2REtSNUtFVXJvZDBDZDVNeTRRQ3M4c05KZFowdFZEcU5USWZndnl4WVZXODN0OS14dUVMWU9JNWw5SF9sNXBEU0g1S0NmSjlOaEQ5QlhMMExseV9tdVdOZXE3V1hGb0Q?oc=5",
+        "pub_date": "Sun, 10 May 2026 03:03:26 GMT"
+      }
+    },
+    {
+      "keyword": "건강보험료 조회",
+      "domain": "보험",
+      "channel": "unpre",
+      "source": "google_news_rss",
+      "score": 100,
+      "frequency": 167,
+      "growth_rate": 6.0,
+      "sentiment": 0,
+      "score_breakdown": {
+        "source_weight": 25,
+        "rank_bonus": 6,
+        "seasonal_bonus": 0,
+        "domain_bonus": 15,
+        "intent_bonus": 10,
+        "sentiment": 0,
+        "frequency": 167,
+        "growth": 20
+      },
+      "captured_at": "2026-05-10T18:01:50.232530+09:00",
+      "metadata": {
+        "example_title": "10일 국민건강보험 캐시워크 돈버는퀴즈 정답 공개",
+        "query": "보험",
+        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE11SjBDSjdfaXAyWGpUUUprWVROdW12T3pSMGdSMTE4WjRvbzA1djlBb1M0M3EySC1Ra3Y3aFpzZXM1ZTYyRVZ0S0Zpd3BwM0pXaGc3SjJfcWstcjdtbUpFc1FRVjlBQWdNejcxWNIBb0FVX3lxTE10TnVZUkFVcFpfVVBUWnNtZW81X2MzS1RRQ0JkODEyWG84eEhlLXhQQVJHemVGTFVuTUVDWF9SMnZKa0RucjYwVE55MDVpdEdZOWdzazdGVU1wRVpnZlQ4eWt2UTlKbWpLTXp1b2tQTQ?oc=5",
+        "pub_date": "Sun, 10 May 2026 08:00:00 GMT"
+      }
+    },
+    {
+      "keyword": "다이어트 식단 추천",
+      "domain": "건강",
+      "channel": "unpre",
+      "source": "google_news_rss",
+      "score": 100,
+      "frequency": 186,
+      "growth_rate": 6.0,
+      "sentiment": 0,
+      "score_breakdown": {
+        "source_weight": 25,
+        "rank_bonus": 10,
+        "seasonal_bonus": 0,
+        "domain_bonus": 15,
+        "intent_bonus": 10,
+        "sentiment": 0,
+        "frequency": 186,
+        "growth": 20
+      },
+      "captured_at": "2026-05-10T18:01:50.232530+09:00",
+      "metadata": {
+        "example_title": "야식 먹고 2㎏ 뺀다? 최화정이 즐기는 '다이어트 야식'",
+        "query": "다이어트",
+        "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFA4MDF3Q0ZYQl9yZzJLN1BudFRhYldiOFdUUTR1azhCU1JMaTktMXpHT0NPRzN6ZDhiS2NVX1QyZTlnRVNnbm5HYkt3djlGTHM2SWV6a1g3RXZOUlNsWldTcEgxZjlvVVZ0WFRibDNUaUFWcGNHcHlEadIBeEFVX3lxTFA4MDF3Q0ZYQl9yZzJLN1BudFRhYldiOFdUUTR1azhCU1JMaTktMXpHT0NPRzN6ZDhiS2NVX1QyZTlnRVNnbm5HYkt3djlGTHM2SWV6a1g3RXZOUlNsWldTcEgxZjlvVVZ0WFRibDNUaUFWcGNHcHlEaQ?oc=5",
+        "pub_date": "Sun, 10 May 2026 04:43:00 GMT"
+      }
+    },
+    {
+      "keyword": "건강검진 대상자 조회",
+      "domain": "건강",
+      "channel": "unpre",
+      "source": "google_news_rss",
+      "score": 100,
+      "frequency": 157,
+      "growth_rate": 6.0,
+      "sentiment": 0,
+      "score_breakdown": {
+        "source_weight": 25,
+        "rank_bonus": 8,
+        "seasonal_bonus": 10,
+        "domain_bonus": 15,
+        "intent_bonus": 10,
+        "sentiment": 0,
+        "frequency": 157,
+        "growth": 20
+      },
+      "captured_at": "2026-05-10T18:01:50.232530+09:00",
+      "metadata": {
+        "example_title": "최명수 도의원, 소방공무원 퇴직 후에도 체계적 건강관리 지원",
+        "query": "건강검진",
+        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oUTRFM3E4a01VRnBtQWNOMzRpMl82Q29LbmZObnd0Y2RtU0VJYVFLUDIxQXVXU0Y2TXUtbl9zRmNKVE5kV1Z1OF9KS1daczlYOG5zcU93VWNxMzg2QVpRZk1JODdWYzhMU0ZWZg?oc=5",
+        "pub_date": "Sun, 10 May 2026 08:15:22 GMT"
+      }
+    },
+    {
+      "keyword": "혈당 관리 식단",
+      "domain": "건강",
+      "channel": "unpre",
+      "source": "google_news_rss",
+      "score": 100,
+      "frequency": 88,
+      "growth_rate": 5.4,
+      "sentiment": 0,
+      "score_breakdown": {
+        "source_weight": 25,
+        "rank_bonus": 6,
+        "seasonal_bonus": 0,
+        "domain_bonus": 15,
+        "intent_bonus": 10,
+        "sentiment": 0,
+        "frequency": 88,
+        "growth": 17.6
+      },
+      "captured_at": "2026-05-10T18:01:50.232530+09:00",
+      "metadata": {
+        "example_title": "“혈당 뚝 떨어진다”… 매일 먹으면 좋은 ‘친숙한 음식’ 5가지",
+        "query": "혈당",
+        "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE0xQ2R5Z0Z2eXh3VWpYa0RGNGpUdWJQaHRVUUQwem9kRWVaRzF4THVLTHhmZHdidTZaR2VrUnN3QUY2Wm1yTmJlaEZRMmpJMjNjQmVFeVhsNHhHWkxySTFnbHhnY01DWElWVXdTNzFQQUFhUG9odlE?oc=5",
+        "pub_date": "Sun, 10 May 2026 08:00:00 GMT"
+      }
+    },
+    {
+      "keyword": "ETF 투자 방법",
+      "domain": "재테크",
+      "channel": "unpre",
+      "source": "google_news_rss",
+      "score": 100,
+      "frequency": 221,
+      "growth_rate": 6.0,
+      "sentiment": 0,
+      "score_breakdown": {
+        "source_weight": 25,
+        "rank_bonus": 10,
+        "seasonal_bonus": 0,
+        "domain_bonus": 15,
+        "intent_bonus": 10,
+        "sentiment": 0,
+        "frequency": 221,
+        "growth": 20
+      },
+      "captured_at": "2026-05-10T18:01:50.232530+09:00",
+      "metadata": {
+        "example_title": "한화자산운용 'PLUS 코스피50 ETF' 1년 수익률 270%",
+        "query": "재테크",
+        "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1keG11RXVOLVo3ZmZ5X1JhbF9HOFpRYXBNT2xPYzRqeGRsSmEtZlQwQUJSa2N0eGNhRTNpNklacU5QbXFtemQtVEMwRHhVVE0wZUVmc0FIUG1xZWpWbjlWWVlaYmRTb1BfMFVqcnBB?oc=5",
+        "pub_date": "Fri, 08 May 2026 07:21:57 GMT"
+      }
+    },
+    {
+      "keyword": "코스피 투자 전략",
+      "domain": "재테크",
+      "channel": "unpre",
+      "source": "google_news_rss",
+      "score": 100,
+      "frequency": 188,
+      "growth_rate": 6.0,
+      "sentiment": 0,
+      "score_breakdown": {
+        "source_weight": 25,
+        "rank_bonus": 8,
+        "seasonal_bonus": 0,
+        "domain_bonus": 15,
+        "intent_bonus": 10,
+        "sentiment": 0,
+        "frequency": 188,
+        "growth": 20
+      },
+      "captured_at": "2026-05-10T18:01:50.232530+09:00",
+      "metadata": {
+        "example_title": "코스피 7000 넘기니 재테크 도서 판매율 껑충...305% 증가",
+        "query": "재테크",
+        "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQTy1OaklMNlY0aS1ISlpONnFacHQyRjNLN09xYXZuVm5OTFJrR1hlUFdrb3RlSHRsVEYwQmZwUVJSZV9UQ0ZhU0NNSlJ6eElkSXRsTEwyQTBYa2lxejdQQVZDaWRQQVAxVk10czM2bnNKVl9XVFBYZkQ4Z3lmZ2FLemx2VmRHOU5EUzNickRmMWFqOGYy?oc=5",
+        "pub_date": "Sat, 09 May 2026 00:36:00 GMT"
+      }
+    },
+    {
+      "keyword": "종합소득세 신고",
+      "domain": "재테크",
+      "channel": "unpre",
+      "source": "google_news_rss",
+      "score": 100,
+      "frequency": 169,
+      "growth_rate": 6.0,
+      "sentiment": 0,
+      "score_breakdown": {
+        "source_weight": 25,
+        "rank_bonus": 6,
+        "seasonal_bonus": 10,
+        "domain_bonus": 15,
+        "intent_bonus": 10,
+        "sentiment": 0,
+        "frequency": 169,
+        "growth": 20
+      },
+      "captured_at": "2026-05-10T18:01:50.232530+09:00",
+      "metadata": {
+        "example_title": "법원 \"다단계 투자 수익금도 종합소득세 대상\"",
+        "query": "종합소득세",
+        "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNa1V0ZVF4akVwVXM4TTZBeFlNUlU3WGRwazN0X0JQcTJvMnRKbVJ2enhXeTdhcjBYX0t3a2RFVzVBdmltX2JiVDB2WXNIWmsyWi1WMkR5d0ZfelZoUFg4SGhsQ3JsaVVXUFhCMXgxem5reTJ6NEFaZFc4LTl5bGtDYVU5TEZ5Nnc?oc=5",
+        "pub_date": "Sun, 10 May 2026 03:46:00 GMT"
+      }
+    },
+    {
+      "keyword": "정부지원금 신청",
+      "domain": "지원금",
+      "channel": "unpre",
+      "source": "google_news_rss",
+      "score": 100,
+      "frequency": 493,
+      "growth_rate": 6.0,
+      "sentiment": 0,
+      "score_breakdown": {
+        "source_weight": 25,
+        "rank_bonus": 10,
+        "seasonal_bonus": 0,
+        "domain_bonus": 15,
+        "intent_bonus": 10,
+        "sentiment": 0,
+        "frequency": 493,
+        "growth": 20
+      },
+      "captured_at": "2026-05-10T18:01:50.232530+09:00",
+      "metadata": {
+        "example_title": "\"난 얼마 받지?\"…고유가 피해지원금 2차 기준 내일 공개",
+        "query": "지원금",
+        "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBmZmFoTkk0UDJJajZRamVpSVd0bUdRYzBud3FzZU1valZ4R0JUZFVIZWQtZzY3NnRyQnBsUlVSa1k5bXB3b3RGYlVGVkF4bTNtZW9lTi1wU2oya1d1aGlWdXBn?oc=5",
+        "pub_date": "Sun, 10 May 2026 01:34:35 GMT"
+      }
+    },
+    {
+      "keyword": "정부 보조금 신청",
+      "domain": "지원금",
+      "channel": "unpre",
+      "source": "google_news_rss",
+      "score": 100,
+      "frequency": 194,
+      "growth_rate": 6.0,
+      "sentiment": 0,
+      "score_breakdown": {
+        "source_weight": 25,
+        "rank_bonus": 8,
+        "seasonal_bonus": 0,
+        "domain_bonus": 15,
+        "intent_bonus": 10,
+        "sentiment": 0,
+        "frequency": 194,
+        "growth": 20
+      },
+      "captured_at": "2026-05-10T18:01:50.232530+09:00",
+      "metadata": {
+        "example_title": "\"지방보조금 더 쉽고 투명하게\"…보탬e 카드, 지역 금융기관까지 확대",
+        "query": "보조금",
+        "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9wWGtDaGlSd2U5dGlzS3VIRzYxUnY1NjVnT2JYX3VyU3pRSkRxeFYtd1ZpLXRGeWdpeE9HSWlaNFVWVVJqOVUwXzl5SkNxZUtsellWQV93?oc=5",
+        "pub_date": "Sun, 10 May 2026 04:24:43 GMT"
+      }
+    },
+    {
+      "keyword": "국세 환급금 조회",
+      "domain": "지원금",
+      "channel": "unpre",
+      "source": "google_news_rss",
+      "score": 100,
+      "frequency": 83,
+      "growth_rate": 5.15,
+      "sentiment": 0,
+      "score_breakdown": {
+        "source_weight": 25,
+        "rank_bonus": 6,
+        "seasonal_bonus": 0,
+        "domain_bonus": 15,
+        "intent_bonus": 10,
+        "sentiment": 0,
+        "frequency": 83,
+        "growth": 16.6
+      },
+      "captured_at": "2026-05-10T18:01:50.232530+09:00",
+      "metadata": {
+        "example_title": "울주군, \"지방세 미환급금 찾아가세요\"…'1만원 미만' 57%",
+        "query": "환급금",
+        "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1sRUUyUi0zRHVKRm9FYUxmbzFrbzFBdUY0MDlrWTlLSnJfWWQxdHdFalZRcGhlWE00RHBlSXRSS1kyX1d2ZDVvWVRxWElvUkJ3YXRLNEdackJmQ0Nlc3pRbWZaQUFWamdLMGp3Zk1n?oc=5",
+        "pub_date": "Fri, 08 May 2026 01:23:11 GMT"
+      }
+    }
+  ],
+  "domain_trends": {
+    "보험": [
+      "실손보험 보험료 비교",
+      "보험 비교 견적",
+      "건강보험료 조회"
+    ],
+    "건강": [
+      "다이어트 식단 추천",
+      "건강검진 대상자 조회",
+      "혈당 관리 식단"
+    ],
+    "재테크": [
+      "ETF 투자 방법",
+      "코스피 투자 전략",
+      "종합소득세 신고"
+    ],
+    "지원금": [
+      "정부지원금 신청",
+      "정부 보조금 신청",
+      "국세 환급금 조회"
+    ]
+  },
+  "history": [
+    {
+      "keyword": "실손보험 보험료 비교",
+      "category": "보험",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "hits": 3
+    },
+    {
+      "keyword": "ETF 투자 방법",
+      "category": "재테크",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "hits": 3
+    },
+    {
+      "keyword": "혈당 관리 식단",
+      "category": "건강",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "hits": 2
+    },
+    {
+      "keyword": "청년월세 지원금 신청",
+      "category": "지원금",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "hits": 2
+    },
+    {
+      "keyword": "종합소득세 환급",
+      "category": "재테크",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "hits": 2
+    },
+    {
+      "keyword": "종합소득세 신고",
+      "category": "재테크",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "hits": 2
+    },
+    {
+      "keyword": "정부지원금 신청",
+      "category": "지원금",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "hits": 2
+    },
+    {
+      "keyword": "정부 바우처 신청",
+      "category": "지원금",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "hits": 2
+    },
+    {
+      "keyword": "자녀장려금 신청",
+      "category": "지원금",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "hits": 2
+    },
+    {
+      "keyword": "대상포진 예방접종 가격",
+      "category": "건강",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "hits": 2
+    },
+    {
+      "keyword": "다이어트 식단 추천",
+      "category": "건강",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "hits": 2
+    },
+    {
+      "keyword": "근로장려금 신청",
+      "category": "지원금",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "hits": 2
+    },
+    {
+      "keyword": "국세 환급금 조회",
+      "category": "지원금",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "hits": 2
+    },
+    {
+      "keyword": "고유가 피해지원금 신청",
+      "category": "지원금",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "hits": 2
+    },
+    {
+      "keyword": "건강보험료 조회",
+      "category": "보험",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "hits": 2
+    },
+    {
+      "keyword": "건강검진 대상자 조회",
+      "category": "건강",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "hits": 2
+    },
+    {
+      "keyword": "펫보험 비교",
+      "category": "보험",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "hits": 1
+    },
+    {
+      "keyword": "코스피 투자 전략",
+      "category": "재테크",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "hits": 1
+    },
+    {
+      "keyword": "코스피 ETF 투자",
+      "category": "재테크",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "hits": 1
+    },
+    {
+      "keyword": "정부 보조금 신청",
+      "category": "지원금",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "hits": 1
+    },
+    {
+      "keyword": "자동차보험료 비교",
+      "category": "보험",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "hits": 1
+    },
+    {
+      "keyword": "자동차보험 차량 5부제 특약",
+      "category": "보험",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "hits": 1
+    },
+    {
+      "keyword": "예금 금리 비교",
+      "category": "재테크",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "hits": 1
+    },
+    {
+      "keyword": "보험 비교 견적",
+      "category": "보험",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "hits": 1
+    },
+    {
+      "keyword": "당뇨 혈당 관리",
+      "category": "건강",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "hits": 1
+    },
+    {
+      "keyword": "ISA 계좌 혜택",
+      "category": "재테크",
+      "first_seen": "2026-05-10",
+      "last_seen": "2026-05-10",
+      "hits": 1
+    }
+  ],
+  "source": {
+    "method": "web_search_rss",
+    "feeds": [
+      {
+        "url": "https://trends.google.com/trending/rss?geo=KR",
+        "items": 10,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EB%B3%B4%ED%97%98+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "보험",
+        "domain": "보험",
+        "items": 100,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EC%8B%A4%EC%86%90%EB%B3%B4%ED%97%98+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "실손보험",
+        "domain": "보험",
+        "items": 26,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EC%9E%90%EB%8F%99%EC%B0%A8%EB%B3%B4%ED%97%98+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "자동차보험",
+        "domain": "보험",
+        "items": 62,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EA%B1%B4%EA%B0%95%EB%B3%B4%ED%97%98+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "건강보험",
+        "domain": "보험",
+        "items": 100,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EB%B3%B4%ED%97%98%EB%A3%8C+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "보험료",
+        "domain": "보험",
+        "items": 99,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EB%B3%B4%ED%97%98%EA%B8%88+%EC%B2%AD%EA%B5%AC+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "보험금 청구",
+        "domain": "보험",
+        "items": 15,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EC%B9%98%EC%95%84%EB%B3%B4%ED%97%98+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "치아보험",
+        "domain": "보험",
+        "items": 77,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EC%95%94%EB%B3%B4%ED%97%98+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "암보험",
+        "domain": "보험",
+        "items": 76,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%ED%8E%AB%EB%B3%B4%ED%97%98+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "펫보험",
+        "domain": "보험",
+        "items": 20,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EB%B3%B4%ED%97%98+%EB%B9%84%EA%B5%90+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "보험 비교",
+        "domain": "보험",
+        "items": 73,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EA%B1%B4%EA%B0%95%EA%B2%80%EC%A7%84+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "건강검진",
+        "domain": "건강",
+        "items": 100,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%ED%98%88%EB%8B%B9+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "혈당",
+        "domain": "건강",
+        "items": 38,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EB%8B%B9%EB%87%A8+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "당뇨",
+        "domain": "건강",
+        "items": 46,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EB%8B%A4%EC%9D%B4%EC%96%B4%ED%8A%B8+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "다이어트",
+        "domain": "건강",
+        "items": 100,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EC%BD%9C%EB%A0%88%EC%8A%A4%ED%85%8C%EB%A1%A4+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "콜레스테롤",
+        "domain": "건강",
+        "items": 19,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EA%B3%A0%ED%98%88%EC%95%95+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "고혈압",
+        "domain": "건강",
+        "items": 33,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EC%88%98%EB%A9%B4+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "수면",
+        "domain": "건강",
+        "items": 52,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EC%98%81%EC%96%91%EC%A0%9C+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "영양제",
+        "domain": "건강",
+        "items": 31,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EB%8F%85%EA%B0%90+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "독감",
+        "domain": "건강",
+        "items": 24,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EB%8C%80%EC%83%81%ED%8F%AC%EC%A7%84+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "대상포진",
+        "domain": "건강",
+        "items": 29,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EC%9E%AC%ED%85%8C%ED%81%AC+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "재테크",
+        "domain": "재테크",
+        "items": 54,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EC%A2%85%ED%95%A9%EC%86%8C%EB%93%9D%EC%84%B8+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "종합소득세",
+        "domain": "재테크",
+        "items": 100,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=ISA+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "ISA",
+        "domain": "재테크",
+        "items": 20,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=IRP+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "IRP",
+        "domain": "재테크",
+        "items": 15,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EC%97%B0%EA%B8%88%EC%A0%80%EC%B6%95+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "연금저축",
+        "domain": "재테크",
+        "items": 30,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=ETF+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "ETF",
+        "domain": "재테크",
+        "items": 100,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EC%98%88%EA%B8%88+%EA%B8%88%EB%A6%AC+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "예금 금리",
+        "domain": "재테크",
+        "items": 61,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EC%BD%94%EC%8A%A4%ED%94%BC+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "코스피",
+        "domain": "재테크",
+        "items": 100,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EC%A0%88%EC%84%B8+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "절세",
+        "domain": "재테크",
+        "items": 32,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EB%B6%80%EB%8F%99%EC%82%B0+%EC%84%B8%EA%B8%88+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "부동산 세금",
+        "domain": "재테크",
+        "items": 84,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EC%A7%80%EC%9B%90%EA%B8%88+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "지원금",
+        "domain": "지원금",
+        "items": 100,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EC%A0%95%EB%B6%80%EC%A7%80%EC%9B%90%EA%B8%88+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "정부지원금",
+        "domain": "지원금",
+        "items": 31,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EA%B7%BC%EB%A1%9C%EC%9E%A5%EB%A0%A4%EA%B8%88+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "근로장려금",
+        "domain": "지원금",
+        "items": 34,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EC%9E%90%EB%85%80%EC%9E%A5%EB%A0%A4%EA%B8%88+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "자녀장려금",
+        "domain": "지원금",
+        "items": 32,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EC%B2%AD%EB%85%84%EC%9B%94%EC%84%B8+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "청년월세",
+        "domain": "지원금",
+        "items": 36,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EB%B3%B4%EC%A1%B0%EA%B8%88+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "보조금",
+        "domain": "지원금",
+        "items": 100,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EB%B0%94%EC%9A%B0%EC%B2%98+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "바우처",
+        "domain": "지원금",
+        "items": 29,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%ED%99%98%EA%B8%89%EA%B8%88+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "환급금",
+        "domain": "지원금",
+        "items": 58,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EA%B3%A0%EC%9C%A0%EA%B0%80+%EC%A7%80%EC%9B%90%EA%B8%88+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "고유가 지원금",
+        "domain": "지원금",
+        "items": 100,
+        "ok": true
+      },
+      {
+        "url": "https://news.google.com/rss/search?q=%EB%AF%BC%EC%83%9D%ED%9A%8C%EB%B3%B5+when%3A3d&hl=ko&gl=KR&ceid=KR%3Ako",
+        "query": "민생회복",
+        "domain": "지원금",
+        "items": 83,
+        "ok": true
+      }
+    ],
+    "collected_at": "2026-05-10 18:01:50",
+    "timezone": "Asia/Seoul",
+    "status": "ok",
+    "raw_google_trends_count": 10,
+    "google_news_items_count": 2319,
+    "errors": [],
+    "notes": "Google Trends KR RSS + Google News RSS when:3d; domain long-tail normalization; history pruned to last_seen within 7 days."
+  }
+}

@@ -114,8 +114,8 @@
     }
   },
   "lead_capture_setup": {
-    "status": "interim_lead_page_connected",
-    "updated_at": "2026-05-07T22:38:26+09:00",
+    "status": "money_intent_offer_refactor_in_progress",
+    "updated_at": "2026-05-10T21:04:16+0900",
     "assets_dir": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/lead_capture",
     "manifest": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/lead_capture/lead_capture_forms_manifest.json",
     "prepared_assets": [
@@ -124,15 +124,119 @@
       "skewese_영양제_조합_가이드.md"
     ],
     "remaining_steps": [
-      "임시 lead.html은 연결 완료. 다음 단계는 Google Forms/이메일 자동발송 또는 CRM으로 교체",
-      "Cloudflare/VPS 고정 tracking backend 전환 후 backend 파라미터 고정 URL로 교체",
+      "임시 lead.html은 연결 완료. backend 파라미터는 제거했고 lead.html이 data/tracking_public_url.json의 canonical backend를 사용",
+      "다음 단계는 Google Forms/이메일 자동발송 또는 CRM으로 교체",
+      "Cloudflare/VPS 고정 tracking backend 전환 후 stable=true로 전환",
       "WP live old posts CTA 재작성 또는 상위 클릭 글부터 수동 업데이트"
     ],
     "form_urls": {
-      "unpre": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=unpre&backend=https://cd593c06f7bb71.lhr.life",
-      "untab": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=untab&backend=https://cd593c06f7bb71.lhr.life",
-      "skewese": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=skewese&backend=https://cd593c06f7bb71.lhr.life",
-      "kakao_channel": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=untab&backend=https://cd593c06f7bb71.lhr.life&intent=service_inquiry"
+      "unpre": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=unpre&intent=lead_magnet&offer_id=unpre_lead_magnet",
+      "untab": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=untab&intent=lead_magnet&offer_id=untab_lead_magnet",
+      "skewese": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=skewese&intent=lead_magnet&offer_id=skewese_lead_magnet",
+      "kakao_channel": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=untab&intent=service_inquiry&offer_id=untab_service_inquiry",
+      "unpre_insurance_quote": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=unpre&intent=insurance_quote&offer_id=unpre_insurance_quote",
+      "unpre_loan_rate_check": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=unpre&intent=loan_rate&offer_id=unpre_loan_rate_check",
+      "unpre_tax_saving_check": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=unpre&intent=tax_saving&offer_id=unpre_tax_saving_check",
+      "untab_subsidy_eligibility": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=untab&intent=subsidy_eligibility&offer_id=untab_subsidy_eligibility",
+      "untab_policy_fund_consult": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=untab&intent=policy_fund&offer_id=untab_policy_fund_consult",
+      "skewese_supplement_buying_check": "https://araelaver.github.io/revenue-ops-dashboard/lead.html?site=skewese&intent=supplement_buying&offer_id=skewese_supplement_buying_check"
+    }
+  },
+  "money_intent_offers": {
+    "unpre_insurance_quote": {
+      "site": "unpre",
+      "type": "insurance_quote_lead",
+      "name": "보험료 30초 견적 점검",
+      "cta_action": "내 보험료 30초 점검하기",
+      "intent": "자동차/운전자/실손/암보험 비교 전환",
+      "revenue_model": "affiliate_or_quote_lead",
+      "lead_priority": "high",
+      "fields": [
+        "insurance_type",
+        "renewal_month",
+        "current_premium_range",
+        "age_range",
+        "contact_channel"
+      ]
+    },
+    "unpre_loan_rate_check": {
+      "site": "unpre",
+      "type": "loan_rate_lead",
+      "name": "대출 갈아타기 금리 체크",
+      "cta_action": "금리 낮출 수 있는지 확인하기",
+      "intent": "대출 비교/갈아타기 상담 전환",
+      "revenue_model": "affiliate_or_finance_lead",
+      "lead_priority": "high",
+      "fields": [
+        "loan_type",
+        "loan_amount_range",
+        "current_rate_range",
+        "income_type",
+        "contact_channel"
+      ]
+    },
+    "unpre_tax_saving_check": {
+      "site": "unpre",
+      "type": "tax_saving_lead",
+      "name": "세액공제 한도 계산 체크",
+      "cta_action": "내 세액공제 한도 확인하기",
+      "intent": "연금저축/IRP/ISA 가입 전환",
+      "revenue_model": "finance_affiliate_or_lead",
+      "lead_priority": "medium",
+      "fields": [
+        "income_range",
+        "current_saving_product",
+        "target_amount",
+        "contact_channel"
+      ]
+    },
+    "untab_subsidy_eligibility": {
+      "site": "untab",
+      "type": "subsidy_eligibility_lead",
+      "name": "지원금 신청 가능성 30초 자가진단",
+      "cta_action": "지원금 대상 여부 확인하기",
+      "intent": "지원금 신청 가능성 확인 후 상담/대행 전환",
+      "revenue_model": "service_inquiry",
+      "lead_priority": "high",
+      "fields": [
+        "applicant_type",
+        "region",
+        "subsidy_topic",
+        "deadline_known",
+        "contact_channel"
+      ]
+    },
+    "untab_policy_fund_consult": {
+      "site": "untab",
+      "type": "policy_fund_consult",
+      "name": "정책자금/폐업지원 상담 체크",
+      "cta_action": "정책자금 상담 가능성 확인하기",
+      "intent": "소상공인 정책자금/희망리턴패키지 상담 전환",
+      "revenue_model": "service_inquiry",
+      "lead_priority": "high",
+      "fields": [
+        "business_status",
+        "region",
+        "business_type",
+        "funding_need",
+        "contact_channel"
+      ]
+    },
+    "skewese_supplement_buying_check": {
+      "site": "skewese",
+      "type": "supplement_buying_check",
+      "name": "영양제 구매 전 성분 체크",
+      "cta_action": "내 목적에 맞는 성분 확인하기",
+      "intent": "영양제 affiliate 구매 전환",
+      "revenue_model": "affiliate_purchase_intent",
+      "lead_priority": "medium",
+      "fields": [
+        "health_goal",
+        "age_range",
+        "current_supplements",
+        "medication_warning",
+        "purchase_timing"
+      ]
     }
   }
 }
