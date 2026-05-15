@@ -22,7 +22,7 @@
   const msg = document.getElementById('message');
   const fallback = document.getElementById('fallback');
   const params = new URLSearchParams(location.search);
-  const safeParamNames = ['site','slot','content_id','placeholder','target'];
+  const safeParamNames = ['site','slot','content_id','placeholder','target','offer_id','intent','utm_source','utm_medium','utm_campaign'];
   const out = new URLSearchParams();
   for (const name of safeParamNames) {
     if (params.has(name)) out.set(name, params.get(name));
