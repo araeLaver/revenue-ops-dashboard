@@ -1,0 +1,89 @@
+{
+  "checked_at": "2026-05-17T09:20:44+09:00",
+  "public": "https://hermes-revenue-tracking-48.loca.lt",
+  "results": [
+    {
+      "name": "local",
+      "root": "http://127.0.0.1:8431",
+      "health": {
+        "status": 200,
+        "body": "{\"ok\": true, \"service\": \"hermes-tracking\", \"time\": \"2026-05-17T09:20:41+09:00\"}"
+      },
+      "t": {
+        "status": 302,
+        "location": "https://www.coupang.com/np/search?q=test&channel=user&sourceType=affiliate&trackingCode=AF5249936"
+      }
+    },
+    {
+      "name": "public",
+      "root": "https://hermes-revenue-tracking-48.loca.lt",
+      "health": {
+        "status": 200,
+        "body": "{\"ok\": true, \"service\": \"hermes-tracking\", \"time\": \"2026-05-17T09:20:43+09:00\"}"
+      },
+      "t": {
+        "status": 302,
+        "location": "https://www.coupang.com/np/search?q=test&channel=user&sourceType=affiliate&trackingCode=AF5249936"
+      }
+    }
+  ],
+  "click_delta": 2,
+  "revenue_event_delta": 2,
+  "last_revenue_events": [
+    {
+      "amount": "0",
+      "content_id": "smoke-274",
+      "currency": "KRW",
+      "event_id": "evt_1777968595068_f7026f8e",
+      "ip_hash": "12ca17b49af22894",
+      "offer_id": "finance-affiliate",
+      "order_ref_hash": "",
+      "referrer": "",
+      "site": "unpre",
+      "source": "smoke",
+      "timestamp": "2026-05-05T17:09:55+09:00",
+      "type": "revenue",
+      "ua_hash": "8f42af6f304383bb"
+    },
+    {
+      "amount": "0",
+      "content_id": "fixed_backend_revenue_proxy_probe",
+      "currency": "KRW",
+      "event_id": "evt_1778977241892_11da95cc",
+      "ip_hash": "12ca17b49af22894",
+      "offer_id": "fixed_backend_check",
+      "order_ref_hash": "",
+      "referrer": "",
+      "site": "ops",
+      "source": "lead_page_outbound",
+      "target_host": "www.coupang.com",
+      "target_path": "/np/search",
+      "timestamp": "2026-05-17T09:20:41+09:00",
+      "type": "revenue_proxy",
+      "ua_hash": "c54a118fc2842124",
+      "utm_campaign": "revenue_proxy_probe",
+      "utm_medium": "backend_test",
+      "utm_source": "ops_probe"
+    },
+    {
+      "amount": "0",
+      "content_id": "fixed_backend_revenue_proxy_probe",
+      "currency": "KRW",
+      "event_id": "evt_1778977243877_debfa446",
+      "ip_hash": "0e290bef435d9a64",
+      "offer_id": "fixed_backend_check",
+      "order_ref_hash": "",
+      "referrer": "",
+      "site": "ops",
+      "source": "lead_page_outbound",
+      "target_host": "www.coupang.com",
+      "target_path": "/np/search",
+      "timestamp": "2026-05-17T09:20:43+09:00",
+      "type": "revenue_proxy",
+      "ua_hash": "c54a118fc2842124",
+      "utm_campaign": "revenue_proxy_probe",
+      "utm_medium": "backend_test",
+      "utm_source": "ops_probe"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-05-17T09:22:19+09:00",
+  "cta_clicks": {
+    "raw": 18212,
+    "real": 0,
+    "by_type": {},
+    "by_offer": {},
+    "last_real": []
+  },
+  "leads": {
+    "raw": 1424,
+    "real": 0,
+    "by_type": {},
+    "by_offer": {},
+    "last_real": []
+  },
+  "revenue_events": {
+    "raw": 3,
+    "real": 0,
+    "by_type": {},
+    "by_offer": {},
+    "last_real": []
+  },
+  "structure_fixes": [
+    "tracking_server /t now records intent/utm fields",
+    "lead_page_outbound clicks now create revenue_proxy events",
+    "today two unpre loan posts now have dual CTA: lead form + direct tracked outbound button"
+  ]
+}

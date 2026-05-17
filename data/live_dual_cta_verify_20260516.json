@@ -1,0 +1,27 @@
+{
+  "verified_at": "2026-05-17T09:21:59+09:00",
+  "results": [
+    {
+      "url": "https://unpre.co.kr/%ec%b2%ad%eb%85%84-%eb%b2%84%ed%8c%80%eb%aa%a9-%ec%a0%84%ec%84%b8%eb%8c%80%ec%b6%9c-3%ea%b0%80%ec%a7%80-%ec%a1%b0%ea%b1%b4-2026-%ec%b4%9d%ec%a0%95%eb%a6%ac/",
+      "http_200": true,
+      "has_dual_cta": true,
+      "has_track_html": true,
+      "has_lead_page_outbound": true,
+      "has_offer_id": true,
+      "has_lead_html": true,
+      "placeholder_left": false,
+      "internal_memo_leak": false
+    },
+    {
+      "url": "https://unpre.co.kr/%ec%b9%b4%ec%b9%b4%ec%98%a4%eb%b1%85%ed%81%ac-%ec%a0%84%ec%9b%94%ec%84%b8%eb%8c%80%ec%b6%9c-%ea%b8%88%eb%a6%ac-3%ea%b0%80%ec%a7%80-%eb%b9%84%ea%b5%90-2026/",
+      "http_200": true,
+      "has_dual_cta": true,
+      "has_track_html": true,
+      "has_lead_page_outbound": true,
+      "has_offer_id": true,
+      "has_lead_html": true,
+      "placeholder_left": false,
+      "internal_memo_leak": false
+    }
+  ]
+}
