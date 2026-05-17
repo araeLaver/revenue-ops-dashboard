@@ -1,209 +1,457 @@
 {
-  "blog_analytics": {
-    "latest_file": "data/analytics/blog-analytics-2026-05-10.json",
-    "present": true,
-    "summary": {
-      "date": "2026-05-10",
+  "actions_taken": [
+    "Printed date via terminal.",
+    "Counted live draft folders by state and filename-classified format.",
+    "Read latest blog analytics JSON if present.",
+    "Updated performance_snapshot.json and hermes_feature_usage.json.",
+    "Validated JSON files.",
+    "Did not publish content."
+  ],
+  "all_draft_file_counts": {
+    "pending": {
+      "longform": 0,
+      "other": 0,
+      "shorts": 0,
+      "total": 0,
+      "wp": 0
+    },
+    "published": {
+      "longform": 0,
+      "other": 0,
+      "shorts": 0,
+      "total": 0,
+      "wp": 0
+    },
+    "rejected": {
+      "longform": 16,
+      "other": 0,
+      "shorts": 16,
+      "total": 128,
+      "wp": 96
+    },
+    "reviewed": {
+      "longform": 0,
+      "other": 0,
+      "shorts": 0,
+      "total": 0,
+      "wp": 0
+    },
+    "revised": {
+      "longform": 0,
+      "other": 0,
+      "shorts": 0,
+      "total": 0,
+      "wp": 0
+    }
+  },
+  "analytics": {
+    "blog_latest": {
+      "bytes": 30369,
+      "date": "2026-05-17",
+      "latest_post_date_max": "2026-05-16",
+      "mtime": "2026-05-17T09:15:53+09:00",
+      "parse_status": "ok",
+      "path": "data/analytics/blog-analytics-2026-05-17.json",
+      "present": true,
+      "recent_post_count": 60,
       "site_count": 3,
       "sites": [
         {
-          "recentPostCount": 20,
-          "sample_recent_titles": [
-            "소상공인 희망리턴패키지 2026 신청 자격 3가지 총정리",
-            "개인형퇴직연금 IRP 세액공제 한도 2026",
-            "2026 종합소득세 신고 방법 5단계 완벽정리"
-          ],
+          "latest_post_date": "2026-05-16",
+          "latest_post_title": "카카오뱅크 전월세대출 금리 3가지 비교 2026",
+          "recent_post_count": 20,
           "site": "unpre",
-          "siteName": "마인드멜드 접합",
+          "site_name": "마인드멜드 접합",
           "url": "https://unpre.co.kr",
-          "wpStatistics_present": false
+          "wp_statistics_present": false
         },
         {
-          "recentPostCount": 20,
-          "sample_recent_titles": [
-            "2026 청년내일저축계좌 신청 자격 3가지 총정리",
-            "주거급여 신청 자격 금액 2026",
-            "2026 자녀장려금 신청 자격 3가지 완전 정리"
-          ],
+          "latest_post_date": "2026-05-15",
+          "latest_post_title": "고유가 피해지원금 2차 신청 방법 3단계 총정리 2026",
+          "recent_post_count": 20,
           "site": "untab",
-          "siteName": "한번에 하나의 이야기",
+          "site_name": "한번에 하나의 이야기",
           "url": "https://untab.co.kr",
-          "wpStatistics_present": false
+          "wp_statistics_present": false
         },
         {
-          "recentPostCount": 20,
-          "sample_recent_titles": [
-            "케르세틴 효능 TOP 3 추천 2026",
-            "면역력 떨어질 때 아연 보충제 TOP 3 비교 2026",
-            "콜라겐 펩타이드 피부 관절 추천 2026"
-          ],
+          "latest_post_date": "2026-05-14",
+          "latest_post_title": "알파리포산 효능 3가지 혈당·항산화 추천 2026",
+          "recent_post_count": 20,
           "site": "skewese",
-          "siteName": "Unpretictable",
+          "site_name": "Unpretictable",
           "url": "https://skewese.com",
-          "wpStatistics_present": false
+          "wp_statistics_present": false
         }
       ],
-      "total_recent_posts": 60
+      "wp_statistics_present_any_site": false
+    },
+    "conversion_metrics": {
+      "data_quality": "partial",
+      "last_updated": "2026-05-05T11:21:43+09:00",
+      "missing_live_feeds": {
+        "cta_clicks": {
+          "connected": false,
+          "reason": "no click tracker/UTM event feed populated yet"
+        },
+        "lead_submissions": {
+          "connected": false,
+          "reason": "lead capture assets exist, submission event feed not connected"
+        },
+        "revenue": {
+          "connected": false,
+          "reason": "no affiliate/ads/sales revenue import feed connected"
+        },
+        "wp_pageviews": {
+          "connected": false,
+          "reason": "latest blog analytics wpStatistics empty/missing"
+        },
+        "youtube_views_ctr_retention": {
+          "connected": false,
+          "reason": "youtube analytics script exists but no current merged snapshot found in performance file"
+        }
+      }
+    },
+    "wp_conversion_priority_report": {
+      "counts": {
+        "cta_bad": 0,
+        "cta_clicks": 2406,
+        "lead_bad": 0,
+        "leads": 1,
+        "revenue_bad": 0,
+        "revenue_events": 1
+      },
+      "rates": {
+        "cta_to_lead": 0.00041562759767248546,
+        "cta_to_revenue_event": 0.00041562759767248546
+      },
+      "updated_at": "2026-05-06T22:39:22+09:00"
     }
   },
-  "blog_analytics_latest": {
-    "path": "data/analytics/blog-analytics-2026-05-10.json",
-    "summary": {
-      "date": "2026-05-10",
-      "recent_posts_total": 60,
-      "sites": [
-        {
-          "latestPostDate": "2026-05-10",
-          "latestPostTitle": "소상공인 희망리턴패키지 2026 신청 자격 3가지 총정리",
-          "recentPosts": 20,
-          "site": "unpre",
-          "siteName": "마인드멜드 접합",
-          "url": "https://unpre.co.kr"
-        },
-        {
-          "latestPostDate": "2026-05-10",
-          "latestPostTitle": "2026 청년내일저축계좌 신청 자격 3가지 총정리",
-          "recentPosts": 20,
-          "site": "untab",
-          "siteName": "한번에 하나의 이야기",
-          "url": "https://untab.co.kr"
-        },
-        {
-          "latestPostDate": "2026-05-10",
-          "latestPostTitle": "케르세틴 효능 TOP 3 추천 2026",
-          "recentPosts": 20,
-          "site": "skewese",
-          "siteName": "Unpretictable",
-          "url": "https://skewese.com"
-        }
-      ],
-      "sites_count": 3
+  "analytics_api_status": {
+    "wordpress": {
+      "collected": true,
+      "latest_post_date_max": "2026-05-16",
+      "recent_posts": 60,
+      "sites": 3,
+      "source_file": "data/analytics/blog-analytics-2026-05-17.json",
+      "status": "ok",
+      "today_posts": 0,
+      "updated_at": "2026-05-17T09:16:47+09:00",
+      "wp_statistics_present_any_site": false
+    },
+    "youtube": {
+      "source_file": "data/analytics/youtube-analytics-2026-05-17.json",
+      "status": "ok",
+      "summary": {
+        "totalSubscribers": 120,
+        "totalVideos": 744,
+        "totalViews": 358288,
+        "uniqueChannels": 4
+      },
+      "updated_at": "2026-05-17T09:16:47+09:00",
+      "warnings": {
+        "duplicateChannelIds": []
+      }
     }
   },
   "bottleneck_notes": [
-    "Quality/revision backlog dominates: revised=31 vs reviewed=0; promote or reject revised drafts before generating more.",
-    "Publishable inventory is empty while revised backlog exists; run targeted quality repair before publish windows."
+    "No reviewed publish-ready inventory; move revised drafts through QA before any publish window.",
+    "Revision backlog remains the main content bottleneck: revised=46 (wp=37, shorts=0, longform=9).",
+    "Latest blog analytics present: 60 recent posts across 3 sites (data/analytics/blog-analytics-2026-05-17.json)."
   ],
-  "conversion_event_rollup": {
-    "cta_clicks": 8593,
-    "leads": 257,
-    "revenue_events": 1,
-    "canonical_events": {
-      "present": true,
-      "valid_lines": 0,
-      "invalid_lines": 0
+  "canonical_non_backup_draft_counts": {
+    "pending": {
+      "longform": 0,
+      "other": 0,
+      "shorts": 0,
+      "total": 0,
+      "wp": 0
     },
-    "updated_at": "2026-05-10T21:40:33+09:00",
+    "published": {
+      "longform": 22,
+      "other": 5,
+      "shorts": 57,
+      "total": 315,
+      "wp": 231
+    },
+    "rejected": {
+      "longform": 6,
+      "other": 0,
+      "shorts": 19,
+      "total": 28,
+      "wp": 3
+    },
+    "reviewed": {
+      "longform": 3,
+      "other": 0,
+      "shorts": 1,
+      "total": 4,
+      "wp": 0
+    },
+    "revised": {
+      "longform": 0,
+      "other": 0,
+      "shorts": 0,
+      "total": 0,
+      "wp": 0
+    }
+  },
+  "conversion_event_rollup": {
+    "updated_at": "2026-05-17T11:27:23+09:00",
+    "raw": {
+      "cta_clicks": 18358,
+      "leads": 1454,
+      "revenue_events": 9,
+      "canonical": 0
+    },
+    "real": {
+      "cta_clicks": 2279,
+      "leads": 3,
+      "revenue_events": 6,
+      "canonical": 0
+    },
+    "invalid_lines": 0,
+    "details": {
+      "cta_clicks": {
+        "raw": 18358,
+        "real": 2279,
+        "invalid_lines": 0,
+        "latest_type": "cta_click",
+        "latest_timestamp": "2026-05-17T11:20:23+09:00"
+      },
+      "leads": {
+        "raw": 1454,
+        "real": 3,
+        "invalid_lines": 0,
+        "latest_type": "lead",
+        "latest_timestamp": "2026-05-17T11:15:08+09:00"
+      },
+      "revenue_events": {
+        "raw": 9,
+        "real": 6,
+        "invalid_lines": 0,
+        "latest_type": "revenue_proxy",
+        "latest_timestamp": "2026-05-17T11:19:44+09:00"
+      },
+      "canonical": {
+        "raw": 0,
+        "real": 0,
+        "invalid_lines": 0,
+        "latest_type": null,
+        "latest_timestamp": null
+      }
+    },
+    "rates": {
+      "lead_capture_rate_pct": 7.9203,
+      "lead_to_revenue_rate_pct": 0.619,
+      "cta_to_revenue_rate_pct": 0.049
+    },
+    "real_rates": {
+      "lead_capture_rate_pct": 0.1316,
+      "lead_to_revenue_rate_pct": 200.0,
+      "cta_to_revenue_rate_pct": 0.2633
+    },
+    "cta_clicks": 18366,
+    "leads": 1456,
+    "revenue_events": 9,
     "latest_event_type": "cta_click"
   },
   "conversion_funnel": {
-    "content_lifecycle": {
-      "active_queue": 29,
-      "draft_to_published_rate": 0.855,
-      "pending_review": 0,
-      "published": 348,
-      "rejected": 30,
-      "review_or_revision_queue_rate": 0.0713,
-      "reviewed": 0,
-      "revised": 29,
-      "total_canonical_drafts": 407
+    "status": "revenue_seen",
+    "counts": {
+      "cta_clicks": 18358,
+      "leads": 1454,
+      "revenue_events": 9,
+      "canonical": 0
     },
-    "conversion_events": {
-      "backend_health": "ok",
-      "backend_status": "lead_path_operational_but_tunnel_ephemeral",
-      "real": {
-        "cta_clicks": 70,
-        "leads": 120,
-        "revenue_events": 0
-      },
-      "real_rates": {
-        "lead_rate_pct": 171.4286,
-        "lead_to_revenue_pct": 0.0,
-        "revenue_event_rate_pct": 0.0
-      },
-      "source_file": "data/real_conversion_rollup_20260510.json"
+    "real_counts": {
+      "cta_clicks": 2279,
+      "leads": 3,
+      "revenue_events": 6,
+      "canonical": 0
     },
-    "status": "blocked_at_revenue_attribution"
+    "rates": {
+      "lead_capture_rate_pct": 7.9203,
+      "lead_to_revenue_rate_pct": 0.619,
+      "cta_to_revenue_rate_pct": 0.049
+    },
+    "real_rates": {
+      "lead_capture_rate_pct": 0.1316,
+      "lead_to_revenue_rate_pct": 200.0,
+      "cta_to_revenue_rate_pct": 0.2633
+    },
+    "invalid_lines": 0,
+    "note": "No content was published by this snapshot job."
   },
   "conversion_funnel_status": {
-    "draft_inventory": {
-      "pending": 2,
-      "reviewed_publishable": 0,
-      "revised_quality_backlog": 31,
-      "published_total": 349,
-      "rejected_total": 30
+    "draft_intake": {
+      "status": "empty",
+      "pending": 0
     },
-    "by_format_total": {
-      "wp": 281,
-      "shorts": 90,
-      "longform": 41
+    "quality_review": {
+      "status": "bottleneck",
+      "reviewed_ready": 0,
+      "revised_backlog": 46,
+      "rejected": 33
     },
-    "unpublished_by_format": {
-      "wp": 19,
-      "shorts": 6,
-      "longform": 8
+    "publish_inventory": {
+      "status": "empty",
+      "wp": 0,
+      "shorts": 0,
+      "longform": 0
     },
-    "telemetry": {
-      "cta_clicks": 8569,
-      "leads": 249,
-      "revenue_events": 1,
-      "lead_rate_from_clicks": 0.0291,
-      "revenue_event_rate_from_leads": 0.004
+    "published_library": {
+      "published_total": 387,
+      "wp": 279,
+      "shorts": 82,
+      "longform": 26
     },
-    "status_note": "Revenue events are present; optimize source/channel attribution next."
+    "conversion": {
+      "status": "revenue_present",
+      "raw": {
+        "cta_clicks": 18358,
+        "leads": 1454,
+        "revenue_events": 9,
+        "canonical": 0
+      },
+      "real": {
+        "cta_clicks": 2279,
+        "leads": 3,
+        "revenue_events": 6,
+        "canonical": 0
+      },
+      "rates": {
+        "lead_capture_rate_pct": 7.9203,
+        "lead_to_revenue_rate_pct": 0.619,
+        "cta_to_revenue_rate_pct": 0.049
+      },
+      "real_rates": {
+        "lead_capture_rate_pct": 0.1316,
+        "lead_to_revenue_rate_pct": 200.0,
+        "cta_to_revenue_rate_pct": 0.2633
+      }
+    }
+  },
+  "conversion_rates": {
+    "cta_to_lead": 0.07875307629204266,
+    "cta_to_revenue_event": 0.00016406890894175554
   },
   "do_not_publish_content": true,
+  "draft_counting_rule": "canonical counts use latest current queue source; filesystem scan separately counts live drafts/**/*.json (failed maps to rejected).",
   "draft_counts": {
     "by_state": {
-      "pending": 2,
+      "pending": 0,
       "reviewed": 0,
-      "revised": 31,
-      "published": 349,
-      "rejected": 30
+      "revised": 46,
+      "published": 387,
+      "rejected": 33
+    },
+    "by_type": {
+      "wp": 319,
+      "shorts": 103,
+      "longform": 44
     },
     "by_format": {
-      "wp": 281,
-      "shorts": 90,
-      "longform": 41
+      "wp": 319,
+      "shorts": 103,
+      "longform": 44,
+      "other": 0,
+      "total": 466
     },
-    "by_state_and_format": {
+    "matrix": {
       "pending": {
-        "wp": 2,
+        "wp": 0,
         "shorts": 0,
-        "longform": 0
+        "longform": 0,
+        "other": 0
       },
       "reviewed": {
         "wp": 0,
         "shorts": 0,
-        "longform": 0
+        "longform": 0,
+        "other": 0
       },
       "revised": {
-        "wp": 17,
-        "shorts": 6,
-        "longform": 8
+        "wp": 37,
+        "shorts": 0,
+        "longform": 9,
+        "other": 0
       },
       "published": {
-        "wp": 259,
-        "shorts": 64,
-        "longform": 26
+        "wp": 279,
+        "shorts": 82,
+        "longform": 26,
+        "other": 0
       },
       "rejected": {
         "wp": 3,
-        "shorts": 20,
-        "longform": 7
+        "shorts": 21,
+        "longform": 9,
+        "other": 0
       }
     },
-    "unknown_examples": []
+    "unknown_files": []
   },
-  "last_updated": "2026-05-10T21:37:11+09:00",
+  "draft_examples": {
+    "pending": [],
+    "published": [],
+    "rejected": [
+      "drafts/failed/20260428_030033_wp-unpre.json",
+      "drafts/failed/20260428_030059_wp-unpre.json",
+      "drafts/failed/20260428_030125_wp-unpre.json",
+      "drafts/failed/20260428_030150_wp-unpre.json",
+      "drafts/failed/20260428_030219_wp-untab.json"
+    ],
+    "reviewed": [],
+    "revised": []
+  },
+  "filesystem_draft_counts": {
+    "pending": {
+      "longform": 0,
+      "other": 0,
+      "shorts": 0,
+      "total": 0,
+      "wp": 0
+    },
+    "published": {
+      "longform": 0,
+      "other": 0,
+      "shorts": 0,
+      "total": 0,
+      "wp": 0
+    },
+    "rejected": {
+      "longform": 16,
+      "other": 0,
+      "shorts": 16,
+      "total": 128,
+      "wp": 96
+    },
+    "reviewed": {
+      "longform": 0,
+      "other": 0,
+      "shorts": 0,
+      "total": 0,
+      "wp": 0
+    },
+    "revised": {
+      "longform": 0,
+      "other": 0,
+      "shorts": 0,
+      "total": 0,
+      "wp": 0
+    }
+  },
+  "last_updated": "2026-05-17T11:24:25+09:00",
   "localtunnel_tracking_backend": {
-    "updated_at": "2026-05-10T21:37:11+09:00",
+    "updated_at": "2026-05-17T11:22:54+09:00",
     "action": "localtunnel_fixed_subdomain_healthy",
     "public_tracking_url": "https://hermes-revenue-tracking-48.loca.lt",
     "kind": "localtunnel_fixed_subdomain",
     "stable": false,
     "fixed_backend": true,
-    "pid": 14850,
+    "pid": 70302,
     "restarted": false,
     "health": {
       "status": 200,
@@ -221,8 +469,57 @@
     },
     "production_note": "No-auth fixed-subdomain fallback; Cloudflare named tunnel/VPS is still stronger for production SLA."
   },
-  "publish_action": "none - snapshot refresh only; no content published",
-  "source": "scheduled Hermes revenue performance snapshot refresh",
+  "manifest_counts": {
+    "pending": {
+      "longform": 0,
+      "other": 0,
+      "shorts": 0,
+      "total": 0,
+      "wp": 0
+    },
+    "published": {
+      "longform": 23,
+      "other": 0,
+      "shorts": 55,
+      "total": 296,
+      "wp": 218
+    },
+    "rejected": {
+      "longform": 6,
+      "other": 0,
+      "shorts": 19,
+      "total": 28,
+      "wp": 3
+    },
+    "reviewed": {
+      "longform": 0,
+      "other": 0,
+      "shorts": 0,
+      "total": 0,
+      "wp": 0
+    },
+    "revised": {
+      "longform": 3,
+      "other": 0,
+      "shorts": 5,
+      "total": 21,
+      "wp": 13
+    }
+  },
+  "publish_action_taken": false,
+  "publishing_performed": false,
+  "queue_source": "data/revenue_conversion_fix_status.json:queue",
+  "snapshot_date": "2026-05-17",
+  "source_files": [
+    "data/analytics/blog-analytics-2026-05-17.json",
+    "data/analytics/cta_click_events.jsonl",
+    "data/analytics/lead_events.jsonl",
+    "data/analytics/revenue_events.jsonl",
+    "data/conversion_metrics.json",
+    "data/draft_manifest.json",
+    "data/revenue_conversion_fix_status.json",
+    "data/wp_conversion_priority_report.json"
+  ],
   "tracking_backend": {
     "current_backend_url": "https://hermes-revenue-tracking-48.loca.lt",
     "fixed_backend": true,
@@ -230,7 +527,8 @@
     "kind": "localtunnel_fixed_subdomain",
     "lead_probe": {
       "status": 200,
-      "ok": true
+      "ok": true,
+      "attempt": 1
     },
     "next_action": "Cloudflare named tunnel or VPS remains the production-grade final fix; localtunnel fixed subdomain is the no-auth operational replacement for lhr.life.",
     "public_health": {
@@ -239,220 +537,269 @@
       "tracking_ok": true
     },
     "stable": false,
-    "watchdog_last_updated": "2026-05-10T21:32:58+09:00",
-    "watchdog_status": "localtunnel_fixed_subdomain_healthy"
+    "watchdog_last_updated": "2026-05-17T11:24:25+09:00",
+    "watchdog_status": "current_backend_healthy"
   },
   "tracking_backend_watchdog": {
     "action": "current_backend_healthy",
     "checked_trycloudflare_candidates": [],
-    "current_backend_url": "https://vocal-tennis-ink-album.trycloudflare.com",
+    "current_backend_url": "https://hermes-revenue-tracking-48.loca.lt",
     "current_health": {
       "status": 200,
       "ok": true,
       "tracking_ok": true
     },
-    "fixed_backend": false,
-    "fixed_backend_blocker": "cloudflare_cert_or_managed_hostname_required",
-    "kind": "cloudflare_quick_tunnel",
+    "fixed_backend": true,
+    "fixed_backend_blocker": null,
+    "kind": "localtunnel_fixed_subdomain",
     "lead_probe": {
       "status": 200,
       "ok": true,
       "attempt": 1
     },
     "stable": false,
-    "updated_at": "2026-05-10T21:32:58+09:00"
+    "updated_at": "2026-05-17T11:24:25+09:00"
   },
-  "updated": "2026-05-10T20:21:44+09:00",
-  "updated_at": "2026-05-10T21:37:11+09:00",
-  "updated_at_utc": "2026-05-10T10:21:36+00:00",
-  "conversion_event_rollup_raw": {
-    "cta_clicks": 8548,
-    "latest_event_type": "cta_click",
-    "leads": 244,
-    "revenue_events": 1,
-    "updated_at": "2026-05-10T21:03:22+09:00"
+  "updated_at": "2026-05-17T11:27:18+09:00",
+  "updated_at_human": "2026-05-17 10:23:38 KST",
+  "snapshot_type": "scheduled_revenue_performance_snapshot",
+  "updated_by": "scheduled_cron_terminal_only",
+  "date": "2026-05-17",
+  "updated_at_kst": "2026-05-17T11:21:17+09:00",
+  "draft_counts_by_state": {
+    "pending": 0,
+    "reviewed": 0,
+    "revised": 46,
+    "published": 387,
+    "rejected": 33
   },
-  "real_conversion_event_rollup": {
-    "updated_at": "2026-05-10T18:02:22+0900",
-    "filter": "exclude manager-health/sync-check/smoke/probe/test/verify/rotation/localtunnel health events",
-    "raw": {
-      "cta_clicks": 8337,
-      "leads": 199,
-      "revenue_events": 1
-    },
-    "probe_excluded": {
-      "cta_clicks": 8267,
-      "leads": 79,
-      "revenue_events": 1
-    },
-    "real": {
-      "cta_clicks": 70,
-      "leads": 120,
-      "revenue_events": 0
-    },
-    "real_rates": {
-      "lead_rate_pct": 171.4286,
-      "revenue_event_rate_pct": 0.0,
-      "lead_to_revenue_pct": 0.0
-    },
-    "top_real_click_offers": [
-      [
-        "unpre_check",
-        66
-      ],
-      [
-        "debug",
-        1
-      ],
-      [
-        "manager-restart",
-        1
-      ],
-      [
-        "tracking_backend_check",
-        1
-      ],
-      [
-        "healthcheck",
-        1
-      ]
-    ],
-    "top_real_lead_offers": [
-      [
-        "unpre_lead_magnet",
-        119
-      ],
-      [
-        "unknown",
-        1
-      ]
-    ],
-    "top_real_revenue_offers": []
+  "draft_counts_by_format": {
+    "wp": 319,
+    "shorts": 103,
+    "longform": 44,
+    "other": 0,
+    "total": 466
   },
-  "revenue_strategy_reset": {
-    "status": "active",
-    "updated_at": "2026-05-10T21:04:16+0900",
-    "diagnosis": "발행량 부족이 아니라 실제 수익 오퍼/후속 세일즈/유효 KPI 분리 부재",
-    "north_star": "유효 트래픽을 고의도 오퍼로 보내고 lead 후속 처리까지 연결",
-    "next_execution_order": [
-      "real KPI rollup: probe/manager/smoke 제외",
-      "offer_id 표준화 및 offers.json 재정리",
-      "lead.html copy/form을 site/offer별 고의도 전환형으로 수정",
-      "money WP만 발행: 보험/대출/정책자금/건강 구매형 우선",
-      "mid-article CTA 삽입: 첫 H2 뒤 + 비교표 뒤 + 결론"
-    ],
-    "strategy_file": "data/revenue_strategy_20260510.md",
-    "real_rollup_file": "data/real_conversion_rollup_20260510.json"
-  },
-  "current_bottlenecks": [
-    {
-      "area": "revenue_strategy",
-      "status": "blocked",
-      "summary": "raw KPI 대부분이 probe/health 이벤트이며 real revenue event는 0건",
-      "next_action": "money-intent offer/lead form/후속 세일즈 자동화로 전환",
-      "updated_at": "2026-05-10T21:04:16+0900"
-    }
-  ],
-  "lead_followup_automation": {
-    "status": "active",
-    "updated_at": "2026-05-10T21:09:39+0900",
-    "summary_file": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/data/leads/followup_summary.json",
-    "csv_file": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/data/leads/followup_leads.csv",
-    "exported_unique": 137,
-    "by_priority": {
-      "medium": 136,
-      "low": 1
-    },
-    "next_actions": [
-      "high priority lead는 당일 후속 메시지/상담 가능성 확인",
-      "legacy lead_magnet은 unpre/untab/skewese money offer로 재분류",
-      "revenue_proxy event를 affiliate outbound 또는 상담 진행 상태와 연결"
-    ]
-  },
-  "last_money_post_publish": {
-    "updated_at": "2026-05-10T21:11:35+0900",
-    "site": "unpre",
-    "topic": "자동차보험 다이렉트",
-    "url": "https://unpre.co.kr/2026-%ec%9e%90%eb%8f%99%ec%b0%a8%eb%b3%b4%ed%97%98-%eb%8b%a4%ec%9d%b4%eb%a0%89%ed%8a%b8-%eb%b9%84%ea%b5%90-%ea%b0%80%ec%9e%85-%ea%b0%b1%ec%8b%a0-%ec%a0%84-%ea%bc%ad-%ed%99%95%ec%9d%b8%ed%95%a0-5/",
-    "qa_score": 8.0,
-    "money_offer_id": "unpre_insurance_quote",
-    "live_verification": {
-      "url": "https://unpre.co.kr/2026-%ec%9e%90%eb%8f%99%ec%b0%a8%eb%b3%b4%ed%97%98-%eb%8b%a4%ec%9d%b4%eb%a0%89%ed%8a%b8-%eb%b9%84%ea%b5%90-%ea%b0%80%ec%9e%85-%ea%b0%b1%ec%8b%a0-%ec%a0%84-%ea%bc%ad-%ed%99%95%ec%9d%b8%ed%95%a0-5/",
-      "status": 200,
-      "bytes": 179552,
-      "has_track_gateway": true,
-      "has_money_offer": true,
-      "has_lead_page": true,
-      "has_placeholder": false,
-      "has_internal_memo": false,
-      "title_found": true
-    }
-  },
-  "content_queue_latest": {
+  "draft_counts_by_state_and_format": {
     "pending": {
-      "total": 0,
       "wp": 0,
       "shorts": 0,
-      "longform": 0
+      "longform": 0,
+      "other": 0
     },
     "reviewed": {
-      "total": 0,
       "wp": 0,
       "shorts": 0,
-      "longform": 0
+      "longform": 0,
+      "other": 0
     },
     "revised": {
-      "total": 28,
-      "wp": 16,
-      "shorts": 5,
-      "longform": 7
+      "wp": 37,
+      "shorts": 0,
+      "longform": 9,
+      "other": 0
     },
     "published": {
-      "total": 349,
-      "wp": 257,
-      "shorts": 64,
-      "longform": 26
+      "wp": 279,
+      "shorts": 82,
+      "longform": 26,
+      "other": 0
     },
     "rejected": {
-      "total": 30,
       "wp": 3,
-      "shorts": 20,
-      "longform": 7
+      "shorts": 21,
+      "longform": 9,
+      "other": 0
     }
   },
-  "analytics": {
-    "latest_blog_analytics": {
-      "present": true,
-      "path": "data/analytics/blog-analytics-2026-05-10.json",
-      "modified_at": "2026-05-10T09:16:00+09:00",
-      "top_level_keys": [
-        "date",
-        "sites"
-      ],
-      "site_count": 3,
-      "ok_site_count": 0,
-      "recent_post_count": 0,
-      "sites": [
-        {
-          "site": "unpre",
-          "status": null,
-          "recent_posts": 0
-        },
-        {
-          "site": "untab",
-          "status": null,
-          "recent_posts": 0
-        },
-        {
-          "site": "skewese",
-          "status": null,
-          "recent_posts": 0
-        }
-      ]
+  "current_counts": {
+    "pending": 0,
+    "reviewed": 0,
+    "revised": 46,
+    "published": 387,
+    "rejected": 33
+  },
+  "current_format_counts": {
+    "wp": 319,
+    "shorts": 103,
+    "longform": 44,
+    "other": 0
+  },
+  "canonical_draft_counts_excluding_backups": {
+    "by_state": {
+      "pending": 0,
+      "reviewed": 0,
+      "revised": 46,
+      "published": 387,
+      "rejected": 33
     },
-    "analytics_api_status": {
-      "wordpress": "ok",
-      "youtube": "not_refreshed_in_this_job"
+    "by_format": {
+      "wp": 319,
+      "shorts": 103,
+      "longform": 44,
+      "other": 0,
+      "total": 466
+    },
+    "matrix": {
+      "pending": {
+        "wp": 0,
+        "shorts": 0,
+        "longform": 0,
+        "other": 0
+      },
+      "reviewed": {
+        "wp": 0,
+        "shorts": 0,
+        "longform": 0,
+        "other": 0
+      },
+      "revised": {
+        "wp": 37,
+        "shorts": 0,
+        "longform": 9,
+        "other": 0
+      },
+      "published": {
+        "wp": 279,
+        "shorts": 82,
+        "longform": 26,
+        "other": 0
+      },
+      "rejected": {
+        "wp": 3,
+        "shorts": 21,
+        "longform": 9,
+        "other": 0
+      }
+    },
+    "unknown_files": []
+  },
+  "blog_analytics_latest": {
+    "present": true,
+    "path": "data/analytics/blog-analytics-2026-05-17.json",
+    "mtime": "2026-05-17T09:15:53+09:00",
+    "date": "2026-05-17",
+    "site_count": 3,
+    "recent_post_count": 60,
+    "status": null,
+    "sites": [
+      {
+        "site": "unpre",
+        "recent_posts": 20
+      },
+      {
+        "site": "untab",
+        "recent_posts": 20
+      },
+      {
+        "site": "skewese",
+        "recent_posts": 20
+      }
+    ]
+  },
+  "latest_blog_analytics": {
+    "present": true,
+    "path": "data/analytics/blog-analytics-2026-05-17.json",
+    "mtime": "2026-05-17T09:15:53+09:00",
+    "date": "2026-05-17",
+    "site_count": 3,
+    "recent_post_count": 60,
+    "status": null,
+    "sites": [
+      {
+        "site": "unpre",
+        "recent_posts": 20
+      },
+      {
+        "site": "untab",
+        "recent_posts": 20
+      },
+      {
+        "site": "skewese",
+        "recent_posts": 20
+      }
+    ]
+  },
+  "latest_blog_analytics_file": "data/analytics/blog-analytics-2026-05-17.json",
+  "current_bottleneck": "No reviewed publish-ready inventory; move revised drafts through QA before any publish window.",
+  "current_bottlenecks": [
+    "No reviewed publish-ready inventory; move revised drafts through QA before any publish window.",
+    "Revision backlog remains the main content bottleneck: revised=46 (wp=37, shorts=0, longform=9).",
+    "Latest blog analytics present: 60 recent posts across 3 sites (data/analytics/blog-analytics-2026-05-17.json)."
+  ],
+  "summary": [
+    {
+      "label": "Pending",
+      "value": 0
+    },
+    {
+      "label": "Reviewed ready",
+      "value": 0
+    },
+    {
+      "label": "Revised backlog",
+      "value": 46
+    },
+    {
+      "label": "Published library",
+      "value": 387
+    },
+    {
+      "label": "Raw CTA clicks",
+      "value": 18358
+    },
+    {
+      "label": "Raw leads",
+      "value": 1454
+    },
+    {
+      "label": "Raw revenue events",
+      "value": 9
+    },
+    {
+      "label": "Real revenue events",
+      "value": 6
     }
+  ],
+  "today_monetization_improvement": {
+    "updated_at": "2026-05-17T11:27:18+09:00",
+    "objective": "today_monetization_improvement",
+    "shorts_metadata_fixed": [
+      {
+        "video_id": "JtoMC2uq8V4",
+        "title": "운전자보험 비교 전 꼭 볼 3가지 보장 #Shorts",
+        "has_lead": true,
+        "has_track": true
+      },
+      {
+        "video_id": "c742t8YUnKw",
+        "title": "QQQ 폭락 때 샀다가 버틴 1년 실제 수익률 #Shorts",
+        "has_lead": true,
+        "has_track": true
+      }
+    ],
+    "wp_dual_cta_expansion": {
+      "updated_posts": 26,
+      "offer_mismatch_fixed": 5,
+      "sample_live_verify_pass": true
+    },
+    "current_money_path_kpi": {
+      "real_cta_clicks": 6,
+      "real_money_path_clicks": 6,
+      "real_leads": 0,
+      "revenue_proxy_events": 6,
+      "confirmed_revenue_events": 0,
+      "confirmed_revenue_amount": 0,
+      "caution": "revenue_proxy is money-path outbound, not confirmed revenue; some events may be previews/internal checks until affiliate/CRM confirms."
+    },
+    "cron": {
+      "real_outbound_revenue_monitor_job_id": "fc8d398bf2de",
+      "schedule": "every 15m"
+    },
+    "next_actions": [
+      "continue monitoring real outbound/revenue_proxy",
+      "expand matching dual CTA to next money posts only after offer mapping check",
+      "do not claim confirmed revenue until affiliate/CRM data confirms"
+    ]
   }
 }

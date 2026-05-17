@@ -1,0 +1,67 @@
+{
+  "verified_at": "2026-05-17T11:19:25+09:00",
+  "results": [
+    {
+      "key": "driver",
+      "url": "https://unpre.co.kr/%ec%9a%b4%ec%a0%84%ec%9e%90%eb%b3%b4%ed%97%98-%eb%b9%84%ea%b5%90-top5-2026-%ea%b0%80%ec%9e%85-%ec%a0%84-%ed%95%84%eb%8f%85/",
+      "http_200": true,
+      "has_expected_offer": true,
+      "has_lead_html": true,
+      "has_track_html": true,
+      "has_lead_page_outbound": true,
+      "has_revenue_campaign": true,
+      "placeholder_left": false,
+      "internal_memo_leak": false
+    },
+    {
+      "key": "tax",
+      "url": "https://unpre.co.kr/%ec%97%b0%ea%b8%88%ec%a0%80%ec%b6%95-%ec%84%b8%ec%95%a1%ea%b3%b5%ec%a0%9c-2026-%ed%95%9c%eb%8f%84%c2%b7%eb%82%a9%ec%9e%85-3%eb%8b%a8%ea%b3%84-%ec%99%84%eb%b2%bd-%eb%b9%84%ea%b5%90/",
+      "http_200": true,
+      "has_expected_offer": true,
+      "has_lead_html": true,
+      "has_track_html": true,
+      "has_lead_page_outbound": true,
+      "has_revenue_campaign": true,
+      "placeholder_left": false,
+      "internal_memo_leak": false
+    },
+    {
+      "key": "policy",
+      "url": "https://unpre.co.kr/%ec%86%8c%ec%83%81%ea%b3%b5%ec%9d%b8-%ec%a0%95%ec%b1%85%ec%9e%90%ea%b8%88-%eb%8c%80%ec%b6%9c-%ea%b8%88%eb%a6%ac-3%ec%a2%85-%eb%b9%84%ea%b5%90-2026/",
+      "http_200": true,
+      "has_expected_offer": true,
+      "has_lead_html": true,
+      "has_track_html": true,
+      "has_lead_page_outbound": true,
+      "has_revenue_campaign": true,
+      "placeholder_left": false,
+      "internal_memo_leak": false
+    },
+    {
+      "key": "untab",
+      "url": "https://untab.co.kr/%ea%b3%a0%ec%9c%a0%ea%b0%80-%ed%94%bc%ed%95%b4%ec%a7%80%ec%9b%90%ea%b8%88-2%ec%b0%a8-%ec%8b%a0%ec%b2%ad-%eb%b0%a9%eb%b2%95-3%eb%8b%a8%ea%b3%84-%ec%b4%9d%ec%a0%95%eb%a6%ac-2026/",
+      "http_200": true,
+      "has_expected_offer": true,
+      "has_lead_html": true,
+      "has_track_html": true,
+      "has_lead_page_outbound": true,
+      "has_revenue_campaign": true,
+      "placeholder_left": false,
+      "internal_memo_leak": false
+    },
+    {
+      "key": "skewese",
+      "url": "https://skewese.com/%ec%95%8c%ed%8c%8c%eb%a6%ac%ed%8f%ac%ec%82%b0-%ed%9a%a8%eb%8a%a5-3%ea%b0%80%ec%a7%80-%ed%98%88%eb%8b%b9%c2%b7%ed%95%ad%ec%82%b0%ed%99%94-%ec%b6%94%ec%b2%9c-2026/",
+      "http_200": true,
+      "has_expected_offer": true,
+      "has_lead_html": true,
+      "has_track_html": true,
+      "has_lead_page_outbound": true,
+      "has_revenue_campaign": true,
+      "placeholder_left": false,
+      "internal_memo_leak": false
+    }
+  ],
+  "updated_posts_expected": 26,
+  "offer_mismatch_fixed": 5
+}

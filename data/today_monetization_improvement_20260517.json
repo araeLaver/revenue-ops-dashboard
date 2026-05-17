@@ -1,0 +1,41 @@
+{
+  "updated_at": "2026-05-17T11:27:18+09:00",
+  "objective": "today_monetization_improvement",
+  "shorts_metadata_fixed": [
+    {
+      "video_id": "JtoMC2uq8V4",
+      "title": "운전자보험 비교 전 꼭 볼 3가지 보장 #Shorts",
+      "has_lead": true,
+      "has_track": true
+    },
+    {
+      "video_id": "c742t8YUnKw",
+      "title": "QQQ 폭락 때 샀다가 버틴 1년 실제 수익률 #Shorts",
+      "has_lead": true,
+      "has_track": true
+    }
+  ],
+  "wp_dual_cta_expansion": {
+    "updated_posts": 26,
+    "offer_mismatch_fixed": 5,
+    "sample_live_verify_pass": true
+  },
+  "current_money_path_kpi": {
+    "real_cta_clicks": 6,
+    "real_money_path_clicks": 6,
+    "real_leads": 0,
+    "revenue_proxy_events": 6,
+    "confirmed_revenue_events": 0,
+    "confirmed_revenue_amount": 0,
+    "caution": "revenue_proxy is money-path outbound, not confirmed revenue; some events may be previews/internal checks until affiliate/CRM confirms."
+  },
+  "cron": {
+    "real_outbound_revenue_monitor_job_id": "fc8d398bf2de",
+    "schedule": "every 15m"
+  },
+  "next_actions": [
+    "continue monitoring real outbound/revenue_proxy",
+    "expand matching dual CTA to next money posts only after offer mapping check",
+    "do not claim confirmed revenue until affiliate/CRM data confirms"
+  ]
+}
