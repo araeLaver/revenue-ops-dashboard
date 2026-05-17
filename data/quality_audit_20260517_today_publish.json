@@ -1,0 +1,202 @@
+{
+  "checked_at": "2026-05-17T09:44:33+09:00",
+  "items": [
+    {
+      "file": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/drafts/published/20260513_yt-untabcompany-shorts_qqq-폭락-때-샀다가-버틴-1년-실제-수익률과-그때-내-판단의-오류.md",
+      "exists": true,
+      "kind": "shorts",
+      "chars": 1364,
+      "title": "설명란 CTA",
+      "qa": {
+        "file": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/drafts/reviewed/20260513_yt-untabcompany-shorts_qqq-폭락-때-샀다가-버틴-1년-실제-수익률과-그때-내-판단의-오류.md",
+        "type": "shorts",
+        "topic": "QQQ 폭락 때 샀다가 버틴 1년 | 실제 수익률과 그때 내 판단의 오류",
+        "threshold": 8.2,
+        "result": {
+          "hook": 8,
+          "clarity": 8,
+          "specificity": 9,
+          "retention": 8,
+          "cta_power": 9,
+          "monetization_fit": 8,
+          "overall": 8.33,
+          "decision": "pass",
+          "must_fix": []
+        }
+      },
+      "has_frontmatter": true,
+      "frontmatter_chars": 191,
+      "body_starts": "source_urls:\n  - https://www.nasdaq.com/market-activity/etf/qqq\n  - https://www.invesco.com/qqq-etf/en/home.html\n  - https://www.sec.gov\n\noffer_id: unpre_loan_r",
+      "source_urls": true,
+      "has_lead_html": true,
+      "has_track_html": false,
+      "has_offer_id": true,
+      "placeholder_left": false,
+      "internal_memo_leak": false,
+      "likely_tts_frontmatter_risk": true,
+      "description_cta_title_risk": true
+    },
+    {
+      "file": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/drafts/published/20260513_yt-untabcompany-shorts_재활용-운전자보험-비교-추천-가입-2026.md",
+      "exists": true,
+      "kind": "shorts",
+      "chars": 1027,
+      "title": "설명란 CTA",
+      "qa": {
+        "file": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/drafts/reviewed/20260513_yt-untabcompany-shorts_재활용-운전자보험-비교-추천-가입-2026.md",
+        "type": "shorts",
+        "topic": "20260513_yt-untabcompany-shorts_재활용-운전자보험-비교-추천-가입-2026",
+        "threshold": 8.2,
+        "result": {
+          "hook": 8,
+          "clarity": 8,
+          "specificity": 9,
+          "retention": 8,
+          "cta_power": 9,
+          "monetization_fit": 8,
+          "overall": 8.33,
+          "decision": "pass",
+          "must_fix": []
+        }
+      },
+      "has_frontmatter": true,
+      "frontmatter_chars": 274,
+      "body_starts": "자동차보험 있으면 교통사고 다 해결된다고요? 완전히 틀린 말입니다.\n\n자동차보험은 상대방 치료비만 줍니다. 내가 내야 할 벌금, 형사합의금, 변호사비는 한 푼도 안 나와요. 2025년 기준 형사합의금 평균이 1,200만에서 3,500만 원, 벌금만 최대 2,000만 원입니다.\n\n운전자보",
+      "source_urls": true,
+      "has_lead_html": true,
+      "has_track_html": false,
+      "has_offer_id": true,
+      "placeholder_left": false,
+      "internal_memo_leak": false,
+      "likely_tts_frontmatter_risk": false,
+      "description_cta_title_risk": true
+    },
+    {
+      "file": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/drafts/published/20260513_wp-unpre_카카오뱅크-전월세대출-금리-조건-2026.md",
+      "exists": true,
+      "kind": "wp",
+      "chars": 9504,
+      "title": "카카오뱅크 전월세대출 금리 3가지 비교 2026",
+      "qa": {
+        "file": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/drafts/reviewed/20260513_wp-unpre_카카오뱅크-전월세대출-금리-조건-2026.md",
+        "type": "blog",
+        "topic": "카카오뱅크 전월세대출 금리 조건 2026",
+        "threshold": 7.8,
+        "result": {
+          "hook": 8,
+          "clarity": 8,
+          "specificity": 8,
+          "retention": 8,
+          "cta_power": 8,
+          "monetization_fit": 8,
+          "overall": 8.0,
+          "decision": "pass",
+          "must_fix": []
+        }
+      },
+      "has_frontmatter": true,
+      "frontmatter_chars": 463,
+      "body_starts": "<title>카카오뱅크 전월세대출 금리 조건 2026</title>\n\n# 카카오뱅크 전월세대출 금리 3가지 비교 2026\n\n전세 계약서 들고 은행 갔다가 \"한도 초과\"라는 말 들어본 적 있죠? 카카오뱅크 전월세대출은 앱 하나로 10분 안에 한도 조회가 가능하다는 게 가장 큰 강점입니다.",
+      "source_urls": true,
+      "has_lead_html": true,
+      "has_track_html": true,
+      "has_offer_id": true,
+      "placeholder_left": false,
+      "internal_memo_leak": false,
+      "likely_tts_frontmatter_risk": false,
+      "description_cta_title_risk": false
+    },
+    {
+      "file": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/drafts/published/20260511_wp-unpre_청년-버팀목-전세대출-조건-2026.md",
+      "exists": true,
+      "kind": "wp",
+      "chars": 10171,
+      "title": "청년 버팀목 전세대출 3가지 조건 2026 총정리",
+      "qa": {
+        "file": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/drafts/reviewed/20260511_wp-unpre_청년-버팀목-전세대출-조건-2026.md",
+        "type": "blog",
+        "topic": "청년 버팀목 전세대출 조건 2026",
+        "threshold": 7.8,
+        "result": {
+          "hook": 8,
+          "clarity": 8,
+          "specificity": 8,
+          "retention": 8,
+          "cta_power": 8,
+          "monetization_fit": 8,
+          "overall": 8.0,
+          "decision": "pass",
+          "must_fix": []
+        }
+      },
+      "has_frontmatter": true,
+      "frontmatter_chars": 461,
+      "body_starts": "<title>청년 버팀목 전세대출 조건 2026, 금리·한도 신청법</title>\n\n# 청년 버팀목 전세대출 3가지 조건 2026 총정리\n\n전세보증금 3억짜리 집에 연 1.5% 금리로 들어갈 수 있다면? 믿기 힘들지만 실제로 가능한 대출이 있다. **청년 버팀목 전세대출**이다. 시중은",
+      "source_urls": true,
+      "has_lead_html": true,
+      "has_track_html": true,
+      "has_offer_id": true,
+      "placeholder_left": false,
+      "internal_memo_leak": false,
+      "likely_tts_frontmatter_risk": false,
+      "description_cta_title_risk": false
+    },
+    {
+      "file": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/drafts/published/20260511_wp-unpre_전세자금대출-금리-비교-은행별-2026.md",
+      "exists": true,
+      "kind": "wp",
+      "chars": 11790,
+      "title": "전세자금대출 금리 비교 TOP5 은행 2026",
+      "qa": {
+        "file": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/drafts/reviewed/20260511_wp-unpre_전세자금대출-금리-비교-은행별-2026.md",
+        "type": "blog",
+        "topic": "전세자금대출 금리 비교 은행별 2026",
+        "threshold": 7.8,
+        "result": {
+          "hook": 8,
+          "clarity": 8,
+          "specificity": 8,
+          "retention": 8,
+          "cta_power": 8,
+          "monetization_fit": 8,
+          "overall": 8.0,
+          "decision": "pass",
+          "must_fix": []
+        }
+      },
+      "has_frontmatter": true,
+      "frontmatter_chars": 364,
+      "body_starts": "<title>전세자금대출 금리 비교 은행별 2026, 최저 금리 찾는 법</title>\n\n# 전세자금대출 금리 비교 TOP5 은행 2026\n\n**이번 대출 비교 #110편에서는** 전세자금대출 은행별 금리를 직접 뜯어봤습니다.\n\n전세 보증금이 3억인데 금리 1%p 차이면 연 300만 원",
+      "source_urls": true,
+      "has_lead_html": true,
+      "has_track_html": true,
+      "has_offer_id": true,
+      "placeholder_left": false,
+      "internal_memo_leak": false,
+      "likely_tts_frontmatter_risk": false,
+      "description_cta_title_risk": false
+    }
+  ],
+  "live_wp": [
+    {
+      "key": "wp_youth",
+      "url": "https://unpre.co.kr/%ec%b2%ad%eb%85%84-%eb%b2%84%ed%8c%80%eb%aa%a9-%ec%a0%84%ec%84%b8%eb%8c%80%ec%b6%9c-3%ea%b0%80%ec%a7%80-%ec%a1%b0%ea%b1%b4-2026-%ec%b4%9d%ec%a0%95%eb%a6%ac/",
+      "http_200": true,
+      "title": "청년 버팀목 전세대출 3가지 조건 2026 총정리 - 마인드멜드 접합",
+      "has_dual_cta": true,
+      "has_sources": true,
+      "placeholder_left": false,
+      "internal_memo_leak": false
+    },
+    {
+      "key": "wp_kakao",
+      "url": "https://unpre.co.kr/%ec%b9%b4%ec%b9%b4%ec%98%a4%eb%b1%85%ed%81%ac-%ec%a0%84%ec%9b%94%ec%84%b8%eb%8c%80%ec%b6%9c-%ea%b8%88%eb%a6%ac-3%ea%b0%80%ec%a7%80-%eb%b9%84%ea%b5%90-2026/",
+      "http_200": true,
+      "title": "카카오뱅크 전월세대출 금리 3가지 비교 2026 - 마인드멜드 접합",
+      "has_dual_cta": true,
+      "has_sources": true,
+      "placeholder_left": false,
+      "internal_memo_leak": false
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "file": "drafts/published/20260513_yt-untabcompany-shorts_재활용-운전자보험-비교-추천-가입-2026.md",
+  "type": "shorts",
+  "topic": "20260513_yt-untabcompany-shorts_재활용-운전자보험-비교-추천-가입-2026",
+  "threshold": 8.2,
+  "result": {
+    "hook": 8,
+    "clarity": 8,
+    "specificity": 9,
+    "retention": 8,
+    "cta_power": 9,
+    "monetization_fit": 8,
+    "overall": 8.1,
+    "decision": "fail",
+    "must_fix": [
+      "쇼츠 제목/본문 구조 오류 — '설명란 CTA' 또는 '고정댓글 CTA'가 제목처럼 노출됨"
+    ]
+  }
+}

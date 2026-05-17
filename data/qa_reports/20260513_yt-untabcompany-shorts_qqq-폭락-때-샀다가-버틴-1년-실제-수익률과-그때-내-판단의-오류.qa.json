@@ -1,0 +1,20 @@
+{
+  "file": "drafts/published/20260513_yt-untabcompany-shorts_qqq-폭락-때-샀다가-버틴-1년-실제-수익률과-그때-내-판단의-오류.md",
+  "type": "shorts",
+  "topic": "QQQ 폭락 때 샀다가 버틴 1년 | 실제 수익률과 그때 내 판단의 오류",
+  "threshold": 8.2,
+  "result": {
+    "hook": 8,
+    "clarity": 8,
+    "specificity": 9,
+    "retention": 8,
+    "cta_power": 9,
+    "monetization_fit": 8,
+    "overall": 8.1,
+    "decision": "fail",
+    "must_fix": [
+      "쇼츠 본문 시작에 frontmatter/source_urls가 노출됨 — TTS가 메타데이터를 읽을 위험",
+      "쇼츠 제목/본문 구조 오류 — '설명란 CTA' 또는 '고정댓글 CTA'가 제목처럼 노출됨"
+    ]
+  }
+}
