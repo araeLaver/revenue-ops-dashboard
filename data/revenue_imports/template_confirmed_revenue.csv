@@ -1,0 +1,2 @@
+date,network,offer_id,content_id,amount_krw,currency,order_ref,status,utm_source,target_host,notes
+2026-05-18,coupang,unpre_loan_rate_check,c742t8YUnKw,0,KRW,DO_NOT_USE_SAMPLE,pending,youtube_shorts,www.coupang.com,"샘플 행입니다. 실제 리포트 업로드 시 이 행을 삭제하고 status를 confirmed/approved/paid/settled 중 하나로 넣으세요."

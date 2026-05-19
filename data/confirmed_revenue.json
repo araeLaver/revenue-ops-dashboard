@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "updated_at": "2026-05-18T22:48:08+09:00",
+    "import_dir": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/data/revenue_imports",
+    "rows_imported": 0,
+    "confirmed_count": 0,
+    "confirmed_amount_krw": 0,
+    "pending_count": 0,
+    "rejected_count": 0,
+    "revenue_proxy_events_considered": 6,
+    "matched_confirmed_count": 0,
+    "unmatched_confirmed_count": 0,
+    "by_offer_amount_krw": {},
+    "by_network_amount_krw": {},
+    "status": "no_confirmed_revenue_imported",
+    "notes": [
+      "revenue_proxy is not confirmed revenue",
+      "raw order_ref values are hashed and not persisted",
+      "drop CSV/JSON reports into data/revenue_imports/ and rerun this script"
+    ]
+  },
+  "confirmed_rows": []
+}
