@@ -35,33 +35,96 @@ def stamp() -> str:
 
 
 def log(msg: str) -> None:
+    """Print and best-effort append to the manager log.
+
+    The tunnel manager is an observer/safety process. On macOS/external volumes,
+    the log file can intermittently raise PermissionError even when the directory
+    is normally writable. Logging must never crash the tunnel watcher.
+    """
     line = f"{stamp()} {msg}"
     print(line, flush=True)
-    with LOG_PATH.open("a", encoding="utf-8") as f:
-        f.write(line + "\n")
+    try:
+        LOG_DIR.mkdir(exist_ok=True)
+        with LOG_PATH.open("a", encoding="utf-8") as f:
+            f.write(line + "\n")
+    except OSError as e:
+        print(f"{stamp()} LOG_WRITE_FAILED path={LOG_PATH} error={type(e).__name__}", file=sys.stderr, flush=True)
 
 
 def write_state(**kwargs) -> None:
+    """Best-effort state writer.
+
+    The manager is only an lhr observer in --no-commit --no-push mode. A transient
+    macOS/external-volume PermissionError while writing the state file must not
+    crash the observer or affect the protected canonical backend.
+    """
     state = {}
-    if STATE_PATH.exists():
-        try:
-            state = json.loads(STATE_PATH.read_text(encoding="utf-8"))
-        except Exception:
-            state = {}
-    state.update(kwargs)
-    state["updated_at"] = stamp()
-    STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
-    STATE_PATH.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    try:
+        if STATE_PATH.exists():
+            try:
+                state = json.loads(STATE_PATH.read_text(encoding="utf-8"))
+            except Exception:
+                state = {}
+        state.update(kwargs)
+        state["updated_at"] = stamp()
+        STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
+        tmp = STATE_PATH.with_suffix(STATE_PATH.suffix + ".tmp")
+        tmp.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        tmp.replace(STATE_PATH)
+    except OSError as e:
+        log(f"STATE_WRITE_FAILED path={STATE_PATH} error={type(e).__name__}")
+
+
+def protected_backend_active() -> tuple[bool, str]:
+    """Return true when a non-lhr interim/fixed backend is already configured and healthy.
+
+    This prevents the localhost.run observer from overwriting a healthier Cloudflare
+    quick/named/VPS backend in data/tracking_public_url.json. The lhr manager may
+    still monitor lhr.life, but it must not become canonical while a protected
+    backend is alive.
+    """
+    cfg_path = ROOT / "data/tracking_public_url.json"
+    try:
+        cfg = json.loads(cfg_path.read_text(encoding="utf-8"))
+    except Exception:
+        return False, "no_config"
+    url = str(cfg.get("current_backend_url") or cfg.get("public_tracking_url") or "").rstrip("/")
+    kind = str(cfg.get("kind") or "")
+    if not url or ".lhr.life" in url:
+        return False, "no_protected_backend"
+    if kind in {"cloudflare_quick_tunnel", "cloudflare_named_tunnel", "vps_reverse_proxy", "localhostrun_account_key", "custom_fixed_backend"}:
+        ok, detail = quick_backend_ok(url)
+        return ok, f"{kind}:{url}:{detail}"
+    return False, f"unprotected_kind={kind}"
 
 
 def sync_url(url: str, commit: bool, push: bool) -> bool:
+    if not commit and not push:
+        log(f"SYNC_SKIPPED_OBSERVE_ONLY observed_lhr={url} reason=no_commit_no_push")
+        write_state(last_observed_lhr_url=url, last_sync_url=url, last_sync_ok=True, last_sync_rc="skipped_observe_only")
+        return True
+    protected_ok, protected_detail = protected_backend_active()
+    if protected_ok:
+        log(f"SYNC_SKIPPED_PROTECTED_BACKEND observed_lhr={url} protected={protected_detail}")
+        write_state(last_observed_lhr_url=url, last_sync_url=url, last_sync_ok=True, last_sync_rc="skipped_protected_backend", protected_backend_detail=protected_detail)
+        return True
     cmd = [sys.executable, str(ROOT / "scripts/sync_tracking_tunnel.py"), "--url", url]
     if commit:
         cmd.append("--commit")
     if push:
         cmd.append("--push")
     log("SYNC_START url=" + url)
-    p = subprocess.run(cmd, cwd=str(ROOT), text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, timeout=240)
+    try:
+        p = subprocess.run(cmd, cwd=str(ROOT), text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, timeout=90)
+    except subprocess.TimeoutExpired as e:
+        partial = e.stdout or ""
+        if isinstance(partial, bytes):
+            partial = partial.decode("utf-8", "replace")
+        for line in str(partial).splitlines():
+            log("SYNC_OUT " + line)
+        write_state(last_sync_url=url, last_sync_ok=False, last_sync_rc="timeout")
+        log(f"SYNC_TIMEOUT url={url} timeout=90s")
+        return False
     for line in p.stdout.splitlines():
         log("SYNC_OUT " + line)
     ok = p.returncode == 0
@@ -149,9 +212,9 @@ def quick_backend_ok(url: str, timeout: int = 8) -> tuple[bool, str]:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--port", type=int, default=8431)
-    ap.add_argument("--commit", action="store_true", default=True)
+    ap.add_argument("--commit", action="store_true", default=False)
     ap.add_argument("--no-commit", dest="commit", action="store_false")
-    ap.add_argument("--push", action="store_true", default=True)
+    ap.add_argument("--push", action="store_true", default=False)
     ap.add_argument("--no-push", dest="push", action="store_false")
     ap.add_argument("--restart-delay", type=int, default=10)
     ap.add_argument("--health-interval", type=int, default=60)
@@ -201,6 +264,15 @@ def main() -> int:
                         current_url = url
                         last_health_check = time.time()
                         write_state(status="url_detected", current_url=url, detected_at=stamp(), tunnel_pid=child.pid, manager_pid=os.getpid())
+                        pre_ok, pre_detail = quick_backend_ok(url)
+                        log(f"PRE_SYNC_HEALTH url={url} ok={pre_ok} detail={pre_detail}")
+                        if not pre_ok:
+                            mark_provider_degraded(url, pre_detail)
+                            write_state(status="pre_sync_health_failed_restarting", failed_url=url, current_url=url, last_health_ok=False, last_health_detail=pre_detail, last_health_at=stamp(), tunnel_pid=child.pid, manager_pid=os.getpid())
+                            restart_requested = True
+                            if child.poll() is None:
+                                child.terminate()
+                            break
                         ok = sync_url(url, commit=args.commit, push=args.push)
                         if not ok:
                             mark_provider_degraded(url, f"sync_failed rc={0 if ok else 'nonzero'}")
