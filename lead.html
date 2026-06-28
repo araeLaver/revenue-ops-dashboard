@@ -28,12 +28,12 @@
     <form id="leadForm" class="grid">
       <div class="field"><label>진단 유형</label><select name="offer_id" id="offerSelect"></select></div>
       <div class="two">
-        <div class="field"><label>이메일</label><input name="email" type="email" placeholder="you@example.com" required /></div>
-        <div class="field"><label>연락 선호 채널</label><select name="contact_channel"><option value="email">이메일</option><option value="kakao">카카오톡</option><option value="phone">전화</option><option value="none">자료만 받기</option></select></div>
+        <div class="field"><label>이메일 또는 연락처(선택)</label><input name="email" type="email" placeholder="자료를 받을 이메일이 있으면 입력" /></div>
+        <div class="field"><label>진행 방식</label><select name="contact_channel"><option value="none">먼저 결과만 보기</option><option value="email">이메일로 자료 받기</option><option value="kakao">카카오톡 상담 희망</option><option value="phone">전화 상담 희망</option></select></div>
       </div>
       <div id="dynamicFields" class="grid"></div>
       <div class="field"><label>추가 메모</label><textarea name="note" rows="4" placeholder="예: 자동차보험 갱신이 다음 달입니다 / 정책자금 신청 마감일이 임박했습니다 / 피로 때문에 영양제를 보고 있습니다"></textarea></div>
-      <label class="small"><input type="checkbox" required /> 자료 발송과 신청/견적/구매 체크를 위한 최소 정보 수집에 동의합니다. 민감정보는 입력하지 않습니다.</label>
+      <label class="small"><input type="checkbox" name="consent" /> 연락처를 남기는 경우 자료 발송과 신청/견적/구매 체크를 위한 최소 정보 수집에 동의합니다. 민감정보는 입력하지 않습니다.</label>
       <button type="submit" id="submitBtn">30초 진단 신청하기</button>
     </form>
     <div class="ok" id="okBox"></div>
@@ -72,12 +72,13 @@ if(offers[initialOffer]) offerSelect.value=initialOffer;
 function fieldHtml(def){const [name,label,type,options]=def;if(type==='select'){return `<div class="field"><label>${label}</label><select name="${name}">${options.map(v=>`<option value="${v}">${v}</option>`).join('')}</select></div>`;}return `<div class="field"><label>${label}</label><input name="${name}" type="text" placeholder="${options||''}" /></div>`;}
 function updateOffer(){const offerId=offerSelect.value;const o=offers[offerId]||offers.unpre_insurance_quote;const t=outboundTargets[offerId]||outboundTargets.unpre_insurance_quote;const outboundHref=trackedOutbound(offerId,o);badge.textContent=o.badge;pageTitle.textContent=o.title;pageSub.textContent=o.sub;submitBtn.textContent=o.button;heroActions.innerHTML=`<a class="heroPrimary" rel="nofollow sponsored noopener" target="_blank" href="${outboundHref}">바로 비교/구매 보기</a><a class="heroSecondary" href="#leadForm">내 조건 체크하고 보기</a>`;assetBox.innerHTML=`<strong>받을 자료/진단: ${o.name}</strong><ul>${o.bullets.map(x=>`<li>${x}</li>`).join('')}</ul><div class="outbound"><a class="primaryLink" rel="nofollow sponsored noopener" target="_blank" href="${outboundHref}">${t.label}</a><a class="secondaryLink" href="#leadForm">${t.secondary}</a></div><p class="hint">첫 화면의 빠른 버튼과 이 버튼 클릭은 offer_id별 outbound click으로 기록됩니다. 폼 제출은 별도 lead로 분리됩니다.</p>`;dynamicFields.innerHTML=o.fields.map(fieldHtml).join('');}
 offerSelect.addEventListener('change',updateOffer);updateOffer();
-async function sha256(s){const b=new TextEncoder().encode(s.trim().toLowerCase());const h=await crypto.subtle.digest('SHA-256',b);return Array.from(new Uint8Array(h)).map(x=>x.toString(16).padStart(2,'0')).join('');}
+async function sha256(s){const b=new TextEncoder().encode(String(s||'').trim().toLowerCase()||'anonymous-interest');const h=await crypto.subtle.digest('SHA-256',b);return Array.from(new Uint8Array(h)).map(x=>x.toString(16).padStart(2,'0')).join('');}
 document.getElementById('leadForm').addEventListener('submit',async e=>{
   e.preventDefault(); okBox.style.display='none'; errBox.style.display='none';
-  const fd=new FormData(e.target); const offerId=fd.get('offer_id'); const o=offers[offerId]||offers.unpre_insurance_quote; const email=fd.get('email');
+  const fd=new FormData(e.target); const offerId=fd.get('offer_id'); const o=offers[offerId]||offers.unpre_insurance_quote; const email=String(fd.get('email')||'').trim();
   const details={}; for(const [k,v] of fd.entries()){ if(!['email','note','offer_id'].includes(k)) details[k]=String(v).slice(0,120); }
-  const payload={site:o.site,content_id:params.get('content_id')||'lead-page',offer_id:offerId,intent:o.intent,lead_type:o.name,lead_priority:offerId.includes('insurance')||offerId.includes('loan')||offerId.includes('policy')||offerId.includes('subsidy')?'high':'medium',email_hash:await sha256(email),source:'money_intent_lead_page',note:String(fd.get('note')||'').slice(0,500),details};
+  const contactMode=String(fd.get('contact_channel')||'none');
+  const payload={site:o.site,content_id:params.get('content_id')||'lead-page',offer_id:offerId,intent:o.intent,lead_type:email?o.name:(o.name+' - anonymous interest'),lead_priority:offerId.includes('insurance')||offerId.includes('loan')||offerId.includes('policy')||offerId.includes('subsidy')?'high':'medium',email_hash:await sha256(email),source:email?'money_intent_lead_page':'money_intent_quick_interest',note:String(fd.get('note')||'').slice(0,500),details:{...details,contact_mode:contactMode,has_contact:email?'yes':'no'}};
   try{
     const cfg=await fetch('data/tracking_public_url.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({}));
     const cfgBackend=String(cfg.public_tracking_url||cfg.current_backend_url||'').replace(/\/$/,'');
@@ -86,7 +87,8 @@ document.getElementById('leadForm').addEventListener('submit',async e=>{
     const endpoint=chosenBackend ? chosenBackend+'/lead' : '/lead';
     const res=await fetch(endpoint,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});
     if(!res.ok) throw new Error('bad status');
-    okBox.textContent='신청 기록이 저장됐습니다. '+o.name+' 항목으로 분류되어 후속 확인 대상에 올라갑니다.';
+    const outboundHref=trackedOutbound(offerId,o);
+    okBox.innerHTML='확인 기록이 저장됐습니다. '+o.name+' 항목으로 분류됐습니다.<br><br><a class="primaryLink" rel="nofollow sponsored noopener" target="_blank" href="'+outboundHref+'">이어서 비교/구매 자료 보기 →</a>';
     okBox.style.display='block'; e.target.reset(); offerSelect.value=offerId; updateOffer();
   }catch(err){errBox.style.display='block';}
 });
