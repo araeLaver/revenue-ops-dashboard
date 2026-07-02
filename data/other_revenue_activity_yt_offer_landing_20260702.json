@@ -1,0 +1,11 @@
+{
+  "updated_at": "2026-07-02T22:13:04",
+  "new_revenue_activity": "yt_non_finance_offer_landing_added",
+  "problem": "YT offer_ids kdowndan_casefile_newsletter / araelaver_history_mystery_digest / micheuhasi_relationship_pattern_check existed in content metadata but not in lead.html offers, causing fallback to unrelated insurance offer.",
+  "actions": [
+    "added three dedicated lead products to lead.html",
+    "added Coupang outbound targets for mystery/history/relationship psychology books/workbooks",
+    "kept tracking via /track.html and backend revenue_proxy"
+  ],
+  "expected_effect": "non-finance YouTube traffic can now convert to relevant PDF/newsletter/workbook lead or affiliate outbound instead of bouncing from mismatched insurance landing."
+}
