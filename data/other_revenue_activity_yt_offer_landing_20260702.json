@@ -7,5 +7,13 @@
     "added Coupang outbound targets for mystery/history/relationship psychology books/workbooks",
     "kept tracking via /track.html and backend revenue_proxy"
   ],
-  "expected_effect": "non-finance YouTube traffic can now convert to relevant PDF/newsletter/workbook lead or affiliate outbound instead of bouncing from mismatched insurance landing."
+  "expected_effect": "non-finance YouTube traffic can now convert to relevant PDF/newsletter/workbook lead or affiliate outbound instead of bouncing from mismatched insurance landing.",
+  "deploy_status": "success",
+  "last_checked_at": "2026-07-02T22:23:15",
+  "public_verification": {
+    "github_pages_action": "success",
+    "html_contains_new_offer_ids": true,
+    "browser_verified_offer": "kdowndan_casefile_newsletter",
+    "verified_at": "2026-07-02T22:23:39"
+  }
 }
