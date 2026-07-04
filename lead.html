@@ -70,14 +70,41 @@ function trackedOutbound(offerId,o){
   const q=new URLSearchParams({site:o.site,slot:'lead_page_outbound',content_id:params.get('content_id')||'lead-page',offer_id:offerId,intent:o.intent,utm_source:'lead_page',utm_medium:'outbound_button',utm_campaign:'revenue_zero_fix',target:t.url});
   return 'track.html?'+q.toString();
 }
+let trackingLeadEndpoint='';
+async function loadTrackingEndpoint(){
+  try{
+    const cfg=await fetch('data/tracking_public_url.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({}));
+    const cfgBackend=String(cfg.public_tracking_url||cfg.current_backend_url||'').replace(/\/$/,'');
+    const direct=String(params.get('backend')||'').replace(/\/$/,'');
+    const chosenBackend=cfgBackend || (direct && !/\.lhr\.life$/.test(direct) ? direct : '');
+    trackingLeadEndpoint=chosenBackend ? chosenBackend+'/lead' : '';
+  }catch(err){trackingLeadEndpoint='';}
+}
+function quickInterestPayload(offerId,source){
+  const o=offers[offerId]||offers.unpre_insurance_quote;
+  return {site:o.site,content_id:params.get('content_id')||'lead-page',offer_id:offerId,lead_type:o.name+' - quick interest click',email_hash:'anonymous-interest-click',source:source||'hero_outbound_quick_interest',note:'폼 제출 전 빠른 비교/구매 버튼 클릭으로 기록된 interest lead'};
+}
+function recordQuickInterest(offerId,source){
+  if(!trackingLeadEndpoint) return;
+  const payload=quickInterestPayload(offerId,source);
+  const body=new URLSearchParams(payload).toString();
+  try{
+    if(navigator.sendBeacon){
+      navigator.sendBeacon(trackingLeadEndpoint,new Blob([body],{type:'application/x-www-form-urlencoded'}));
+      return;
+    }
+  }catch(err){}
+  fetch(trackingLeadEndpoint,{method:'POST',headers:{'content-type':'application/x-www-form-urlencoded'},body,keepalive:true}).catch(()=>{});
+}
 const legacyBySite={unpre:'unpre_insurance_quote',untab:'untab_subsidy_eligibility',skewese:'skewese_supplement_buying_check'};
 const params=new URLSearchParams(location.search);
 const initialOffer=params.get('offer_id')||legacyBySite[params.get('site')]||'unpre_insurance_quote';
 Object.entries(offers).forEach(([id,o])=>{const opt=document.createElement('option');opt.value=id;opt.textContent=o.name;offerSelect.appendChild(opt);});
 if(offers[initialOffer]) offerSelect.value=initialOffer;
 function fieldHtml(def){const [name,label,type,options]=def;if(type==='select'){return `<div class="field"><label>${label}</label><select name="${name}">${options.map(v=>`<option value="${v}">${v}</option>`).join('')}</select></div>`;}return `<div class="field"><label>${label}</label><input name="${name}" type="text" placeholder="${options||''}" /></div>`;}
-function updateOffer(){const offerId=offerSelect.value;const o=offers[offerId]||offers.unpre_insurance_quote;const t=outboundTargets[offerId]||outboundTargets.unpre_insurance_quote;const outboundHref=trackedOutbound(offerId,o);badge.textContent=o.badge;pageTitle.textContent=o.title;pageSub.textContent=o.sub;submitBtn.textContent=o.button;heroActions.innerHTML=`<a class="heroPrimary" rel="nofollow sponsored noopener" target="_blank" href="${outboundHref}">바로 비교/구매 보기</a><a class="heroSecondary" href="#leadForm">내 조건 체크하고 보기</a>`;assetBox.innerHTML=`<strong>받을 자료/진단: ${o.name}</strong><ul>${o.bullets.map(x=>`<li>${x}</li>`).join('')}</ul><div class="outbound"><a class="primaryLink" rel="nofollow sponsored noopener" target="_blank" href="${outboundHref}">${t.label}</a><a class="secondaryLink" href="#leadForm">${t.secondary}</a></div><p class="hint">첫 화면의 빠른 버튼과 이 버튼 클릭은 offer_id별 outbound click으로 기록됩니다. 폼 제출은 별도 lead로 분리됩니다.</p>`;dynamicFields.innerHTML=o.fields.map(fieldHtml).join('');}
-offerSelect.addEventListener('change',updateOffer);updateOffer();
+function updateOffer(){const offerId=offerSelect.value;const o=offers[offerId]||offers.unpre_insurance_quote;const t=outboundTargets[offerId]||outboundTargets.unpre_insurance_quote;const outboundHref=trackedOutbound(offerId,o);badge.textContent=o.badge;pageTitle.textContent=o.title;pageSub.textContent=o.sub;submitBtn.textContent=o.button;heroActions.innerHTML=`<a class="heroPrimary" data-quick-interest="hero_outbound" data-offer-id="${offerId}" rel="nofollow sponsored noopener" target="_blank" href="${outboundHref}">바로 비교/구매 보기</a><a class="heroSecondary" href="#leadForm">내 조건 체크하고 보기</a>`;assetBox.innerHTML=`<strong>받을 자료/진단: ${o.name}</strong><ul>${o.bullets.map(x=>`<li>${x}</li>`).join('')}</ul><div class="outbound"><a class="primaryLink" data-quick-interest="asset_outbound" data-offer-id="${offerId}" rel="nofollow sponsored noopener" target="_blank" href="${outboundHref}">${t.label}</a><a class="secondaryLink" href="#leadForm">${t.secondary}</a></div><p class="hint">빠른 비교/구매 버튼 클릭도 interest lead로 저장합니다. 연락처 입력은 선택이며, 폼 제출 lead와 별도 분리됩니다.</p>`;dynamicFields.innerHTML=o.fields.map(fieldHtml).join('');}
+offerSelect.addEventListener('change',updateOffer);updateOffer();loadTrackingEndpoint();
+document.addEventListener('click',e=>{const a=e.target.closest('a[data-quick-interest]');if(!a) return;recordQuickInterest(a.dataset.offerId||offerSelect.value,a.dataset.quickInterest||'outbound_quick_interest');});
 async function sha256(s){const b=new TextEncoder().encode(String(s||'').trim().toLowerCase()||'anonymous-interest');const h=await crypto.subtle.digest('SHA-256',b);return Array.from(new Uint8Array(h)).map(x=>x.toString(16).padStart(2,'0')).join('');}
 document.getElementById('leadForm').addEventListener('submit',async e=>{
   e.preventDefault(); okBox.style.display='none'; errBox.style.display='none';

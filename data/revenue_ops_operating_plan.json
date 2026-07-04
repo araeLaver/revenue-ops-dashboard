@@ -1,0 +1,32 @@
+{
+  "updated_at": "2026-07-04T22:20:00+09:00",
+  "goal": "confirmed revenue로 이어질 가능성이 높은 금융/보험/지원금/건강 WP와 YouTube 자산을 우선 운영한다",
+  "success_metrics": [
+    "real_money_path_clicks 증가",
+    "real_leads 0 탈출",
+    "revenue_proxy 증가",
+    "confirmed revenue 연동"
+  ],
+  "daily_priority_order": [
+    "1. revised WP에서 대출/보험/지원금/세액공제/영양제 글을 선별해 reviewed로 승격",
+    "2. reviewed WP를 사이트별로 제한 발행하고 URL 200 + lead.html + offer_id 확인",
+    "3. YouTube quota는 untabcompany 금융/절세와 unpre 보험/대출 우선 사용",
+    "4. quota/발행 가드에 막히면 old asset CTA repair와 lead.html 전환 실험 수행",
+    "5. real_leads가 0이면 클릭 즉시 interest lead 저장 구조를 강화"
+  ],
+  "automation": {
+    "script": "/Volumes/WorkDrive/Develop/48.HermesAgent/dashboard/scripts/revenue_priority_ops.py",
+    "default_action": "promote up to 5 high-intent WP drafts and publish up to 3 WP posts per run",
+    "safety": [
+      "existing prepublish_gate.py QA 통과 필요",
+      "existing publish-blogs.sh 사용",
+      "site별 후보 상한 적용",
+      "report saved to data/revenue_priority_ops_latest.json"
+    ]
+  },
+  "manual_review_needed": [
+    "confirmed affiliate/CPA revenue reconciliation",
+    "lead form 개인정보/동의 문구 최종 검토",
+    "보험/대출 CPA 제휴처 연결"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "updated_at": "2026-07-04T22:34:00+09:00",
+  "problem": "real_leads가 0인 동안 lead.html 빠른 비교/구매 버튼은 outbound/revenue_proxy만 만들고 lead_events에는 남지 않았다.",
+  "experiment": "quick_interest_click_as_lead",
+  "change": [
+    "hero/asset outbound 버튼에 data-quick-interest 추가",
+    "클릭 순간 tracking backend /lead로 quick interest lead 저장",
+    "기존 track.html outbound/revenue_proxy 이동은 유지",
+    "연락처 입력 lead와 quick interest lead를 source로 분리"
+  ],
+  "success_metric": [
+    "lead_events.jsonl real count > 0",
+    "source=hero_outbound 또는 asset_outbound 유입 확인",
+    "offer_id별 quick interest 발생 확인"
+  ],
+  "safety": [
+    "개인정보 없이 anonymous-interest-click으로 저장",
+    "폼 제출 경로는 기존대로 유지",
+    "outbound click/revenue_proxy tracking 유지"
+  ]
+}
