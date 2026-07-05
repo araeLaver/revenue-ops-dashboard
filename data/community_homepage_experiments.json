@@ -1,0 +1,128 @@
+{
+  "updated_at": "2026-07-05T09:36:13+09:00",
+  "purpose": "하루 1개씩 특정 타겟 커뮤니티형 홈페이지를 배포해 real CTA click/quick-interest lead/revenue_proxy를 검증",
+  "public_index_path": "communities/index.html",
+  "public_index_url": "https://araelaver.github.io/revenue-ops-dashboard/communities/",
+  "daily_rotation": [
+    {
+      "day": 1,
+      "slug": "car-insurance-renewal-club",
+      "site": "unpre",
+      "segment": "자동차보험 갱신 30~45일 전 직장인/자영업자",
+      "title": "자동차보험 갱신 전 보험료 줄이는 사람들의 30초 체크룸",
+      "offer_id": "unpre_insurance_quote",
+      "intent": "insurance_quote",
+      "primary_cta": "내 보험료 30초 점검하기",
+      "traffic_hooks": [
+        "네이버 카페 자동차보험 갱신 질문 답변용 링크",
+        "자동차보험 관련 WP 글 하단 CTA",
+        "유튜브 쇼츠 고정댓글: 갱신 전 체크"
+      ],
+      "url": "https://araelaver.github.io/revenue-ops-dashboard/communities/car-insurance-renewal-club.html"
+    },
+    {
+      "day": 2,
+      "slug": "loan-refinance-rate-room",
+      "site": "unpre",
+      "segment": "신용대출/전세대출 금리 부담이 커진 20~40대",
+      "title": "대출 금리 갈아타기 전에 내 조건부터 보는 비교룸",
+      "offer_id": "unpre_loan_rate_check",
+      "intent": "loan_rate",
+      "primary_cta": "금리 낮출 수 있는지 확인하기",
+      "traffic_hooks": [
+        "대출 금리 WP 글 내부 CTA",
+        "재테크 유튜브 설명란",
+        "커뮤니티 Q&A 답변용 진단 링크"
+      ],
+      "url": "https://araelaver.github.io/revenue-ops-dashboard/communities/loan-refinance-rate-room.html"
+    },
+    {
+      "day": 3,
+      "slug": "small-business-policy-fund-desk",
+      "site": "untab",
+      "segment": "정책자금·폐업지원·재창업 지원을 찾는 소상공인",
+      "title": "소상공인 정책자금 신청 전 서류·마감 체크 데스크",
+      "offer_id": "untab_policy_fund_consult",
+      "intent": "policy_fund",
+      "primary_cta": "정책자금 상담 가능성 확인하기",
+      "traffic_hooks": [
+        "소상공인 지원금 WP 글 CTA",
+        "지역 커뮤니티 답변 링크",
+        "카카오 상담 전 사전진단 링크"
+      ],
+      "url": "https://araelaver.github.io/revenue-ops-dashboard/communities/small-business-policy-fund-desk.html"
+    },
+    {
+      "day": 4,
+      "slug": "youth-subsidy-deadline-board",
+      "site": "untab",
+      "segment": "청년월세·긴급복지·에너지바우처 등 마감형 지원금 신청자",
+      "title": "지원금 마감 전에 대상 여부부터 확인하는 신청 보드",
+      "offer_id": "untab_subsidy_eligibility",
+      "intent": "subsidy_eligibility",
+      "primary_cta": "지원금 대상 여부 확인하기",
+      "traffic_hooks": [
+        "지원금 글 상단 CTA",
+        "맘카페/지역카페 정보글 답변",
+        "쇼츠 설명란 신청 전 체크"
+      ],
+      "url": "https://araelaver.github.io/revenue-ops-dashboard/communities/youth-subsidy-deadline-board.html"
+    },
+    {
+      "day": 5,
+      "slug": "supplement-stack-lab",
+      "site": "skewese",
+      "segment": "피로·수면·혈행·다이어트 목적 영양제 구매 직전 사용자",
+      "title": "영양제 장바구니 넣기 전 성분 조합 체크랩",
+      "offer_id": "skewese_supplement_buying_check",
+      "intent": "supplement_buying",
+      "primary_cta": "내 목적에 맞는 성분 확인하기",
+      "traffic_hooks": [
+        "건강/영양제 WP 글 CTA",
+        "쿠팡 상품 비교 전 중간 페이지",
+        "Shorts 고정댓글: 성분 체크"
+      ],
+      "url": "https://araelaver.github.io/revenue-ops-dashboard/communities/supplement-stack-lab.html"
+    },
+    {
+      "day": 6,
+      "slug": "relationship-pattern-room",
+      "site": "micheuhasi",
+      "segment": "이별 후/회피형/불안형 관계 패턴을 검색하는 20~30대",
+      "title": "반복되는 관계 패턴을 조용히 체크하는 대화 회복룸",
+      "offer_id": "micheuhasi_relationship_pattern_check",
+      "intent": "relationship_pattern_check",
+      "primary_cta": "내 관계 패턴 체크하기",
+      "traffic_hooks": [
+        "관계심리 Shorts 고정댓글",
+        "롱폼 설명란 워크북 링크",
+        "커뮤니티 사연 답변용 링크"
+      ],
+      "url": "https://araelaver.github.io/revenue-ops-dashboard/communities/relationship-pattern-room.html"
+    },
+    {
+      "day": 7,
+      "slug": "mystery-casefile-club",
+      "site": "kdowndan",
+      "segment": "실화 미스터리/미제 사건 타임라인을 좋아하는 구독자",
+      "title": "미제 사건 타임라인을 함께 정리하는 사건파일 클럽",
+      "offer_id": "kdowndan_casefile_newsletter",
+      "intent": "casefile_newsletter",
+      "primary_cta": "사건 타임라인 PDF 받기",
+      "traffic_hooks": [
+        "미스터리 유튜브 설명란",
+        "고정댓글 PDF 링크",
+        "관련 도서 제휴 전환 페이지"
+      ],
+      "url": "https://araelaver.github.io/revenue-ops-dashboard/communities/mystery-casefile-club.html"
+    }
+  ],
+  "success_metrics": [
+    "community_page_view",
+    "track.html CTA click",
+    "lead.html quick-interest click",
+    "lead form submit",
+    "offer outbound/revenue_proxy"
+  ],
+  "next_manual_action": "오늘 DAY 1 자동차보험 갱신 체크룸 링크를 자동차보험/재테크 글 하단, 관련 커뮤니티 답변, YouTube 고정댓글 중 1곳 이상에 배포"
+}
